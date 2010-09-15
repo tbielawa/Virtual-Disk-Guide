@@ -1,4 +1,22 @@
-#!/usr/bin/make
+#!/usr/bin/make -f
+#Template Makefile for working with DocBook XML projects
 
-pdf:
-	xmllint --xinclude Virtual-Disk-Operations.xml | xsltproc ~/cache/DocumentEditing/DocBook/XSLSheets/docbook-xsl-1.75.2/fo/docbook.xsl - > tmp.fo && fop tmp.fo tmp.pdf
+SHELL = /bin/sh
+OSTYPE := $(shell uname -s)
+
+# OS X?
+ifeq ("$(findstring Darwin, $(OSTYPE))", "Darwin")
+	SED = sed -E
+	FIND = find . -E
+# Assume GNU
+else
+	SED = sed -r
+	FIND = find . -regextype posix-extended
+endif
+
+all: clean
+
+
+clean:
+	$(FIND)  \( -regex "^[.]?(.+)\~$$" -o -regex "./[.]?#.*#" \) -delete
+
