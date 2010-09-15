@@ -1,0 +1,18 @@
+TODO
+
+Topics to write about.
+
+
+ * Differences from on image type to another.
+ * Creating a "working copy" (copy on write) image from a base image.
+   * Creating a "working-working copy" (copy on write) image, from a copy on write image.
+
+- qemu-img convert
+ * Taking a copy on write image and produce a base image from that
+
+- parted
+ * use mklabel to create a MRB on virtual disks. 
+ * Mount a disk partition by calculating offsets.
+ * convert a physical disk into a logical disk.
+
+

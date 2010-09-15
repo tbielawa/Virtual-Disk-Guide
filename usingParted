@@ -1,0 +1,86 @@
+Tue Jun 09 11:10:45 2009	 tbielawa - Comments added		 [Reply] [Comment]
+Download (untitled) [text/plain 1.1k]
+For your benefit, these are the commands I've been running. It's
+important to do them in the order given or you'll be swimming in a
+bucket of fail.
+
+root@heron:/srv/lcsee-kvm/fileserver004# qemu-img create
+towns-bronze.qcow2 500G
+Formatting 'towns-bronze.qcow2', fmt=raw, size=524288000 kB
+root@heron:/srv/lcsee-kvm/fileserver004# qemu-img create
+towns-gold.qcow2 200G
+Formatting 'towns-gold.qcow2', fmt=raw, size=209715200 kB
+
+root@heron:/srv/lcsee-kvm/fileserver004# parted towns-bronze.qcow2
+mklabel msdos
+root@heron:/srv/lcsee-kvm/fileserver004# parted towns-gold.qcow2 mklabel
+msdos
+
+root@heron:/srv/lcsee-kvm/fileserver004# losetup -f towns-bronze.qcow2
+root@heron:/srv/lcsee-kvm/fileserver004# losetup -f towns-gold.qcow2
+root@heron:/srv/lcsee-kvm/fileserver004# losetup -a
+/dev/loop0: [090f]:48496643 (towns-bronze.qcow2)
+/dev/loop1: [090f]:48496644 (towns-gold.qcow2)
+
+
+now one can use fdisk, create a primart partition, then do crazy stuff
+and make filesystems, then start mounting stuff. wooo!
+-- 
+Tim Bielawa
+LCSEE System Administrator
+helpdesk@csee.wvu.edu
+LCSEE Frequently Asked Questions
+-- http://csee.wvu.edu/helpdesk/faq/
+
+
+
+
+
+
+
+
+root@hummer:/srv/lcsee-kvm/backupfileserver001# qemu-img create bu-fs001.qcow2 400G
+Formatting 'bu-fs001.qcow2', fmt=raw, size=419430400 kB
+root@hummer:/srv/lcsee-kvm/backupfileserver001# 
+root@hummer:/srv/lcsee-kvm/backupfileserver001# parted bu-fs001.qcow2 mklabel msdos
+root@hummer:/srv/lcsee-kvm/backupfileserver001# losetup -f bu-fs001.qcow2 
+root@hummer:/srv/lcsee-kvm/backupfileserver001# losetup -a
+/dev/loop0: [090a]:38584323 (bu-fs001.qcow2)
+root@hummer:/srv/lcsee-kvm/backupfileserver001# fdisk -l /dev/loop0
+
+Disk /dev/loop0: 429.4 GB, 429496729600 bytes
+255 heads, 63 sectors/track, 52216 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk identifier: 0x000e7a1a
+
+      Device Boot      Start         End      Blocks   Id  System
+root@hummer:/srv/lcsee-kvm/backupfileserver001# fdisk /dev/loop0
+
+The number of cylinders for this disk is set to 52216.
+There is nothing wrong with that, but this is larger than 1024,
+and could in certain setups cause problems with:
+1) software that runs at boot time (e.g., old versions of LILO)
+2) booting and partitioning software from other OSs
+   (e.g., DOS FDISK, OS/2 FDISK)
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 1
+First cylinder (1-52216, default 1): 
+Using default value 1
+Last cylinder or +size or +sizeM or +sizeK (1-52216, default 52216): 
+Using default value 52216
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error 22: Invalid argument.
+The kernel still uses the old table.
+The new table will be used at the next reboot.
+Syncing disks.
+root@hummer:/srv/lcsee-kvm/backupfileserver001#
