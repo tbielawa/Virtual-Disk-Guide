@@ -1,10 +1,9 @@
 #!/usr/bin/make -f
 
-XSLTPARAMS = --xinclude -o Virtual-Disk-Operations.html
-STYLESHEET = /usr/share/xml/docbook5/stylesheet/docbook5/html/docbook.xsl
+XSLTPARAMS = --xinclude -o output/Virtual-Disk-Operations.html \
+	--stringparam make.single.year.ranges 0
+HTMLSTYLESHEET = /usr/share/xml/docbook5/stylesheet/docbook5/html/docbook.xsl
 DOCUMENT = Virtual-Disk-Operations
-
-
 OSTYPE := $(shell uname -s)
 
 # OS X?
@@ -20,11 +19,13 @@ endif
 all: clean
 
 html:
-	xsltproc $(XSLTPARAMS) $(STYLESHEET) $(DOCUMENT).xml
+	xsltproc $(XSLTPARAMS) $(HTMLSTYLESHEET) $(DOCUMENT).xml
 
 pdf:
-	dblatex -o $(DOCUMENT).pdf -P latex.class.options=11pt -P term.breakline=1 $(DOCUMENT).xml
+	dblatex -o output/$(DOCUMENT).pdf -P latex.class.options=11pt -P term.breakline=1 $(DOCUMENT).xml
+
+docs: html pdf
 
 clean:
 	$(FIND)  \( -regex "^[.]?(.+)\~$$" -o -regex "./[.]?#.*#" \) -delete
-
+	rm -fR output/*

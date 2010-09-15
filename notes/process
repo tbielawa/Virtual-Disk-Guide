@@ -1,0 +1,163 @@
+First section:
+
+     Information on hard drives in general.
+     Blocks, cylinders, sectors
+     UNITS
+     math
+
+What makes virtual disks any different from actual hard drives? We'll
+examine this question by creating a virtual disk from scratch.
+
+What does your operating system think a disk drive is? I have a 320 GB
+SATA drive in my computer which is represented by /dev/sda in
+Linux. Using *file*, *stat* and *fdisk* we'll see what Linux thinks
+the /dev/sda file is.
+
+    file - Guesses what the file "is". (uses stat)
+    stat - Displays file or file system status
+    fdisk - A partition table manuputalor
+
+===============================
+
+<tbielawa>@(fridge)[~/images] 02:53:18
+$ sudo file /dev/sda
+/dev/sda: block special
+<tbielawa>@(fridge)[~/images] 02:53:20
+$ sudo stat /dev/sda
+  File: `/dev/sda'
+  Size: 0		Blocks: 0          IO Block: 4096   block special file
+Device: 5h/5d		Inode: 5217        Links: 1     Device type: 8,0
+Access: (0660/brw-rw----)  Uid: (    0/    root)   Gid: (    6/    disk)
+Access: 2010-09-15 01:09:02.060722589 -0400
+Modify: 2010-09-12 11:03:20.831372852 -0400
+Change: 2010-09-12 11:03:26.226369247 -0400
+<tbielawa>@(fridge)[~/images] 02:53:27
+$ sudo fdisk -l /dev/sda
+
+Disk /dev/sda: 320.1 GB, 320071851520 bytes
+255 heads, 63 sectors/track, 38913 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk identifier: 0x12031202
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1               1       25496   204796588+   7  HPFS/NTFS
+/dev/sda2           25497       31870    51199155   83  Linux
+/dev/sda3           31871       33086     9767520   82  Linux swap / Solaris
+/dev/sda4           33087       38913    46805377+   5  Extended
+/dev/sda5   *       33087       38913    46805346   83  Linux
+
+===============================
+
+Create a 1GB disk.
+
+Use the dd command. (Teaches about hard drive addressing)
+
+"Block" is generally interchangeble with the term "sector".
+
+    1kb = 1b * 1024
+    1mb = 1kb * 1024
+    1gb = 1mb * 1024
+       = 1b * 2^10 * 2^10 * 2^10
+       = 1b * 2^30
+       = 1b * 1073741824 (1,073,741,824)
+
+    blocksize = 512 bytes. This is standard for a disk
+
+    So for a 1G disk we need 2^30 bytes. To stay consistent with block
+    sizes on disks we'll set dd's block size "bs" to 512. We'll need
+    We'll get 2^30 bytes by setting dd's count to 2^30/512.
+
+        count: (2^30)/(2^9) = (1073741824/512) = 2097152 (2,097,152)
+
+Note: /dev/zero doesn't provide endless "0"s. It actually provides
+endless NUL control characters("^@" in the Caret Notation[0]). The NUL
+control character has the octal value 000. The actual ASCII zero
+character "0" has the hex value 060.
+
+NUL being a control character [1] means it's a non-orinting character (it
+doesn't represent a written symbol), so you want to identify it you
+can use 'cat' like this to print 5 NUL characters in Caret Notation:
+
+    tbielawa@fridge:~ $ dd if=/dev/zero bs=1 count=5 2>/dev/null | cat -v
+    ^@^@^@^@^@
+
+You can also convert the output from /dev/zero into ASCII 0 characters
+like this:
+
+    tbielawa@fridge:~ $ dd if=/dev/zero bs=1 count=5 2>/dev/null | tr "\0" "\60"
+    00000
+
+
+>>>> Lets make a disk!
+
+Transforming a bunch of NUL's into a block device, step by step.
+
+    dd if=/dev/zero of=disk1.raw bs=512 count=2097152
+
+Now that you know what /dev/zero *is* it's obvious this is just a file
+containing 2^30 bytes (1gb) of data. Each byte litterally has the
+value '0'.
+
+    Use file, stat, fdisk on disk1.raw to see what it 'looks like' to the
+    operating system:
+
+===============================
+
+<tbielawa>@(fridge)[~/images] 02:51:12
+$ dd if=/dev/zero of=disk1.raw bs=512 count=2097152
+2097152+0 records in
+2097152+0 records out
+1073741824 bytes (1.1 GB) copied, 10.8062 s, 99.4 MB/s
+<tbielawa>@(fridge)[~/images] 02:51:25
+$ file disk1.raw
+disk1.raw: data
+<tbielawa>@(fridge)[~/images] 02:51:36
+$ stat disk1.raw
+  File: `disk1.raw'
+  Size: 1073741824	Blocks: 2097152    IO Block: 4096   regular file
+Device: 805h/2053d	Inode: 151552      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (  500/tbielawa)   Gid: (  500/tbielawa)
+Access: 2010-09-15 02:51:36.147724384 -0400
+Modify: 2010-09-15 02:51:25.729720057 -0400
+Change: 2010-09-15 02:51:25.729720057 -0400
+<tbielawa>@(fridge)[~/images] 02:51:37
+$ fdisk -l disk1.raw
+
+Disk disk1.raw: 0 MB, 0 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk identifier: 0x00000000
+
+Disk disk1.raw doesn't contain a valid partition table
+
+===============================
+
+From this there isn't much disk1.raw has in common with the actual
+disk drive sda.
+
+          |     sda       |     disk1.raw     |
+          -------------------------------------
+    file  | block special |   data            |
+    stat  | block special |   regular file    |
+    fdisk | Has partition |   no partition    |
+          |  table        |    table          |
+          -------------------------------------
+
+Nothing surprising here. disk1.raw is just 2^30 0's in a row... for now.
+
+
+
+
+
+
+
+
+run qemu-img info on the new image.
+
+run file to see what the computer thinks it is.
+
+
+
+
+[0] http://en.wikipedia.org/wiki/Caret_notation
+[1] http://en.wikipedia.org/wiki/Control_code

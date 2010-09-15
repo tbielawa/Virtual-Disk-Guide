@@ -1,0 +1,4 @@
+Compiling this documentation requires:
+	  xsltproc
+	  apache fop
+	  docboook5 stylesheets

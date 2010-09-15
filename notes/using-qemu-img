@@ -1,0 +1,8 @@
+qemu-img create -f qcow2 -o ?
+Supported options:
+size             Virtual disk size
+backing_file     File name of a base image
+backing_fmt      Image format of the base image
+encryption       Encrypt the image
+cluster_size     qcow2 cluster size
+

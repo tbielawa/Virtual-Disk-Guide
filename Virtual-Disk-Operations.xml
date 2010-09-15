@@ -19,7 +19,6 @@
       </author>
     </authorgroup>
 
-    <!-- FIGURE OUT THE BEST WAY TO PUT CREATE COMMONS LICENSING INFORMATION HERE -->
     <abstract>
       <title>Introduction</title>
 
@@ -29,7 +28,8 @@
         that is available is not contained in a central location. Some concepts
         of the qemu system aren't covered at all. FAQs lead on to having an
         answer to a particular query, but many lead you to off site resources,
-        some of which are no longer available on the Internet. </para>
+        some of which are no longer available on the Internet.
+      </para>
 
       <para> What I hope to do is provide a document which will demonstrate the
         core concepts of virtual disk management. This document will concern
@@ -37,19 +37,22 @@
         GNU/Linux disk utility tools like <command>fdisk</command>. Most
         importantly to me, in the case of non-trivial examples, I hope to
         identify what the relevant technical concepts are how they work up to
-        the final result of each example. </para>
+        the final result of each example.
+      </para>
     </abstract>
 
     <legalnotice>
       <para> This work is licensed under the Creative Commons Attribution 3.0
         United States License. To view a copy of this license, visit
-        http://creativecommons.org/licenses/by/3.0/us/ or send a letter to
+        <link xl:href="http://creativecommons.org/licenses/by/3.0/us/"/> or send a letter to
         Creative Commons, 171 Second Street, Suite 300, San Francisco,
-        California, 94105, USA. </para>
+        California, 94105, USA.
+      </para>
     </legalnotice>
 
     <copyright>
       <year>2009</year>
+      <year>2010</year>
       <holder>Tim 'Shaggy' Bielawa</holder>
     </copyright>
   </info>
