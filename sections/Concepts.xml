@@ -77,8 +77,9 @@ Disk identifier: 0x12031202
       contextual. It's common usage to say block when referring to the
       data being referenced and to use sector when speaking about disk
       geometry. Officially the term "data block" was defined by
-      <orgname>ANSI ASC X3</orgname> in ANSI X3.221-199xata "AT
-      Attachment Interface for Disk Drives (ATA-1)" §3.1.3 as:
+      <orgname>ANSI ASC X3</orgname> in ANSI X3.221-199xata
+      <citetitle>AT Attachment Interface for Disk Drives
+      (ATA-1)</citetitle> §3.1.3 as:
     </para>
 
     <variablelist>
