@@ -1,7 +1,8 @@
 #!/usr/bin/make -f
 
 XSLTPARAMS = --xinclude -o output/Virtual-Disk-Operations.html \
-	--stringparam make.single.year.ranges 0
+	--stringparam make.single.year.ranges 0 \
+	--stringparam html.stylesheet "/loud.css"
 HTMLSTYLESHEET = /usr/share/xml/docbook5/stylesheet/docbook5/html/docbook.xsl
 DOCUMENT = Virtual-Disk-Operations
 OSTYPE := $(shell uname -s)
