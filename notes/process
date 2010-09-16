@@ -15,7 +15,7 @@ the /dev/sda file is.
 
     file - Guesses what the file "is". (uses stat)
     stat - Displays file or file system status
-    fdisk - A partition table manuputalor
+    fdisk - A partition table manipulator
 
 ===============================
 
@@ -50,9 +50,9 @@ Disk identifier: 0x12031202
 
 Create a 1GB disk.
 
-Use the dd command. (Teaches about hard drive addressing)
+Use the *dd* command. (Teaches about hard drive addressing)
 
-"Block" is generally interchangeble with the term "sector".
+"Block" is generally interchangeable with the term "sector".
 
     1kb = 1b * 1024
     1mb = 1kb * 1024
@@ -61,7 +61,7 @@ Use the dd command. (Teaches about hard drive addressing)
        = 1b * 2^30
        = 1b * 1073741824 (1,073,741,824)
 
-    blocksize = 512 bytes. This is standard for a disk
+    block size = 512 bytes (This is standard for a disk)
 
     So for a 1G disk we need 2^30 bytes. To stay consistent with block
     sizes on disks we'll set dd's block size "bs" to 512. We'll need
@@ -74,7 +74,7 @@ endless NUL control characters("^@" in the Caret Notation[0]). The NUL
 control character has the octal value 000. The actual ASCII zero
 character "0" has the hex value 060.
 
-NUL being a control character [1] means it's a non-orinting character (it
+NUL being a control character [1] means it's a non-printing character (it
 doesn't represent a written symbol), so you want to identify it you
 can use 'cat' like this to print 5 NUL characters in Caret Notation:
 
@@ -95,10 +95,10 @@ Transforming a bunch of NUL's into a block device, step by step.
     dd if=/dev/zero of=disk1.raw bs=512 count=2097152
 
 Now that you know what /dev/zero *is* it's obvious this is just a file
-containing 2^30 bytes (1gb) of data. Each byte litterally has the
+containing 2^30 bytes (1gb) of data. Each byte literally has the
 value '0'.
 
-    Use file, stat, fdisk on disk1.raw to see what it 'looks like' to the
+    Use *file*, *stat*, *fdisk* on disk1.raw to see what it 'looks like' to the
     operating system:
 
 ===============================
@@ -195,7 +195,7 @@ Understanding what has changed:
 
    Using parted is the first step to a better thing. You can also use
    parted on regular disk drives to change the kind of partition table
-   on any disk (Generally speaking, partitiontables are tied to an
+   on any disk (Generally speaking, partition tables are tied to an
    architecture and operating system).
 
    The GNU parted utility can create a bunch of different table types:
@@ -262,7 +262,7 @@ a block special device associated with our file. This is called a loop
 device(*).
 
 You can think of a loop device, e.g., /dev/loop1, like a
-translator. With a loop device inserted betwen programs and our disk
+translator. With a loop device inserted between programs and our disk
 image we can view and operate on the disk image as if it were a
 regular drive.
 
@@ -385,12 +385,12 @@ has no device created to represent this. Instead we'll have to create
 another device associated with a specific offset in (loop0/disk1.raw).
 
     Why do we have to specify an offset? How do we know what offset to
-    specificy?
+    specifically?
 
 An "offset" just means how far from the beginning of a device
 something is. We need to know this because we're going to create a
 device mapped to the first partition (Linux does this automatically
-for regular disks during the boot proces). Partitions don't start on
+for regular disks during the boot process). Partitions don't start on
 the first block of a device because filesystem information is stored
 there. To specify the offset we just need to know what sector the
 partition (loop0p1) starts on. *fdisk* can give us this
@@ -468,7 +468,7 @@ we can create a filesystem on it and finally mount it.
 
 
 The same procedure applies to any arbitrary partition: obtain the
-starting sector, multiply by blocksize.
+starting sector, multiply by block size.
 
 
 You can destroy the loop device (while leaving your file intact) by
@@ -483,15 +483,19 @@ giving the -d option to losetup.
   standard hostname given to the loopback address 172.0.0.1. See [4]
   for additional information.
 
-* FUSE Mountlo -  http://sourceforge.net/apps/mediawiki/fuse/index.php?title=FileSystems#Mountlo
+** FUSE (Filesystem is Userspace) has a module called Mountlo that
+  allows non-root users to make make loop devices. See [5] for the
+  download.
+  
 
 
 ===============================
 
 References
 
-[0] http://en.wikipedia.org/wiki/Caret_notation
-[1] http://en.wikipedia.org/wiki/Control_code
-[2] GNU Parted 1.9.0 Manual http://www.gnu.org/software/parted/manual/html_node/mklabel.html#mklabel
-[3] http://www.rwc.uc.edu/koehler/comath/42.html
-[4] RFC: 1700 http://tools.ietf.org/html/rfc1700
+[0] Caret Notation - http://en.wikipedia.org/wiki/Caret_notation
+[1] Control Characters - http://en.wikipedia.org/wiki/Control_code
+[2] GNU Parted 1.9.0 Manual - http://www.gnu.org/software/parted/manual/html_node/mklabel.html#mklabel
+[3] Disk Geometry - http://www.rwc.uc.edu/koehler/comath/42.html
+[4] RFC: 1700 - http://tools.ietf.org/html/rfc1700
+[5] FUSE - http://sourceforge.net/apps/mediawiki/fuse/index.php?title=FileSystems#Mountlo
