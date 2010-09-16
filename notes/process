@@ -467,7 +467,8 @@ we can create a filesystem on it and finally mount it.
     /dev/loop0           1008M   18M  940M   2% /home/tbielawa/images/partition1
 
 
-
+The same procedure applies to any arbitrary partition: obtain the
+starting sector, multiply by blocksize.
 
 
 You can destroy the loop device (while leaving your file intact) by
