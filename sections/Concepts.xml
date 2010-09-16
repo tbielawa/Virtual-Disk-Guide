@@ -1,4 +1,6 @@
-<chapter xmlns="http://docbook.org/ns/docbook" xml:id="VDG-Concepts" version="5.0">
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xl="http://www.w3.org/1999/xlink"
+	 xml:id="VDG-Concepts" version="5.0">
 
   <title>Disk Concepts</title>
 
@@ -177,17 +179,24 @@ Disk identifier: 0x12031202
 	  <systemitem class="resource">/dev/zero</systemitem> doesn't
 	  provide endless "0"s. It actually provides endless
 	  <keycode>NUL</keycode> control
-	  characters(<keycap>^@</keycap> in Caret Notation[0]). The
+	  characters(<keycap>^@</keycap> in Caret Notation
+	  <footnote><para><link
+	  xl:href="http://en.wikipedia.org/wiki/Caret_notation">Caret
+	  Notation</link> on Wikipedia</para></footnote>). The
 	  <keycode>NUL</keycode> control character has the octal value
 	  <keycode>000</keycode>. The actual ASCII zero character
-	  <keycap>0</keycap> has the hex value <keycode>060</keycode>.
+	  <keycap>0</keycap> has the octal value
+	  <keycode>060</keycode>.
 	</para>
       </note>
 
       <para>
-	<keycode>NUL</keycode> being a control character [1] means
-	it's a non-printing character (it doesn't represent a
-	written symbol), so if you want to identify it you can use
+	<keycode>NUL</keycode> being a control character
+	<footnote><para><link
+	xl:href="http://en.wikipedia.org/wiki/Control_code">Control
+	Characters</link> on Wikipedia</para></footnote> means it's a
+	non-printing character (it doesn't represent a written
+	symbol), so if you want to identify it you can use
 	<command>cat</command> like this to print 5
 	<keycode>NUL</keycode> characters in Caret Notation:
       </para>
@@ -455,9 +464,11 @@ Command (m for help):]]>
       <para>
 	To calculate how many cylinders to specify you could work
 	backwards from <xref
-	linkend="VDG-Concepts-Capacity-Equation"/> but the number of
-	unknowns at this time make it prohibitively difficult for us
-	to work out. It's provided in this documentation as general
+	linkend="VDG-Concepts-Capacity-Equation"/><footnote><para><link
+	xl:href="http://www.rwc.uc.edu/koehler/comath/42.html">Disk
+	Geometry</link></para></footnote> but the number of unknowns
+	at this time make it prohibitively difficult for us to work
+	out. It's provided in this documentation as a general
 	informative reference.
       </para>
 
@@ -469,7 +480,6 @@ Command (m for help):]]>
 	  (tracks/head) * (sectors/track) * (bytes/sector)
 	</mathphrase>
       </equation>
-      <!-- [F1] Disk Capacity Formula [3] -->
 
       <para>
 	A much simpler way to create partitions (still using
@@ -501,8 +511,17 @@ Command (m for help):]]>
 	  <systemitem class="resource">/dev/sda</systemitem> to
 	  represent my hard drive, we need to create a block special
 	  device to represent our virtual disk. This is called a loop
-	  device(*). You can think of a loop device, e.g., <systemitem
-	  class="resource">/dev/loop1</systemitem>, like a translator.
+	  device<footnote><para> Don't confuse the often misused term
+	  "loopback device" with a "loop device." In networking a
+	  loopback device refers to a virtual interface used for
+	  routing within a host. <systemitem
+	  class="domainname">localhost</systemitem> is the standard
+	  hostname given to the loopback address <systemitem
+	  class="ipaddress">172.0.0.1</systemitem>. See <link
+	  xl:href="http://tools.ietf.org/html/rfc1700">rfc1700</link>
+	  for additional information.</para></footnote> You can think of a loop device,
+	  e.g., <systemitem class="resource">/dev/loop1</systemitem>,
+	  like a translator.
 	</para>
 
 	<para>
@@ -521,12 +540,17 @@ Command (m for help):]]>
 	<note>
 	  <para>
 	    Since we'll be working with the kernel to create a device
-	    you'll need to have super user permissions to continue.
+	    you'll need to have super user permissions to
+	    continue<footnote><para><package>FUSE</package>
+	    (Filesystem in Userspace) has a module called <systemitem
+	    class="filesystem">Mountlo</systemitem> that allows
+	    non-root users to make make loop
+	    devices.</para></footnote>.
 	  </para>
 	</note>
 
 	<para>
-	  To create a loop device(**). Run the
+	  To create a loop device. Run the
 	  <command>losetup</command> command with the
 	  <option>-f</option> option and an available loop device will
 	  be selected automatically and associated with
@@ -835,38 +859,6 @@ Filesystem            Size  Used Avail Use% Mounted on
 $ sudo losetup -d /dev/loop1]]>
 	  </screen>
 	</example>
-
-	<para>
-	  * Don't confuse the often misused term "loopback device"
-	  with a "loop device." In networking a loopback device refers
-	  to a virtual interface used for routing within a
-	  host. <systemitem class="domainname">localhost</systemitem>
-	  is the standard hostname given to the loopback address
-	  <systemitem class="ipaddress">172.0.0.1</systemitem>. See
-	  [4] for additional information.
-	</para>
-
-	<para>
-	  **<package>FUSE</package> (Filesystem is Userspace) has a
-	  module called <systemitem
-	  class="filesystem">Mountlo</systemitem> that allows non-root
-	  users to make make loop devices. See [5] for the download
-	  information.
-	</para>
-
-	<screen><![CDATA[
-===============================
-
-References
-
-[0] Caret Notation - http://en.wikipedia.org/wiki/Caret_notation
-[1] Control Characters - http://en.wikipedia.org/wiki/Control_code
-[2] GNU Parted 1.9.0 Manual - http://www.gnu.org/software/parted/manual/html_node/mklabel.html#mklabel
-[3] Disk Geometry - http://www.rwc.uc.edu/koehler/comath/42.html
-[4] RFC: 1700 - http://tools.ietf.org/html/rfc1700
-[5] FUSE - http://sourceforge.net/apps/mediawiki/fuse/index.php?title=FileSystems#Mountlo
-]]>
-	</screen>
       </section>
     </section>
   </section>
