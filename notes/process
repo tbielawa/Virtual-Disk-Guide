@@ -19,10 +19,10 @@ the /dev/sda file is.
 
 ===============================
 
-<tbielawa>@(fridge)[~/images] 02:53:18
+<tbielawa>@(fridge)[~/images]
 $ sudo file /dev/sda
 /dev/sda: block special
-<tbielawa>@(fridge)[~/images] 02:53:20
+<tbielawa>@(fridge)[~/images]
 $ sudo stat /dev/sda
   File: `/dev/sda'
   Size: 0		Blocks: 0          IO Block: 4096   block special file
@@ -31,7 +31,7 @@ Access: (0660/brw-rw----)  Uid: (    0/    root)   Gid: (    6/    disk)
 Access: 2010-09-15 01:09:02.060722589 -0400
 Modify: 2010-09-12 11:03:20.831372852 -0400
 Change: 2010-09-12 11:03:26.226369247 -0400
-<tbielawa>@(fridge)[~/images] 02:53:27
+<tbielawa>@(fridge)[~/images]
 $ sudo fdisk -l /dev/sda
 
 Disk /dev/sda: 320.1 GB, 320071851520 bytes
@@ -103,15 +103,15 @@ value '0'.
 
 ===============================
 
-<tbielawa>@(fridge)[~/images] 02:51:12
+<tbielawa>@(fridge)[~/images]
 $ dd if=/dev/zero of=disk1.raw bs=512 count=2097152
 2097152+0 records in
 2097152+0 records out
 1073741824 bytes (1.1 GB) copied, 10.8062 s, 99.4 MB/s
-<tbielawa>@(fridge)[~/images] 02:51:25
+<tbielawa>@(fridge)[~/images]
 $ file disk1.raw
 disk1.raw: data
-<tbielawa>@(fridge)[~/images] 02:51:36
+<tbielawa>@(fridge)[~/images]
 $ stat disk1.raw
   File: `disk1.raw'
   Size: 1073741824	Blocks: 2097152    IO Block: 4096   regular file
@@ -120,7 +120,7 @@ Access: (0644/-rw-r--r--)  Uid: (  500/tbielawa)   Gid: (  500/tbielawa)
 Access: 2010-09-15 02:51:36.147724384 -0400
 Modify: 2010-09-15 02:51:25.729720057 -0400
 Change: 2010-09-15 02:51:25.729720057 -0400
-<tbielawa>@(fridge)[~/images] 02:51:37
+<tbielawa>@(fridge)[~/images]
 $ fdisk -l disk1.raw
 
 Disk disk1.raw: 0 MB, 0 bytes
@@ -158,7 +158,7 @@ Nothing surprising here. disk1.raw is just 2^30 0's in a row... for now.
 
 Now use parted to put a valid partition table on the image file.
 
-<tbielawa>@(fridge)[~/images] 07:38:18
+<tbielawa>@(fridge)[~/images]
 $ parted disk1.raw mklabel msdos
 WARNING: You are not superuser.  Watch out for permissions.
 
@@ -166,10 +166,10 @@ WARNING: You are not superuser.  Watch out for permissions.
 Now lets examine the image again
 
 
-<tbielawa>@(fridge)[~/images] 07:38:25
+<tbielawa>@(fridge)[~/images]
 $ file disk1.raw
 disk1.raw: x86 boot sector, code offset 0xb8
-<tbielawa>@(fridge)[~/images] 07:39:13
+<tbielawa>@(fridge)[~/images]
 $ stat disk1.raw
   File: `disk1.raw'
   Size: 1073741824      Blocks: 2097160    IO Block: 4096   regular file
@@ -178,7 +178,7 @@ Access: (0644/-rw-r--r--)  Uid: (  500/tbielawa)   Gid: (  500/tbielawa)
 Access: 2010-09-15 19:38:30.516826093 -0400
 Modify: 2010-09-15 19:38:25.934611550 -0400
 Change: 2010-09-15 19:38:25.934611550 -0400
-<tbielawa>@(fridge)[~/images] 07:39:26
+<tbielawa>@(fridge)[~/images]
 $ fdisk -l disk1.raw
 You must set cylinders.
 You can do this from the extra functions menu.
@@ -227,7 +227,7 @@ Creating partitions on disk1.raw
 So now disk1.raw has a partition table, but does that mean we can
 create partitions on it now? Lets run fdisk on disk1.raw.
 
-    <tbielawa>@(fridge)[~/images] 08:21:18
+    <tbielawa>@(fridge)[~/images]
     $ fdisk disk1.raw
     You must set cylinders.
     You can do this from the extra functions menu.
@@ -274,9 +274,9 @@ commands -f option to find an available loop device and associate
 disk1.raw with it.
 
 
-    <tbielawa>@(fridge)[~/images] 10:08:14
+    <tbielawa>@(fridge)[~/images]
     $ sudo losetup -f disk1.raw
-    <tbielawa>@(fridge)[~/images] 10:10:23
+    <tbielawa>@(fridge)[~/images]
     $ sudo losetup -a
     /dev/loop1: [0805]:151552 (/home/tbielawa/images/disk1.raw)
 
@@ -286,10 +286,10 @@ yourself that nothing has changed since we put a filesystem on it with
 
 Lets examine our newly created loop device now.
 
-    <tbielawa>@(fridge)[~/images] 10:21:22
+    <tbielawa>@(fridge)[~/images]
     $ file /dev/loop0
     /dev/loop0: block special
-    <tbielawa>@(fridge)[~/images] 10:21:36
+    <tbielawa>@(fridge)[~/images]
     $ stat /dev/loop0
       File: `/dev/loop0'
       Size: 0               Blocks: 0          IO Block: 4096   block special file
@@ -298,7 +298,7 @@ Lets examine our newly created loop device now.
     Access: 2010-09-15 01:22:09.909721760 -0400
     Modify: 2010-09-12 11:03:19.351004598 -0400
     Change: 2010-09-12 11:03:24.694640781 -0400
-    <tbielawa>@(fridge)[~/images] 10:21:40
+    <tbielawa>@(fridge)[~/images]
     $ sudo fdisk -l /dev/loop0
 
     Disk /dev/loop0: 1073 MB, 1073741824 bytes
@@ -337,7 +337,7 @@ it with ext3, and then mount it for reading and writing.
 Open /dev/loop0 (or whatever loop device your disk was mounted to)
 with fdisk to create a partition.
 
-    <tbielawa>@(fridge)[~/images] 10:33:36
+    <tbielawa>@(fridge)[~/images]
     $ sudo fdisk /dev/loop0
 
     Command (m for help): n
@@ -364,7 +364,7 @@ with fdisk to create a partition.
     The kernel still uses the old table. The new table will be used at
     the next reboot or after you run partprobe(8) or kpartx(8)
     Syncing disks.
-    <tbielawa>@(fridge)[~/images] 10:41:25
+    <tbielawa>@(fridge)[~/images]
     $ sudo fdisk -l /dev/loop0
 
     Disk /dev/loop0: 1073 MB, 1073741824 bytes
@@ -400,7 +400,7 @@ partition will be 512 * 63 = 32,256).
 Print the partition table using *fdisk* with the -u option to switch
 the printing format to sectors instead of cylinders for units.
 
-    <tbielawa>@(fridge)[~/images] 10:49:40
+    <tbielawa>@(fridge)[~/images]
     $ sudo fdisk -ul /dev/loop0
 
     Disk /dev/loop0: 1073 MB, 1073741824 bytes
@@ -417,9 +417,9 @@ that it starts on sector 63. Since we have to specify offsets in bytes
 we multiply 63 by 512 (the default block size) to obtain an offset of
 32256 bytes.
 
-    <tbielawa>@(fridge)[~/images] 11:06:44
+    <tbielawa>@(fridge)[~/images]
     $ sudo losetup -o 32256 -f /dev/loop0
-    <tbielawa>@(fridge)[~/images] 11:07:59
+    <tbielawa>@(fridge)[~/images]
     $ sudo losetup -a
     /dev/loop0: [0805]:151552 (/home/tbielawa/images/disk1.raw)
     /dev/loop1: [0005]:5102 (/dev/loop0), offset 32256
@@ -427,7 +427,7 @@ we multiply 63 by 512 (the default block size) to obtain an offset of
 Now that we have /dev/loop1 representing partition of our virtual disk
 we can create a filesystem on it and finally mount it.
 
-    <tbielawa>@(fridge)[~/images] 11:09:53
+    <tbielawa>@(fridge)[~/images]
     $ sudo mkfs -t ext3 /dev/loop1
     mke2fs 1.41.9 (22-Aug-2009)
     Filesystem label=
@@ -450,18 +450,18 @@ we can create a filesystem on it and finally mount it.
 
     This filesystem will be automatically checked every 25 mounts or
     180 days, whichever comes first.  Use tune2fs -c or -i to override.
-    <tbielawa>@(fridge)[~/images] 11:10:02
+    <tbielawa>@(fridge)[~/images]
     $ sudo losetup -d /dev/loop1
-    <tbielawa>@(fridge)[~/images] 11:10:33
+    <tbielawa>@(fridge)[~/images]
     $ sudo losetup -d /dev/loop0
-    <tbielawa>@(fridge)[~/images] 11:10:34
+    <tbielawa>@(fridge)[~/images]
     $ mkdir partition1
-    <tbielawa>@(fridge)[~/images] 11:11:28
+    <tbielawa>@(fridge)[~/images]
     $ sudo mount -t ext3 -o loop,offset=32256 disk1.raw partition1/
-    <tbielawa>@(fridge)[~/images] 11:11:40
+    <tbielawa>@(fridge)[~/images]
     $ mount | grep partition1
     /dev/loop0 on /home/tbielawa/images/partition1 type ext3 (rw,offset=32256)
-    <tbielawa>@(fridge)[~/images] 11:11:45
+    <tbielawa>@(fridge)[~/images]
     $ df -h partition1/
     Filesystem            Size  Used Avail Use% Mounted on
     /dev/loop0           1008M   18M  940M   2% /home/tbielawa/images/partition1
@@ -473,7 +473,7 @@ we can create a filesystem on it and finally mount it.
 You can destroy the loop device (while leaving your file intact) by
 giving the -d option to losetup.
 
-    <tbielawa>@(fridge)[~/images] 10:10:27
+    <tbielawa>@(fridge)[~/images]
     $ sudo losetup -d /dev/loop1
 
 * Don't confuse the often misused term "loopback device" with a "loop
