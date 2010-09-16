@@ -135,6 +135,15 @@ Disk disk1.raw doesn't contain a valid partition table
 From this there isn't much disk1.raw has in common with the actual
 disk drive sda.
 
+*file* thinks it's "data", which the file manual page
+says is how it labels what is usually ‘binary’ or non-printable
+
+*stat* says it's just a regular file.
+
+*fdisk* doesn't knows how big it is, nor can it find any partition
+information on it.
+
+
           |     sda       |     disk1.raw     |
           -------------------------------------
     file  | block special |   data            |
@@ -145,19 +154,343 @@ disk drive sda.
 
 Nothing surprising here. disk1.raw is just 2^30 0's in a row... for now.
 
+===============================
+
+Now use parted to put a valid partition table on the image file.
+
+<tbielawa>@(fridge)[~/images] 07:38:18
+$ parted disk1.raw mklabel msdos
+WARNING: You are not superuser.  Watch out for permissions.
+
+
+Now lets examine the image again
+
+
+<tbielawa>@(fridge)[~/images] 07:38:25
+$ file disk1.raw
+disk1.raw: x86 boot sector, code offset 0xb8
+<tbielawa>@(fridge)[~/images] 07:39:13
+$ stat disk1.raw
+  File: `disk1.raw'
+  Size: 1073741824      Blocks: 2097160    IO Block: 4096   regular file
+Device: 805h/2053d      Inode: 151552      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (  500/tbielawa)   Gid: (  500/tbielawa)
+Access: 2010-09-15 19:38:30.516826093 -0400
+Modify: 2010-09-15 19:38:25.934611550 -0400
+Change: 2010-09-15 19:38:25.934611550 -0400
+<tbielawa>@(fridge)[~/images] 07:39:26
+$ fdisk -l disk1.raw
+You must set cylinders.
+You can do this from the extra functions menu.
+
+Disk disk1.raw: 0 MB, 0 bytes
+255 heads, 63 sectors/track, 0 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk identifier: 0x000e44e8
+
+    Device Boot      Start         End      Blocks   Id  System
+
+
+Understanding what has changed:
+
+   Using parted is the first step to a better thing. You can also use
+   parted on regular disk drives to change the kind of partition table
+   on any disk (Generally speaking, partitiontables are tied to an
+   architecture and operating system).
+
+   The GNU parted utility can create a bunch of different table types:
+   "bsd", "dvh", "gpt", "loop", "mac", "msdos", "pc98", or "sun" [2].
+
+
+Now when we run *file* instead of "data" *file* thinks it is an x86
+boot sector. That sounds pretty accurate since we just put a partition
+table on it.
+
+*stat* still thinks it's a regular file (as opposed to a block special
+device, or a socket, etc...).
+
+*fdisk* was able to find a partition table in that boot sector that
+ *file* found.
+
+          |     sda       |     disk1.raw     | disk1.raw (parted) |
+          ----------------------------------------------------------
+    file  | block special |   data            |   x86 boot sector  |
+    stat  | block special |   regular file    |   regular file     |
+    fdisk | Has partition |   no partition    |   valid partition  |
+          |  table        |    table          |    table. Unknown  |
+          -----------------------------------------cylinder count--|
+
+===============================
+
+Creating partitions on disk1.raw
+
+So now disk1.raw has a partition table, but does that mean we can
+create partitions on it now? Lets run fdisk on disk1.raw.
+
+    <tbielawa>@(fridge)[~/images] 08:21:18
+    $ fdisk disk1.raw
+    You must set cylinders.
+    You can do this from the extra functions menu.
+
+    Command (m for help):
+
+To calculate how many cylinders to specify you could work backwards
+from the formula for calculating disk capacity [F1], but the number of
+unknowns at this time make it prohibitively difficult for us to work
+out.
+
+    Disk Capacity = Total Disks  *  Cylinders * Heads        * Tracks   * Sectors  * Bytes
+                                    per disk    per cylinder   per head   per track  per sector
+
+                                                                [F1] Disk Capacity Formula [3]
+
+Instead of using fdisk on disk1.raw directly, we'll create a loop
+device and associate disk1.raw with it. From here on we'll be
+accessing our virtual drives through loop devices.
+
+===============================
+
+Creating partitions on a loop device.
+
+Why are we doing this? And what is a loop device?
+
+Unfortunately for data1.raw, it will never be anything more than just
+a file. The operating just system doesn't have interfaces for block
+operations against files. As the kernel creates the block special
+device /dev/sda to represent my hard drive the kernel needs to create
+a block special device associated with our file. This is called a loop
+device(*).
+
+You can think of a loop device, e.g., /dev/loop1, like a
+translator. With a loop device inserted betwen programs and our disk
+image we can view and operate on the disk image as if it were a
+regular drive.
+
+  Creating a loop device.
+
+Since we'll be working with the kernel to create a device you'll need
+super user permissions to create a loop device(**). Give the *losetup*
+commands -f option to find an available loop device and associate
+disk1.raw with it.
+
+
+    <tbielawa>@(fridge)[~/images] 10:08:14
+    $ sudo losetup -f disk1.raw
+    <tbielawa>@(fridge)[~/images] 10:10:23
+    $ sudo losetup -a
+    /dev/loop1: [0805]:151552 (/home/tbielawa/images/disk1.raw)
+
+You can run *file*, *stat*, and *fdisk* on disk1.raw to see for
+yourself that nothing has changed since we put a filesystem on it with
+*parted*.
+
+Lets examine our newly created loop device now.
+
+    <tbielawa>@(fridge)[~/images] 10:21:22
+    $ file /dev/loop0
+    /dev/loop0: block special
+    <tbielawa>@(fridge)[~/images] 10:21:36
+    $ stat /dev/loop0
+      File: `/dev/loop0'
+      Size: 0               Blocks: 0          IO Block: 4096   block special file
+    Device: 5h/5d   Inode: 5102        Links: 1     Device type: 7,0
+    Access: (0660/brw-rw----)  Uid: (    0/    root)   Gid: (    6/    disk)
+    Access: 2010-09-15 01:22:09.909721760 -0400
+    Modify: 2010-09-12 11:03:19.351004598 -0400
+    Change: 2010-09-12 11:03:24.694640781 -0400
+    <tbielawa>@(fridge)[~/images] 10:21:40
+    $ sudo fdisk -l /dev/loop0
+
+    Disk /dev/loop0: 1073 MB, 1073741824 bytes
+    255 heads, 63 sectors/track, 130 cylinders
+    Units = cylinders of 16065 * 512 = 8225280 bytes
+    Disk identifier: 0x000e44e8
+
+          Device Boot      Start         End      Blocks   Id  System
+
+Look back at when I ran these commands against my actual disk drive
+(/dev/sda) and you'll see they're quite similar.
+
+*file* detects loop0 as a block special device
+
+*stat* does too now
+
+*fdisk* no longer says we need to set the cylinders.
+
+
+          |     sda       |     disk1.raw     | disk1.raw (parted) |     /dev/loop0       |
+          ---------------------------------------------------------------------------------
+    file  | block special |   data            |   x86 boot sector  | block special        |
+    stat  | block special |   regular file    |   regular file     | block special        |
+    fdisk | Has partition |   no partition    |   valid partition  | Has partition table, |
+          |  table        |    table          |    table. Unknown  |  cylinder count      |
+          -----------------------------------------cylinder count--|--known----------------
+
+Our virtual disk is starting to look like a real hard drive now!
+
+To being this section to a conclusion we'll create a partition, format
+it with ext3, and then mount it for reading and writing.
+
+
+   Creating partitions
+
+Open /dev/loop0 (or whatever loop device your disk was mounted to)
+with fdisk to create a partition.
+
+    <tbielawa>@(fridge)[~/images] 10:33:36
+    $ sudo fdisk /dev/loop0
+
+    Command (m for help): n
+    Command action
+       e   extended
+       p   primary partition (1-4)
+    p
+    Partition number (1-4): 1
+    First cylinder (1-130, default 1):
+    Using default value 1
+    Last cylinder, +cylinders or +size{K,M,G} (1-130, default 130):
+    Using default value 130
+
+    Command (m for help): t
+    Selected partition 1
+    Hex code (type L to list codes): 83
+
+    Command (m for help): w
+    The partition table has been altered!
+
+    Calling ioctl() to re-read partition table.
+
+    WARNING: Re-reading the partition table failed with error 22: Invalid argument.
+    The kernel still uses the old table. The new table will be used at
+    the next reboot or after you run partprobe(8) or kpartx(8)
+    Syncing disks.
+    <tbielawa>@(fridge)[~/images] 10:41:25
+    $ sudo fdisk -l /dev/loop0
+
+    Disk /dev/loop0: 1073 MB, 1073741824 bytes
+    255 heads, 63 sectors/track, 130 cylinders
+    Units = cylinders of 16065 * 512 = 8225280 bytes
+    Disk identifier: 0x000e44e8
+
+          Device Boot      Start         End      Blocks   Id  System
+    /dev/loop0p1               1         130     1044193+  83  Linux
+
+
+>>> ADD CALLOUTS ABOVE <<<
+
+
+Unlike /dev/sda we can't just create a partition on the first loop0
+partition by addressing it as /dev/loop0. This is because the kernel
+has no device created to represent this. Instead we'll have to create
+another device associated with a specific offset in (loop0/disk1.raw).
+
+    Why do we have to specify an offset? How do we know what offset to
+    specificy?
+
+An "offset" just means how far from the beginning of a device
+something is. We need to know this because we're going to create a
+device mapped to the first partition (Linux does this automatically
+for regular disks during the boot proces). Partitions don't start on
+the first block of a device because filesystem information is stored
+there. To specify the offset we just need to know what sector the
+partition (loop0p1) starts on. *fdisk* can give us this
+information. (Spoiler: 9 times out of 10 the offset for the first
+partition will be 512 * 63 = 32,256).
+
+Print the partition table using *fdisk* with the -u option to switch
+the printing format to sectors instead of cylinders for units.
+
+    <tbielawa>@(fridge)[~/images] 10:49:40
+    $ sudo fdisk -ul /dev/loop0
+
+    Disk /dev/loop0: 1073 MB, 1073741824 bytes
+    255 heads, 63 sectors/track, 130 cylinders, total 2097152 sectors
+    Units = sectors of 1 * 512 = 512 bytes
+    Disk identifier: 0x000e44e8
+
+          Device Boot      Start         End      Blocks   Id  System
+    /dev/loop0p1              63     2088449     1044193+  83  Linux
+
+
+/dev/loop0p1 is our first partition and from the table above we know
+that it starts on sector 63. Since we have to specify offsets in bytes
+we multiply 63 by 512 (the default block size) to obtain an offset of
+32256 bytes.
+
+    <tbielawa>@(fridge)[~/images] 11:06:44
+    $ sudo losetup -o 32256 -f /dev/loop0
+    <tbielawa>@(fridge)[~/images] 11:07:59
+    $ sudo losetup -a
+    /dev/loop0: [0805]:151552 (/home/tbielawa/images/disk1.raw)
+    /dev/loop1: [0005]:5102 (/dev/loop0), offset 32256
+
+Now that we have /dev/loop1 representing partition of our virtual disk
+we can create a filesystem on it and finally mount it.
+
+    <tbielawa>@(fridge)[~/images] 11:09:53
+    $ sudo mkfs -t ext3 /dev/loop1
+    mke2fs 1.41.9 (22-Aug-2009)
+    Filesystem label=
+    OS type: Linux
+    Block size=4096 (log=2)
+    Fragment size=4096 (log=2)
+    65536 inodes, 262136 blocks
+    13106 blocks (5.00%) reserved for the super user
+    First data block=0
+    Maximum filesystem blocks=268435456
+    8 block groups
+    32768 blocks per group, 32768 fragments per group
+    8192 inodes per group
+    Superblock backups stored on blocks:
+            32768, 98304, 163840, 229376
+
+    Writing inode tables: done
+    Creating journal (4096 blocks): done
+    Writing superblocks and filesystem accounting information: done
+
+    This filesystem will be automatically checked every 25 mounts or
+    180 days, whichever comes first.  Use tune2fs -c or -i to override.
+    <tbielawa>@(fridge)[~/images] 11:10:02
+    $ sudo losetup -d /dev/loop1
+    <tbielawa>@(fridge)[~/images] 11:10:33
+    $ sudo losetup -d /dev/loop0
+    <tbielawa>@(fridge)[~/images] 11:10:34
+    $ mkdir partition1
+    <tbielawa>@(fridge)[~/images] 11:11:28
+    $ sudo mount -t ext3 -o loop,offset=32256 disk1.raw partition1/
+    <tbielawa>@(fridge)[~/images] 11:11:40
+    $ mount | grep partition1
+    /dev/loop0 on /home/tbielawa/images/partition1 type ext3 (rw,offset=32256)
+    <tbielawa>@(fridge)[~/images] 11:11:45
+    $ df -h partition1/
+    Filesystem            Size  Used Avail Use% Mounted on
+    /dev/loop0           1008M   18M  940M   2% /home/tbielawa/images/partition1
 
 
 
 
 
+You can destroy the loop device (while leaving your file intact) by
+giving the -d option to losetup.
+
+    <tbielawa>@(fridge)[~/images] 10:10:27
+    $ sudo losetup -d /dev/loop1
+
+* Don't confuse the often misused term "loopback device" with a "loop
+  device." In networking a loopback device refers to a virtual
+  interface used for routing within a host. "localhost" is the
+  standard hostname given to the loopback address 172.0.0.1. See [4]
+  for additional information.
+
+* FUSE Mountlo -  http://sourceforge.net/apps/mediawiki/fuse/index.php?title=FileSystems#Mountlo
 
 
-run qemu-img info on the new image.
+===============================
 
-run file to see what the computer thinks it is.
-
-
-
+References
 
 [0] http://en.wikipedia.org/wiki/Caret_notation
 [1] http://en.wikipedia.org/wiki/Control_code
+[2] GNU Parted 1.9.0 Manual http://www.gnu.org/software/parted/manual/html_node/mklabel.html#mklabel
+[3] http://www.rwc.uc.edu/koehler/comath/42.html
+[4] RFC: 1700 http://tools.ietf.org/html/rfc1700
