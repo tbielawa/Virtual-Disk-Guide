@@ -72,8 +72,10 @@
     </copyright>
   </info>
 
+  <xi:include href="sections/Concepts.xml"/>
   <xi:include href="sections/Basics.xml"/>
   <xi:include href="sections/Advanced.xml"/>
   <!-- <xi:include href="sections/Other-Formats.xml"/> -->
   <!-- <xi:include href="sections/Additional-Resources.xml"/> -->
+  <xi:include href="sections/Appendix.xml"/>
 </book>

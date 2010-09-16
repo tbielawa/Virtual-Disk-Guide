@@ -1,0 +1,9 @@
+<appendix xmlns="http://docbook.org/ns/docbook"
+	  xmlns:xi="http://www.w3.org/2001/XInclude"
+	  xml:id="VDG-Appendix-Index"
+	  version="5.0">
+
+  <title>Appendices</title>
+
+  <xi:include href="units7.xml"/>
+</appendix>

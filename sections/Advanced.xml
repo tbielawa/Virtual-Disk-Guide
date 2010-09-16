@@ -7,21 +7,15 @@
     <title>Creating a Mountable Disk</title>
 
     <para>
-      In the previous section I went through creating a disk that you can
-      use as the boot disk for a virtual machine. In that example it was
-      expected that you would configure your virtualization software to use that
-      disk and then the operating system installation would take care of
-      creating the disk label and file systems. In this section I'll show you
-      the steps required to do that by yourself.
+      In the previous section I went through creating a disk that you
+      can use as the boot disk for a virtual machine. In that example
+      it was expected that you would configure your virtualization
+      software to use that disk and then the operating system
+      installation would take care of creating the disk label and file
+      systems. In this section I'll show you the steps required to do
+      that by yourself.
     </para>
 
-    <para>
-      I've chosen to break this section up into separate parts to
-      clearly show simpler methods apart from the more advanced
-      methods. Each method presented grows in complexity as the
-      virtual disk created becomes more indistingushable from a real
-      hard drive.
-    </para>
   </section>
 
   <section xml:id="VDI-Advanced-Cloning-A-Physical-Disk">
@@ -38,7 +32,7 @@
       option. This is possible in part due to the original philosophy
       laid down by Dennis Ritchie and Ken Thompson when they first
       created Unix that everything's treated as a file. The syntax for
-      the <option>convert</option> is below.
+      the <option>convert</option> option is below.
     </para>
 
     <programlisting>
