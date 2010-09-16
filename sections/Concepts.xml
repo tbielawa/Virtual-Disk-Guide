@@ -518,7 +518,7 @@ Command (m for help):]]>
 	  routing within a host. <systemitem
 	  class="domainname">localhost</systemitem> is the standard
 	  hostname given to the loopback address <systemitem
-	  class="ipaddress">172.0.0.1</systemitem>. See <link
+	  class="ipaddress">127.0.0.1</systemitem>. See <link
 	  xl:href="http://tools.ietf.org/html/rfc1700">rfc1700</link>
 	  for additional information.</para></footnote> You can think of a loop device,
 	  e.g., <systemitem class="resource">/dev/loop1</systemitem>,
