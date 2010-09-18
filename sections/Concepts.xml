@@ -154,6 +154,10 @@ Disk identifier: 0x12031202
 	<option>count</option>. To calculate the proper
 	<option>count</option> setting we need only to divide the
 	total number of bytes required by the size of a each block.
+	"The block size is given to <command>dd</command> with the
+	<option>bs</option> option. It specifies the block size in
+	bytes. If not explicitly defined, it defaults to 512 byte
+	blocks (2<superscript>9</superscript>)"
       </para>
 
       <equation xml:id="eq.count">
@@ -290,9 +294,9 @@ Disk disk1.raw doesn't contain a valid partition table]]>
       </screen>
 
       <para>
-	From this there isn't much <filename>disk1.raw</filename>
-	has in common with the actual disk drive <systemitem
-	class="resource">sda</systemitem>.
+	From this it's quite clear that there isn't much
+	<filename>disk1.raw</filename> has in common with the actual
+	disk drive <systemitem class="resource">sda</systemitem>.
       </para>
 
       <itemizedlist mark='opencircle'>
