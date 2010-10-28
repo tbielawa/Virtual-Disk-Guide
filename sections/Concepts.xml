@@ -259,7 +259,7 @@ $ dd if=/dev/zero of=disk1.raw bs=512 count=2097152]]>
       <title>Examining the created file</title>
 
       <para>
-	Like in <xref linkend="VDG-Concepts-Regular-Drive"/> lets
+3	Like in <xref linkend="VDG-Concepts-Regular-Drive"/> lets
 	take a look at the file we created from the operating
 	systems point of view.
       </para>

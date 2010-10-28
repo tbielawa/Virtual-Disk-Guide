@@ -1,0 +1,140 @@
+8:41:54 PM Johnny: now i shall read your document :)
+8:42:00 PM Shaggy: ty!
+8:46:44 PM Johnny:	  count = 230	  / 2 9 =	1073741824/512 = 2097152 (2,097,152)
+8:46:54 PM Johnny: you don't explain where 2^9 comes from
+8:46:57 PM Johnny: that is important :)
+8:47:11 PM Shaggy: I will add that!
+8:47:11 PM Shaggy: :D
+8:47:36 PM Johnny: might want to mention the "bs=" option for dd
+8:48:02 PM Shaggy: it's mentioned somewhere but it must not be done well. I'll look at that too.
+8:48:11 PM Shaggy: or maybe it was mentioend somehwere.
+8:48:27 PM Johnny: ah yeah you use it in the following examples
+8:48:33 PM Johnny: but don't say "bs is the block size"
+8:48:47 PM Shaggy: suggestion?
+8:49:16 PM Johnny: after...
+8:49:25 PM Johnny: "To calculate the proper	count setting we need only to divide the	total number of bytes required by the size of a each block."
+8:50:13 PM Johnny: something like "The block size is given to dd with the 'bs' option.  It specifies the block size in bytes.  If not explicitly defined, it defaults to 512 byte blocks (2^9)"
+8:50:39 PM Johnny: after that, equation 1.1 makes sense
+8:50:54 PM Johnny: and also doesn't leave the reader confused with the bs in the examples
+8:51:29 PM Shaggy: I appreciate this input!
+8:52:09 PM Johnny: i am good at it
+8:52:18 PM Johnny: i spend most of my working day correcting people :)
+8:52:26 PM Johnny: so i have learned to be helpful
+8:52:27 PM Shaggy: You work at systems too?
+8:52:30 PM Shaggy: ;)
+8:54:06 PM Johnny: also
+8:54:10 PM Johnny: helpful tidbit
+8:54:17 PM Johnny: my very unstatistically sound test...
+8:54:27 PM Johnny: change...
+8:54:32 PM Johnny: bs=512 count=2097152
+8:54:32 PM Johnny: to
+8:54:38 PM Johnny: bs=4096 count=262144
+8:54:44 PM Johnny: and on my system the creation time goes from
+8:54:49 PM Johnny: real	  0m16.361s
+8:54:49 PM Johnny: to
+8:54:54 PM Johnny: real	0m9.558s
+8:55:22 PM Johnny: due to the fact that filesystems and disk controllers tend to operate with 4KB blocks
+8:55:29 PM Shaggy: Now-a-days that's trufax
+8:57:01 PM Johnny: by my math that's a roughly 40% improvement
+8:57:11 PM Johnny: if you are making a big virtual disk that matters :)
+8:57:16 PM Shaggy: Oh yeah
+8:57:22 PM Johnny: anyways
+8:57:25 PM Johnny: *keeps reading*
+8:57:26 PM Shaggy: on my macbook time goes from real	0m34.524s to
+8:57:29 PM Shaggy: *still running*
+8:57:34 PM Shaggy: OH
+8:57:36 PM Shaggy: I didn't adjust the count
+8:57:37 PM Shaggy: rofl
+8:57:40 PM Johnny: lulz
+8:58:27 PM Shaggy: So for srs, it goes from real	0m34.524s to real	0m31.616s
+8:58:28 PM Shaggy: rofl
+8:58:50 PM Johnny: hm
+8:58:52 PM Johnny: not so good!
+8:58:57 PM Shaggy: but better!
+8:59:39 PM Shaggy: on my desktop it goes from real	0m9.450s to real	0m17.665s
+8:59:45 PM Shaggy: that's a decrease.
+9:00:00 PM Shaggy: I don't think these systems are using 4096 byte blocks
+9:00:12 PM Shaggy: These are interesting observations.
+9:00:22 PM Johnny: yessir
+9:00:33 PM Shaggy: yeah, using 512B blocks the throughbut was doubled on the desktop
+9:00:34 PM Johnny: mucho interesting!
+9:00:59 PM Johnny: mine is also on ext4
+9:01:11 PM Johnny: i dunno if yours is ext4 or not
+9:01:19 PM Shaggy: laptop is so slow
+9:02:00 PM Shaggy: desktop clocked 114MiB/sec using 512 blocks and 60.8 MiB/sec using 4096. MacBook went from 29.692 to 32.619
+9:02:35 PM Shaggy: hfs on macbook and ext4 on desktop
+9:03:07 PM Shaggy: This definetly warrants a discussion on performance adjustments.
+9:03:15 PM Shaggy: finding your ideal bs/count combo.
+
+
+
+1:13:00 PM Chris Venghaus: I've finished my chores for tonight
+11:13:04 PM Chris Venghaus: Show me ur dox
+11:15:17 PM Shaggy: hokay
+11:15:46 PM Shaggy: here's a compiled PDF and HTML doc http://peopleareducks.com/docs/vdg/output/
+11:16:08 PM Shaggy: Source if available through: git clone git://github.com/tbielawa/Virtual-Disk-Guide.git
+11:18:39 PM Shaggy: I appreciate your input
+11:18:57 PM Shaggy: My RedHat buddy gave me some earlier which was quite helpfu.
+11:19:16 PM Shaggy: Remember that this is a draft. It's not finished (under vdg/docs/ there is a todo).
+11:19:52 PM Chris Venghaus: I like how you start with a definition of blocks :)
+11:20:01 PM Shaggy: :D
+11:20:32 PM Shaggy: Hunting those sources was not easy! I take pride in having thorough references.
+11:20:55 PM Chris Venghaus: Haha
+11:21:19 PM Chris Venghaus: You also describe zero! :D
+11:21:55 PM Shaggy: LOL
+11:22:02 PM Shaggy: You can never be too sure
+11:23:23 PM Chris Venghaus: Hmm
+11:23:31 PM Chris Venghaus: You were on a roll up until loop devices
+11:23:40 PM Shaggy: it gets hairy
+11:23:52 PM Shaggy: that's the last part I assembled and marked up.
+11:24:22 PM Shaggy: I agree that it needs a lot of editing. In general the whole document needs to have the chapters removed and then reorganized.
+11:25:12 PM Chris Venghaus: *continues*
+11:29:52 PM Chris Venghaus: I like what you have so far :)
+11:30:19 PM Chris Venghaus: The background information is great.  It reads like an O'Reilly book.
+11:30:37 PM Chris Venghaus: Meaning you assume the user knows /nothing/ prior to reading.
+11:31:41 PM Shaggy: Heh, it took a long time for me to be able to know anything about virtual disks. I think that's the case with most sys admins. The data out there is just so scatted.
+11:31:47 PM Shaggy: And thank you
+11:32:26 PM Chris Venghaus: I hate docs that are like, "Now all you do is whargarble and fluxipate your fgsfds, and viola!  A sandwich."
+11:32:41 PM Shaggy: yeah!
+11:32:45 PM Shaggy: fucking fluxipation
+11:32:48 PM Shaggy: gets me all the time
+11:33:09 PM Chris Venghaus: I have a dummies book for that
+11:33:13 PM Shaggy: oh cool
+11:33:27 PM Shaggy: When I was writing the first chapter (last night) I didn't know for sure if I could actually create a virtual disk just using DD
+11:33:28 PM Shaggy: dd
+11:33:46 PM Chris Venghaus: Another neat thing you might consider is a TLDR; section
+11:33:56 PM Shaggy: Great idea
+11:33:58 PM Shaggy: !
+11:34:05 PM Shaggy: Like a "cook book"
+11:34:10 PM Chris Venghaus: Yeah
+11:34:12 PM Shaggy: "You want to:...."
+11:34:48 PM Chris Venghaus: Like, all the commands you ran to create and partition a disk in an inline, short and sweet format.
+11:35:03 PM Shaggy: Def
+11:35:09 PM Shaggy: A cheatsheet type section
+11:35:12 PM Chris Venghaus: Exactly
+11:35:24 PM Shaggy: Yeah thats a great idea.
+11:35:41 PM Chris Venghaus: It'll get more people interested in your doc
+11:36:25 PM Chris Venghaus: You'll have people searching for "How do I..." and you have it layed out for them.... with detailed information on why they're doing what they're doing if they're interested.'
+11:37:32 PM Shaggy: Eventually I'd like to extend out to the "big-name" disk types. like the virtualbox and vmware types
+11:38:13 PM Shaggy: There's information "out there" about how to manipulate them all, but it's all across dozens of message boards and FAQ sites.
+11:38:16 PM Shaggy: Not quite that useful.
+11:39:27 PM Chris Venghaus: yeah
+11:40:42 PM Chris Venghaus: Google, how do I do this?  Oh, great!  But how about this.  Oh, that's over there?  What about this?  No?  That's where?  Now where can I find info on this.  Wait... It's on the first page?  How many tabs do I have open?
+11:40:48 PM Shaggy: yeah
+11:40:50 PM Shaggy: totally
+11:41:05 PM Shaggy: So let me ask you:
+11:41:20 PM Shaggy: did you learn much from reading that little bit I have so far?
+11:41:26 PM Chris Venghaus: "Okay so now I just..... (*&^(*&%(*^$.... firefox crashed."
+11:41:47 PM Chris Venghaus: I did!
+11:42:58 PM Chris Venghaus: I could create and partition a virtual disk and assign it a loop device, at least :)
+11:43:10 PM Shaggy: :D
+11:43:24 PM Shaggy: some of the cooler stuff happens when we start using disk types other than RAW
+11:43:34 PM Shaggy: I've got most experience with qcows
+11:43:44 PM Shaggy: Making base images is fantastic while prototyping new services.
+11:44:17 PM Shaggy: I boot up a new generic vm, get the system updates installed and take care of any reboots then I shut it down
+11:44:23 PM Shaggy: rename the disk image
+11:45:02 PM Shaggy: And create another "Copy On Write" image that uses the original as a backing.
+11:45:36 PM Chris Venghaus: I've used qcows before
+11:45:39 PM Shaggy: Then if I seriously F the box up during prototyping, or when I want to test the stability of the system with a fresh install I just shut down, delete the COW, create a new one based on the same base image, and then boot up again.
+11:45:45 PM Shaggy: they're like scratch work disks.
+11:46:28 PM Chris Venghaus: I've used regular QEMU and VirtualIron
