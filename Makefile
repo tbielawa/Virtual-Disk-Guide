@@ -44,7 +44,8 @@ HTML_CHUNKED_xsl = $(STYLEDIR)/html/chunk.xsl
 # DBLATEX_PARAMS - Options specific to dblatex PDF output
 ##################################################################
 XSLTPARAMS = --xinclude \
-	--stringparam section.autolabel 1
+	--stringparam section.autolabel 1 \
+	--stringparam chunker.output.encoding UTF-8
 
 # -o $(OUTFILE).html
 #XSLT_HTML_PARAMS =

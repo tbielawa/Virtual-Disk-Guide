@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
-  <uri resource="Advanced.xml" uri="../../../../../../opt/local/share/xml/docbook/5.0/rng/docbookxi.rnc"/>
   <documentElement localName="section" typeId="DocBook"/>
   <documentElement localName="chapter" typeId="DocBook"/>
   <documentElement localName="article" typeId="DocBook"/>
