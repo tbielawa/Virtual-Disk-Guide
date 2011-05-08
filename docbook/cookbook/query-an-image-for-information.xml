@@ -1,0 +1,87 @@
+<section xml:id="VDI-Cookbook-Query-an-Image-for-Information"
+	 xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Query an Image for Information</title>
+
+  <para>
+    How to query some basic information about virtual disks. The tools
+    of the trade here are going to be <command>ls</command> to check
+    disk usage, <command>file</command> for a quick check of the
+    types, and <command>qemu-img</command> for more in-depth
+    information.
+  </para>
+
+  <example xml:id="VDI-Cookbook-Example-Query-an-Image">
+    <title>Querying an Image</title>
+
+    <screen><xi:include href="../examples/cookbook-query-an-image01" parse="text"/></screen>
+  </example>
+
+  <note>
+    <para>
+      These images are freshly created and don't have any information
+      on them yet. Both were created to be 10G images.
+    </para>
+  </note>
+
+  <para>
+    The interesting information we can get from using <command>ls
+    -lhs</command> is how the files are actually
+    sized. <filename>image-raw.raw</filename> appears to be 10G but
+    doesn't have any actual blocks allocated to it yet. It is
+    literally an empty file. What's good about these RAW disks is that
+    you don't need any special kind of tools to know how large the
+    disk is internally. The RAW image should always match it's
+    reported file size on the host OS.
+  </para>
+
+  <para>
+    Our QCOW, on the other hand, is being deceptive and concealing
+    it's true size. QCOWs will grow to their maximum size over
+    time. What makes it different from our RAW image in this case is
+    that it already has blocks allocated to it (that information is in
+    the left-most column and comes from the <option>-s</option> flag
+    to <command>ls</command>). The allocated space is overhead from
+    the meta-data associated with the QCOW image format.
+  </para>
+
+  <!-- TODO: Link reference to QCOW specification -->
+  <!-- http://people.gnome.org/~markmc/qcow-image-format.html -->
+
+  <para>
+    The <command>file</command> command tells us immediately what it
+    thinks each file is. This is another simple to perform query that
+    you can run from any system without special tools. Here we see it
+    correctly recports <filename>image-qcow.qcow2</filename>s
+    type. Unfortunately, without any content, all it can tell us about
+    <filename>image-raw.raw</filename> is that it's 'data'.
+  </para>
+
+  <note>
+    <para>
+      Its worth mentioning that RAW image types will be reported by
+      <command>file</command> as "x86 boot sector, code offset 0xb8"
+      once given a filesystem label and a partition table.
+    </para>
+  </note>
+
+  <para>
+    Using the <command>qemu-img</command> command we can get more
+    detailed information about the disk images in a clearly presented
+    format.
+  </para>
+
+  <para>
+    With <command>qemu-img</command> it's clear that
+    <filename>image-qcow.qcow2</filename> is a QCOW2 type image and is
+    only 136K on disk and internally (the 'virtual size' field) is a
+    10G disk image. If the QCOW had a backing image the path to that
+    file would be shown here as an additional field.
+  </para>
+
+  <para>
+    For the RAW image there is no new information here that we didn't
+    already get from the <command>ls</command>.
+  </para>
+</section>

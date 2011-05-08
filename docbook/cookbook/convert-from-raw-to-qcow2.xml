@@ -1,0 +1,52 @@
+<section xml:id="VDI-Cookbook-Convert-Between-RAW-and-QCOW2"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Converting Between RAW and QCOW2</title>
+
+  <section xml:id="VDI-Cookbook-Converting-from-RAW-to-QCOW2">
+    <title>Convert an Image from RAW to QCOW2</title>
+
+    <para>
+      RAW images, though simple to work with, carry the disadvantage of
+      increased disk usage on the host OS. One option to have is to
+      convert the image into the QCOW2 format which uses zlib
+      compression and optionally allows for 128 bit AES encryption.
+    </para>
+
+    <example xml:id="VDI-Cookbook-Example-Convert-from-RAW-to-QCOW2">
+      <title>Converting from RAW to QCOW2</title>
+
+      <screen><xi:include href="../examples/cookbook-convert-between-raw-and-qcow201" parse="text"/></screen>
+    </example>
+
+    <para>
+      It's that simple.
+    </para>
+  </section>
+
+  <section xml:id="VDI-Cookbook-Converting-from-QCOW2-to-RAW">
+    <title>Convert an Image from QCOW2 to RAW</title>
+
+    <para>
+      Here's how to do the last example, but in reverse.
+    </para>
+
+    <example xml:id="VDI-Cookbook-Example-Convert-from-QCOW2-to-RAW">
+      <title>Converting from QCOW2 to RAW</title>
+
+      <screen><xi:include href="../examples/cookbook-convert-between-raw-and-qcow202" parse="text"/></screen>
+    </example>
+
+    <para>
+      It's that simple.
+    </para>
+
+    <note>
+      <para>
+	When converted to the RAW format the image has the potential
+	to take up much more disk space than before.
+      </para>
+    </note>
+  </section>
+</section>

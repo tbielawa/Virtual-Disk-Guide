@@ -4,7 +4,7 @@
   xmlns:xl="http://www.w3.org/1999/xlink" version="5.0">
 
   <info>
-    <title>The System Administrators Guide to Virtual Disks</title>
+    <title>The Linux System Administrators Guide to Virtual Disks</title>
 
     <subtitle>From the basics to the advanced.</subtitle>
 
@@ -72,6 +72,7 @@
     </copyright>
   </info>
 
+  <xi:include href="docbook/Cookbook.xml"/>
   <xi:include href="docbook/Concepts.xml"/>
   <xi:include href="docbook/Basics.xml"/>
   <xi:include href="docbook/Advanced.xml"/>

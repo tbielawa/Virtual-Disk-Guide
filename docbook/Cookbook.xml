@@ -1,0 +1,26 @@
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude"
+	 xml:id="VDI-Cookbook"
+	 version="5.0">
+
+  <title>Cookbook</title>
+
+  <section xml:id="VDI-Cookbook-Introduction">
+    <title>The Virtual Disk Cookbook</title>
+
+    <para>
+      In this section we're just going to cover things you'll find
+      yourself needing to do from time to time. Theory and concepts
+      will be covered later on. It's assumed that you're comfortable
+      with the concepts already and don't need everything explained.
+    </para>
+
+    <!-- TODO: Make a link to theory/concepts-->
+
+  </section>
+
+  <!-- Links to each recipe follow -->
+  <xi:include href="cookbook/query-an-image-for-information.xml"/>
+  <xi:include href="cookbook/convert-from-qcow2-to-raw.xml"/>
+  <xi:include href="cookbook/convert-from-raw-to-qcow2.xml"/>
+</chapter>

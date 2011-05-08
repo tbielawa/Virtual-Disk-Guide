@@ -5,5 +5,5 @@
 
   <title>Appendices</title>
 
-  <xi:include href="units7.xml"/>
+  <xi:include href="appendix/units7.xml"/>
 </appendix>
