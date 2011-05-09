@@ -94,7 +94,9 @@ all: clean docs
 
 docdir:
 	mkdir -p $(DEST)
+	ln -s ../css/lnx-docbook-stylesheet.css html/lnx-docbook-stylesheet.css || true
 	mkdir -p $(CHUNKDIR)
+	ln -s ../css/lnx-docbook-stylesheet.css output/lnx-docbook-stylesheet.css || true
 
 chunked:
 	xsltproc $(XSLTPARAMS) $(XSLT_CHUNKED_PARAMS) $(HTML_CHUNKED_xsl) $(INPUT).xml
@@ -124,4 +126,4 @@ locator:
 
 clean:
 	$(FIND)  \( -regex "^[.]?(.+)\~$$" -o -regex "./[.]?#.*#" \) -delete
-	rm -fR output/*
+	rm -fR output/* html/*
