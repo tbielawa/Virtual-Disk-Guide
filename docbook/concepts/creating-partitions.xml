@@ -1,13 +1,19 @@
-<section xml:id="VDG-Concepts-"
-	 xmlns="http://docbook.org/ns/docbook"
-	 xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="VDG-Concepts-Creating-Partitions"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <title>Creating partitions</title>
 
+  <para>
+    Open <systemitem class="resource">/dev/loop0</systemitem> (or
+    whatever loop device your disk was associated with) in
+    <command>fdisk</command> to create a partition.
+  </para>
 
-  <example xml:id="VDG-Concepts-">
-    <title></title>
+  <example xml:id="VDG-Concepts-Example-Create-Partition">
+    <title>Creating a partition with <command>fdisk</command></title>
 
-    <screen><xi:include href="../examples/concepts-" parse="text"/></screen>
+    <screen><xi:include href="../examples/concepts-creating-partitions01" parse="text"/></screen>
   </example>
-
+  <!-- That example would benefit a LOT from some well placed callouts -->
 </section>

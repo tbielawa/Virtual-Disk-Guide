@@ -1,13 +1,38 @@
-<section xml:id="VDG-Concepts-"
-	 xmlns="http://docbook.org/ns/docbook"
-	 xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="VDG-Concepts-Creating-a-Loop-Device"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <title>Creating a Loop Device</title>
 
+  <note>
+    <para>
+      Since we'll be working with the kernel to create a device
+      you'll need to have super user permissions to
+      continue<footnote><para><package>FUSE</package>
+      (Filesystem in Userspace) has a module called <systemitem
+      class="filesystem">Mountlo</systemitem> that allows
+      non-root users to make make loop
+      devices.</para></footnote>.
+    </para>
+  </note>
 
-  <example xml:id="VDG-Concepts-">
-    <title></title>
+  <para>
+    To create a loop device. Run the <command>losetup</command>
+    command with the <option>-f</option> option and an available loop
+    device will be selected automatically and associated with
+    <filename>disk1.raw</filename>.
+  </para>
 
-    <screen><xi:include href="../examples/concepts-" parse="text"/></screen>
+  <example xml:id="VDG-Concepts-Example-Run-losetup">
+    <title>Creating a loop device with <command>losetup</command></title>
+
+    <screen><xi:include href="../examples/concepts-creating-a-loop-device01" parse="text"/></screen>
   </example>
 
+  <para>
+    You can run <command>file</command>, <command>stat</command>, and
+    <command>fdisk</command> on <filename>disk1.raw</filename> to
+    verify that nothing has changed since we put a partition table on
+    it with <command>parted</command>.
+  </para>
 </section>

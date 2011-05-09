@@ -1,0 +1,96 @@
+<section xml:id="VDG-Concepts-Devices-and-Partitions-Introduction"
+	 xmlns:xl="http://www.w3.org/1999/xlink"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Introduction</title>
+
+  <para>
+    After using <command>parted</command>
+    <filename>disk1.raw</filename> has a partition table, but does
+    that mean we can create partitions on it now? Lets run
+    <command>fdisk</command> on <filename>disk1.raw</filename>.
+  </para>
+
+  <screen><![CDATA[
+<tbielawa>@(fridge)[~/images]
+$ fdisk disk1.raw
+You must set cylinders.
+You can do this from the extra functions menu.
+
+Command (m for help):]]></screen>
+
+  <para>
+    To calculate how many cylinders to specify you could work
+    backwards from <xref
+    linkend="VDG-Concepts-Capacity-Equation"/><footnote><para><link
+    xl:href="http://www.rwc.uc.edu/koehler/comath/42.html">Disk
+    Geometry</link></para></footnote> but the number of unknowns at
+    this time make it prohibitively difficult for us to work out. It's
+    provided in this documentation as a general informative reference.
+  </para>
+
+  <equation xml:id="VDG-Concepts-Capacity-Equation">
+    <title>Total Capacity of a Disk</title>
+
+    <mathphrase>
+      Disk Capacity = (cylinders/disk) * (heads/cylinder) *
+      (tracks/head) * (sectors/track) * (bytes/sector)
+    </mathphrase>
+  </equation>
+
+  <para>
+    A much simpler way to create partitions (still using
+    <command>fdisk</command>) is by is by accessing the file as if it
+    were an actual device. Doing this requires creating loop devices.
+  </para>
+
+  <para>
+    Instead of using <command>fdisk</command> on
+    <filename>disk1.raw</filename> directly, we'll create a loop
+    device and associate <filename>disk1.raw</filename> with it. From
+    here on we'll be accessing our virtual drives through loop
+    devices.
+  </para>
+
+  <para>
+    Why are we doing this? And what is a loop device?
+  </para>
+
+  <para>
+    Unfortunately for <filename>disk1.raw</filename>, it will never be
+    anything more than just a file. The operating just system doesn't
+    have interfaces for block operations against files. As the kernel
+    creates the block special device <systemitem
+    class="resource">/dev/sda</systemitem> to represent my hard drive,
+    we need to create a block special device to represent our virtual
+    disk. This is called a loop device<footnote><para> Don't confuse
+    the often misused term "loopback device" with a "loop device." In
+    networking a loopback device refers to a virtual interface used
+    for routing within a host. <systemitem
+    class="domainname">localhost</systemitem> is the standard hostname
+    given to the loopback address <systemitem
+    class="ipaddress">127.0.0.1</systemitem>. See <link
+    xl:href="http://tools.ietf.org/html/rfc1700">rfc1700</link> for
+    additional information.</para></footnote> You can think of a loop
+    device, e.g., <systemitem
+    class="resource">/dev/loop1</systemitem>, like a translator.
+  </para>
+
+  <para>
+    With a loop device inserted between programs and our disk image we
+    can view and operate on the disk image as if it were a regular
+    drive. When accessed through a loop device
+    <command>fdisk</command> can properly determine the number of
+    cylinders, heads, and everything else required to create
+    partitions.
+  </para>
+
+
+  <example xml:id="VDG-Concepts-">
+    <title></title>
+
+    <screen><xi:include href="../examples/concepts-" parse="text"/></screen>
+  </example>
+
+</section>

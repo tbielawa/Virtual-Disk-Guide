@@ -1,8 +1,23 @@
-<section xml:id="VDG-Concepts-"
-	 xmlns="http://docbook.org/ns/docbook"
-	 xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="VDG-Concepts-Cleaning-Up"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <title>Cleaning Up</title>
 
+  <para>
+    You can detach the loop device (while leaving your file
+    intact) by giving the <option>-d</option> option to
+    <command>losetup</command>.
+  </para>
+
+  <example xml:id="VDG-Concepts-Example-Detaching-a-loop-device">
+    <title>Detaching a loop device</title>
+
+    <screen><![CDATA[
+<tbielawa>@(fridge)[~/images]
+$ sudo losetup -d /dev/loop1]]>
+    </screen>
+  </example>
 
   <example xml:id="VDG-Concepts-">
     <title></title>

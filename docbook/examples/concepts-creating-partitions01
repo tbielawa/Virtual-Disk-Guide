@@ -1,0 +1,37 @@
+<tbielawa>@(fridge)[~/images]
+$ sudo fdisk /dev/loop0
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 1
+First cylinder (1-130, default 1):
+Using default value 1
+Last cylinder, +cylinders or +size{K,M,G} (1-130, default 130):
+Using default value 130
+
+Command (m for help): t
+Selected partition 1
+Hex code (type L to list codes): 83
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error 22: Invalid argument.
+The kernel still uses the old table. The new table will be used at
+the next reboot or after you run partprobe(8) or kpartx(8)
+Syncing disks.
+<tbielawa>@(fridge)[~/images]
+$ sudo fdisk -l /dev/loop0
+
+Disk /dev/loop0: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk identifier: 0x000e44e8
+
+      Device Boot      Start         End      Blocks   Id  System
+/dev/loop0p1               1         130     1044193+  83  Linux

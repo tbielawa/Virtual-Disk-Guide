@@ -1,0 +1,7 @@
+          |     sda       |  disk1.raw        | disk1.raw (parted) |     /dev/loop0       |
+          ---------------------------------------------------------------------------------
+file      | block special |   data            |   x86 boot sector  | block special        |
+stat      | block special |   regular file    |   regular file     | block special        |
+fdisk     | Has partition |   no partition    |   valid partition  | Has partition table, |
+          |  table        |    table          |    table. Unknown  | Cylinder count known |
+          -----------------------------------------cylinder count--|-----------------------

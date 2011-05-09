@@ -1,13 +1,57 @@
-<section xml:id="VDG-Concepts-"
+<section xml:id="VDG-Concepts-Examine-the-Loop-Device"
 	 xmlns="http://docbook.org/ns/docbook"
 	 xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <title>Examine the loop device</title>
 
+  <example xml:id="VDG-Concepts-Example-Examine-the-Loop-Device">
+    <title>Examining the Loop Device</title>
 
-  <example xml:id="VDG-Concepts-">
-    <title></title>
-
-    <screen><xi:include href="../examples/concepts-" parse="text"/></screen>
+    <screen><xi:include href="../examples/concepts-examine-the-loop-device01" parse="text"/></screen>
   </example>
 
+  <para>
+    Look back at <xref linkend="VDG-Concepts-Regular-Drive"/>
+    where I ran these commands against my actual disk drive
+    (<systemitem class="resource">/dev/sda</systemitem>) and
+    you'll see the results are quite similar.
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+	<command>file</command> detects <systemitem
+	class="resource">loop0</systemitem> as a block special
+	device.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+	<command>stat</command> does too.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+	<command>fdisk</command> no longer says we need to set
+	the cylinders.
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <example xml:id="VDG-Concepts-Example-Examine-the-Loop-Device">
+    <title>Examining the Loop Device</title>
+
+    <screen><xi:include href="../examples/concepts-examine-the-loop-device02" parse="text"/></screen>
+  </example>
+
+  <para>
+    Our virtual disk is starting to look like a real hard drive
+    now!
+  </para>
+
+  <para>
+    To bring this section to a conclusion we'll create a
+    partition, format it with ext3, and then mount it for reading
+    and writing.
+  </para>
 </section>
