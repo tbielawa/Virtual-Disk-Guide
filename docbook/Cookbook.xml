@@ -3,10 +3,10 @@
 	 xml:id="VDI-Cookbook"
 	 version="5.0">
 
-  <title>Cookbook</title>
+  <title>The Virtual Disk Cookbook</title>
 
   <section xml:id="VDI-Cookbook-Introduction">
-    <title>The Virtual Disk Cookbook</title>
+    <title>Introduction</title>
 
     <para>
       In this section we're just going to cover things you'll find
@@ -21,6 +21,7 @@
 
   <!-- Links to each recipe follow -->
   <xi:include href="cookbook/query-an-image-for-information.xml"/>
-  <xi:include href="cookbook/convert-from-qcow2-to-raw.xml"/>
-  <xi:include href="cookbook/convert-from-raw-to-qcow2.xml"/>
+  <xi:include href="cookbook/converting-between-raw-and-qcow2.xml"/>
+  <xi:include href="cookbook/create-disks-with-backing-images.xml"/>
+  <xi:include href="cookbook/create-virtual-disks.xml"/>
 </chapter>

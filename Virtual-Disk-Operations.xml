@@ -12,10 +12,9 @@
       <author>
         <personname>
           <firstname>Tim</firstname>
-          <othername>'Shaggy'</othername>
           <surname>Bielawa</surname>
         </personname>
-        <email>tbielawa@csee.wvu.edu</email>
+        <email>tbielawa@redhat.com</email>
       </author>
     </authorgroup>
 
@@ -23,7 +22,7 @@
       <title>Introduction</title>
 
       <para>
-	I was inspired to write this document because I felt the
+	I was motivated to write this document because I felt the
 	quality of the information regarding commonly used
 	functionality in virtual disk operation was lacking certain
 	specific clear examples. The information that is available is
@@ -61,20 +60,20 @@
         under version control on the web at <link
         xl:href="http://github.com/tbielawa/Virtual-Disk-Guide"/> and an
         HTML compiled version under <link
-        xl:href="http://peopleareducks.com/docs/vdg/"/>.
+        xl:href="http://lnx.cx/docs/vdg/"/>.
       </para>
     </legalnotice>
 
     <copyright>
       <year>2009</year>
       <year>2010</year>
-      <holder>Tim 'Shaggy' Bielawa</holder>
+      <year>2011</year>
+      <holder>Tim Bielawa</holder>
     </copyright>
   </info>
 
   <xi:include href="docbook/Cookbook.xml"/>
   <xi:include href="docbook/Concepts.xml"/>
-  <xi:include href="docbook/Basics.xml"/>
   <xi:include href="docbook/Advanced.xml"/>
   <!-- <xi:include href="docbook/Other-Formats.xml"/> -->
   <!-- <xi:include href="docbook/Additional-Resources.xml"/> -->

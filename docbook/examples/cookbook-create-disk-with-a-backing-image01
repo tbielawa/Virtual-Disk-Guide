@@ -1,0 +1,19 @@
+tbielawa@deepfryer:/srv/images$ mkdir base-images
+tbielawa@deepfryer:/srv/images$ mkdir webserver01
+tbielawa@deepfryer:/srv/images$ cd base-images
+
+tbielawa@deepfryer:/srv/images/base-images$ qemu-img create -f qcow2 image-webserver-base.qcow2 10G
+Formatting 'image-webserver-base.qcow2', fmt=qcow2 size=10737418240 encryption=off cluster_size=0
+tbielawa@deepfryer:/srv/images/base-images$ cd ../webserver01
+
+tbielawa@deepfryer:/srv/images/webserver01$ qemu-img create -b /srv/images/base-images/image-webserver-base.qcow2 -f qcow2 image-webserver-devel.qcow2
+Formatting 'image-webserver-devel.qcow2', fmt=qcow2 size=10737418240 backing_file='/srv/images/base-images/image-webserver-base.qcow2' encryption=off cluster_size=0
+
+tbielawa@deepfryer:/srv/images/webserver01$ qemu-img info image-webserver-devel.qcow2
+image: image-webserver-devel.qcow2
+file format: qcow2
+virtual size: 10G (10737418240 bytes)
+disk size: 136K
+cluster_size: 65536
+backing file: /srv/images/base-images/image-webserver-base.qcow2 (actual path: /srv/images/base-images/image-webserver-base.qcow2)
+tbielawa@deepfryer:/srv/images/webserver01$

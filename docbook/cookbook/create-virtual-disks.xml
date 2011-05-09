@@ -1,0 +1,39 @@
+<section xml:id="VDI-Cookbook-Create-Simple-Images"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         version="5.0">
+
+  <title>Creating Simple Images</title>
+
+  <para>
+    The simplest operation (next to deleting an image) you can do is
+    creating a new virtual disk image. Depending on what type you
+    choose there are several options available when creating an
+    image. For example, if you want encryption, if you want a format
+    that supports compression, or even what existing image to base
+    this new disk off of.
+  </para>
+
+  <para>
+    In this example we will start simple and only show how to create
+    basic images in different formats. Each will appear to a virtual
+    machine as being 10G in capacity.
+  </para>
+
+  <example xml:id="VDI-Cookbook-Example-Creating-Simple-Images">
+    <title>
+      Using <command>qemu-img</command> to Create RAW Images
+    </title>
+
+    <screen><xi:include href="../examples/cookbook-create-simple-images01" parse="text"/></screen>
+  </example>
+
+  <!-- TODO: make terms like 'RAW' and etc... link to a relevant section where they are defined -->
+
+  <para>
+    From the <literal>fmt</literal> attribute above you can see that
+    the type of virtual disk crated was RAW, this is the default when
+    using <command>qemu-img</command>. You can also see that the disk
+    will appear as a 10G drive when used in a virtual machine.
+  </para>
+</section>
