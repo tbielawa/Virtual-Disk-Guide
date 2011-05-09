@@ -1,4 +1,4 @@
-<section xml:id="VDI-Concepts-Examining-the-Created-File"
+<section xml:id="VDG-Concepts-Examining-the-Created-File"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude">
 
@@ -11,7 +11,7 @@
     systems point of view.
   </para>
 
-  <example xml:id="VDI-Concepts-Examining-the-Created-File">
+  <example xml:id="VDG-Concepts-Example-Examining-the-Created-File">
     <title>Examining the Created File</title>
 
     <screen><xi:include href="../examples/concepts-examining-the-created-file01" parse="text"/></screen>

@@ -1,4 +1,4 @@
-<section xml:id="VDI-Cookbook-Query-an-Image-for-Information"
+<section xml:id="VDG-Cookbook-Query-an-Image-for-Information"
 	 xmlns="http://docbook.org/ns/docbook"
 	 xmlns:xi="http://www.w3.org/2001/XInclude"
 	 version="5.0">
@@ -13,7 +13,7 @@
     information.
   </para>
 
-  <example xml:id="VDI-Cookbook-Example-Query-an-Image">
+  <example xml:id="VDG-Cookbook-Example-Query-an-Image">
     <title>Querying an Image</title>
 
     <screen><xi:include href="../examples/cookbook-query-an-image01" parse="text"/></screen>

@@ -1,4 +1,4 @@
-<section xml:id="VDI-Concepts-Create-a-Partition-Table"
+<section xml:id="VDG-Concepts-Create-a-Partition-Table"
 	 xmlns="http://docbook.org/ns/docbook"
 	 xmlns:xi="http://www.w3.org/2001/XInclude">
 
@@ -9,7 +9,7 @@
     on the image file.
   </para>
 
-  <example xml:id="VDI-Concepts-Create-a-Partition-Table">
+  <example xml:id="VDG-Concepts-Example-Create-a-Partition-Table">
     <title>Create a Partition Table</title>
 
     <screen><xi:include href="../examples/concepts-create-a-partition-table01" parse="text"/></screen>
@@ -20,10 +20,42 @@
     thinks it has changed.
   </para>
 
-  <example xml:id="VDI-Concepts-Create-a-Partition-Table">
-    <title>Create a Partition Table</title>
+  <example xml:id="VDG-Concepts-Example-Create-a-Partition-Table-Changes">
+    <title>Overview - What Changed </title>
 
-    <screen><xi:include href="../examples/concepts-create-a-partition-table01" parse="text"/></screen>
+    <screen><xi:include href="../examples/concepts-create-a-partition-table02" parse="text"/></screen>
   </example>
 
+  <itemizedlist>
+    <listitem>
+      <para>
+	Now when we run <command>file</command> instead of "data"
+	<command>file</command> thinks it is an x86 boot sector. That
+	sounds pretty accurate since we just put a partition table on
+	it.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>stat</command> still thinks it's a regular file (as
+        opposed to a block special device, or a socket, etc...).
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>fdisk</command> was able to find a partition table in
+        that boot sector that <command>file</command> found.
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <!-- TODO: Convert the next part into a Table -->
+
+  <example xml:id="VDG-Concepts-Example-Create-a-Partition-Table-Changes">
+    <title>What <command>parted</command> Changed</title>
+
+    <screen>
+      <xi:include href="../examples/concepts-create-a-partition-table03" parse="text"/>
+    </screen>
+  </example>
 </section>

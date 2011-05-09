@@ -1,4 +1,4 @@
-<section xml:id="VDI-Cookbook-Create-Disks-with-Backing-Images"
+<section xml:id="VDG-Cookbook-Create-Disks-with-Backing-Images"
 	 xmlns="http://docbook.org/ns/docbook"
 	 xmlns:xi="http://www.w3.org/2001/XInclude">
 
@@ -48,13 +48,13 @@
     </para>
   </note>
 
-  <example xml:id="VDI-Cookbook-Example-Create-Disk-with-a-Backing-Image">
+  <example xml:id="VDG-Cookbook-Example-Create-Disk-with-a-Backing-Image">
     <title>Creating a Disk with a Backing Image</title>
 
     <screen><xi:include href="../examples/cookbook-create-disk-with-a-backing-image01" parse="text"/></screen>
   </example>
 
-  <procedure xml:id="VDI-Cookbook-Steps-Create-Disk-with-a-Backing-Image">
+  <procedure xml:id="VDG-Cookbook-Steps-Create-Disk-with-a-Backing-Image">
     <title>Steps in Detail</title>
 
     <step>

@@ -1,4 +1,4 @@
-<section xml:id="VDI-Cookbook-Create-Simple-Images"
+<section xml:id="VDG-Cookbook-Create-Simple-Images"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          version="5.0">
@@ -20,7 +20,7 @@
     machine as being 10G in capacity.
   </para>
 
-  <example xml:id="VDI-Cookbook-Example-Creating-Simple-Images">
+  <example xml:id="VDG-Cookbook-Example-Creating-Simple-Images">
     <title>
       Using <command>qemu-img</command> to Create RAW Images
     </title>

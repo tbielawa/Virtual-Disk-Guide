@@ -1,4 +1,4 @@
-<section xml:id="VDI-Cookbook-"
+<section xml:id="VDG-Cookbook-"
 	 xmlns="http://docbook.org/ns/docbook"
 	 xmlns:xi="http://www.w3.org/2001/XInclude">
 
@@ -8,7 +8,7 @@
     Text
   </para>
 
-  <example xml:id="VDI-Basics-qemu-img_info-Example">
+  <example xml:id="VDG-Basics-qemu-img_info-Example">
     <title>Example-title</title>
 
     <screen><xi:include href="../examples/disk-prep" parse="text"/></screen>
