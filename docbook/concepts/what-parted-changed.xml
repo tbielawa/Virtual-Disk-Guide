@@ -1,0 +1,37 @@
+<section xml:id="VDI-Concepts-What-parted-Changed"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>What <command>parted</command> changed</title>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        Now when we run <command>file</command> instead of "data"
+        <command>file</command> thinks it is an x86 boot sector. That
+        sounds pretty accurate since we just put a partition table on
+        it.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>stat</command> still thinks it's a regular file (as
+        opposed to a block special device, or a socket, etc...).
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>fdisk</command> was able to find a partition table in
+        that boot sector that <command>file</command> found.
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <example xml:id="VDI-Concepts-Example-What-parted-Changed">
+    <title>What <command>parted</command> Changed</title>
+
+    <screen>
+      <xi:include href="../examples/concepts-what-parted-changed01" parse="text"/>
+    </screen>
+  </example>
+</section>

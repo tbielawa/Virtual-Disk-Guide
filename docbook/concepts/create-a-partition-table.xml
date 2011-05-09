@@ -1,0 +1,29 @@
+<section xml:id="VDI-Concepts-Create-a-Partition-Table"
+	 xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Create a Partition Table</title>
+
+  <para>
+    Use GNU <command>parted</command> to put a valid partition table
+    on the image file.
+  </para>
+
+  <example xml:id="VDI-Concepts-Create-a-Partition-Table">
+    <title>Create a Partition Table</title>
+
+    <screen><xi:include href="../examples/concepts-create-a-partition-table01" parse="text"/></screen>
+  </example>
+
+  <para>
+    Lets examine the image again to see how the operating system
+    thinks it has changed.
+  </para>
+
+  <example xml:id="VDI-Concepts-Create-a-Partition-Table">
+    <title>Create a Partition Table</title>
+
+    <screen><xi:include href="../examples/concepts-create-a-partition-table01" parse="text"/></screen>
+  </example>
+
+</section>

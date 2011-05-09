@@ -1,0 +1,3 @@
+<tbielawa>@(fridge)[~/images]
+$ parted disk1.raw mklabel msdos
+WARNING: You are not superuser.  Watch out for permissions.

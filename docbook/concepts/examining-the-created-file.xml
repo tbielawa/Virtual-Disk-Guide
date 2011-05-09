@@ -1,0 +1,75 @@
+<section xml:id="VDI-Concepts-Examining-the-Created-File"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Examining the Created File</title>
+
+
+  <para>
+    Like in <xref linkend="VDG-Concepts-Regular-Drive"/> lets
+    take a look at the file we created from the operating
+    systems point of view.
+  </para>
+
+  <example xml:id="VDI-Concepts-Examining-the-Created-File">
+    <title>Examining the Created File</title>
+
+    <screen><xi:include href="../examples/concepts-examining-the-created-file01" parse="text"/></screen>
+  </example>
+
+  <para>
+    From this it's quite clear that there isn't much
+    <filename>disk1.raw</filename> has in common with the actual
+    disk drive <systemitem class="resource">sda</systemitem>.
+  </para>
+
+  <itemizedlist mark='opencircle'>
+    <listitem>
+      <para>
+        <command>file</command> thinks it's "data", which the
+        <command>file</command> manual page says is how it labels
+        what are usually ‘binary’ or non-printable files.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>stat</command> says it's just a regular file.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>fdisk</command> doesn't knows how big it is, nor
+        can it find any partition information on it.
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <table xml:id="VDG-Concepts-Comparison1" border="1">
+    <caption>Attribute Comparison</caption>
+    <tr>
+      <td>Command</td>
+      <td><systemitem class="resource">sda</systemitem></td>
+      <td><filename>disk1.raw</filename></td>
+    </tr>
+    <tr>
+      <td><command>file</command></td>
+      <td>block special</td>
+      <td>data</td>
+    </tr>
+    <tr>
+      <td><command>stat</command></td>
+      <td>block special</td>
+      <td>regular file</td>
+    </tr>
+    <tr>
+      <td><command>fdisk</command></td>
+      <td>Contains partition table</td>
+      <td>Missing partition table</td>
+    </tr>
+  </table>
+
+  <para>
+    These results make perfect sense. <filename>disk1.raw</filename>
+    is just 2<superscript>30</superscript> 0's in a row
+  </para>
+</section>

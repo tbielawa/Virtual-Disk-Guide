@@ -1,0 +1,92 @@
+<section xml:id="VDI-Concepts-Background-on-the-dd-Command"
+	 xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude"
+	 xmlns:xl="http://www.w3.org/1999/xlink"
+	 version="5.0">
+
+  <title>
+    Background on the <command>dd</command> command
+  </title>
+
+  <para>
+    We'll use the <command>dd</command> command to create the file
+    that represents our virtual disk. Other higher level tools
+    like <command>qemu-img</command> exist to do similar things
+    but using <command>dd</command> will give us a deeper insight
+    into what's going on. <command>dd</command> will only be used
+    in the introductory part of this document, later on we will
+    use the <command>qemu-img</command> command almost
+    exclusively.
+  </para>
+
+  <para>
+    If we're creating a 1GiB disk that means the file needs to be
+    exactly 2<superscript>30</superscript> bytes in size. By
+    default <command>dd</command> operates in block sized
+    chunks. This means that to create
+    2<superscript>30</superscript> bytes it needs to push a
+    calculable number of these chunks into our target disk
+    file. This number is referred to as the
+    <option>count</option>. To calculate the proper
+    <option>count</option> setting we need only to divide the
+    total number of bytes required by the size of a each block.
+    "The block size is given to <command>dd</command> with the
+    <option>bs</option> option. It specifies the block size in
+    bytes. If not explicitly defined, it defaults to 512 byte
+    blocks (2<superscript>9</superscript>)"
+  </para>
+
+  <equation xml:id="eq.count">
+    <title>Calculating the Count</title>
+
+    <mathphrase>
+      count = 2<superscript>30</superscript>
+      / 2 <superscript>9</superscript> =
+    1073741824/512 = 2097152 (2,097,152)</mathphrase>
+  </equation>
+
+  <para>
+    We need something to fill the file with that has a negligible
+    value. On Unix systems the best thing to use is the output
+    from <systemitem class="resource">/dev/zero</systemitem> (a
+    special character device like a keyboard). We specify
+    <systemitem class="resource">/dev/zero</systemitem> as our
+    input file to <command>dd</command> by using the
+    <option>if</option> option.
+  </para>
+
+  <note>
+    <para>
+      <systemitem class="resource">/dev/zero</systemitem> doesn't
+      provide endless "0"s. It actually provides endless
+      <keycode>NUL</keycode> control characters(<keycap>^@</keycap> in
+      Caret Notation <footnote><para><link
+      xl:href="http://en.wikipedia.org/wiki/Caret_notation">Caret
+      Notation</link> on Wikipedia</para></footnote>). The
+      <keycode>NUL</keycode> control character has the octal value
+      <keycode>000</keycode>. The actual ASCII zero character
+      <keycap>0</keycap> has the octal value <keycode>060</keycode>.
+    </para>
+  </note>
+
+  <para>
+    <keycode>NUL</keycode> being a control character
+    <footnote><para><link
+    xl:href="http://en.wikipedia.org/wiki/Control_code">Control
+    Characters</link> on Wikipedia</para></footnote> means it's a
+    non-printing character (it doesn't represent a written symbol), so
+    if you want to identify it you can use <command>cat</command> like
+    this to print 5 <keycode>NUL</keycode> characters in Caret
+    Notation:
+  </para>
+
+  <screen><xi:include href="../examples/concepts-background-on-dd01" parse="text"/></screen>
+
+  <para>
+    You can also convert the output from <systemitem
+    class="resource">/dev/zero</systemitem> into ASCII
+    <keycap>0</keycap> characters like this:
+  </para>
+
+  <screen><xi:include href="../examples/concepts-background-on-dd02" parse="text"/></screen>
+</section>

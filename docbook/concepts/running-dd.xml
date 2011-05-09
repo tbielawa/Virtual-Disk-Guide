@@ -1,0 +1,31 @@
+<section xml:id="VDI-Concepts-Running-dd"
+	 xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude"
+	 version="5.0">
+
+  <title>
+    Running <command>dd</command>
+  </title>
+
+  <para>
+    With the information from the preceding sections we can now
+    create the file that will soon be a virtual disk. The file
+    we create will be called <filename>disk1.raw</filename> and
+    filled with 2097152 blocks of <keycode>NUL</keycode>
+    characters from <systemitem
+    class="resource">/dev/null</systemitem>. Here's the command:
+  </para>
+
+  <example xml:id="VDG-Concepts-Example-Using-dd">
+    <title>Running the <command>dd</command> command</title>
+
+    <screen><xi:include href="../examples/concepts-running-dd01" parse="text"/></screen>
+  </example>
+
+  <para>
+    Now that you know what <systemitem
+    class="resource">/dev/zero</systemitem> is it's obvious this is
+    just a file containing 2<superscript>30</superscript> bytes (1GiB)
+    of data. Each byte literally having the value '0'.
+  </para>
+</section>
