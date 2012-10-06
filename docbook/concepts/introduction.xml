@@ -140,10 +140,10 @@
         <row>
           <entry align='left'></entry>
           <entry align='left'>
-	    = 1B * 2<superscript>10</superscript> *
-	    2<superscript>10</superscript> *
-	    2<superscript>10</superscript>
-	  </entry>
+            = 1B * 2<superscript>10</superscript> *
+            2<superscript>10</superscript> *
+            2<superscript>10</superscript>
+          </entry>
           <entry align='left'>The gibibyte</entry>
         </row>
         <row>
@@ -160,68 +160,15 @@
     </tgroup>
   </informaltable>
 
+  <!-- Citation: IEC 60027-2, Second edition, 2000-11, Letter symbols to be used in electrical technology - Part 2: Telecommunications and electronics -->
+  <!-- IEC 60027-2 online: http://webstore.iec.ch/webstore/webstore.nsf/artnum/034558 -->
 
-  <table pgwide='0' frame='all' xml:id="VDG-Concepts-Example-Examine-the-Loop-Device">
-    <title>Examining the Loop Device</title>
-    <tgroup cols='5' align='center'>
-      <colspec colname='c1'/>
-      <colspec colname='c2'/>
-      <colspec colname='c3'/>
-      <colspec colname='c4'/>
-      <colspec colname='c5'/>
-      <thead>
-        <row>
-          <entry align='left'></entry>
-          <entry align='left'>sda</entry>
-          <entry align='left'>disk1.raw</entry>
-          <entry align='left'>disk1.raw (parted)</entry>
-          <entry align='left'>/dev/loop0</entry>
-        </row>
-      </thead>
-      <tbody>
-        <row>
-          <entry align='left'>file</entry>
-          <entry align='left'>block special</entry>
-          <entry align='left'>data</entry>
-          <entry align='left'>x86 boot sector</entry>
-          <entry align='left'>block special</entry>
-        </row>
-        <row>
-          <entry align='left'>stat</entry>
-          <entry align='left'>block special</entry>
-          <entry align='left'>regular file</entry>
-          <entry align='left'>regular file</entry>
-          <entry align='left'>block special</entry>
-        </row>
-        <row>
-          <entry align='left'>fdisk</entry>
-          <entry align='left'>has partition table</entry>
-          <entry align='left'>no partition table</entry>
-          <entry align='left'>valid partition table. unknown cylinder count</entry>
-          <entry align='left'>valid partition table. unknown cylinder count</entry>
-        </row>
-      </tbody>
-    </tgroup>
-  </table>
-<screen>
-Abbrev.   Measurement          Name
-  1B      = 8 Bits                              The byte
-  1KiB    = 1B * 2^10                           The kibibyte
-  1MiB    = 1KiB * 2^10                         The mebibyte
-  1GiB    = 1MiB * 2^10                         The gibibyte
-          = 1B * 2^10 * 2^10 * 2^10
-          = 1B * 2^30
-          = 1B * 1073741824 (1,073,741,824)
-</screen>
-<!-- Citation: IEC 60027-2, Second edition, 2000-11, Letter symbols to be used in electrical technology - Part 2: Telecommunications and electronics -->
-<!-- IEC 60027-2 online: http://webstore.iec.ch/webstore/webstore.nsf/artnum/034558 -->
+  <!-- Also adopted by the IEEE as: IEEE Std 1541-2002 http://ieeexplore.ieee.org/servlet/opac?punumber=5254929 -->
 
-<!-- Also adopted by the IEEE as: IEEE Std 1541-2002 http://ieeexplore.ieee.org/servlet/opac?punumber=5254929 -->
+  <!-- <example xml:id="VDG-Concepts-"> -->
+  <!--   <title></title> -->
 
-<!-- <example xml:id="VDG-Concepts-"> -->
-<!--   <title></title> -->
-
-<!--   <screen><xi:include href="../examples/concepts-" parse="text"/></screen> -->
-<!-- </example> -->
+  <!--   <screen><xi:include href="../examples/concepts-" parse="text"/></screen> -->
+  <!-- </example> -->
 
 </section>

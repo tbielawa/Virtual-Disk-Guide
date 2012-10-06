@@ -50,7 +50,7 @@
           <entry align='left'></entry>
           <entry align='left'><filename class='devicefile'>sda</filename></entry>
           <entry align='left'><filename>disk1.raw</filename></entry>
-          <entry align='left'><filename>disk1.raw</filename> (parted)</entry>
+          <entry align='left'><filename>disk1.raw</filename> (via <command>parted</command>)</entry>
           <entry align='left'><filename class='devicefile'>/dev/loop0</filename></entry>
         </row>
       </thead>
