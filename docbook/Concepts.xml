@@ -21,7 +21,7 @@
     <title>Devices and Partitions</title>
 
     <xi:include href="concepts/devices-and-partitions-introduction.xml"/>
-    <xi:include href="concepts/create-a-loop-device.xml"/>
+    <xi:include href="concepts/creating-a-loop-device.xml"/>
     <xi:include href="concepts/examine-the-loop-device.xml"/>
     <xi:include href="concepts/creating-partitions.xml"/>
     <xi:include href="concepts/formatting-partitions.xml"/>

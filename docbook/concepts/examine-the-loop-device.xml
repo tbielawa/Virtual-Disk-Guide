@@ -4,7 +4,7 @@
 
   <title>Examine the loop device</title>
 
-  <example xml:id="VDG-Concepts-Example-Examine-the-Loop-Device">
+  <example xml:id="VDG-Concepts-Example-Examine-the-Loop-Device-example">
     <title>Examining the Loop Device</title>
 
     <screen><xi:include href="../examples/concepts-examine-the-loop-device01" parse="text"/></screen>

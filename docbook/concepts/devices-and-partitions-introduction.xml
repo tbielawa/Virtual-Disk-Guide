@@ -87,10 +87,10 @@ Command (m for help):]]></screen>
   </para>
 
 
-  <example xml:id="VDG-Concepts-">
-    <title></title>
+  <!-- <example xml:id="VDG-Concepts-"> -->
+  <!--   <title></title> -->
 
-    <screen><xi:include href="../examples/concepts-" parse="text"/></screen>
-  </example>
+  <!--   <screen><xi:include href="../examples/concepts-" parse="text"/></screen> -->
+  <!-- </example> -->
 
 </section>

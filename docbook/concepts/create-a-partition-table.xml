@@ -51,7 +51,7 @@
 
   <!-- TODO: Convert the next part into a Table -->
 
-  <example xml:id="VDG-Concepts-Example-Create-a-Partition-Table-Changes">
+  <example xml:id="VDG-Concepts-Example-Create-a-Partition-Table-Changes-example">
     <title>What <command>parted</command> Changed</title>
 
     <screen>

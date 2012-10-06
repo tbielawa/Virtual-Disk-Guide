@@ -131,10 +131,10 @@ Filesystem            Size  Used Avail Use% Mounted on
     </para>
   </note>
 
-  <example xml:id="VDG-Concepts-">
-    <title></title>
+  <!-- <example xml:id="VDG-Concepts-"> -->
+  <!--   <title></title> -->
 
-    <screen><xi:include href="../examples/concepts-" parse="text"/></screen>
-  </example>
+  <!--   <screen><xi:include href="../examples/concepts-" parse="text"/></screen> -->
+  <!-- </example> -->
 
 </section>

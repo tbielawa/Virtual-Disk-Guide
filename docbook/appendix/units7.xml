@@ -77,32 +77,32 @@
 	      <row>
 		<entry align='left'>Ki</entry>
 		<entry align='left'>kibi</entry>
-		<entry align='left'>2^10 = 1024</entry>
+		<entry align='left'>2<superscript>10</superscript> = 1024</entry>
 	      </row>
 	      <row>
 		<entry align='left'>Mi</entry>
 		<entry align='left'>mebi</entry>
-		<entry align='left'>2^20 = 1048576</entry>
+		<entry align='left'>2<superscript>20</superscript> = 1048576</entry>
 	      </row>
 	      <row>
 		<entry align='left'>Gi</entry>
 		<entry align='left'>gibi</entry>
-		<entry align='left'>2^30 = 1073741824</entry>
+		<entry align='left'>2<superscript>30</superscript> = 1073741824</entry>
 	      </row>
 	      <row>
 		<entry align='left'>Ti</entry>
 		<entry align='left'>tebi</entry>
-		<entry align='left'>2^40 = 1099511627776</entry>
+		<entry align='left'>2<superscript>40</superscript> = 1099511627776</entry>
 	      </row>
 	      <row>
 		<entry align='left'>Pi</entry>
 		<entry align='left'>pebi</entry>
-		<entry align='left'>2^50 = 1125899906842624</entry>
+		<entry align='left'>2<superscript>50</superscript> = 1125899906842624</entry>
 	      </row>
 	      <row>
 		<entry align='left'>Ei</entry>
 		<entry align='left'>exbi</entry>
-		<entry align='left'>2^60 = 1152921504606846976</entry>
+		<entry align='left'>2<superscript>60</superscript> = 1152921504606846976</entry>
 	      </row>
 	    </tbody>
 	  </tgroup>

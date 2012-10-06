@@ -119,10 +119,10 @@ Disk identifier: 0x12031202
 
     <!-- Also adopted by the IEEE as: IEEE Std 1541-2002 http://ieeexplore.ieee.org/servlet/opac?punumber=5254929 -->
 
-  <example xml:id="VDG-Concepts-">
-    <title></title>
+  <!-- <example xml:id="VDG-Concepts-"> -->
+  <!--   <title></title> -->
 
-    <screen><xi:include href="../examples/concepts-" parse="text"/></screen>
-  </example>
+  <!--   <screen><xi:include href="../examples/concepts-" parse="text"/></screen> -->
+  <!-- </example> -->
 
 </section>
