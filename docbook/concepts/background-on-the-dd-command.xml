@@ -21,19 +21,17 @@
 
   <para>
     If we're creating a 1GiB disk that means the file needs to be
-    exactly 2<superscript>30</superscript> bytes in size. By
-    default <command>dd</command> operates in block sized
-    chunks. This means that to create
-    2<superscript>30</superscript> bytes it needs to push a
-    calculable number of these chunks into our target disk
-    file. This number is referred to as the
-    <option>count</option>. To calculate the proper
-    <option>count</option> setting we need only to divide the
-    total number of bytes required by the size of a each block.
-    "The block size is given to <command>dd</command> with the
+    exactly 2<superscript>30</superscript> bytes in size. By default
+    <command>dd</command> operates in block sized chunks. This means
+    that to create 2<superscript>30</superscript> bytes it needs to
+    push a calculable number of these chunks into our target disk
+    file. This number is referred to as the <option>count</option>. To
+    calculate the proper <option>count</option> setting we need only
+    to divide the total number of bytes required by the size of a each
+    block. The block size is given to <command>dd</command> with the
     <option>bs</option> option. It specifies the block size in
-    bytes. If not explicitly defined, it defaults to 512 byte
-    blocks (2<superscript>9</superscript>)"
+    bytes. If not explicitly defined, it defaults to 512 byte blocks
+    (2<superscript>9</superscript>).
   </para>
 
   <equation xml:id="eq.count">
@@ -47,12 +45,11 @@
 
   <para>
     We need something to fill the file with that has a negligible
-    value. On Unix systems the best thing to use is the output
-    from <systemitem class="resource">/dev/zero</systemitem> (a
-    special character device like a keyboard). We specify
-    <systemitem class="resource">/dev/zero</systemitem> as our
-    input file to <command>dd</command> by using the
-    <option>if</option> option.
+    value. On Unix systems the best thing to use is the output from
+    <systemitem class="resource">/dev/zero</systemitem> (a special
+    character device like a keyboard). We specify <systemitem
+    class="resource">/dev/zero</systemitem> as our input file to
+    <command>dd</command> by using the <option>if</option> option.
   </para>
 
   <note>

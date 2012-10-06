@@ -1,12 +1,11 @@
 <section xml:id="VDG-Concepts-Examine-the-Loop-Device"
-	 xmlns="http://docbook.org/ns/docbook"
-	 xmlns:xi="http://www.w3.org/2001/XInclude">
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <title>Examine the loop device</title>
 
   <example xml:id="VDG-Concepts-Example-Examine-the-Loop-Device-example">
     <title>Examining the Loop Device</title>
-
     <screen><xi:include href="../examples/concepts-examine-the-loop-device01" parse="text"/></screen>
   </example>
 
@@ -20,29 +19,66 @@
   <itemizedlist>
     <listitem>
       <para>
-	<command>file</command> detects <systemitem
-	class="resource">loop0</systemitem> as a block special
-	device.
+        <command>file</command> detects <systemitem
+        class="resource">loop0</systemitem> as a block special
+        device.
       </para>
     </listitem>
     <listitem>
       <para>
-	<command>stat</command> does too.
+        <command>stat</command> does too.
       </para>
     </listitem>
     <listitem>
       <para>
-	<command>fdisk</command> no longer says we need to set
-	the cylinders.
+        <command>fdisk</command> no longer says we need to set
+        the cylinders.
       </para>
     </listitem>
   </itemizedlist>
 
-  <example xml:id="VDG-Concepts-Example-Examine-the-Loop-Device">
+  <table pgwide='0' frame='all' xml:id="VDG-Concepts-Example-Examine-the-Loop-Device">
     <title>Examining the Loop Device</title>
-
-    <screen><xi:include href="../examples/concepts-examine-the-loop-device02" parse="text"/></screen>
-  </example>
+    <tgroup cols='5' align='center'>
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+      <thead>
+        <row>
+          <entry align='left'></entry>
+          <entry align='left'><filename class='devicefile'>sda</filename></entry>
+          <entry align='left'><filename>disk1.raw</filename></entry>
+          <entry align='left'><filename>disk1.raw</filename> (parted)</entry>
+          <entry align='left'><filename class='devicefile'>/dev/loop0</filename></entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry align='left'><command>file</command></entry>
+          <entry align='left'>block special</entry>
+          <entry align='left'>data</entry>
+          <entry align='left'>x86 boot sector</entry>
+          <entry align='left'>block special</entry>
+        </row>
+        <row>
+          <entry align='left'><command>stat</command></entry>
+          <entry align='left'>block special</entry>
+          <entry align='left'>regular file</entry>
+          <entry align='left'>regular file</entry>
+          <entry align='left'>block special</entry>
+        </row>
+        <row>
+          <entry align='left'><command>fdisk</command></entry>
+          <entry align='left'>has partition table</entry>
+          <entry align='left'>no partition table</entry>
+          <entry align='left'>valid partition table. unknown cylinder count</entry>
+          <entry align='left'>valid partition table. unknown cylinder count</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
 
   <para>
     Our virtual disk is starting to look like a real hard drive

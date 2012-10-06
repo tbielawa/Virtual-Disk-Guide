@@ -1,6 +1,6 @@
 <refentry xmlns="http://docbook.org/ns/docbook"
-	  xml:id='VDG-Appendix-Units'
-	  version="5.0">
+          xml:id='VDG-Appendix-Units'
+          version="5.0">
 
   <!-- lifted from troff+man by doclifter -->
 
@@ -55,65 +55,62 @@
     <refsect2 id='binary_prefixes'>
       <title>Binary prefixes</title>
       <para>
-	The binary prefixes resemble the decimal ones, but have an
-	additional 'i' (and "Ki" starts with a capital 'K').  The names
-	are formed by taking the first syllable of the names of the
-	decimal prefix with roughly the same size, followed by "bi" for
-	"binary".
+        The binary prefixes resemble the decimal ones, but have an
+        additional 'i' (and "Ki" starts with a capital 'K').  The names
+        are formed by taking the first syllable of the names of the
+        decimal prefix with roughly the same size, followed by "bi" for
+        "binary".
       </para>
-      <blockquote remap='RS'>
 
-	<informaltable pgwide='0' frame='none'>
-	  <tgroup cols='3' align='center'>
-	    <colspec colname='c1'/>
-	    <colspec colname='c2'/>
-	    <colspec colname='c3'/>
-	    <tbody>
-	      <row>
-		<entry align='left'>Prefix</entry>
-		<entry align='left'>Name</entry>
-		<entry align='left'>Value</entry>
-	      </row>
-	      <row>
-		<entry align='left'>Ki</entry>
-		<entry align='left'>kibi</entry>
-		<entry align='left'>2<superscript>10</superscript> = 1024</entry>
-	      </row>
-	      <row>
-		<entry align='left'>Mi</entry>
-		<entry align='left'>mebi</entry>
-		<entry align='left'>2<superscript>20</superscript> = 1048576</entry>
-	      </row>
-	      <row>
-		<entry align='left'>Gi</entry>
-		<entry align='left'>gibi</entry>
-		<entry align='left'>2<superscript>30</superscript> = 1073741824</entry>
-	      </row>
-	      <row>
-		<entry align='left'>Ti</entry>
-		<entry align='left'>tebi</entry>
-		<entry align='left'>2<superscript>40</superscript> = 1099511627776</entry>
-	      </row>
-	      <row>
-		<entry align='left'>Pi</entry>
-		<entry align='left'>pebi</entry>
-		<entry align='left'>2<superscript>50</superscript> = 1125899906842624</entry>
-	      </row>
-	      <row>
-		<entry align='left'>Ei</entry>
-		<entry align='left'>exbi</entry>
-		<entry align='left'>2<superscript>60</superscript> = 1152921504606846976</entry>
-	      </row>
-	    </tbody>
-	  </tgroup>
-	</informaltable>
-
-
-      </blockquote> <!-- remap='RE' -->
+      <table pgwide='0' frame='all'>
+        <title>Binary Preflixes</title>
+        <tgroup cols='3' align='center'>
+          <colspec colname='c1'/>
+          <colspec colname='c2'/>
+          <colspec colname='c3'/>
+          <tbody>
+            <row>
+              <entry align='left'>Prefix</entry>
+              <entry align='left'>Name</entry>
+              <entry align='left'>Value</entry>
+            </row>
+            <row>
+              <entry align='left'>Ki</entry>
+              <entry align='left'>kibi</entry>
+              <entry align='left'>2<superscript>10</superscript> = 1024</entry>
+            </row>
+            <row>
+              <entry align='left'>Mi</entry>
+              <entry align='left'>mebi</entry>
+              <entry align='left'>2<superscript>20</superscript> = 1048576</entry>
+            </row>
+            <row>
+              <entry align='left'>Gi</entry>
+              <entry align='left'>gibi</entry>
+              <entry align='left'>2<superscript>30</superscript> = 1073741824</entry>
+            </row>
+            <row>
+              <entry align='left'>Ti</entry>
+              <entry align='left'>tebi</entry>
+              <entry align='left'>2<superscript>40</superscript> = 1099511627776</entry>
+            </row>
+            <row>
+              <entry align='left'>Pi</entry>
+              <entry align='left'>pebi</entry>
+              <entry align='left'>2<superscript>50</superscript> = 1125899906842624</entry>
+            </row>
+            <row>
+              <entry align='left'>Ei</entry>
+              <entry align='left'>exbi</entry>
+              <entry align='left'>2<superscript>60</superscript> = 1152921504606846976</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
 
       <para>
-	See also: <ulink
-	url='http://physics.nist.gov/cuu/Units/binary.html'>http://physics.nist.gov/cuu/Units/binary.html</ulink>
+        See also: <ulink
+        url='http://physics.nist.gov/cuu/Units/binary.html'>http://physics.nist.gov/cuu/Units/binary.html</ulink>
       </para>
 
     </refsect2>
@@ -121,46 +118,46 @@
     <refsect2 id='discussion'>
       <title>Discussion</title>
       <para>
-	Before these binary prefixes were introduced, it was fairly
-	common to use k=1000 and K=1024, just like b=bit, B=byte.
-	Unfortunately, the M is capital already, and cannot be
-	capitalized to indicate binary-ness.
+        Before these binary prefixes were introduced, it was fairly
+        common to use k=1000 and K=1024, just like b=bit, B=byte.
+        Unfortunately, the M is capital already, and cannot be
+        capitalized to indicate binary-ness.
       </para>
 
       <para>
-	At first that didn't matter too much, since memory modules and
-	disks came in sizes that were powers of two, so everyone knew
-	that in such contexts "kilobyte" and "megabyte" meant 1024 and
-	1048576 bytes, respectively.  What originally was a sloppy use
-	of the prefixes "kilo" and "mega" started to become regarded as
-	the "real true meaning" when computers were involved.  But then
-	disk technology changed, and disk sizes became arbitrary
-	numbers.  After a period of uncertainty all disk manufacturers
-	settled on the standard, namely k=1000, M=1000k, G=1000M.
+        At first that didn't matter too much, since memory modules and
+        disks came in sizes that were powers of two, so everyone knew
+        that in such contexts "kilobyte" and "megabyte" meant 1024 and
+        1048576 bytes, respectively.  What originally was a sloppy use
+        of the prefixes "kilo" and "mega" started to become regarded as
+        the "real true meaning" when computers were involved.  But then
+        disk technology changed, and disk sizes became arbitrary
+        numbers.  After a period of uncertainty all disk manufacturers
+        settled on the standard, namely k=1000, M=1000k, G=1000M.
       </para>
 
       <para>
-	The situation was messy: in the 14k4 modems, k=1000; in the
-	1.44MB diskettes, M=1024000; etc. In 1998 the IEC approved the
-	standard that defines the binary prefixes given above, enabling
-	people to be precise and unambiguous.
+        The situation was messy: in the 14k4 modems, k=1000; in the
+        1.44MB diskettes, M=1024000; etc. In 1998 the IEC approved the
+        standard that defines the binary prefixes given above, enabling
+        people to be precise and unambiguous.
       </para>
 
       <para>
-	Thus, today, MB = 1000000B and MiB = 1048576B.
+        Thus, today, MB = 1000000B and MiB = 1048576B.
       </para>
 
       <para>
-	In the free software world programs are slowly being changed to
-	conform. When the Linux kernel boots and says:
+        In the free software world programs are slowly being changed to
+        conform. When the Linux kernel boots and says:
       </para>
 
       <screen>
-	hda: 120064896 sectors (61473 MB) w/2048KiB Cache
+        hda: 120064896 sectors (61473 MB) w/2048KiB Cache
       </screen>
 
       <para>
-	the MB are megabytes and the KiB are kibibytes.
+        the MB are megabytes and the KiB are kibibytes.
       </para>
     </refsect2>
   </refsect1>
