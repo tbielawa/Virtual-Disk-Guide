@@ -49,13 +49,57 @@
     </listitem>
   </itemizedlist>
 
-  <!-- TODO: Convert the next part into a Table -->
-
-  <example xml:id="VDG-Concepts-Example-Create-a-Partition-Table-Changes-example">
+  <table pgwide='0' frame='all' xml:id="VDG-Concepts-Create-A-Partition-Table-What-Changed">
     <title>What <command>parted</command> Changed</title>
+    <tgroup cols='4' align='center'>
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <thead>
+        <row>
+          <entry align='left'></entry>
+          <entry align='left'><filename class='devicefile'>sda</filename></entry>
+          <entry align='left'><filename>disk1.raw</filename></entry>
+          <entry align='left'><filename>disk1.raw</filename> (via <command>parted</command>)</entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry align='left'><command>file</command></entry>
+          <entry align='left'>block special</entry>
+          <entry align='left'>data</entry>
+          <entry align='left'>x86 boot sector</entry>
+        </row>
+        <row>
+          <entry align='left'><command>stat</command></entry>
+          <entry align='left'>block special</entry>
+          <entry align='left'>regular file</entry>
+          <entry align='left'>regular file</entry>
+        </row>
+        <row>
+          <entry align='left'><command>fdisk</command></entry>
+          <entry align='left'>has partition table</entry>
+          <entry align='left'>no partition table</entry>
+          <entry align='left'>valid partition table. unknown cylinder count</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
 
-    <screen>
-      <xi:include href="../examples/concepts-create-a-partition-table03" parse="text"/>
-    </screen>
-  </example>
+
+
+  <!-- <example xml:id="VDG-Concepts-Example-Create-a-Partition-Table-Changes-example"> -->
+  <!--   <title>What <command>parted</command> Changed</title> -->
+
+
+  <!--   <screen> -->
+
+  <!--         |     sda       |     disk1.raw     | disk1.raw (parted) | -->
+  <!--   file  | block special |   data            |   x86 boot sector  | -->
+  <!--   stat  | block special |   regular file    |   regular file     | -->
+  <!--   fdisk | Has partition |   no partition    |   valid partition  | -->
+  <!--         |  table        |    table          |    table. Unknown  | -->
+  <!--   </screen> -->
+  <!-- </example> -->
 </section>
