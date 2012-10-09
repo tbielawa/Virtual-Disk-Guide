@@ -58,8 +58,8 @@
       <para>
         You can view the latest DocBook 5 XML source to this guide
         under version control on the web at <link
-        xl:href="http://github.com/tbielawa/Virtual-Disk-Guide"/> and an
-        HTML compiled version under <link
+        xl:href="http://github.com/tbielawa/Virtual-Disk-Guide"/> and
+        an HTML compiled version under <link
         xl:href="http://lnx.cx/docs/vdg/"/>.
       </para>
     </legalnotice>
@@ -68,6 +68,7 @@
       <year>2009</year>
       <year>2010</year>
       <year>2011</year>
+      <year>2012</year>
       <holder>Tim Bielawa</holder>
     </copyright>
   </info>
