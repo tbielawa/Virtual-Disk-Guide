@@ -4,7 +4,6 @@
 
   <xsl:import href="/usr/share/sgml/docbook/xsl-ns-stylesheets/html/docbook.xsl"/>
   <xsl:output method="html"
-              encoding="UTF-8"
-              indent="no"/>
+              indent="yes"/>
 
 </xsl:stylesheet>

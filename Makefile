@@ -33,7 +33,7 @@ STYLEDIR = /usr/share/sgml/docbook/xsl-ns-stylesheets/
 # OS X - Package (Macports): docbook-xsl
 # STYLEDIR = /opt/local/share/xsl/docbook-xsl
 
-HTML_xsl = xsl/docbook-utf8.xsl
+HTML_xsl = xsl/docbook-html.xsl
 HTML_CHUNKED_xsl = $(STYLEDIR)/html/chunk.xsl
 
 ##################################################################
