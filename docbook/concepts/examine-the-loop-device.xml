@@ -74,7 +74,7 @@
           <entry align='left'>has partition table</entry>
           <entry align='left'>no partition table</entry>
           <entry align='left'>valid partition table. unknown cylinder count</entry>
-          <entry align='left'>valid partition table. unknown cylinder count</entry>
+          <entry align='left'>valid partition table. known cylinder count</entry>
         </row>
       </tbody>
     </tgroup>

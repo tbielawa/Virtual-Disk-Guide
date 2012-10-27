@@ -45,7 +45,6 @@ HTML_CHUNKED_xsl = $(STYLEDIR)/html/chunk.xsl
 ##################################################################
 XSLTPARAMS = --xinclude \
 	--stringparam section.autolabel 1 \
-	--stringparam chunker.output.encoding UTF-8 \
 	--stringparam html.stylesheet "./lnx-docbook-stylesheet.css"
 
 # -o $(OUTFILE).html
