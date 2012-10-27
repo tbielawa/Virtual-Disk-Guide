@@ -54,7 +54,7 @@
     The <command>file</command> command tells us immediately what it
     thinks each file is. This is another simple to perform query that
     you can run from any system without special tools. Here we see it
-    correctly recports <filename>image-qcow.qcow2</filename>s
+    correctly reports <filename>image-qcow.qcow2</filename>'s
     type. Unfortunately, without any content, all it can tell us about
     <filename>image-raw.raw</filename> is that it's 'data'.
   </para>

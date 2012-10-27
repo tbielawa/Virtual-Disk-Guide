@@ -9,7 +9,7 @@
 
     <para>
       RAW images, though simple to work with, carry the disadvantage of
-      increased disk usage on the host OS. One option to have is to
+      increased disk usage on the host OS. One option we have is to
       convert the image into the QCOW2 format which uses zlib
       compression and optionally allows for 128 bit AES encryption.
     </para>

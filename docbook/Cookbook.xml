@@ -20,8 +20,8 @@
   </section>
 
   <!-- Links to each recipe follow -->
+  <xi:include href="cookbook/create-virtual-disks.xml"/>
   <xi:include href="cookbook/query-an-image-for-information.xml"/>
   <xi:include href="cookbook/converting-between-raw-and-qcow2.xml"/>
   <xi:include href="cookbook/create-disks-with-backing-images.xml"/>
-  <xi:include href="cookbook/create-virtual-disks.xml"/>
 </chapter>

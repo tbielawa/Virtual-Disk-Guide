@@ -1,8 +1,7 @@
-tbielawa@deepfryer:/srv/images$ qemu-img convert -O qcow2 image-raw.raw image-raw-converted.qcow
+tbielawa@deepfryer:/srv/images$ qemu-img convert -O raw image-converted.qcow image-converted-from-qcow2.raw
 
-tbielawa@deepfryer:/srv/images$ qemu-img info image-raw-converted.qcow
-image: image-raw-converted.qcow
-file format: qcow2
+tbielawa@deepfryer:/srv/images$ qemu-img info image-converted-from-qcow2.raw
+image: image-converted-from-qcow2.raw
+file format: raw
 virtual size: 10G (10737418240 bytes)
-disk size: 136K
-cluster_size: 65536
+disk size: 0
