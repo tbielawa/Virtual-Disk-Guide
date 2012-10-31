@@ -49,7 +49,7 @@
     </listitem>
   </itemizedlist>
 
-  <table pgwide='0' frame='all' xml:id="VDG-Concepts-Create-A-Partition-Table-What-Changed">
+  <table pgwide='0' frame='none' xml:id="VDG-Concepts-Create-A-Partition-Table-What-Changed" role='vdg-table'>
     <title>What <command>parted</command> Changed</title>
     <tgroup cols='4' align='center'>
       <colspec colname='c1'/>
@@ -58,7 +58,7 @@
       <colspec colname='c4'/>
       <thead>
         <row>
-          <entry align='left'></entry>
+          <entry align='left'>Command</entry>
           <entry align='left'><filename class='devicefile'>sda</filename></entry>
           <entry align='left'><filename>disk1.raw</filename></entry>
           <entry align='left'><filename>disk1.raw</filename> (via <command>parted</command>)</entry>

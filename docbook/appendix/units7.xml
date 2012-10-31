@@ -62,7 +62,7 @@
         "binary".
       </para>
 
-      <table pgwide='0' frame='all'>
+      <table pgwide='0' frame='none' role='vdg-table'>
         <title>Binary Preflixes</title>
         <tgroup cols='3' align='center'>
           <colspec colname='c1'/>

@@ -37,7 +37,7 @@
     </listitem>
   </itemizedlist>
 
-  <table pgwide='0' frame='all' xml:id="VDG-Concepts-Example-Examine-the-Loop-Device">
+  <table pgwide='0' frame='none' xml:id="VDG-Concepts-Example-Examine-the-Loop-Device" role='vdg-table'>
     <title>Examining the Loop Device</title>
     <tgroup cols='5' align='center'>
       <colspec colname='c1'/>
@@ -47,7 +47,7 @@
       <colspec colname='c5'/>
       <thead>
         <row>
-          <entry align='left'></entry>
+          <entry align='left'>Command</entry>
           <entry align='left'><filename class='devicefile'>sda</filename></entry>
           <entry align='left'><filename>disk1.raw</filename></entry>
           <entry align='left'><filename>disk1.raw</filename> (via <command>parted</command>)</entry>

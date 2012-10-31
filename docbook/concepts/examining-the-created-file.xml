@@ -44,7 +44,7 @@
     </listitem>
   </itemizedlist>
 
-  <table xml:id="VDG-Concepts-Comparison1" border="1">
+  <table xml:id="VDG-Concepts-Comparison1" role='vdg-table'>
     <caption>Attribute Comparison</caption>
     <tr>
       <td>Command</td>
