@@ -44,28 +44,37 @@
     </listitem>
   </itemizedlist>
 
-  <table xml:id="VDG-Concepts-Comparison1" role='vdg-table'>
-    <caption>Attribute Comparison</caption>
-    <tr>
-      <td>Command</td>
-      <td><systemitem class="resource">sda</systemitem></td>
-      <td><filename>disk1.raw</filename></td>
-    </tr>
-    <tr>
-      <td><command>file</command></td>
-      <td>block special</td>
-      <td>data</td>
-    </tr>
-    <tr>
-      <td><command>stat</command></td>
-      <td>block special</td>
-      <td>regular file</td>
-    </tr>
-    <tr>
-      <td><command>fdisk</command></td>
-      <td>Contains partition table</td>
-      <td>Missing partition table</td>
-    </tr>
+  <table pgwide='0' frame='none' xml:id="VDG-Concepts-Comparison1" role='vdg-table'>
+    <title>Attribute Comparison</title>
+    <tgroup cols='3' align='center'>
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <thead>
+	<row>
+	  <entry align='left'>Command</entry>
+	  <entry align='left'><systemitem class="resource">sda</systemitem></entry>
+	  <entry align='left'><filename>disk1.raw</filename></entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry align='left'><command>file</command></entry>
+	  <entry align='left'>block special</entry>
+	  <entry align='left'>data</entry>
+	</row>
+	<row>
+	  <entry align='left'><command>stat</command></entry>
+	  <entry align='left'>block special</entry>
+	  <entry align='left'>regular file</entry>
+	</row>
+	<row>
+	  <entry align='left'><command>fdisk</command></entry>
+	  <entry align='left'>Contains partition table</entry>
+	  <entry align='left'>Missing partition table</entry>
+	</row>
+      </tbody>
+    </tgroup>
   </table>
 
   <para>

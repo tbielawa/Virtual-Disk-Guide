@@ -54,7 +54,10 @@ XSLT_CHUNKED_PARAMS = --stringparam base.dir $(CHUNKDIR)/
 
 # -o $(OUTFILE).pdf
 DBLATEX_PARAMS = -P latex.class.options=11pt \
-	-P term.breakline=1
+	-P term.breakline=1 \
+	-V -D \
+	-p xsl/dblatex-pdf.xsl
+#	-V -D
 
 ##################################################################
 # Use the proper options for the target platform
@@ -98,6 +101,9 @@ docdir:
 	ln -s ../css/lnx-docbook-stylesheet.css output/lnx-docbook-stylesheet.css || true
 
 chunked:
+	@echo "#############################################"
+	@echo "     BUILDING HTML (CHUNKED) OUTPUT NOW"
+	@echo "#############################################"
 	xsltproc $(XSLTPARAMS) $(XSLT_CHUNKED_PARAMS) $(HTML_CHUNKED_xsl) $(INPUT).xml
 
 # %.html: %.xml
@@ -113,10 +119,20 @@ chunked:
 # somefile.pdf, or somefile.html.  The depend target (%.xml below) are
 # recursively evaluated until all required targets have been met.
 %.html: %.xml
+	@echo "#############################################"
+	@echo "       BUILDING HTML OUTPUT NOW"
+	@echo "#############################################"
 	xsltproc $(XSLTPARAMS) $(XSLT_HTML_PARAMS) -o $(DEST)/$@ $(HTML_xsl) $<
 
+html: $(OUTPUT).html
+
 %.pdf: %.xml
+	@echo "#############################################"
+	@echo "       BUILDING PDF OUTPUT NOW"
+	@echo "#############################################"
 	dblatex $(DBLATEX_PARAMS) -o $(DEST)/$@ $<
+
+pdf: $(OUTPUT).pdf
 
 docs: docdir $(OUTPUT).html $(OUTPUT).pdf chunked
 
