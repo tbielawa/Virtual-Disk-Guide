@@ -53,11 +53,8 @@ XSLTPARAMS = --xinclude \
 XSLT_CHUNKED_PARAMS = --stringparam base.dir $(CHUNKDIR)/
 
 # -o $(OUTFILE).pdf
-DBLATEX_PARAMS = -P latex.class.options=11pt \
-	-P term.breakline=1 \
-	-V -D \
-	-p xsl/dblatex-pdf.xsl
-#	-V -D
+DBLATEX_PARAMS = -p xsl/dblatex-pdf.xsl
+
 
 ##################################################################
 # Use the proper options for the target platform
