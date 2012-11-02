@@ -5,4 +5,5 @@
   <xsl:param name="latex.class.options">11pt</xsl:param>
   <xsl:param name="term.breakline">1</xsl:param>
   <xsl:param name="latex.output.revhistory">0</xsl:param>
+  <xsl:param name="draft.mode">yes</xsl:param>
 </xsl:stylesheet>
