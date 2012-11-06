@@ -6,7 +6,7 @@
   <info>
     <title>The Linux Sysadmins Guide to Virtual Disks</title>
 
-    <subtitle>From the basics to the advanced.</subtitle>
+    <subtitle>From the basics to the advanced</subtitle>
 
     <authorgroup>
       <author>
@@ -43,6 +43,19 @@
 	what the relevant technical concepts are how they work up to
 	the final result of each example.
       </para>
+
+      <para>
+        You can report issues with this guide, or view the latest
+        DocBook 5 XML source under version control (git) on the web,
+        at <link
+        xl:href="http://github.com/tbielawa/Virtual-Disk-Guide"/>.
+
+	An HTML compiled version is available at <link
+	xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html"/>,
+
+	and a PDF is available at <link
+	xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf"/>.
+      </para>
     </abstract>
 
     <legalnotice>
@@ -53,14 +66,6 @@
 	xl:href="http://creativecommons.org/licenses/by/3.0/us/"/> or
 	send a letter to Creative Commons, 171 Second Street, Suite
 	300, San Francisco, California, 94105, USA.
-      </para>
-
-      <para>
-        You can view the latest DocBook 5 XML source to this guide
-        under version control on the web at <link
-        xl:href="http://github.com/tbielawa/Virtual-Disk-Guide"/> and
-        an HTML compiled version under <link
-        xl:href="http://lnx.cx/docs/vdg/"/>.
       </para>
     </legalnotice>
 
