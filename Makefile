@@ -43,9 +43,7 @@ HTML_CHUNKED_xsl = $(STYLEDIR)/html/chunk.xsl
 # XSLT_HTML_PARAMS - Options specific to sigle HTML output
 # DBLATEX_PARAMS - Options specific to dblatex PDF output
 ##################################################################
-XSLTPARAMS = --xinclude \
-	--stringparam section.autolabel 1 \
-	--stringparam html.stylesheet "./lnx-docbook-stylesheet.css"
+XSLTPARAMS = --xinclude 
 
 # -o $(OUTFILE).html
 #XSLT_HTML_PARAMS =
