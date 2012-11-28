@@ -13,7 +13,7 @@
     we create will be called <filename>disk1.raw</filename> and
     filled with 2097152 blocks of <keycode>NUL</keycode>
     characters from <systemitem
-    class="resource">/dev/null</systemitem>. Here's the command:
+    class="resource">/dev/zero</systemitem>. Here's the command:
   </para>
 
   <example xml:id="VDG-Concepts-Example-Using-dd">
