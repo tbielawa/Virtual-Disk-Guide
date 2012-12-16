@@ -1,164 +1,172 @@
-<refentry xmlns="http://docbook.org/ns/docbook"
-          xml:id='VDG-Appendix-Units'
+<appendix xmlns="http://docbook.org/ns/docbook"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xml:id="VDG-Appendix-Units"
           version="5.0">
 
-  <!-- lifted from troff+man by doclifter -->
+  <title>Man Pages</title>
 
-  <!--  Copyright (C) 2001 Andries Brouwer &lt;aeb@cwi.nl&gt; -->
+  <refentry>
 
-  <!--  Permission is granted to make and distribute verbatim copies of this -->
-  <!--  manual provided the copyright notice and this permission notice are -->
-  <!--  preserved on all copies. -->
+    <!-- lifted from troff+man by doclifter -->
 
-  <!--  Permission is granted to copy and distribute modified versions of this -->
-  <!--  manual under the conditions for verbatim copying, provided that the -->
-  <!--  entire resulting derived work is distributed under the terms of a -->
-  <!--  permission notice identical to this one. -->
+    <!--  Copyright (C) 2001 Andries Brouwer &lt;aeb@cwi.nl&gt; -->
 
-  <!--  Since the Linux kernel and libraries are constantly changing, this -->
-  <!--  manual page may be incorrect or out\-of\-date.  The author(s) assume no -->
-  <!--  responsibility for errors or omissions, or for damages resulting from -->
-  <!--  the use of the information contained herein.  The author(s) may not -->
-  <!--  have taken the same level of care in the production of this manual, -->
-  <!--  which is licensed free of charge, as they might when working -->
-  <!--  professionally. -->
+    <!--  Permission is granted to make and distribute verbatim copies of this -->
+    <!--  manual provided the copyright notice and this permission notice are -->
+    <!--  preserved on all copies. -->
 
-  <!--  Formatted or processed versions of this manual, if unaccompanied by -->
-  <!--  the source, must acknowledge the copyright and authors of this work. -->
+    <!--  Permission is granted to copy and distribute modified versions of this -->
+    <!--  manual under the conditions for verbatim copying, provided that the -->
+    <!--  entire resulting derived work is distributed under the terms of a -->
+    <!--  permission notice identical to this one. -->
 
-  <refentryinfo><date>2001-12-22</date></refentryinfo>
+    <!--  Since the Linux kernel and libraries are constantly changing, this -->
+    <!--  manual page may be incorrect or out\-of\-date.  The author(s) assume no -->
+    <!--  responsibility for errors or omissions, or for damages resulting from -->
+    <!--  the use of the information contained herein.  The author(s) may not -->
+    <!--  have taken the same level of care in the production of this manual, -->
+    <!--  which is licensed free of charge, as they might when working -->
+    <!--  professionally. -->
 
-  <refmeta>
-    <refentrytitle>UNITS</refentrytitle>
-    <manvolnum>7</manvolnum>
-    <refmiscinfo class='date'>2001-12-22</refmiscinfo>
-    <refmiscinfo class='source'>Linux</refmiscinfo>
-    <refmiscinfo class='manual'>Linux Programmer's Manual</refmiscinfo>
-  </refmeta>
+    <!--  Formatted or processed versions of this manual, if unaccompanied by -->
+    <!--  the source, must acknowledge the copyright and authors of this work. -->
 
-  <refnamediv id='name'>
-    <refname>units</refname>
-    <refname>kilo</refname>
-    <refname>kibi</refname>
-    <refname>mega</refname>
-    <refname>mebi</refname>
-    <refname>giga</refname>
-    <refname>gibi</refname>
-    <refpurpose>decimal and binary prefixes</refpurpose>
-  </refnamediv>
-  <!-- body begins here -->
+    <refentryinfo><date>2001-12-22</date></refentryinfo>
 
-  <refsect1 id='description'>
-    <title>DESCRIPTION</title>
+    <refmeta>
+      <refentrytitle>UNITS</refentrytitle>
+      <manvolnum>7</manvolnum>
+      <refmiscinfo class='date'>2001-12-22</refmiscinfo>
+      <refmiscinfo class='source'>Linux</refmiscinfo>
+      <refmiscinfo class='manual'>Linux Programmer's Manual</refmiscinfo>
+    </refmeta>
+
+    <refnamediv id='name'>
+      <refname>units</refname>
+      <refname>kilo</refname>
+      <refname>kibi</refname>
+      <refname>mega</refname>
+      <refname>mebi</refname>
+      <refname>giga</refname>
+      <refname>gibi</refname>
+      <refpurpose>decimal and binary prefixes</refpurpose>
+    </refnamediv>
+    <!-- body begins here -->
+
+    <refsect1 id='description'>
+      <title>DESCRIPTION</title>
 
 
-    <refsect2 id='binary_prefixes'>
-      <title>Binary prefixes</title>
-      <para>
-        The binary prefixes resemble the decimal ones, but have an
-        additional 'i' (and "Ki" starts with a capital 'K').  The names
-        are formed by taking the first syllable of the names of the
-        decimal prefix with roughly the same size, followed by "bi" for
-        "binary".
-      </para>
+      <refsect2 id='binary_prefixes'>
+        <title>Binary prefixes</title>
+        <para>
+          The binary prefixes resemble the decimal ones, but have an
+          additional 'i' (and "Ki" starts with a capital 'K').  The names
+          are formed by taking the first syllable of the names of the
+          decimal prefix with roughly the same size, followed by "bi" for
+          "binary".
+        </para>
 
-      <table pgwide='0' frame='none' role='vdg-table'>
-        <title>Binary Prefixes</title>
-        <tgroup cols='3' align='center'>
-          <colspec colname='c1'/>
-          <colspec colname='c2'/>
-          <colspec colname='c3'/>
-          <tbody>
-            <row>
-              <entry align='left'>Prefix</entry>
-              <entry align='left'>Name</entry>
-              <entry align='left'>Value</entry>
-            </row>
-            <row>
-              <entry align='left'>Ki</entry>
-              <entry align='left'>kibi</entry>
-              <entry align='left'>2<superscript>10</superscript> = 1024</entry>
-            </row>
-            <row>
-              <entry align='left'>Mi</entry>
-              <entry align='left'>mebi</entry>
-              <entry align='left'>2<superscript>20</superscript> = 1048576</entry>
-            </row>
-            <row>
-              <entry align='left'>Gi</entry>
-              <entry align='left'>gibi</entry>
-              <entry align='left'>2<superscript>30</superscript> = 1073741824</entry>
-            </row>
-            <row>
-              <entry align='left'>Ti</entry>
-              <entry align='left'>tebi</entry>
-              <entry align='left'>2<superscript>40</superscript> = 1099511627776</entry>
-            </row>
-            <row>
-              <entry align='left'>Pi</entry>
-              <entry align='left'>pebi</entry>
-              <entry align='left'>2<superscript>50</superscript> = 1125899906842624</entry>
-            </row>
-            <row>
-              <entry align='left'>Ei</entry>
-              <entry align='left'>exbi</entry>
-              <entry align='left'>2<superscript>60</superscript> = 1152921504606846976</entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
+        <table pgwide='0' frame='none' role='vdg-table'>
+          <title>Binary Prefixes</title>
+          <tgroup cols='3' align='center'>
+            <colspec colname='c1'/>
+            <colspec colname='c2'/>
+            <colspec colname='c3'/>
+	    <thead>
+              <row>
+                <entry align='left'>Prefix</entry>
+                <entry align='left'>Name</entry>
+                <entry align='left'>Value</entry>
+              </row>
+	    </thead>
+            <tbody>
+              <row>
+                <entry align='left'>Ki</entry>
+                <entry align='left'>kibi</entry>
+                <entry align='left'>2<superscript>10</superscript> = 1024</entry>
+              </row>
+              <row>
+                <entry align='left'>Mi</entry>
+                <entry align='left'>mebi</entry>
+                <entry align='left'>2<superscript>20</superscript> = 1048576</entry>
+              </row>
+              <row>
+                <entry align='left'>Gi</entry>
+                <entry align='left'>gibi</entry>
+                <entry align='left'>2<superscript>30</superscript> = 1073741824</entry>
+              </row>
+              <row>
+                <entry align='left'>Ti</entry>
+                <entry align='left'>tebi</entry>
+                <entry align='left'>2<superscript>40</superscript> = 1099511627776</entry>
+              </row>
+              <row>
+                <entry align='left'>Pi</entry>
+                <entry align='left'>pebi</entry>
+                <entry align='left'>2<superscript>50</superscript> = 1125899906842624</entry>
+              </row>
+              <row>
+                <entry align='left'>Ei</entry>
+                <entry align='left'>exbi</entry>
+                <entry align='left'>2<superscript>60</superscript> = 1152921504606846976</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
 
-      <para>
-        See also: <ulink
-        url='http://physics.nist.gov/cuu/Units/binary.html'>http://physics.nist.gov/cuu/Units/binary.html</ulink>
-      </para>
+        <para>
+          See also: <ulink
+          url='http://physics.nist.gov/cuu/Units/binary.html'>http://physics.nist.gov/cuu/Units/binary.html</ulink>
+        </para>
 
-    </refsect2>
+      </refsect2>
 
-    <refsect2 id='discussion'>
-      <title>Discussion</title>
-      <para>
-        Before these binary prefixes were introduced, it was fairly
-        common to use k=1000 and K=1024, just like b=bit, B=byte.
-        Unfortunately, the M is capital already, and cannot be
-        capitalized to indicate binary-ness.
-      </para>
+      <refsect2 id='discussion'>
+        <title>Discussion</title>
+        <para>
+          Before these binary prefixes were introduced, it was fairly
+          common to use k=1000 and K=1024, just like b=bit, B=byte.
+          Unfortunately, the M is capital already, and cannot be
+          capitalized to indicate binary-ness.
+        </para>
 
-      <para>
-        At first that didn't matter too much, since memory modules and
-        disks came in sizes that were powers of two, so everyone knew
-        that in such contexts "kilobyte" and "megabyte" meant 1024 and
-        1048576 bytes, respectively.  What originally was a sloppy use
-        of the prefixes "kilo" and "mega" started to become regarded as
-        the "real true meaning" when computers were involved.  But then
-        disk technology changed, and disk sizes became arbitrary
-        numbers.  After a period of uncertainty all disk manufacturers
-        settled on the standard, namely k=1000, M=1000k, G=1000M.
-      </para>
+        <para>
+          At first that didn't matter too much, since memory modules and
+          disks came in sizes that were powers of two, so everyone knew
+          that in such contexts "kilobyte" and "megabyte" meant 1024 and
+          1048576 bytes, respectively.  What originally was a sloppy use
+          of the prefixes "kilo" and "mega" started to become regarded as
+          the "real true meaning" when computers were involved.  But then
+          disk technology changed, and disk sizes became arbitrary
+          numbers.  After a period of uncertainty all disk manufacturers
+          settled on the standard, namely k=1000, M=1000k, G=1000M.
+        </para>
 
-      <para>
-        The situation was messy: in the 14k4 modems, k=1000; in the
-        1.44MB diskettes, M=1024000; etc. In 1998 the IEC approved the
-        standard that defines the binary prefixes given above, enabling
-        people to be precise and unambiguous.
-      </para>
+        <para>
+          The situation was messy: in the 14k4 modems, k=1000; in the
+          1.44MB diskettes, M=1024000; etc. In 1998 the IEC approved the
+          standard that defines the binary prefixes given above, enabling
+          people to be precise and unambiguous.
+        </para>
 
-      <para>
-        Thus, today, MB = 1000000B and MiB = 1048576B.
-      </para>
+        <para>
+          Thus, today, MB = 1000000B and MiB = 1048576B.
+        </para>
 
-      <para>
-        In the free software world programs are slowly being changed to
-        conform. When the Linux kernel boots and says:
-      </para>
+        <para>
+          In the free software world programs are slowly being changed to
+          conform. When the Linux kernel boots and says:
+        </para>
 
-      <screen>
-        hda: 120064896 sectors (61473 MB) w/2048KiB Cache
-      </screen>
+        <screen>
+          hda: 120064896 sectors (61473 MB) w/2048KiB Cache
+        </screen>
 
-      <para>
-        the MB are megabytes and the KiB are kibibytes.
-      </para>
-    </refsect2>
-  </refsect1>
-</refentry>
+        <para>
+          the MB are megabytes and the KiB are kibibytes.
+        </para>
+      </refsect2>
+    </refsect1>
+  </refentry>
+</appendix>

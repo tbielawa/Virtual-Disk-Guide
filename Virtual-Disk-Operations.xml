@@ -84,5 +84,6 @@
   <xi:include href="docbook/Advanced.xml"/>
   <!-- <xi:include href="docbook/Other-Formats.xml"/> -->
   <!-- <xi:include href="docbook/Additional-Resources.xml"/> -->
-  <xi:include href="docbook/Appendix.xml"/>
+  <xi:include href="docbook/appendix/units7.xml"/>
+  <xi:include href="docbook/appendix/mbr.xml"/>
 </book>

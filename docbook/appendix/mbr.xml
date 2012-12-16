@@ -1,0 +1,54 @@
+<appendix xmlns="http://docbook.org/ns/docbook"
+          xml:id="VDG-Appendix-MBR"
+          version="5.0">
+
+  <title>Master Boot Record Contents</title>
+
+  <table pgwide='0' frame='none'>
+    <title>Master Boot Record Contents</title>
+    <tgroup cols='3' align='center'>
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <thead>
+        <row>
+          <entry align='left'>Size (in bytes)</entry>
+          <entry align='left'>Percent</entry>
+          <entry align='left'>Purpose</entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry align='left'>440B</entry>
+          <entry align='left'>86%</entry>
+          <entry align='left'>Bootable  Code (such as Grub/Lilo)</entry>
+        </row>
+        <row>
+          <entry align='left'>4B</entry>
+          <entry align='left'>0.8%</entry>
+          <entry align='left'>Disk signature</entry>
+        </row>
+        <row>
+          <entry align='left'>2B</entry>
+          <entry align='left'>0.4%</entry>
+          <entry align='left'>Nulls</entry>
+        </row>
+        <row>
+          <entry align='left'>64B</entry>
+          <entry align='left'>13%</entry>
+          <entry align='left'>Partition Table</entry>
+        </row>
+        <row>
+          <entry align='left'>2B</entry>
+          <entry align='left'>0.4%</entry>
+          <entry align='left'>MBR Signature</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+
+
+
+
+
+</appendix>
