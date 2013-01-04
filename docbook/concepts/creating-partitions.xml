@@ -15,5 +15,8 @@
 
     <screen><xi:include href="../examples/concepts-creating-partitions01" parse="text"/></screen>
   </example>
-  <!-- That example would benefit a LOT from some well placed callouts -->
+
+  <remark>TODO: That example would benefit a LOT from some well placed callouts</remark>
+
+  <remark>TODO: Speak about the kpartx and partprobe commands</remark>
 </section>

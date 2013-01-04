@@ -253,3 +253,19 @@ TABLE td {
 TABLE tbody tr:hover td {
 	color: #009;
 }
+
+p.remark {
+    text-align: right;
+}
+
+span.remark {
+    color: #CCCCAA;
+}
+
+span.remark:hover {
+    color: #000000;
+}
+
+acronym {
+    border-bottom: dotted 1px;
+}

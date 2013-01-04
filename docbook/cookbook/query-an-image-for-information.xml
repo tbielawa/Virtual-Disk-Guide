@@ -47,8 +47,10 @@
     the meta-data associated with the QCOW image format.
   </para>
 
-  <!-- TODO: Link reference to QCOW specification -->
-  <!-- http://people.gnome.org/~markmc/qcow-image-format.html -->
+  <remark>
+    TODO: Link reference to QCOW specification:
+    http://people.gnome.org/~markmc/qcow-image-format.html
+  </remark>
 
   <para>
     The <command>file</command> command tells us immediately what it

@@ -28,7 +28,9 @@
     <screen><xi:include href="../examples/cookbook-create-simple-images01" parse="text"/></screen>
   </example>
 
-  <!-- TODO: make terms like 'RAW' and etc... link to a relevant section where they are defined -->
+  <remark>
+    TODO: make terms like 'RAW' and etc... link to a relevant section where they are defined
+  </remark>
 
   <para>
     From the <literal>fmt</literal> attribute above you can see that

@@ -4,16 +4,19 @@
 
   <title>Formatting Partitions</title>
 
+  <remark>TODO: Move the examples in this section into their own files</remark>
 
   <para>
     Unlike <systemitem class="resource">/dev/sda</systemitem> we can't
-    just create a partition on the first <systemitem
-    class="resource">loop0</systemitem> partition by addressing it as
+    just create a partition on the <systemitem
+    class="resource">loop0</systemitem> device by addressing it as
     <systemitem class="resource">/dev/loop0</systemitem>. This is
-    because the kernel has no device created to represent
-    this. Instead we'll have to create another device associated with
-    a specific offset in our device/file.
+    because the kernel has no device created to represent it. Instead
+    we'll have to create another device associated with a specific
+    <literal>offset</literal> in our device/file.
   </para>
+
+  <remark>TODO: Rephrase the above paragraph ^ wrt: device representation</remark>
 
   <qandaset defaultlabel="qanda">
     <!-- Don't generate a table of contents for QandASets -->
@@ -21,45 +24,87 @@
     <qandaentry>
       <question>
         <para>
-          What is an offset, and Why do we have to specify one?
+          What is an <literal>offset</literal>, and why do we have to
+          specify one?
         </para>
       </question>
       <answer>
-	<para>
-	  An "offset" just means how far from the beginning of a
-	  device something is.
-	</para>
+        <para>
+          An <literal>offset</literal> indicates how far from the
+          beginning of a device something is.
+        </para>
 
-	<para>
-	  We need to know this because we're going to create a device
-	  mapped to the first partition (Linux does this automatically
-	  for regular disks during the boot process).
-	</para>
+        <para>
+          The first partition is not located at the beginning of the
+          device. That is where the Master Boot Record
+          (<acronym>MBR</acronym>) is stored
+          (<literal>offset=0</literal>). If we tried to create a
+          partition at <literal>offset=0</literal> we would overwrite
+          the MBR. Knowing the offset will allow us to create create a
+          device mapped to where the first partition begins without
+          overwriting the MBR. Linux does this automatically for
+          regular disks during the boot process.
+        </para>
       </answer>
     </qandaentry>
+
     <qandaentry>
       <question>
         <para>
-          How do we know what offset to specify?
+	  Why doesn't the first partition begin after the MBR?
+	</para>
+      </question>
+      <answer>
+	<para>
+	  The MBR fits into 512B, the typical size of one sector. A
+	  disk cylinder (or <literal>track</literal>) was typically 63
+	  sectors. This would represent one concentric ring of storage
+	  on a physical disk.
+	</para>
+
+	<para>
+	  The reason for this dates back to historical operating
+	  system conventions. Some older operating systems (noteably
+	  <systemitem class="osname">MS-DOS</systemitem>) enforced
+	  requirements which dictated that partitions begin on
+	  cylinder boundries. <remark>TODO: Find a good citation for
+	  this</remark>
+	</para>
+      </answer>
+    </qandaentry>
+
+    <qandaentry>
+      <question>
+        <para>
+          How do we calculate the offset to specify?
         </para>
       </question>
       <answer>
         <para>
-	  Partitions don't start on the first block of a device
-	  because the Master Boot Record (MBR) is stored there.
-	</para>
+          To calculate the offset we need to know what sector the
+          partition (<systemitem
+          class="resource">loop0p1</systemitem>) starts
+          on. <command>fdisk</command> can give us this
+          information. (Spoiler: 9 times out of 10 the offset for the
+          first partition will be <literal>512 * 63 =
+          32256</literal>).
+        </para>
       </answer>
     </qandaentry>
   </qandaset>
 
 
-  <para>
-    To specify the offset we just need to know what sector the
-    partition (<systemitem class="resource">loop0p1</systemitem>)
-    starts on. <command>fdisk</command> can give us this
-    information. (Spoiler: 9 times out of 10 the offset for the first
-    partition will be 512 * 63 = 32256).
-  </para>
+  <remark>
+    TODO: Insert a proper attribution to
+    http://ubuntuforums.org/showthread.php?t=1661254 for credit
+  </remark>
+
+  <remark>
+    TODO: This document pretty much discredits everythings I wrote in
+    this section with respect to where and why partitions must be
+    aligned:
+    http://homepage.ntlworld.com./jonathan.deboynepollard/FGA/disc-partition-alignment.html
+  </remark>
 
   <para>
     Print the partition table using <command>fdisk</command> with the
