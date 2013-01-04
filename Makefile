@@ -43,7 +43,7 @@ HTML_CHUNKED_xsl = $(STYLEDIR)/html/chunk.xsl
 # XSLT_HTML_PARAMS - Options specific to sigle HTML output
 # DBLATEX_PARAMS - Options specific to dblatex PDF output
 ##################################################################
-XSLTPARAMS = --xinclude 
+XSLTPARAMS = --xinclude
 
 # -o $(OUTFILE).html
 #XSLT_HTML_PARAMS =
@@ -51,7 +51,7 @@ XSLTPARAMS = --xinclude
 XSLT_CHUNKED_PARAMS = --stringparam base.dir $(CHUNKDIR)/
 
 # -o $(OUTFILE).pdf
-DBLATEX_PARAMS = -p xsl/dblatex-pdf.xsl
+DBLATEX_PARAMS = -p xsl/dblatex-pdf.xsl -b xetex
 
 
 ##################################################################

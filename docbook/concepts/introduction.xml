@@ -39,35 +39,10 @@
   <example xml:id="VDG-Concepts-Regular-Drive">
     <title>Regular Disk Drive</title>
 
-    <!-- Make this into a screenco with callouts on what to look for -->
-    <screen><![CDATA[
-    <tbielawa>@(fridge)[~/images]
-    $ file /dev/sda
-    /dev/sda: block special
-    <tbielawa>@(fridge)[~/images]
-    $ stat /dev/sda
-    File: `/dev/sda'
-    Size: 0             Blocks: 0          IO Block: 4096   block special file
-    Device: 5h/5d               Inode: 5217        Links: 1     Device type: 8,0
-    Access: (0660/brw-rw----)  Uid: (    0/    root)   Gid: (    6/    disk)
-    Access: 2010-09-15 01:09:02.060722589 -0400
-    Modify: 2010-09-12 11:03:20.831372852 -0400
-    Change: 2010-09-12 11:03:26.226369247 -0400
-    <tbielawa>@(fridge)[~/images]
-    $ sudo fdisk -l /dev/sda
-
-    Disk /dev/sda: 320.1 GB, 320071851520 bytes
-    255 heads, 63 sectors/track, 38913 cylinders
-    Units = cylinders of 16065 * 512 = 8225280 bytes
-    Disk identifier: 0x12031202
-
-    Device Boot      Start         End      Blocks   Id  System
-    /dev/sda1               1       25496   204796588+   7  HPFS/NTFS
-    /dev/sda2           25497       31870    51199155   83  Linux
-    /dev/sda3           31871       33086     9767520   82  Linux swap / Solaris
-    /dev/sda4           33087       38913    46805377+   5  Extended
-    /dev/sda5   *       33087       38913    46805346   83  Linux]]></screen>
+    <screen><xi:include href="../examples/concepts-regular-drive" parse="text"/></screen>
   </example>
+
+  <remark>Make this into a screenco with callouts on what to look for</remark>
 
   <para>
     The term "block" is generally interchangeable with the term
@@ -174,8 +149,6 @@
       </tbody>
     </tgroup>
   </informaltable>
-
-    
 
   <!-- Citation:   -->
   <!-- IEC 60027-2 online:  -->

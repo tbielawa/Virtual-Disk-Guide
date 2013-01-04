@@ -6,4 +6,13 @@
   <xsl:param name="term.breakline">1</xsl:param>
   <xsl:param name="latex.output.revhistory">0</xsl:param>
   <xsl:param name="draft.mode">yes</xsl:param>
+
+  <xsl:param name="xetex.font">
+    <xsl:text>\setmainfont{Source Sans Pro}
+    </xsl:text>
+    <xsl:text>\setsansfont{Source Sans Pro}
+    </xsl:text>
+    <xsl:text>\setmonofont{Source Code Pro}
+    </xsl:text>
+  </xsl:param>
 </xsl:stylesheet>
