@@ -20,6 +20,8 @@
     this section mostly applies to Snapshots too.
   </para>
 
+  <remark>TODO: Link to snapshot section</remark>
+
   <para>
     So I went with backing images, they worked great for what I needed
     to them do. I could work incrementally and "commit" changes in the
