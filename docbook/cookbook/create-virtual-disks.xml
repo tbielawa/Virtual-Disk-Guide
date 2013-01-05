@@ -6,8 +6,8 @@
   <title>Creating Simple Images</title>
 
   <para>
-    The simplest operation (next to deleting an image) you can do is
-    creating a new virtual disk image. Depending on what type you
+    The simplest operation you can do (next to deleting an image) is
+    creating a new virtual disk image. Depending on what format you
     choose there are several options available when creating an
     image. For example, if you want encryption, if you want a format
     that supports compression, or even what existing image to base

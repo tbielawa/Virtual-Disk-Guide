@@ -1,5 +1,6 @@
 <appendix xmlns="http://docbook.org/ns/docbook"
           xml:id="VDG-Appendix-MBR"
+	  xmlns:xl="http://www.w3.org/1999/xlink"
           version="5.0">
 
   <title>Master Boot Record Contents</title>
@@ -24,22 +25,22 @@
           <entry align='left'>Bootable  Code (such as GRUB/Lilo)</entry>
         </row>
         <row>
-          <entry align='left'>4B</entry>
+          <entry align='left'>004B</entry>
           <entry align='left'>0.8%</entry>
           <entry align='left'>Disk signature</entry>
         </row>
         <row>
-          <entry align='left'>2B</entry>
+          <entry align='left'>002B</entry>
           <entry align='left'>0.4%</entry>
           <entry align='left'>Nulls</entry>
         </row>
         <row>
-          <entry align='left'>64B</entry>
+          <entry align='left'>064B</entry>
           <entry align='left'>13%</entry>
           <entry align='left'>Partition Table</entry>
         </row>
         <row>
-          <entry align='left'>2B</entry>
+          <entry align='left'>002B</entry>
           <entry align='left'>0.4%</entry>
           <entry align='left'>MBR Signature</entry>
         </row>
@@ -47,6 +48,9 @@
     </tgroup>
   </table>
 
+  <para>
+    Source: <link xl:href="http://ubuntuforums.org/showthread.php?t=1661254">Ubuntu Forums: Sector 32 FlexNet Problem -- Grub</link>
+  </para>
 
 
 

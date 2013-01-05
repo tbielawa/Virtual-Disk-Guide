@@ -42,11 +42,11 @@
 
   <note>
     <para>
-      When we refer to a <literal>COW</literal> image it has no
-      connotation to the <literal>COW</literal> ("copy-on-write") disk
-      format. Saying <literal>COW</literal> only serves to help make a
-      distinction between the read-only base-image and the image that
-      changes are copied to on writing.
+      In this section when we refer to a <literal>COW</literal> image
+      it has no connotation to the <literal>COW</literal>
+      ("copy-on-write") diskp format. Saying <literal>COW</literal>
+      only serves to help make a distinction between the read-only
+      base-image and the image that changes are copied to on writing.
     </para>
   </note>
 

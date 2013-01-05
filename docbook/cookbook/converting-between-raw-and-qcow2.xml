@@ -8,10 +8,14 @@
     <title>Convert an Image from RAW to QCOW2</title>
 
     <para>
-      RAW images, though simple to work with, carry the disadvantage of
-      increased disk usage on the host OS. One option we have is to
+      RAW images, though simple to work with, carry the disadvantage
+      of increased disk usage on the host OS. One option we have is to
       convert the image into the QCOW2 format which uses zlib
       compression and optionally allows for 128 bit AES encryption.
+
+      <remark>TODO: Explain how QCOW2 only uses as much space as there
+      is data in the image. Also talk about sparse file
+      systems</remark>
     </para>
 
     <example xml:id="VDG-Cookbook-Example-Convert-from-RAW-to-QCOW2">

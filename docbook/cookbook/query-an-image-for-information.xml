@@ -61,6 +61,12 @@
     <filename>image-raw.raw</filename> is that it's 'data'.
   </para>
 
+  <remark>
+    TODO: Link to concepts section that shows when it doesn't appear
+    as data anymore
+  </remark>
+
+
   <note>
     <para>
       Its worth mentioning that RAW image types will be reported by
