@@ -1,8 +1,12 @@
 /* Based on the original stylesheet from http://www.karakas-online.de/myLinuxTips/css-for-docbook.html */
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+/* font-family: 'Source Code Pro', sans-serif; */
 
 BODY {
-    font-family: arial;
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 1em;
 }
 
@@ -13,7 +17,7 @@ DIV.ABSTRACT {
 }
 
 PRE.SCREEN {
-    font-family: monospace;
+    font-family: 'Source Code Pro', sans-serif;
     white-space: pre;
     width: auto;
     background-color: #ffffcc;
@@ -28,7 +32,7 @@ PRE.SCREEN {
 }
 
 PRE.PROGRAMLISTING {
-    font-family: monospace;
+    font-family: 'Source Code Pro', sans-serif;
     white-space: pre;
     width: auto;
     background-color: #ffffcc;
@@ -118,7 +122,7 @@ TABLE.WARNING {
 }
 
 DIV.VARIABLELIST {
-    font-family: sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: normal;
     padding-left: 20px;
@@ -218,7 +222,7 @@ dl dt a {
 
 /* put <command /> elements in a monospaced font */
 .command {
-    font-family: "Lucida Console", Courier, monospace;
+    font-family: 'Source Code Pro', sans-serif;
 }
 
 /* *************************************************
@@ -227,13 +231,14 @@ dl dt a {
 /* http://coding.smashingmagazine.com/2008/08/13/top-10-css-table-designs/
 /* ************************************************* */
 TABLE {
-	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	font-size: 12px;
-	background: #fff;
-	margin: 15px;
-	width: 480px;
-	border-collapse: collapse;
-	text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+/* 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; */
+    font-size: 12px;
+    background: #fff;
+    margin: 15px;
+    width: 480px;
+    border-collapse: collapse;
+    text-align: left;
 }
 
 TABLE th {
