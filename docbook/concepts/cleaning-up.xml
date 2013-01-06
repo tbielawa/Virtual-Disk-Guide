@@ -13,10 +13,7 @@
   <example xml:id="VDG-Concepts-Example-Detaching-a-loop-device">
     <title>Detaching a loop device</title>
 
-    <screen><![CDATA[
-<tbielawa>@(fridge)[~/images]
-$ sudo losetup -d /dev/loop1]]>
-    </screen>
+    <screen><xi:include href="../examples/concepts-cleaning-up01" parse="text"/></screen>
   </example>
 
   <!-- <example xml:id="VDG-Concepts-"> -->

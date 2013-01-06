@@ -1,0 +1,7 @@
+<tbielawa>@(fridge)[~/images]
+$ sudo losetup -o 32256 -f /dev/loop0
+
+<tbielawa>@(fridge)[~/images]
+$ sudo losetup -a
+/dev/loop0: [0805]:151552 (/home/tbielawa/images/disk1.raw)
+/dev/loop1: [0005]:5102 (/dev/loop0), offset 32256

@@ -12,13 +12,7 @@
     <command>fdisk</command> on <filename>disk1.raw</filename>.
   </para>
 
-  <screen><![CDATA[
-<tbielawa>@(fridge)[~/images]
-$ fdisk disk1.raw
-You must set cylinders.
-You can do this from the extra functions menu.
-
-Command (m for help):]]></screen>
+  <screen><xi:include href="../examples/concepts-devices-and-partitions-introduction01" parse="text"/></screen>
 
   <para>
     To calculate how many cylinders to specify you could work

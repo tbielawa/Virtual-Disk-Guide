@@ -1,0 +1,10 @@
+<tbielawa>@(fridge)[~/images]
+$ sudo fdisk -ul /dev/loop0
+
+Disk /dev/loop0: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders, total 2097152 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Disk identifier: 0x000e44e8
+
+Device Boot      Start         End      Blocks   Id  System
+/dev/loop0p1              63     2088449     1044193+  83  Linux

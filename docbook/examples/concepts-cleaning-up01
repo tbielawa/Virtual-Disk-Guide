@@ -1,0 +1,2 @@
+<tbielawa>@(fridge)[~/images]
+$ sudo losetup -d /dev/loop1
