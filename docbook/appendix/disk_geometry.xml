@@ -1,9 +1,9 @@
 <appendix xmlns="http://docbook.org/ns/docbook"
           xml:id="VDG-Appendix-MBR"
-	  xmlns:xl="http://www.w3.org/1999/xlink"
+          xmlns:xl="http://www.w3.org/1999/xlink"
           version="5.0">
 
-  <title>Master Boot Record Contents</title>
+  <title>Disk Drive Geometry</title>
 
   <table pgwide='0' frame='none'>
     <title>Master Boot Record Contents</title>
@@ -22,7 +22,9 @@
         <row>
           <entry align='left'>440B</entry>
           <entry align='left'>86%</entry>
-          <entry align='left'>Bootable  Code (such as GRUB/Lilo)</entry>
+          <entry align='left'>Bootable Code (such as <link
+          xl:href="http://www.gnu.org/software/grub/">GRUB</link>/<link
+          xl:href="http://lilo.alioth.debian.org/">LILO</link>)</entry>
         </row>
         <row>
           <entry align='left'>004B</entry>
@@ -49,10 +51,11 @@
   </table>
 
   <para>
-    Source: <link xl:href="http://ubuntuforums.org/showthread.php?t=1661254">Ubuntu Forums: Sector 32 FlexNet Problem -- Grub</link>
+    References for sizes: <link
+    xl:href="http://www.pixelbeat.org/docs/disk/">Pixel Beat: "Details
+    of GRUB on the PC"</link>, and <link
+    xl:href="http://ubuntuforums.org/showthread.php?t=1661254">Ubuntu
+    Forums: Sector 32 FlexNet Problem -- Grub</link>
   </para>
-
-
-
 
 </appendix>

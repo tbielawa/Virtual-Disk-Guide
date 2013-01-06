@@ -86,5 +86,5 @@
   <!-- <xi:include href="docbook/Other-Formats.xml"/> -->
   <!-- <xi:include href="docbook/Additional-Resources.xml"/> -->
   <xi:include href="docbook/appendix/units7.xml"/>
-  <xi:include href="docbook/appendix/mbr.xml"/>
+  <xi:include href="docbook/appendix/disk_geometry.xml"/>
 </book>
