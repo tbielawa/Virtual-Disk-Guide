@@ -1,9 +1,10 @@
 <?xml version='1.0'?>
 <xsl:stylesheet  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  version="1.0">
-  <xsl:import href="/usr/share/sgml/docbook/xsl-ns-stylesheets/html/docbook.xsl"/>
+  <xsl:import href="/usr/share/sgml/docbook/xsl-ns-stylesheets/html/chunk.xsl"/>
 
   <xsl:output method="html" indent="yes"/>
+  <xsl:param name="navig.graphics">1</xsl:param>
   <xsl:param name="admon.graphics">1</xsl:param>
   <xsl:param name="draft.mode">yes</xsl:param>
   <xsl:param name="html.stylesheet">./lnx-docbook-stylesheet.css</xsl:param>

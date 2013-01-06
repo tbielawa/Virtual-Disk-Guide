@@ -232,7 +232,6 @@ dl dt a {
 /* ************************************************* */
 TABLE {
     font-family: 'Source Sans Pro', sans-serif;
-/* 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; */
     font-size: 12px;
     background: #fff;
     margin: 15px;
@@ -241,12 +240,32 @@ TABLE {
     text-align: left;
 }
 
+div.caution table {
+    width: 600px;
+}
+
+div.important table {
+    width: 600px;
+}
+
+div.note table {
+    width: 600px;
+}
+
+div.tip table {
+    width: 600px;
+}
+
+div.warning table {
+    width: 600px;
+}
+
 TABLE th {
-	font-size: 14px;
-	font-weight: normal;
-	color: #039;
-	padding: 10px 8px;
-	border-bottom: 2px solid #6678b1;
+    font-size: 14px;
+    font-weight: normal;
+    color: #039;
+    padding: 10px 8px;
+    border-bottom: 2px solid #6678b1;
 }
 
 TABLE td {
@@ -273,4 +292,14 @@ span.remark:hover {
 
 acronym {
     border-bottom: dotted 1px;
+}
+
+div.navheader table {
+    width: 100%;
+    margin-left: 0px;
+}
+
+div.navfooter table {
+    width: 100%;
+    margin-left: 0px;
 }

@@ -34,7 +34,8 @@ STYLEDIR = /usr/share/sgml/docbook/xsl-ns-stylesheets/
 # STYLEDIR = /opt/local/share/xsl/docbook-xsl
 
 HTML_xsl = xsl/docbook-html.xsl
-HTML_CHUNKED_xsl = $(STYLEDIR)/html/chunk.xsl
+#HTML_CHUNKED_xsl = $(STYLEDIR)/html/chunk.xsl
+HTML_CHUNKED_xsl = xsl/docbook-html-chunked.xsl
 
 ##################################################################
 # Options for transformations
@@ -91,9 +92,11 @@ all: clean docs
 
 docdir:
 	mkdir -p $(DEST)
-	ln -s ../css/lnx-docbook-stylesheet.css html/lnx-docbook-stylesheet.css || true
+	@ln -s ../css/lnx-docbook-stylesheet.css $(DEST)/lnx-docbook-stylesheet.css || true
+	@ln -s ../images $(DEST)/images || true
 	mkdir -p $(CHUNKDIR)
-	ln -s ../css/lnx-docbook-stylesheet.css output/lnx-docbook-stylesheet.css || true
+	@ln -s ../css/lnx-docbook-stylesheet.css $(CHUNKDIR)/lnx-docbook-stylesheet.css || true
+	@ln -s ../images $(CHUNKDIR)/images || true
 
 chunked:
 	@echo "#############################################"
@@ -119,7 +122,7 @@ chunked:
 	@echo "#############################################"
 	xsltproc $(XSLTPARAMS) $(XSLT_HTML_PARAMS) -o $(DEST)/$@ $(HTML_xsl) $<
 
-html: $(OUTPUT).html
+html: docdir $(OUTPUT).html
 
 %.pdf: %.xml
 	@echo "#############################################"
@@ -136,4 +139,4 @@ locator:
 
 clean:
 	$(FIND)  \( -regex "^[.]?(.+)\~$$" -o -regex "./[.]?#.*#" \) -delete
-	rm -fR output/* html/*
+	rm -fR output html
