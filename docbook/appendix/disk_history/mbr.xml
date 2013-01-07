@@ -5,6 +5,30 @@
 
   <title>The Master Boot Record</title>
 
+  <para>
+    The Master Boot Record (<acronym>MBR</acronym>) is located in the
+    first sector of the primary disk drive. The MBR may be up to 446B
+    of code, and partition tables may be up to 64B of data. When you
+    add in another 2B to record a <firstterm>Boot
+    Signature</firstterm> you have 512B, which up until recently
+    happened to be the typical size of one sector
+
+    <footnote><para>
+      <link
+      xl:href="http://www.seagate.com/tech-insights/advanced-format-4k-sector-hard-drives-master-ti/">Seagate.com:
+      Transition to Advanced Format 4K Sector Hard Drives</link>
+    </para></footnote>
+
+    <footnote><para>
+      <link xl:href="http://www.pixelbeat.org/docs/disk/">Pixel Beat:
+      "Details of GRUB on the PC"</link>
+    </para></footnote>
+
+
+    . This first sector is given a special name, <systemitem>boot
+    sector</systemitem>.
+  </para>
+
   <table pgwide='0' frame='none'>
     <title>Master Boot Record Contents</title>
     <tgroup cols='3' align='center'>
@@ -51,10 +75,61 @@
   </table>
 
   <para>
-    References for sizes: <link
-    xl:href="http://www.pixelbeat.org/docs/disk/">Pixel Beat: "Details
-    of GRUB on the PC"</link>, and <link
-    xl:href="http://ubuntuforums.org/showthread.php?t=1661254">Ubuntu
-    Forums: Sector 32 FlexNet Problem -- Grub</link>
+    In the old days a disk cylinder (or track) was typically 63
+    sectors. This would represent one concentric ring of storage on a
+    physical disk. Some people believe that early operating systems
+    (noteably MS-DOS) enforced requirements which dictated that
+    partitions begin on cylinder boundries, or that the OS needed to
+    begin and end on a cylinder boundry. Jonathan de Boyne Pollard
+    disputes that claim
+
+    <footnote><para>
+      <link
+      xl:href="http://homepage.ntlworld.com/jonathan.deboynepollard/FGA/disc-partition-alignment.html">The
+      gen on disc partition alignment</link>
+    </para></footnote>
+
+    , saying:
+
+    <blockquote>
+      <para>
+	It is often believed that disc partitions have to be aligned
+	to cylinder or track boundaries. This is not in fact true and
+	never really has been. There are alignment considerations for
+	disc partitions, but they have nothing to do with cylinders,
+	and they aren't mandatory. Operating systems will still work
+	with misaligned partitions, just more slowly for some (not
+	all) disc unit models.
+      </para>
+
+      <para>
+	The idea that disc partitions have to aligned to cylinder
+	boundaries is nonsense on its face. Millions of people have
+	had discs where the first primary partition began on track
+	zero, sector one, head one with no ill effect whatsoever on
+	operating systems from MS-DOS through Windows NT to OS/2. That
+	was, after all, the default that fdisk/Disk Manager on those
+	operating systems used for almost two decades. At best, the
+	purported alignment requirement would have been a track
+	alignment, with all partitions starting at sector one (Sectors
+	are numbered from one, remember.) of any given track.
+      </para>
+
+      <para>
+	But this is not true, either. No version of any operating
+	system has actually required this. Even MS-DOS was quite happy
+	to have disc partitions starting at sectors other than 1. The
+	only things that have required this have been disc
+	partitioning utilities. There's been a bit of circular logic
+	about this. The disc partitioning utilities enforced the
+	requirement because their authors thought that it was a
+	requirement, but people only thought that it was a requirement
+	because fdisk and the like enforced it. It was what the
+	partitioning utility programs enforced — so the logic went —
+	so it must have been a restriction. In fact it never was, and
+	no operating system itself has any trouble with this.
+      </para>
+    </blockquote>
   </para>
+
 </section>

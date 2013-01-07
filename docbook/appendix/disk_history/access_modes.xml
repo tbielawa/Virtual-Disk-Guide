@@ -194,4 +194,20 @@
     are LBA aware: the disk drive controller, the BIOS, and the
     operating system.
   </para>
+
+  <para>
+    Eventually disk drive capacities exceeded the maximum addressable
+    range defined in original ATA-1 standard. In 2002 the T13 group
+    released the ATA-6 standard
+
+    <footnote><para>
+      <link
+      xl:href="http://www.t13.org/documents/UploadedDocuments/project/d1410r3b-ATA-ATAPI-6.pdf"><citetitle>INCITS
+      361-2002 (1410D): AT Attachment - 6 with Packet Interface
+      (ATA/ATAPI - 6)</citetitle></link>
+    </para></footnote>
+
+    which introduced 48b addressing. This increased the maximum
+    addressable capacity to 128PiB.
+  </para>
 </section>
