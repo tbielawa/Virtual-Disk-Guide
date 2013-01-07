@@ -1,0 +1,20 @@
+<appendix xmlns="http://docbook.org/ns/docbook"
+          xml:id="VDG-Appendix-Disk-Drive-History"
+	  xmlns:xi="http://www.w3.org/2001/XInclude"
+          version="5.0">
+
+  <title>Appendix: Disk Drive History</title>
+
+  <para>
+    Disk drives, and how they are accessed, is a broad subject which
+    has changed greatly over time. Some <quote>facts</quote> are
+    actually just misconceptions which are taken as canon. This
+    section will attempt to sort the facts from fiction and give some
+    sort of historical account of how the software and hardware has
+    changed over time.
+  </para>
+
+  <xi:include href="disk_history/access_modes.xml"/>
+  <xi:include href="disk_history/mbr.xml"/>
+
+</appendix>
