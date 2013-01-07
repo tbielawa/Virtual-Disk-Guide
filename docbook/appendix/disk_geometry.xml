@@ -3,7 +3,7 @@
           xmlns:xl="http://www.w3.org/1999/xlink"
           version="5.0">
 
-  <title>Disk Drive Geometry</title>
+  <title>Appendix: Disk Drive Geometry</title>
 
   <para>
     Disk drives, and how they are accessed, is a broad subject which
@@ -80,20 +80,15 @@
         <firstterm>sectors</firstterm>.
       </para>
     </listitem>
-    <listitem>
-      <para>
-        The location of data is specified by a combination of its
-        distance from the center of the disk (track), its rotation
-        around the disk (sector), and the head which accesses its side
-        of the platter.
-      </para>
-    </listitem>
   </itemizedlist>
 
   <para>
     In the beginning data on disk drives was addressed by describing
-    the physical geometry of the disk using a system called
-    Cylinder-Head-Sector (<acronym>CHS</acronym>)
+    the physical geometry of the disk using a combination of its
+    distance from the center of the disk (track), its rotation around
+    the disk (sector), and the head which accesses its side of the
+    platter. This addressing system is called Cylinder-Head-Sector
+    (<acronym>CHS</acronym>).
 
     <footnote><para>
       <link xl:href="http://en.wikipedia.org/wiki/Cylinder-head-sector">Wikipedia: Cylinder-Head-Sector</link>
@@ -125,9 +120,9 @@
   </para>
 
   <para>
-    One way this was addressed was through the <quote>Int 13h
-    Exensions</quote>. The original Int 13h system used 24 bits for
-    addressing data, the extensions bumped that number up to 64
+    One way this was addressed was through the <firstterm>Int 13h
+    Exensions</firstterm>. The original Int 13h system used 24 bits
+    for addressing data, the extensions bumped that number up to 64
     bits. To put that into perspective, the maximum addressable range
     of data went from 8.46 GB up to 9,400,000,000,000 GB
 
@@ -147,40 +142,49 @@
     the ATA/Int 13h systems
 
     <footnote>
-      <para>
-	<link
-	xl:href="http://www.pcguide.com/ref/hdd/geom/tracks_ZBR.htm">Zoned
-	Bit Recording</link> is example of something logically
-	impossible to represent with Int 13h
-      </para>
+      <para><link
+      xl:href="http://www.pcguide.com/ref/hdd/geom/tracks_ZBR.htm">Zoned
+      Bit Recording</link> is example of something logically
+      impossible to represent with Int 13h</para>
     </footnote>
 
-    .
-
-    To work around this, disk drives began reporting their
-    <quote>Logical Geometry</quote> to the BIOS. In this way only the
-    disk drive knows it's actual physical (CHS) geometry. Access
-    requests from the BIOS are <emphasis>translated</emphasis>
-    internally on the hard disk controller into actual physical disk
-    geometry. A disks logical geometry will have a number of sectors
-    approximately equal to, but never more than, the physical number
-    of sectors on the disk. The reported logical geometry fits within
-    the limits of the ATA standard, but not necessarily (most often
-    not) within the limits of the Int 13h standard.
+    . To work around this, disk drives began reporting their
+    <firstterm>Logical Geometry</firstterm> to the BIOS. In this way
+    only the disk drive knows it's actual physical
+    (<acronym>CHS</acronym>) geometry. Access requests from the BIOS
+    are <firstterm>translated</firstterm> internally on the hard disk
+    controller into actual physical disk geometry. A disks logical
+    geometry will have a number of sectors approximately equal to, but
+    never more than, the physical number of sectors on the disk. The
+    reported logical geometry fits within the limits of the ATA
+    standard, but not necessarily (most often not) within the limits
+    of the Int 13h standard.
   </para>
 
   <para>
     Another important thing that happened was the introduction of
     geometry translation at the BIOS level. This is an addressing mode
-    the BIOS will enable which translates the logical drive geometry
-    into units compatible with the Int 13h system. This addressing
-    mode is often called Extended CHS, or Large mode
+    which the BIOS will enable that translates the logical drive
+    geometry
+
+    <footnote>
+      <para>Recall: this <quote>logical geometry</quote> has already
+      been translated once to fit ATA standards for the BIOS by the
+      disk controller</para>
+    </footnote>
+
+    into CHS tuples compatible with the Int 13h system. This
+    addressing mode is often called <firstterm>Extended
+    CHS</firstterm>, or <firstterm>Large mode</firstterm>
 
     <footnote><para>
       <link
       xl:href="http://www.pcguide.com/ref/hdd/bios/modesECHS-c.html">PC
       Guide: Extended CHS/Large Mode</link>
     </para></footnote>
+
+    .
+
   </para>
 
   <para>
@@ -191,18 +195,15 @@
   </para>
 
   <para>
-    In LBA mode there is an abstraction between the operating
-    system/application attempting to access data, and the devices
-    where the data is stored. Accessing data via LBA is done by using
-    a unique identifier which has no relationship to the physical
-    location of a block.
+    In LBA mode there is an abstraction between the operating system
+    and the devices where the data is stored. Using LBA the operating
+    system accesses data by unique identifiers. Each block is
+    addressed by a simple identifier which increases
+    sequentially. This system requires that all involved components
+    are LBA aware: the disk drive controller, the BIOS, and the
+    operating system.
   </para>
 
-
-  <para>
-
-    http://www.pcguide.com/ref/hdd/bios/modesLBA-c.html
-  </para>
 
   <table pgwide='0' frame='none'>
     <title>Master Boot Record Contents</title>

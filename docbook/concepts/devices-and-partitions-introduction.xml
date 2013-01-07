@@ -58,16 +58,19 @@
     creates the block special device <systemitem
     class="resource">/dev/sda</systemitem> to represent my hard drive,
     we need to create a block special device to represent our virtual
-    disk. This is called a loop device<footnote><para> Don't confuse
-    the often misused term "loopback device" with a "loop device." In
-    networking a loopback device refers to a virtual interface used
-    for routing within a host. <systemitem
+    disk. This is called a loop device
+
+    <footnote><para>Don't confuse the often misused term
+    <firstterm>loopback device</firstterm> with a <firstterm>loop
+    device.</firstterm> In networking a loopback device refers to a
+    virtual interface used for routing within a host. <systemitem
     class="domainname">localhost</systemitem> is the standard hostname
     given to the loopback address <systemitem
     class="ipaddress">127.0.0.1</systemitem>. See <link
     xl:href="http://tools.ietf.org/html/rfc1700">rfc1700</link> for
-    additional information.</para></footnote> You can think of a loop
-    device, e.g., <systemitem
+    additional information.</para></footnote>
+
+    You can think of a loop device, e.g., <systemitem
     class="resource">/dev/loop1</systemitem>, like a translator.
   </para>
 

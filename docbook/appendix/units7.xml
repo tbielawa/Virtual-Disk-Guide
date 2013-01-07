@@ -1,9 +1,10 @@
 <appendix xmlns="http://docbook.org/ns/docbook"
           xmlns:xi="http://www.w3.org/2001/XInclude"
           xml:id="VDG-Appendix-Units"
+	  xmlns:xl="http://www.w3.org/1999/xlink"
           version="5.0">
 
-  <title>Man Pages</title>
+  <title>Appendix: Man Pages</title>
 
   <refentry>
 
@@ -41,7 +42,7 @@
       <refmiscinfo class='manual'>Linux Programmer's Manual</refmiscinfo>
     </refmeta>
 
-    <refnamediv id='name'>
+    <refnamediv xml:id='name'>
       <refname>units</refname>
       <refname>kilo</refname>
       <refname>kibi</refname>
@@ -53,11 +54,11 @@
     </refnamediv>
     <!-- body begins here -->
 
-    <refsect1 id='description'>
+    <refsect1 xml:id='description'>
       <title>DESCRIPTION</title>
 
 
-      <refsect2 id='binary_prefixes'>
+      <refsect2 xml:id='binary_prefixes'>
         <title>Binary prefixes</title>
         <para>
           The binary prefixes resemble the decimal ones, but have an
@@ -116,13 +117,12 @@
         </table>
 
         <para>
-          See also: <ulink
-          url='http://physics.nist.gov/cuu/Units/binary.html'>http://physics.nist.gov/cuu/Units/binary.html</ulink>
+          See also: <link xl:href='http://physics.nist.gov/cuu/Units/binary.html'>http://physics.nist.gov/cuu/Units/binary.html</link>
         </para>
 
       </refsect2>
 
-      <refsect2 id='discussion'>
+      <refsect2 xml:id='discussion'>
         <title>Discussion</title>
         <para>
           Before these binary prefixes were introduced, it was fairly

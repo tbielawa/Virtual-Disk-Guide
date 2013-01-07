@@ -4,8 +4,6 @@
 
   <title>Formatting Partitions</title>
 
-  <remark>TODO: Move the examples in this section into their own files</remark>
-
   <para>
     Unlike <systemitem class="resource">/dev/sda</systemitem> we can't
     just create a partition on the <systemitem
@@ -13,7 +11,7 @@
     <systemitem class="resource">/dev/loop0</systemitem>. This is
     because the kernel has no device created to represent it. Instead
     we'll have to create another device associated with a specific
-    <literal>offset</literal> in our device/file.
+    <firstterm>offset</firstterm> in our device/file.
   </para>
 
   <remark>TODO: Rephrase the above paragraph ^ wrt: device representation</remark>

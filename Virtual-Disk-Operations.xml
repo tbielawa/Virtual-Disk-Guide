@@ -109,5 +109,5 @@
   <!-- <xi:include href="docbook/Additional-Resources.xml"/> -->
   <xi:include href="docbook/appendix/units7.xml"/>
   <!-- Commenting this out until I decide where I'm going with it -->
-  <!-- <xi:include href="docbook/appendix/disk_geometry.xml"/> -->
+  <xi:include href="docbook/appendix/disk_geometry.xml"/>
 </book>
