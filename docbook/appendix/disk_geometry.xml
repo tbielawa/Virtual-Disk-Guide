@@ -56,7 +56,7 @@
   <itemizedlist>
     <listitem>
       <para>
-        One called a <emphasis>head</emphasis> which is mounted on a
+        One called a <firstterm>head</firstterm> which is mounted on a
         swinging arm. The arm swings across a disk platter to move the
         head to the sector requested for a read or write
         operation. More platters in a disk drive mean more heads and
@@ -66,7 +66,7 @@
     <listitem>
       <para>
         An array of magnetized spinning disks called
-        <emphasis>platters</emphasis>. Because each side of a platter
+        <firstterm>platters</firstterm>. Because each side of a platter
         is used to store data there must be two heads for each
         platter.
       </para>
@@ -75,9 +75,9 @@
       <para>
         For the purpose of addressing a specific location on a platter
         each platter is further broken down into
-        <emphasis>cylinders</emphasis> (or
-        <emphasis>tracks</emphasis>), and
-        <emphasis>sectors</emphasis>.
+        <firstterm>cylinders</firstterm> (or
+        <firstterm>tracks</firstterm>), and
+        <firstterm>sectors</firstterm>.
       </para>
     </listitem>
     <listitem>
@@ -186,8 +186,8 @@
   <para>
     Up to this point we've been discussing addressing modes based on
     the properties of the physical disk drive. Now the discussion will
-    transition to the modern <emphasis>Logical Block
-    Addressing</emphasis>.
+    transition to the modern <firstterm>Logical Block
+    Addressing</firstterm>.
   </para>
 
   <para>

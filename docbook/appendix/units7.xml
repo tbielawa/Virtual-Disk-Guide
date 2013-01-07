@@ -159,9 +159,7 @@
           conform. When the Linux kernel boots and says:
         </para>
 
-        <screen>
-          hda: 120064896 sectors (61473 MB) w/2048KiB Cache
-        </screen>
+        <screen>hda: 120064896 sectors (61473 MB) w/2048KiB Cache</screen>
 
         <para>
           the MB are megabytes and the KiB are kibibytes.
