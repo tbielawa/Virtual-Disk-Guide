@@ -33,7 +33,12 @@ STYLEDIR = /usr/share/sgml/docbook/xsl-ns-stylesheets/
 # OS X - Package (Macports): docbook-xsl
 # STYLEDIR = /opt/local/share/xsl/docbook-xsl
 
-HTML_xsl = xsl/docbook-html.xsl
+HTML_xsl = $(STYLEDIR)profiling/profile.xsl
+HTML_CUSTOM_XSL = ./xsl/docbook-html.xsl
+HTML_XSLTPROC_PARAMS = --xinclude --param profile.attribute "'audience'" \
+	--param profile.value "'html'" \
+	$(HTML_xsl)
+
 #HTML_CHUNKED_xsl = $(STYLEDIR)/html/chunk.xsl
 HTML_CHUNKED_xsl = xsl/docbook-html-chunked.xsl
 
@@ -53,7 +58,10 @@ XSLT_CHUNKED_PARAMS = --stringparam base.dir $(CHUNKDIR)/
 
 # -o $(OUTFILE).pdf
 DBLATEX_PARAMS = -p xsl/dblatex-pdf.xsl -b xetex
-
+DBLATEX_XSLTPROC_PARAMS = --xinclude \
+	--param profile.attribute "'audience'" \
+	--param profile.value "'pdf'" \
+	$(STYLEDIR)profiling/profile.xsl
 
 ##################################################################
 # Use the proper options for the target platform
@@ -120,7 +128,8 @@ chunked:
 	@echo "#############################################"
 	@echo "       BUILDING HTML OUTPUT NOW"
 	@echo "#############################################"
-	xsltproc $(XSLTPARAMS) $(XSLT_HTML_PARAMS) -o $(DEST)/$@ $(HTML_xsl) $<
+	xsltproc $(HTML_XSLTPROC_PARAMS) $< | \
+	xsltproc $(XSLTPARAMS) $(XSLT_HTML_PARAMS) -o $(DEST)/$@ $(HTML_CUSTOM_XSL) -
 
 html: docdir $(OUTPUT).html
 
@@ -128,9 +137,10 @@ html: docdir $(OUTPUT).html
 	@echo "#############################################"
 	@echo "       BUILDING PDF OUTPUT NOW"
 	@echo "#############################################"
-	dblatex $(DBLATEX_PARAMS) -o $(DEST)/$@ $<
+	xsltproc $(DBLATEX_XSLTPROC_PARAMS) Virtual-Disk-Operations.xml | \
+	dblatex $(DBLATEX_PARAMS) -o $(DEST)/$@ -
 
-pdf: $(OUTPUT).pdf
+pdf: docdir $(OUTPUT).pdf
 
 docs: docdir $(OUTPUT).html $(OUTPUT).pdf chunked
 
