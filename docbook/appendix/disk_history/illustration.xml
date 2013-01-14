@@ -1,0 +1,17 @@
+<section xmlns="http://docbook.org/ns/docbook"
+         xml:id="VDG-Appendix-Disk-Drive-History-Illustration"
+         xmlns:xl="http://www.w3.org/1999/xlink"
+         version="5.0">
+
+  <title>Disk Drive Illustration</title>
+
+  <figure xml:id="ex.pythagorean">
+    <title>Disk Drive Components</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../../images/disk-structure.png"/>
+      </imageobject>
+      <textobject><phrase>Disk Drive Components</phrase></textobject>
+    </mediaobject>
+  </figure>
+</section>
