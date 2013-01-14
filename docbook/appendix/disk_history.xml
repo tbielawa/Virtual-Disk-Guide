@@ -16,5 +16,6 @@
 
   <xi:include href="disk_history/access_modes.xml"/>
   <xi:include href="disk_history/mbr.xml"/>
+  <xi:include href="disk_history/illustration.xml"/>
 
 </appendix>

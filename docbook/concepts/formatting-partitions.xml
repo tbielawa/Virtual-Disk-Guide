@@ -1,6 +1,7 @@
 <section xml:id="VDG-Concepts-Formatting-Partitions"
          xmlns="http://docbook.org/ns/docbook"
-         xmlns:xi="http://www.w3.org/2001/XInclude">
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
 
   <title>Formatting Partitions</title>
 
@@ -49,25 +50,42 @@
     <qandaentry>
       <question>
         <para>
-	  Why doesn't the first partition begin after the MBR?
-	</para>
+          Why doesn't the first partition begin after the MBR?
+          Specifically, why is there empty space between the first
+          sector (where the MBR is stored) and the first partition?
+        </para>
       </question>
       <answer>
-	<para>
-	  The MBR fits into 512B, the typical size of one sector. A
-	  disk cylinder (or <literal>track</literal>) was typically 63
-	  sectors. This would represent one concentric ring of storage
-	  on a physical disk.
+        <para>
+          It's complicated, but worth learning about. See the appendix
+          <link linkend="VDG-Appendix-Disk-Drive-History">on disk
+          drive history</link> for a complete explanation.
+        </para>
+
+        <para>
+	  Here's the short answer: In current PC MBRs there may be up
+	  to 446B of executable code, and a partition table containing
+	  up to 64B of data. When you add in another 2B to record a
+	  <firstterm>Boot Signature</firstterm> you have 512B, which
+	  up until recently happened to be the typical size of one
+	  sector.
 	</para>
 
 	<para>
-	  The reason for this dates back to historical operating
-	  system conventions. Some older operating systems (noteably
-	  <systemitem class="osname">MS-DOS</systemitem>) enforced
-	  requirements which dictated that partitions begin on
-	  cylinder boundries. <remark>TODO: Find a good citation for
-	  this</remark>
+	  Partitioning tools historically left the space between the
+	  MBR and the second cylinder empty. Modern boot loaders
+	  (<link
+	  xl:href="http://en.wikipedia.org/wiki/NTLDR">NTLDR</link>,
+	  <link
+	  xl:href="http://www.gnu.org/software/grub/">GRUB</link>,
+	  etc) use this space to store <emphasis>additional</emphasis>
+	  code and data necessary to boot the system.
 	</para>
+
+	<para>
+	  Some software, such as licensing managers and virus
+	  scanners, also use this space to store files.
+        </para>
       </answer>
     </qandaentry>
 
@@ -90,19 +108,6 @@
       </answer>
     </qandaentry>
   </qandaset>
-
-
-  <remark>
-    TODO: Insert a proper attribution to
-    http://ubuntuforums.org/showthread.php?t=1661254 for credit
-  </remark>
-
-  <remark>
-    TODO: This document pretty much discredits everythings I wrote in
-    this section with respect to where and why partitions must be
-    aligned:
-    http://homepage.ntlworld.com./jonathan.deboynepollard/FGA/disc-partition-alignment.html
-  </remark>
 
   <para>
     Print the partition table using <command>fdisk</command> with the
@@ -132,7 +137,7 @@
   <example xml:id="VDG-Concepts-Example-Partition-Formating">
     <title>Formatting the partition</title>
 
-  <screen><xi:include href="../examples/concepts-formatting-partitions03" parse="text"/></screen>
+    <screen><xi:include href="../examples/concepts-formatting-partitions03" parse="text"/></screen>
   </example>
 
   <note>
@@ -141,11 +146,4 @@
       obtain the starting sector, multiply by block size.
     </para>
   </note>
-
-  <!-- <example xml:id="VDG-Concepts-"> -->
-  <!--   <title></title> -->
-  <!-- <screen><xi:include href="../examples/concepts-formatting-partitions01" parse="text"/></screen> -->
-  <!--   <screen><xi:include href="../examples/concepts-" parse="text"/></screen> -->
-  <!-- </example> -->
-
 </section>
