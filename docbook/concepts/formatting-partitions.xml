@@ -39,8 +39,8 @@
           (<acronym>MBR</acronym>) is stored
           (<literal>offset=0</literal>). If we tried to create a
           partition at <literal>offset=0</literal> we would overwrite
-          the MBR. Knowing the offset will allow us to create create a
-          device mapped to where the first partition begins without
+          the MBR. Knowing the offset will allow us to create a device
+          mapped to where the first partition begins without
           overwriting the MBR. Linux does this automatically for
           regular disks during the boot process.
         </para>
@@ -79,7 +79,17 @@
 	  <link
 	  xl:href="http://www.gnu.org/software/grub/">GRUB</link>,
 	  etc) use this space to store <emphasis>additional</emphasis>
-	  code and data necessary to boot the system.
+	  code and data necessary to boot the system
+
+	  <footnote><para>
+	    <link xl:href="http://www.gnu.org/software/grub/manual/grub.html#BIOS-installation">GRUB: BIOS Installation</link>
+	  </para></footnote>
+
+	  <footnote><para>
+	    <link xl:href="http://moi.vonos.net/linux/Booting_Linux_on_x86_with_Grub2/#installing-grub">Simon Kitching: Booting Linux on x86 using Grub2</link>
+	  </para></footnote>
+
+	  .
 	</para>
 
 	<para>
