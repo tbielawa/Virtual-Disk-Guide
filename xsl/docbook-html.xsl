@@ -10,6 +10,7 @@
   <xsl:param name="section.autolabel">1</xsl:param>
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
 
+  <!-- Make admonitions not be so far indented -->
   <xsl:param name="admon.style">
     <xsl:value-of select="concat('margin-', $direction.align.start,            ': 0.10in; margin-', $direction.align.end, ': 0.10in;')"/>
   </xsl:param>
