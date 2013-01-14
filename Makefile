@@ -150,3 +150,6 @@ locator:
 clean:
 	$(FIND)  \( -regex "^[.]?(.+)\~$$" -o -regex "./[.]?#.*#" \) -delete
 	rm -fR output html
+
+spell:
+	for i in `find . -name "*.xml"`; do aspell -H -c $$i; done

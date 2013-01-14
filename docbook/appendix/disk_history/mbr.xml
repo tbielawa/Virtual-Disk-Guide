@@ -78,9 +78,9 @@
     In the old days a disk cylinder (or track) was typically 63
     sectors. This would represent one concentric ring of storage on a
     physical disk. Some people believe that early operating systems
-    (noteably MS-DOS) enforced requirements which dictated that
-    partitions begin on cylinder boundries, or that the OS needed to
-    begin and end on a cylinder boundry. Jonathan de Boyne Pollard
+    (notably MS-DOS) enforced requirements which dictated that
+    partitions begin on cylinder boundaries, or that the OS needed to
+    begin and end on a cylinder boundary. Jonathan de Boyne Pollard
     disputes that claim
 
     <footnote><para>

@@ -121,7 +121,7 @@
 
   <para>
     One way this was addressed was through the <firstterm>Int 13h
-    Exensions</firstterm>. The original Int 13h system used 24 bits
+    Extensions</firstterm>. The original Int 13h system used 24 bits
     for addressing data, the extensions bumped that number up to 64
     bits. To put that into perspective, the maximum addressable range
     of data went from 8.46 GB up to 9,400,000,000,000 GB

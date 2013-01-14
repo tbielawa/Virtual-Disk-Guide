@@ -34,7 +34,7 @@
   <note>
     <para>
       The terms <literal>base-image</literal> and
-      <literal>backing-image</literal> are used interchangably to
+      <literal>backing-image</literal> are used interchangeably to
       refer to the read-only image that is used to back a read-write
       disk.
     </para>
@@ -44,7 +44,7 @@
     <para>
       In this section when we refer to a <literal>COW</literal> image
       it has no connotation to the <literal>COW</literal>
-      ("copy-on-write") diskp format. Saying <literal>COW</literal>
+      ("copy-on-write") disk format. Saying <literal>COW</literal>
       only serves to help make a distinction between the read-only
       base-image and the image that changes are copied to on writing.
     </para>
