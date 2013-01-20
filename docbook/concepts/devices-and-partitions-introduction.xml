@@ -82,12 +82,4 @@
     cylinders, heads, and everything else required to create
     partitions.
   </para>
-
-
-  <!-- <example xml:id="VDG-Concepts-"> -->
-  <!--   <title></title> -->
-
-  <!--   <screen><xi:include href="../examples/concepts-" parse="text"/></screen> -->
-  <!-- </example> -->
-
 </section>

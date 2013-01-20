@@ -86,20 +86,4 @@
       </tbody>
     </tgroup>
   </table>
-
-
-
-  <!-- <example xml:id="VDG-Concepts-Example-Create-a-Partition-Table-Changes-example"> -->
-  <!--   <title>What <command>parted</command> Changed</title> -->
-
-
-  <!--   <screen> -->
-
-  <!--         |     sda       |     disk1.raw     | disk1.raw (parted) | -->
-  <!--   file  | block special |   data            |   x86 boot sector  | -->
-  <!--   stat  | block special |   regular file    |   regular file     | -->
-  <!--   fdisk | Has partition |   no partition    |   valid partition  | -->
-  <!--         |  table        |    table          |    table. Unknown  | -->
-  <!--   </screen> -->
-  <!-- </example> -->
 </section>
