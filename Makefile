@@ -160,7 +160,7 @@ locator:
 
 clean:
 	$(FIND)  \( -regex "^[.]?(.+)\~$$" -o -regex "./[.]?#.*#" \) -delete
-	rm -fR output html
+	rm -fR output html Virtual-Disk-Operations.xml
 
 spell:
 	for i in `find . -name "*.xml"`; do aspell -H -c $$i; done
