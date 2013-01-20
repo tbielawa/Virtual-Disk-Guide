@@ -26,9 +26,9 @@
   <itemizedlist mark='opencircle'>
     <listitem>
       <para>
-        <command>file</command> thinks it's "data", which the
-        <command>file</command> manual page says is how it labels
-        what are usually ‘binary’ or non-printable files.
+        <command>file</command> thinks it's <quote>data</quote>, which
+        the <command>file</command> manual page says is how it labels
+        what are usually <quote>binary</quote> or non-printable files.
       </para>
     </listitem>
     <listitem>

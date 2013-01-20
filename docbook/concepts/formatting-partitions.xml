@@ -139,9 +139,9 @@
 
   <para>
     Now that we have <systemitem
-    class="resource">/dev/loop1</systemitem> representing
-    partition of our virtual disk we can create a filesystem on
-    it and finally mount it.
+    class="resource">/dev/loop1</systemitem> representing the first
+    partition of our virtual disk we can create a filesystem on it and
+    finally mount it.
   </para>
 
   <example xml:id="VDG-Concepts-Example-Partition-Formating">

@@ -26,6 +26,7 @@
     Now that you know what <systemitem
     class="resource">/dev/zero</systemitem> is it's obvious this is
     just a file containing 2<superscript>30</superscript> bytes (1GiB)
-    of data. Each byte literally having the value '0'.
+    of data. Each byte literally having the value
+    <literal>0</literal>.
   </para>
 </section>

@@ -45,14 +45,14 @@
   <remark>Make this into a screenco with callouts on what to look for</remark>
 
   <para>
-    The term "block" is generally interchangeable with the term
-    "sector". The only difference in their meaning is contextual. It's
-    common usage to say block when referring to the data being
-    referenced and to use sector when speaking about disk
-    geometry. Officially the term <quote>data block</quote> was
-    defined by <orgname>ANSI ASC X3</orgname> in <citetitle>ANSI
-    X3.221-199x - AT Attachment Interface for Disk Drives
-    (ATA-1)</citetitle>
+    The term <firstterm>block</firstterm> is generally interchangeable
+    with the term <firstterm>sector</firstterm>. The only difference
+    in their meaning is contextual. It's common usage to say block
+    when referring to the data being referenced and to use sector when
+    speaking about disk geometry. Officially the term <firstterm>data
+    block</firstterm> was defined by <orgname>ANSI ASC X3</orgname> in
+    <citetitle>ANSI X3.221-199x - AT Attachment Interface for Disk
+    Drives (ATA-1)</citetitle>
 
     <footnote><para><link
     xl:href="http://www.t10.org/t13/project/d0791r4c-ATA-1.pdf">ANSI

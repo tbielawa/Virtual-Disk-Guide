@@ -29,10 +29,10 @@
   <itemizedlist>
     <listitem>
       <para>
-	Now when we run <command>file</command> instead of "data"
-	<command>file</command> thinks it is an x86 boot sector. That
-	sounds pretty accurate since we just put a partition table on
-	it.
+	Now when we run <command>file</command> instead of
+	<quote>data</quote> <command>file</command> thinks it is an
+	x86 boot sector. That sounds pretty accurate since we just put
+	a partition table on it.
       </para>
     </listitem>
     <listitem>
