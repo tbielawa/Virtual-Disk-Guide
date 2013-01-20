@@ -14,6 +14,8 @@ OUTPUT = $(INPUT)
 DEST = output
 CHUNKDIR = html
 OUTFILE = $(DEST)/$(OUTPUT)
+GENERATION_TIMESTAMP = $(shell date +"%c")
+GENERATION_COMMIT_HASH = $(shell git reflog -1 | cut -d' ' -f1)
 
 ##################################################################
 # Stylesheet configuration
@@ -96,7 +98,16 @@ SCHEMADIR = /usr/share/xml/docbook5/schema/rng/5.0
 ##################################################################
 # Build targets
 ##################################################################
-all: clean docs
+all: clean Virtual-Disk-Operations.xml docs
+
+# Support a rendered-on timestamp in HTML *and* PDF output. Removes
+# the reliance on the <?dbtimestamp> element
+Virtual-Disk-Operations.xml: Virtual-Disk-Operations.xml.in
+	sed -e "s/GENERATION_TIMESTAMP/$(GENERATION_TIMESTAMP)/" \
+	-e "s/GENERATION_COMMIT_HASH/$(GENERATION_COMMIT_HASH)/g" $< > $@
+
+timestamp: Virtual-Disk-Operations.xml
+
 
 docdir:
 	mkdir -p $(DEST)
@@ -131,7 +142,7 @@ chunked:
 	xsltproc $(HTML_XSLTPROC_PARAMS) $< | \
 	xsltproc $(XSLTPARAMS) $(XSLT_HTML_PARAMS) -o $(DEST)/$@ $(HTML_CUSTOM_XSL) -
 
-html: docdir $(OUTPUT).html
+html: timestamp docdir $(OUTPUT).html
 
 %.pdf: %.xml
 	@echo "#############################################"
@@ -140,7 +151,7 @@ html: docdir $(OUTPUT).html
 	xsltproc $(DBLATEX_XSLTPROC_PARAMS) Virtual-Disk-Operations.xml | \
 	dblatex $(DBLATEX_PARAMS) -o $(DEST)/$@ -
 
-pdf: docdir $(OUTPUT).pdf
+pdf: timestamp docdir $(OUTPUT).pdf
 
 docs: docdir $(OUTPUT).html $(OUTPUT).pdf chunked
 

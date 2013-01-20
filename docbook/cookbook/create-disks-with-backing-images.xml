@@ -117,8 +117,8 @@
     contents of an attached COW image. Maybe we wanted to make the
     latest system updates a part of the base image, or a configuration
     setting needed to be updated. This was as simple as making the
-    base-image read-write, and running <command>qemu-img commit
-    /srv/images/webserver01/image-webserver-devel.qcow2</command>.
+    base-image read-write, and running <command>qemu-img
+    commit</command> on the created file.
   </para>
 
   <important>

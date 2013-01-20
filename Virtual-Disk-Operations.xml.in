@@ -76,8 +76,11 @@
 	</itemizedlist>
       </para>
 
-      <para audience="html">This document was generated
-      <?dbtimestamp format="Y-m-d H:M:S"?>.</para>
+      <para>
+	This document was generated from commit <link
+	xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/GENERATION_COMMIT_HASH"><literal>GENERATION_COMMIT_HASH</literal></link>
+	on GENERATION_TIMESTAMP.
+      </para>
     </abstract>
 
     <legalnotice>
