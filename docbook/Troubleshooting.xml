@@ -1,0 +1,11 @@
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xl="http://www.w3.org/1999/xlink"
+	 xmlns:xi="http://www.w3.org/2001/XInclude"
+	 xml:id="VDG-Troubleshooting" version="5.0">
+
+  <title>Troubleshooting/FAQs</title>
+
+  <para>
+    This is where the FAQs will be.
+  </para>
+</chapter>
