@@ -5,6 +5,5 @@
 
   <title>Advanced Operations</title>
 
-  <xi:include href="advanced/creating-a-mountable-disk.xml"/>
   <xi:include href="advanced/cloning-a-physical-disk.xml"/>
 </chapter>

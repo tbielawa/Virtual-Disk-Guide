@@ -14,7 +14,7 @@
 
     <para>
       <quote>
-	Everything in the UNIX system is a file.
+        Everything in the UNIX system is a file.
       </quote>
     </para>
   </blockquote>
@@ -46,41 +46,28 @@
   </cmdsynopsis>
 
   <para>
-    In this section we'll clone a standard 1GB USB thumb drive
-    following these steps:
-
-    <procedure>
-      <step>
-	<para>
-	  Examine the thumb drive and mount a partition to write some
-	  data to it to look for later
-	</para>
-      </step>
-
-      <step>
-	<para>
-	  Unmount the thumb drive and use <command>qemu-img</command>
-	  to convert it into a qcow2 image
-	</para>
-      </step>
-
-      <step>
-	<para>
-	  Attach the qcow2 image to a virtual machine
-	</para>
-      </step>
-
-      <step>
-	<para>
-	  Examine the thumb drive and mount a partition. Compare it to
-	  the contents of the original thumb drive
-	</para>
-      </step>
-    </procedure>
+    In this section we'll look at a standard 1GB USB thumb drive and
+    then clone it into a disk image. Using <command>parted</command>,
+    here's what that disk looks like to the host system:
   </para>
 
+  <example xml:id="VDG-Advanced-clone-thumb_drive_properties">
+    <title>Thumb Drive Properties</title>
 
-  <xi:include href="clone/examine-and-mount-physical.xml"/>
-  <xi:include href="clone/unmount-and-convert-to-image.xml"/>
+    <screen><xi:include href="../examples/advanced-clone-thumb_drive_properties" parse="text"/></screen>
+  </example>
+
+  <remark>TODO: Make xref to the relevant troubleshooting section</remark>
+
+  <para>
+
+  </para>
+
+  <example xml:id="VDG-Advanced-Cloning-A-Physical-Disk-unmount-and-convert-to-image01">
+    <title></title>
+
+    <screen><xi:include href="../examples/advanced-clone-unmount-and-convert-to-image01" parse="text"/></screen>
+  </example>
+
 
 </section>

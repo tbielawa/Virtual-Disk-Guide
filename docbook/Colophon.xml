@@ -1,0 +1,39 @@
+<colophon xmlns="http://docbook.org/ns/docbook"
+          xmlns:xl="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xml:id="VDG-Colophon" version="5.0">
+
+  <title>Colophon</title>
+
+  <para>
+    The standard typeface used in this book is Source Sans Pro
+
+    <footnote>
+      <para>
+	Source Sans Pro Announcement (2012-08-02): <link
+	xl:href="http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html"/>
+      </para>
+    </footnote>
+
+
+    , the monospaced sequences use Source Code Pro
+
+    <footnote>
+      <para>
+	Source Code Pro Announcement (2012-09-24): <link
+	xl:href="http://blogs.adobe.com/typblography/2012/09/source-code-pro.html"/>
+      </para>
+    </footnote>
+
+    . Both of these beautiful fonts families were designed by Paul
+    D. Hunt at Adobe Systems Incorporated.
+  </para>
+
+  <para>
+    This book was composed entirely in
+    <application>Emacs</application> (nXML/RNG mode if you're
+    curious), on various Fedora Linux releases.
+  </para>
+
+
+</colophon>

@@ -13,20 +13,18 @@
     Signature</firstterm> you have 512B, which up until recently
     happened to be the typical size of one sector
 
-    <footnote><para>
-      <link
-      xl:href="http://www.seagate.com/tech-insights/advanced-format-4k-sector-hard-drives-master-ti/">Seagate.com:
-      Transition to Advanced Format 4K Sector Hard Drives</link>
+    <footnote><para> Seagate.com - Transition to Advanced Format 4K
+    Sector Hard Drives: <link
+    xl:href="http://www.seagate.com/tech-insights/advanced-format-4k-sector-hard-drives-master-ti/"/>
     </para></footnote>
 
-    <footnote><para>
-      <link xl:href="http://www.pixelbeat.org/docs/disk/">Pixel Beat:
-      "Details of GRUB on the PC"</link>
+    <footnote><para>Pixel Beat - Details of GRUB on the PC:
+      <link xl:href="http://www.pixelbeat.org/docs/disk/"/>
     </para></footnote>
 
 
-    . This first sector is given a special name, <systemitem>boot
-    sector</systemitem>.
+    . This first sector is referred to by a special name, the
+    <systemitem>boot sector</systemitem>.
   </para>
 
   <table pgwide='0' frame='none'>
@@ -81,12 +79,10 @@
     (notably MS-DOS) enforced requirements which dictated that
     partitions begin on cylinder boundaries, or that the OS needed to
     begin and end on a cylinder boundary. Jonathan de Boyne Pollard
-    disputes that claim
+    (JDBP) disputes that claim
 
-    <footnote><para>
-      <link
-      xl:href="http://homepage.ntlworld.com/jonathan.deboynepollard/FGA/disc-partition-alignment.html">The
-      gen on disc partition alignment</link>
+    <footnote><para>The gen on disc partition alignment: <link
+    xl:href="http://homepage.ntlworld.com/jonathan.deboynepollard/FGA/disc-partition-alignment.html"/>
     </para></footnote>
 
     , saying:
@@ -131,5 +127,10 @@
       </para>
     </blockquote>
   </para>
+
+  <para>
+    What we can take away from JDBP here is this:
+  </para>
+
 
 </section>

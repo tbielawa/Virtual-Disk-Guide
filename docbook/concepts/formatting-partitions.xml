@@ -94,7 +94,16 @@
 
 	<para>
 	  Some software, such as licensing managers and virus
-	  scanners, also use this space to store files.
+	  scanners, also use this space to store files
+
+	  <footnote>
+	    <para>
+	      Ubuntu Forums - Sector 32 FlexNet Problem -- Grub: <link
+	      xl:href="http://ubuntuforums.org/showthread.php?t=1661254"/>
+	    </para>
+	  </footnote>
+
+	  .
         </para>
       </answer>
     </qandaentry>

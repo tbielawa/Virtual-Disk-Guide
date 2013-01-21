@@ -1,9 +1,68 @@
 <section xmlns="http://docbook.org/ns/docbook"
-         xml:id="VDG-Appendix-Disk-Drive-History-Illustration"
+         xml:id="VDG-Appendix-Disk-Drive-Components"
          xmlns:xl="http://www.w3.org/1999/xlink"
          version="5.0">
 
-  <title>Disk Drive Illustration</title>
+  <title>Disk Drive Components</title>
+
+  <para>
+    In the early days of computing, direct access storage devices
+    (i.e., <quote>hard disk drives</quote>) were much simpler. A
+    simple device meant a less complex method for interaction was
+    necessary. Two standards define how communication with disk drives
+    may happen: The IDE/ATA standard for communicating with disk
+    drives, and the BIOS Int 13h standard (<quote>disk
+    services</quote>) for how operating systems can interact with disk
+    drives via software interrupts
+
+    <footnote>
+      <para>
+	BIOS Enhanced Disk Drive Specification v3: <link xl:href="http://www.t10.org/t13/technical/d98120r0.pdf" />
+      </para>
+    </footnote>
+
+    <footnote>
+      <para>
+	PC Guide - Int 13h: <link
+	xl:href="http://www.pcguide.com/ref/hdd/bios/bios_Int13h.htm"/>
+      </para>
+    </footnote>
+
+    .
+  </para>
+
+  <para>
+    A disk drive was originally composed of a few simple components:
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        One called a <firstterm>head</firstterm> which is mounted on a
+        swinging arm. The arm swings across a disk platter to move the
+        head to the sector requested for a read or write
+        operation. More platters in a disk drive mean more heads and
+        arms.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        An array of magnetized spinning disks called
+        <firstterm>platters</firstterm>. Because each side of a platter
+        is used to store data there must be two heads for each
+        platter.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        For the purpose of addressing a specific location on a platter
+        each platter is further broken down into
+        <firstterm>cylinders</firstterm> (or
+        <firstterm>tracks</firstterm>), and
+        <firstterm>sectors</firstterm>.
+      </para>
+    </listitem>
+  </itemizedlist>
 
   <figure xml:id="VDG-Appendix-Disk-Drive-History-Illustration-Figure">
     <title>Disk Drive Components</title>

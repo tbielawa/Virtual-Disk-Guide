@@ -1,6 +1,6 @@
 <appendix xmlns="http://docbook.org/ns/docbook"
           xml:id="VDG-Appendix-Disk-Drive-History"
-	  xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
           version="5.0">
 
   <title>Appendix: Disk Drive History</title>
@@ -14,8 +14,7 @@
     changed over time.
   </para>
 
+  <xi:include href="disk_history/illustration.xml"/>
   <xi:include href="disk_history/access_modes.xml"/>
   <xi:include href="disk_history/mbr.xml"/>
-  <xi:include href="disk_history/illustration.xml"/>
-
 </appendix>

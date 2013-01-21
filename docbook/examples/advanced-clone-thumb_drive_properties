@@ -1,0 +1,10 @@
+[root@deepfryer ~]# parted /dev/sdb print
+Model: Generic Flash Disk (scsi)
+Disk /dev/sdb: 1013MB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size   Type     File system  Flags
+ 1      31.2kB  506MB   506MB  primary               boot
+ 2      506MB   1013MB  507MB  primary

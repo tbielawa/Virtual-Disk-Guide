@@ -8,4 +8,13 @@
   <para>
     This is where the FAQs will be.
   </para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+	Why are cloned disks so big, I thought qcows were suppoesd to be small!
+      </para>
+    </listitem>
+  </itemizedlist>
+
 </chapter>

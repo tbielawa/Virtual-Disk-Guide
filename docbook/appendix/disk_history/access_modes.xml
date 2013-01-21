@@ -6,217 +6,171 @@
   <title>Access Modes</title>
 
   <para>
-    In the early days of computing, direct access storage devices
-    (i.e., <quote>hard disk drives</quote>) were much simpler.
-
-    <remark>Picture of drive w/ terms here?</remark>
-
-    A simple device meant a less complex method for interaction was
-    necessary. Two items define how we could interact with disk
-    drives: The IDE/ATA standard for communicating with disk drives,
-    and the BIOS Int 13h standard (<quote>disk services</quote>) for
-    how operating systems can interact with disk drives via software
-    interrupts.
-  </para>
-
-  <note>
-    <para>
-      Later we'll see the problems caused by the radically different
-      and conflicting way the ATA/Int 13h standards are defined.
-    </para>
-  </note>
-
-  <para>
     Addressing data blocks can be done in multiple ways. The older
     ways (CHS, ECHS) operate in terms of physical disk properties
-    (geometry). The second system for addressing blocks has been an
-    option in almost every disk drive since 1996
+    (geometry). The second system for addressing blocks (LBA) has been
+    an option in almost every disk drive since 1996
 
     <footnote><para>
       <link
-      xl:href="http://en.wikipedia.org/wiki/Logical_block_addressing">Wikipedia:
+          xl:href="http://en.wikipedia.org/wiki/Logical_block_addressing">Wikipedia:
       Logical Block Addressing</link>
     </para></footnote>
     .
   </para>
 
-  <para>
-    A disk drive was originally composed of a few simple components:
+  <note>
+    <para>
+      Later we'll see the problems caused by the radically different
+      and conflicting way the ATA/<systemitem class="event">Int
+      13h</systemitem> standards are defined.
+    </para>
+  </note>
 
-    <footnote>
-      <para>
-	There is an illustration of these components in the appendix:
-	<link
-	linkend="VDG-Appendix-Disk-Drive-History-Illustration">Disk
-	Drive Illustration</link>
-      </para>
-    </footnote>
-  </para>
+  <section xml:id="VDG-Appendix-Disk-Drive-History-Access-Modes-CHS">
+    <title>CHS Addressing</title>
 
-  <itemizedlist>
-    <listitem>
-      <para>
-        One called a <firstterm>head</firstterm> which is mounted on a
-        swinging arm. The arm swings across a disk platter to move the
-        head to the sector requested for a read or write
-        operation. More platters in a disk drive mean more heads and
-        arms.
-      </para>
-    </listitem>
-    <listitem>
-      <para>
-        An array of magnetized spinning disks called
-        <firstterm>platters</firstterm>. Because each side of a platter
-        is used to store data there must be two heads for each
-        platter.
-      </para>
-    </listitem>
-    <listitem>
-      <para>
-        For the purpose of addressing a specific location on a platter
-        each platter is further broken down into
-        <firstterm>cylinders</firstterm> (or
-        <firstterm>tracks</firstterm>), and
-        <firstterm>sectors</firstterm>.
-      </para>
-    </listitem>
-  </itemizedlist>
+    <para>
+      In the beginning data on disk drives was addressed by describing
+      the physical geometry of the disk using a combination of its
+      distance from the center of the disk
+      (<firstterm>track</firstterm>), its rotation around the disk
+      (<firstterm>sector</firstterm>), and the read-write head which
+      accesses its side of the platter. This addressing system is
+      called <firstterm>Cylinder-Head-Sector</firstterm>
+      (<acronym>CHS</acronym>).
 
-  <para>
-    In the beginning data on disk drives was addressed by describing
-    the physical geometry of the disk using a combination of its
-    distance from the center of the disk (track), its rotation around
-    the disk (sector), and the head which accesses its side of the
-    platter. This addressing system is called Cylinder-Head-Sector
-    (<acronym>CHS</acronym>).
+      <footnote><para>
+        PC Guide - Cylinder-Head-Sector: <link xl:href="http://www.pcguide.com/ref/hdd/geom/geom.htm"/>
+      </para></footnote>
 
-    <footnote><para>
-      <link xl:href="http://en.wikipedia.org/wiki/Cylinder-head-sector">Wikipedia: Cylinder-Head-Sector</link>
-    </para></footnote>
+      . This method of access was provided via a BIOS service commonly
+      referred to as <systemitem class="event">Int
+      13h</systemitem>. While this system was quite straightforward,
+      it provided no abstraction between the physical location of data
+      and the act of requesting data from the drive. To read/write
+      data you simply called <systemitem class="event">Int
+      13h</systemitem> and specified the physical cylinder, head, and
+      sector on the disk drive of what you were requesting. It began
+      breaking down when drive capacities exceeded what the standards
+      at the time were capable of describing. You can think of this
+      like running out of telephone numbers.
+    </para>
 
-    <footnote><para>
-      <link xl:href="http://www.pcguide.com/ref/hdd/geom/geom.htm">PC Guide: Cylinder-Head-Sector</link>
-    </para></footnote>
+    <para>
+      One way this was addressed was through the <firstterm>Int 13h
+      Extensions</firstterm>. The original <systemitem
+      class="event">Int 13h</systemitem> system used 24 bits for
+      addressing data, the extensions bumped that number up to 64
+      bits. To put that into perspective, the maximum addressable
+      range of data went from 8.46 GB up to 9,400,000,000,000 GB
 
-    . This method of access was provided via a BIOS service commonly
-    referred to as <systemitem class="event">Int 13h</systemitem>
+      <footnote>
+        <para>
+          PC Guide: <systemitem class="event">Int 13h</systemitem>
+          Extensions <link
+          xl:href="http://www.pcguide.com/ref/hdd/bios/bios_Extensions.htm"/>
+        </para>
+      </footnote>
 
-    <footnote><para>
-      <link xl:href="http://en.wikipedia.org/wiki/INT_13H">Wikipedia: Int 13h</link>
-    </para></footnote>
+      .
+    </para>
 
-    <footnote><para>
-      <link xl:href="http://www.pcguide.com/ref/hdd/bios/bios_Int13h.htm">PC Guide: Int 13h</link>
-    </para></footnote>
+    <para>
+      At the same time this was happening, technology was advancing to
+      the point where it was becoming logically impossible to
+      represent the physical drive geometry to the BIOS in a way
+      compatible with the ATA/<systemitem class="event">Int
+      13h</systemitem> systems
 
-    . While this system was quite straightforward, it provided no
-    abstraction between the physical location of data and the act of
-    requesting data from the drive. To read/write data you simply
-    called Int 13h and specified the physical cylinder, head, and
-    sector on the disk drive of what you were requesting. It began
-    breaking down when drive capacities exceeded what the standards at
-    the time were capable of describing. You can think of this like
-    running out of telephone numbers.
-  </para>
+      <footnote>
+        <para>
+	  Zoned Bit Recording (PC Guide: <link
+	  xl:href="http://www.pcguide.com/ref/hdd/geom/tracks_ZBR.htm"/>)
+	  is an example of something logically impossible to represent
+	  with <systemitem class="event">Int 13h</systemitem>
+	</para>
+      </footnote>
 
-  <para>
-    One way this was addressed was through the <firstterm>Int 13h
-    Extensions</firstterm>. The original Int 13h system used 24 bits
-    for addressing data, the extensions bumped that number up to 64
-    bits. To put that into perspective, the maximum addressable range
-    of data went from 8.46 GB up to 9,400,000,000,000 GB
+      . To work around this, disk drives began reporting their
+      <firstterm>Logical Geometry</firstterm> to the BIOS. In this way
+      only the disk drive knows it's actual physical
+      (<acronym>CHS</acronym>) geometry. Access requests from the BIOS
+      are <firstterm>translated</firstterm> internally on the hard
+      disk controller into actual physical disk geometry. A disks
+      logical geometry will have a number of sectors approximately
+      equal to, but never more than, the physical number of sectors on
+      the disk. The reported logical geometry fits within the limits
+      of the ATA standard, but not necessarily (most often not) within
+      the limits of the <systemitem class="event">Int 13h</systemitem>
+      standard.
+    </para>
+  </section>
 
-    <footnote><para>
-      <link
-      xl:href="http://www.pcguide.com/ref/hdd/bios/bios_Extensions.htm">PC
-      Guide: Int 13h Extensions</link>
-    </para></footnote>
+  <section xml:id="VDG-Appendix-Disk-Drive-History-Access-Modes-LBA">
+    <title>LBA Addressing</title>
 
-    .
-  </para>
+    <para>
+      Up to this point we've been discussing addressing modes based on
+      the properties of the physical disk drive. Now the discussion
+      will transition to the modern <firstterm>Logical Block
+      Addressing</firstterm>.
+    </para>
 
-  <para>
-    At the same time this was happening, technology was advancing to
-    the point where it was becoming logically impossible to represent
-    the physical drive geometry to the BIOS in a way compatible with
-    the ATA/Int 13h systems
 
-    <footnote>
-      <para><link
-      xl:href="http://www.pcguide.com/ref/hdd/geom/tracks_ZBR.htm">Zoned
-      Bit Recording</link> is example of something logically
-      impossible to represent with Int 13h</para>
-    </footnote>
+    <para>
+      Another important thing that happened was the introduction of
+      geometry translation at the BIOS level. This is an addressing mode
+      which the BIOS will enable that translates the logical drive
+      geometry
 
-    . To work around this, disk drives began reporting their
-    <firstterm>Logical Geometry</firstterm> to the BIOS. In this way
-    only the disk drive knows it's actual physical
-    (<acronym>CHS</acronym>) geometry. Access requests from the BIOS
-    are <firstterm>translated</firstterm> internally on the hard disk
-    controller into actual physical disk geometry. A disks logical
-    geometry will have a number of sectors approximately equal to, but
-    never more than, the physical number of sectors on the disk. The
-    reported logical geometry fits within the limits of the ATA
-    standard, but not necessarily (most often not) within the limits
-    of the Int 13h standard.
-  </para>
+      <footnote>
+        <para>Recall: this <quote>logical geometry</quote> has already
+        been translated once to fit ATA standards for the BIOS by the
+        disk controller</para>
+      </footnote>
 
-  <para>
-    Another important thing that happened was the introduction of
-    geometry translation at the BIOS level. This is an addressing mode
-    which the BIOS will enable that translates the logical drive
-    geometry
+      into CHS tuples compatible with the <systemitem
+      class="event">Int 13h</systemitem> system. This addressing mode
+      is often called <firstterm>Extended CHS</firstterm>, or
+      <firstterm>Large mode</firstterm>
 
-    <footnote>
-      <para>Recall: this <quote>logical geometry</quote> has already
-      been translated once to fit ATA standards for the BIOS by the
-      disk controller</para>
-    </footnote>
+      <footnote>
+	<para>
+	  PC Guide: Extended CHS/Large Mode: <link
+	  xl:href="http://www.pcguide.com/ref/hdd/bios/modesECHS-c.html"/>
+	</para>
+      </footnote>
 
-    into CHS tuples compatible with the Int 13h system. This
-    addressing mode is often called <firstterm>Extended
-    CHS</firstterm>, or <firstterm>Large mode</firstterm>
+      .
+    </para>
 
-    <footnote><para>
-      <link
-      xl:href="http://www.pcguide.com/ref/hdd/bios/modesECHS-c.html">PC
-      Guide: Extended CHS/Large Mode</link>
-    </para></footnote>
+    <para>
+      In LBA mode there is an abstraction between the operating system
+      and the devices where the data is stored. Using LBA the operating
+      system accesses data by unique identifiers. Each block is
+      addressed by a simple identifier which increases
+      sequentially. This system requires that all involved components
+      are LBA aware: the disk drive controller, the BIOS, and the
+      operating system.
+    </para>
 
-    .
+    <para>
+      Eventually disk drive capacities exceeded the maximum
+      addressable range defined in original ATA-1 standard. In 2002
+      the <orgname>T13</orgname> group released the ATA-6 standard
 
-  </para>
+      <footnote>
+	<para>
+	  <citetitle>INCITS 361-2002 (1410D): AT Attachment - 6 with
+	  Packet Interface (ATA/ATAPI - 6)</citetitle>:
+          <link
+            xl:href="http://www.t13.org/documents/UploadedDocuments/project/d1410r3b-ATA-ATAPI-6.pdf"/>
+	</para>
+      </footnote>
 
-  <para>
-    Up to this point we've been discussing addressing modes based on
-    the properties of the physical disk drive. Now the discussion will
-    transition to the modern <firstterm>Logical Block
-    Addressing</firstterm>.
-  </para>
-
-  <para>
-    In LBA mode there is an abstraction between the operating system
-    and the devices where the data is stored. Using LBA the operating
-    system accesses data by unique identifiers. Each block is
-    addressed by a simple identifier which increases
-    sequentially. This system requires that all involved components
-    are LBA aware: the disk drive controller, the BIOS, and the
-    operating system.
-  </para>
-
-  <para>
-    Eventually disk drive capacities exceeded the maximum addressable
-    range defined in original ATA-1 standard. In 2002 the T13 group
-    released the ATA-6 standard
-
-    <footnote><para>
-      <link
-      xl:href="http://www.t13.org/documents/UploadedDocuments/project/d1410r3b-ATA-ATAPI-6.pdf"><citetitle>INCITS
-      361-2002 (1410D): AT Attachment - 6 with Packet Interface
-      (ATA/ATAPI - 6)</citetitle></link>
-    </para></footnote>
-
-    which introduced 48b addressing. This increased the maximum
-    addressable capacity to 128PiB.
-  </para>
+      which introduced 48b addressing. This increased the maximum
+      addressable capacity to 128PiB.
+    </para>
+  </section>
 </section>
