@@ -26,14 +26,44 @@
     </footnote>
 
     . Both of these beautiful fonts families were designed by Paul
-    D. Hunt at Adobe Systems Incorporated.
+    D. Hunt at <orgname>Adobe Systems
+    Incorporated</orgname>. Moreover, both of these families are
+    available for use under the Open Font License version 1.1
+
+    <footnote>
+      <para>
+	SIL Open Font License: <link
+	xl:href="http://scripts.sil.org/OFL"/>
+      </para>
+    </footnote>
+    .
   </para>
 
   <para>
-    This book was composed entirely in
-    <application>Emacs</application> (nXML/RNG mode if you're
-    curious), on various Fedora Linux releases.
+    This book was written in DocBook 5 XML (unmodified)
+
+    <footnote>
+      <para>
+	DocBook 5: The Definitive Guide: <link
+	xl:href="http://www.docbook.org/tdg5/en/html/docbook.html"/>
+      </para>
+    </footnote>
+    .
   </para>
 
+  <para>
+    Composition of this book took place entirely in
+    <application>Emacs</application> (nXML/RNG mode if you're
+    curious), on an assortment of <systemitem class="osname">Fedora
+    Linux</systemitem> releases.
+  </para>
 
+  <!-- Rendering tech: dblatex, xetex, xsltproc -->
+  <para>
+    This book was produced using an
+    <application>xsltproc</application> →
+    <application>dblatex</application> →
+    <application>xetex</application> →
+    <application>xdvipdfmx</application> toolchain.
+  </para>
 </colophon>
