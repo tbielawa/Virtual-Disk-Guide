@@ -1,0 +1,10 @@
+[root@deepfryer mnt]# umount -l /dev/sdb1
+[root@deepfryer mnt]# mount | grep vdg
+[root@deepfryer mnt]# time qemu-img convert -O raw /dev/sdb ./thumb_drive.raw
+
+real    1m8.206s
+user    0m0.161s
+sys     0m2.593s
+
+
+

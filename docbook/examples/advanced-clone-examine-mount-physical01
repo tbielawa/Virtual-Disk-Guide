@@ -1,0 +1,24 @@
+[root@deepfryer ~]# fdisk -u -l /dev/sdb
+
+Disk /dev/sdb: 1012 MB, 1012924416 bytes
+32 heads, 61 sectors/track, 1013 cylinders, total 1978368 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x0009df8e
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1            2048      990329      494141   83  Linux
+/dev/sdb2          991232     1977560      493164+   b  W95 FAT32
+
+[root@deepfryer mnt]# mkdir -p /mnt/vdg01
+[root@deepfryer mnt]# mount /dev/sdb1 /mnt/vdg01
+[root@deepfryer mnt]# mount | grep vdg
+/dev/sdb1 on /mnt/vdg01 type ext4 (rw,relatime,data=ordered)
+[root@deepfryer mnt]# date > vdg01/partition01.txt && cat ./vdg01/partition01.txt
+Sun Jan 20 07:47:14 EST 2013
+
+[root@deepfryer mnt]# find vdg01
+vdg01
+vdg01/partition01.txt
+vdg01/lost+found

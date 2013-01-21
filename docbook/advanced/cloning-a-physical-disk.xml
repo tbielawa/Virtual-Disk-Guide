@@ -1,0 +1,86 @@
+<section xmlns="http://docbook.org/ns/docbook"
+         xmlns:xl="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xml:id="VDG-Advanced-Cloning-A-Physical-Disk"
+         version="5.0">
+
+  <title>Cloning a Physical Disk</title>
+
+  <blockquote>
+    <attribution>
+      <citetitle>The UNIX Programming Environment</citetitle> -
+      Chapter 2
+    </attribution>
+
+    <para>
+      <quote>
+	Everything in the UNIX system is a file.
+      </quote>
+    </para>
+  </blockquote>
+
+  <para>
+    I never fully grasped the <quote>everything's a file</quote>
+    concept until I tried (<emphasis>expecting</emphasis> to fail) to
+    use the <command>qemu-img</command> <command>convert</command>
+    sub-command to create a virtual disk image of an actual hard
+    drive. This is possible in part due to the original philosophy
+    laid down by Dennis Ritchie and Ken Thompson when they first
+    created Unix: everything's treated as a file. The synopsis of the
+    <command>convert</command> sub-command is below.
+  </para>
+
+  <!-- qemu-img version 0.12.1, Copyright (c) 2004-2008 Fabrice Bellard -->
+  <!-- [root@spatula qemu]# rpm -qf /usr/bin/qemu-img -->
+  <!-- qemu-img-0.12.1.2-2.295.el6_3.10.x86_64 -->
+
+  <cmdsynopsis>
+    <command>qemu-img convert</command>
+    <arg>-c</arg>
+    <arg>-f <replaceable>fmt</replaceable></arg>
+    <arg>-O <replaceable>output_fmt</replaceable></arg>
+    <arg>-o <replaceable>options</replaceable></arg>
+    <arg choice='req'><replaceable>filename</replaceable></arg>
+    <arg rep='repeat' choice='opt'><replaceable>filename2</replaceable></arg>
+    <arg choice='req'><replaceable>output_filename</replaceable></arg>
+  </cmdsynopsis>
+
+  <para>
+    In this section we'll clone a standard 1GB USB thumb drive
+    following these steps:
+
+    <procedure>
+      <step>
+	<para>
+	  Examine the thumb drive and mount a partition to write some
+	  data to it to look for later
+	</para>
+      </step>
+
+      <step>
+	<para>
+	  Unmount the thumb drive and use <command>qemu-img</command>
+	  to convert it into a qcow2 image
+	</para>
+      </step>
+
+      <step>
+	<para>
+	  Attach the qcow2 image to a virtual machine
+	</para>
+      </step>
+
+      <step>
+	<para>
+	  Examine the thumb drive and mount a partition. Compare it to
+	  the contents of the original thumb drive
+	</para>
+      </step>
+    </procedure>
+  </para>
+
+
+  <xi:include href="clone/examine-and-mount-physical.xml"/>
+  <xi:include href="clone/unmount-and-convert-to-image.xml"/>
+
+</section>

@@ -1,57 +1,10 @@
-<chapter xmlns="http://docbook.org/ns/docbook" xml:id="VDI-Advanced"
-  version="5.0">
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xl="http://www.w3.org/1999/xlink"
+	 xmlns:xi="http://www.w3.org/2001/XInclude"
+	 xml:id="VDG-Advanced" version="5.0">
 
   <title>Advanced Operations</title>
 
-  <section xml:id="VDI-Advanced-Creating-A-Mountable-Disk">
-    <title>Creating a Mountable Disk</title>
-
-    <para>
-      In the previous section I went through creating a disk that you
-      can use as the boot disk for a virtual machine. In that example
-      it was expected that you would configure your virtualization
-      software to use that disk and then the operating system
-      installation would take care of creating the disk label and file
-      systems. In this section I'll show you the steps required to do
-      that by yourself.
-    </para>
-
-  </section>
-
-  <section xml:id="VDI-Advanced-Cloning-A-Physical-Disk">
-    <title>Cloning a Physical Disk</title>
-
-    <blockquote>
-      <attribution> Unknown </attribution>
-      <para> "Everything's a file"</para>
-    </blockquote>
-
-    <para>
-      It is also possible to clone an existing physical hard disk
-      using the <command>qemu-img</command> <option>convert</option>
-      option. This is possible in part due to the original philosophy
-      laid down by Dennis Ritchie and Ken Thompson when they first
-      created Unix that everything's treated as a file. The syntax for
-      the <option>convert</option> option is below.
-    </para>
-
-    <programlisting>
-convert [-c] [-f fmt] [-O output_fmt] [-o options] filename [filename2 [...]] output_filename
-    </programlisting>
-
-    <para>
-      I never fully grasped the "everything's a file" concept until I
-      tried (expecting to fail) to use the <option>convert</option>
-      option to create a virtual disk image of an actual hard
-      drive. This section explains how to do just that.
-    </para>
-
-    <example xml:id="VDI-Advanced-Cloning-A-Physical-Disk-Example">
-      <title>Making a virtual disk from a physical disk</title>
-
-      <programlisting>
-
-      </programlisting>
-    </example>
-  </section>
+  <xi:include href="advanced/creating-a-mountable-disk.xml"/>
+  <xi:include href="advanced/cloning-a-physical-disk.xml"/>
 </chapter>
