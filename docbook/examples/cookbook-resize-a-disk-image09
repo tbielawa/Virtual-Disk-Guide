@@ -1,0 +1,1 @@
+[root@deepfryer ~]# rm -f /dev/loop0p[12]

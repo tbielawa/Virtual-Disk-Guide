@@ -1,0 +1,10 @@
+[root@deepfryer ~]# resize2fs /dev/loop0p1
+resize2fs 1.42.3 (14-May-2012)
+Resizing the filesystem on /dev/loop0p1 to 1541216 (1k) blocks.
+The filesystem on /dev/loop0p1 is now 1541216 blocks long.
+
+[root@deepfryer ~]# mount /dev/loop0p1 /mnt/vdg01
+
+[root@deepfryer ~]# df -h /mnt/vdg01
+Filesystem           Size  Used Avail Use% Mounted on
+/dev/mapper/loop0p1  1.5G   11M  1.4G   1% /mnt/vdg01

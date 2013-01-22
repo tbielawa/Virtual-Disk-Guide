@@ -1,0 +1,7 @@
+[root@deepfryer ~]# mount /dev/loop0p1 /mnt/vdg01
+[root@deepfryer ~]# df -h /mnt/vdg01
+Filesystem           Size  Used Avail Use% Mounted on
+/dev/mapper/loop0p1  468M   11M  433M   3% /mnt/vdg01
+[root@deepfryer ~]# du -sh /mnt/vdg01
+14K     /mnt/vdg01
+[root@deepfryer ~]# umount -l /mnt/vdg01

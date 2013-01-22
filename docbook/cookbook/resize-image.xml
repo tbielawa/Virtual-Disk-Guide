@@ -1,0 +1,333 @@
+<section xml:id="VDG-Cookbook-Resize-Image"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         version="5.0">
+
+  <title>Resizing RAW Images</title>
+
+  <para>
+    In this part we'll add 2GiB to a disk image I created of a 1GiB
+    USB thumb drive
+
+    <footnote>
+      <para>
+        See <xref linkend="VDG-Advanced-Cloning-A-Physical-Disk"/> for
+        instructions on how to do this yourself.
+      </para>
+    </footnote>
+
+    .
+
+    The thumb drive has two roughly equal sized partitions. One is
+    <systemitem class="filesystem">EXT4</systemitem> the other is
+    <systemitem class="filesystem">FAT32</systemitem>. At the end of
+    this chapter we'll have done the following:
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        Enlarged the disk by 2GiB with <command>qemu-img</command>
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Shifted the the second partition 1024MiB right into the new
+        space with <application>GParted</application>
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Enlarged the first partition by about 1GiB with <application>GParted</application>
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Resized the <systemitem class="filesystem">EXT4</systemitem>
+        filesystem to use the new space on its partition with
+        <command>resize2fs</command>
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image01">
+    <title>
+      Resize a <filename class="extension">RAW</filename> Image
+    </title>
+
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image01" parse="text"/></screen>
+  </example>
+
+
+  <para>
+    Use <command>kpartx</command> to automatically create a loop
+    device for the resized image and device maps to the
+    partitions. The <option>-a</option> option means we're adding
+    partition mappings and the <option>-v</option> option means to do
+    it with increased verbosity so we know the names of the created
+    devices.
+  </para>
+
+  <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image02">
+    <title>
+      Create devices with <command>kpartx</command>
+    </title>
+
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image02" parse="text"/></screen>
+  </example>
+
+
+  <para>
+    I'm going to use <command>gparted</command> to resize the
+    partitions in the disk image. There's two important things to keep
+    in mind:
+  </para>
+
+
+  <orderedlist>
+    <listitem>
+      <para>
+        <command>gparted</command> expects to find the <filename
+        class="partition">loop0p[12]</filename> devices in <filename
+        class="directory">/dev/</filename>, not <filename
+        class="directory">/dev/mapper/</filename>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>gparted</command> won't list loop devices in its
+        device selection menu
+      </para>
+    </listitem>
+  </orderedlist>
+
+  <para>
+    When we ran <command>kpartx</command> it created symbolic links
+    <filename class="directory"></filename> to the new devices
+    (<filename class="devicefile">/dev/dm-*</filename>) which map to
+    the partitions on <filename
+    class="devicefile">/dev/loop0</filename>. We can use this
+    information to create the symlinks necessary for
+    <command>gparted</command> to locate <filename
+    class="partition">loop0p[12]</filename>.
+  </para>
+
+
+  <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image03">
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image03" parse="text"/></screen>
+  </informalexample>
+
+
+  <para>
+    Once the symlinks are created we can run
+    <command>gparted</command> from the command line with <filename
+    class="devicefile">/dev/loop0</filename> as the device argument.
+  </para>
+
+  <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image04">
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image04" parse="text"/></screen>
+  </informalexample>
+
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize01.png">
+    <title>resize01.png</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize01.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize02">
+    <title>resize02</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize02.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize03">
+    <title>resize03</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize03.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize04">
+    <title>resize04</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize04.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize05">
+    <title>resize05</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize05.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize06">
+    <title>resize06</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize06.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize07">
+    <title>resize07</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize07.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize08">
+    <title>resize08</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize08.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize09">
+    <title>resize09</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize09.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize10">
+    <title>resize10</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="../../images/resize/resize10.png" />
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para>
+    But wait, what's this on the last screen here?
+    <command>gparted</command> says <filename
+    class="partition">loop0p1</filename> is using 1.02GiB of
+    1.47GiB. That can't be right. Before resizing the partition
+    <command>filename</command> said <filename
+    class="partition">loop0p1</filename> was only using 25.54MiB out
+    of 482.56MiB. Lets take a look at it on the command line:
+  </para>
+
+
+  <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image05">
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image05" parse="text"/></screen>
+  </informalexample>
+
+
+  <para>
+    All of that is incorrect too, as if nothing we did in
+    <command>gparted</command> had an effect. What's going on here?
+  </para>
+
+  <para>
+    After the partitions were resized the partition table was updated
+    with the new information but we never updated the device maps in
+    the kernel. The <command>kpartx</command> command also accepts a
+    <option>-u</option> option to update partitions mappings, lets run
+    it and see if that fixes our problem:
+  </para>
+
+
+  <remark>This step may not be actually necessary</remark>
+
+  <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image06">
+    <title>
+      Create device maps with <command>kpartx</command>
+    </title>
+
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image06" parse="text"/></screen>
+  </example>
+
+
+
+  <!-- # 3082432 = sectors, 2048 = offset -->
+
+
+  <!-- Compare to before: -->
+
+  <!-- [root@deepfryer ~]# kpartx -av /dev/loop0 -->
+  <!-- add map loop0p1 (253:8): 0 988282 linear /dev/loop0 2048 -->
+  <!-- add map loop0p2 (253:9): 0 986329 linear /dev/loop0 991232 -->
+
+
+  <!-- # Put the above information into a table ^^ -->
+  <!-- # -->
+  <!-- #             | Original | After Update | -->
+  <!-- # device      |          |              | -->
+  <!-- # major:minor |          |              | -->
+  <!-- # size        |          |              | -->
+  <!-- # offset      |          |              | -->
+
+
+  <para>
+    The partition sizes and offsets reflect the changes we made, but
+    mounting the first partition doesn't show the added capacity:
+  </para>
+
+  <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image07">
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image07" parse="text"/></screen>
+  </informalexample>
+
+
+  <para>
+    We've already resized the partition, but we haven't resized the
+    file system on the partition. That's the last thing we have to do
+    to finish the whole resizing operation. We'll use the
+    <command>resize2fs</command> command and let it automatically
+    resize the filesystem to fill the available space on the <filename
+    class="partition">/dev/loop0p1</filename> partition.
+  </para>
+
+
+  <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image08">
+    <title>
+      Resize the filesystem with <command>resize2fs</command>
+    </title>
+
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image08" parse="text"/></screen>
+  </example>
+
+
+
+  <para>
+    Don't forget to clean up those lingering symlinks we made earlier:
+  </para>
+
+  <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image09">
+    <screen><xi:include href="../examples/cookbook-resize-a-disk-image09" parse="text"/></screen>
+  </informalexample>
+
+
+  <note>
+    <para>
+      The <command>resize2fs</command> command can also shrink
+      partitions, print the minimum possible size, and a couple other
+      things. Check <command>man 8 resize2fs</command> for more
+      information.
+    </para>
+  </note>
+</section>

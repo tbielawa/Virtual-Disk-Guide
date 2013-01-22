@@ -1,0 +1,10 @@
+[root@deepfryer ~]# ls -l /dev/mapper/loop0p*
+lrwxrwxrwx 1 root root 7 Jan 21 15:07 /dev/mapper/loop0p1 -> ../dm-8
+lrwxrwxrwx 1 root root 7 Jan 21 15:07 /dev/mapper/loop0p2 -> ../dm-9
+
+[root@deepfryer ~]# ln -s /dev/dm-8 /dev/loop0p1
+[root@deepfryer ~]# ln -s /dev/dm-9 /dev/loop0p2
+
+[root@deepfryer ~]# ls -l /dev/loop0p[12]
+lrwxrwxrwx 1 root root 9 Jan 21 15:23 /dev/loop0p1 -> /dev/dm-8
+lrwxrwxrwx 1 root root 9 Jan 21 15:23 /dev/loop0p2 -> /dev/dm-9
