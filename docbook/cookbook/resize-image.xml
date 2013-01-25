@@ -227,7 +227,7 @@
     <command>gparted</command> says <filename
     class="partition">loop0p1</filename> is using 1.02GiB of
     1.47GiB. That can't be right. Before resizing the partition
-    <command>filename</command> said <filename
+    <command>gparted</command> said <filename
     class="partition">loop0p1</filename> was only using 25.54MiB out
     of 482.56MiB. Lets take a look at it on the command line:
   </para>
@@ -247,8 +247,8 @@
     After the partitions were resized the partition table was updated
     with the new information but we never updated the device maps in
     the kernel. The <command>kpartx</command> command also accepts a
-    <option>-u</option> option to update partitions mappings, lets run
-    it and see if that fixes our problem:
+    <option>-u</option> option to update partitions mappings, lets try
+    that and see if it fixes our problem:
   </para>
 
 
@@ -294,9 +294,10 @@
 
 
   <para>
-    We've already resized the partition, but we haven't resized the
-    file system on the partition. That's the last thing we have to do
-    to finish the whole resizing operation. We'll use the
+    We've already resized the partition, but we
+    <emphasis>haven't</emphasis> resized the filesystem on the
+    partition. That's the last thing we have to do to finish this
+    whole resizing operation. We'll use the
     <command>resize2fs</command> command and let it automatically
     resize the filesystem to fill the available space on the <filename
     class="partition">/dev/loop0p1</filename> partition.
