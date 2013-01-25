@@ -1,4 +1,5 @@
 <section xml:id="VDG-Cookbook-Create-Simple-Images"
+	 xmlns:xl="http://www.w3.org/1999/xlink"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          version="5.0">
@@ -9,9 +10,37 @@
     The simplest operation you can do (next to deleting an image) is
     creating a new virtual disk image. Depending on what format you
     choose there are several options available when creating an
-    image. For example, if you want encryption, if you want a format
-    that supports compression, or even what existing image to base
-    this new disk off of.
+    image:
+
+    <itemizedlist>
+      <listitem>
+	<para>
+	  Encryption
+	  </para>
+      </listitem>
+      <listitem>
+	<para>
+	  Compression
+	  </para>
+      </listitem>
+      <listitem>
+	<para>
+	  Backing images
+	  <footnote>
+	    <para>
+	      Creating Disks with Backing Images: <xref
+	      linkend="VDG-Cookbook-Create-Disks-with-Backing-Images"
+	      />
+	    </para>
+	  </footnote>
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  Snapshots
+	</para>
+      </listitem>
+    </itemizedlist>
   </para>
 
   <para>
