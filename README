@@ -3,7 +3,7 @@ Compiling this documentation requires:
     dblatex
     docboook5 stylesheets (http://sourceforge.net/projects/docbook/files/docbook-xsl-ns/)
     make
-
+    Adobe Source Code Pro/Source Sans Pro fonts (store *.ttf files in ~/.fonts/)
 
 Fedora Packages with some of these dependencies:
     xsltprox available in libxslt
@@ -13,5 +13,5 @@ Fedora Packages with some of these dependencies:
 
 See it online:
 
-HTML: http://www.peopleareducks.com/docs/vdg/output/Virtual-Disk-Operations.html
-PDF: http://www.peopleareducks.com/docs/vdg/output/Virtual-Disk-Operations.pdf
+HTML: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html
+PDF: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf
