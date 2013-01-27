@@ -502,7 +502,7 @@
       Once the virtual machine is shutdown the process for resizing
       QCOW2 images starts similar to the process for resizing RAW
       images. Use the <command>qemu-img</command>
-      <command>resize</command> subcommand, specify the disk to
+      <command>resize</command> sub-command, specify the disk to
       operate on (<filename>f18.qcow2</filename>), and how much to
       increase the size by (<literal>+5G</literal>):
     </para>
@@ -534,7 +534,18 @@
       we <quote>resize</quote> the partiton with
       <command>fdisk</command> what we're
       <emphasis>actually</emphasis> doing is deleting the partition
-      and then re-creating it starting at the same position.
+      and then re-creating it starting at the same position
+
+      <footnote>
+	<para>
+	  On the Internet I've seen an example where the
+	  <command>parted</command> <command>resize</command>
+	  sub-command was used to resize a partition. That was not a
+	  valid sub-command in the version I used:
+	  parted-3.1-9.fc18.x86_64.
+	</para>
+      </footnote>
+      .
     </para>
 
     <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image04">
