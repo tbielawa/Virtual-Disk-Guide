@@ -67,10 +67,10 @@
   <figure xml:id="VDG-Appendix-Disk-Drive-History-Illustration-Figure">
     <title>Disk Drive Components</title>
     <mediaobject>
-      <imageobject condition="web">
+      <imageobject audience="html">
         <imagedata fileref="./images/disk-structure.png"/>
       </imageobject>
-      <imageobject condition="print">
+      <imageobject audience="pdf">
         <imagedata fileref="../../../images/disk-structure.png"/>
       </imageobject>
       <textobject><phrase>Disk Drive Components</phrase></textobject>
