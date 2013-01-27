@@ -187,8 +187,8 @@
 
       <footnote>
         <para>
-          On aligning Partitions: <link
-          xl:href="VDG-Appendix-Disk-Drive-History-Master-Boot-Record-jdbp-alignment-quote"/>
+          On aligning Partitions: <xref
+          linkend="VDG-Appendix-Disk-Drive-History-Master-Boot-Record"/>
         </para>
       </footnote>
 
@@ -285,7 +285,7 @@
       <title>No errors!</title>
       <mediaobject>
         <imageobject>
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize09.png" />
+          <imagedata contentwidth="315pt" fileref="../../images/resize/resize09.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -436,20 +436,35 @@
       class="osname">Fedora Linux</systemitem> and has no LVM managed
       partitions. The disk image for this virtual machine is located
       at <filename
-      class="devicefile">/var/lib/libvirt/images/f18.qcow2</filename>. Outside
-      of the virtual machine the disk looks like this:
+      class="devicefile">/var/lib/libvirt/images/f18.qcow2</filename>,
+      and the root partition is <filename
+      class="partition">vda3</filename>.
+    </para>
+
+    <para>
+      Outside of the virtual machine the disk looks like this:
     </para>
 
     <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image01">
       <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image01" parse="text"/></screen>
     </informalexample>
 
-    <important>
+    <para>
+      Inside of the virtual machine the disk and root partition look
+      like this:
+    </para>
+
+    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image03">
+      <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image03" parse="text"/></screen>
+    </informalexample>
+
+    <warning>
       <para>
-        Before we begin: make sure you shutdown any virtual machines the
-        disk might be attached to!
+        Before we begin: make sure you shutdown any virtual machines
+        the disk might be attached to! For example:
+        <computeroutput>virsh shutdown f18</computeroutput>
       </para>
-    </important>
+    </warning>
 
     <remark>TODO: Link to section which handles resizing LVM managed partitions</remark>
 
@@ -470,10 +485,68 @@
       <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image02" parse="text"/></screen>
     </example>
 
+    <para>
+      Once you've resized the disk image you can turn the virtual
+      machine back on, for example: <computeroutput>virsh start
+      f18</computeroutput>
+    </para>
 
+    <important>
+      <para>
+	The following steps happen <emphasis>inside</emphasis> of the
+	running virtual machine.
+      </para>
+    </important>
 
+    <para>
+      Once the machine is back online we can resize the partition with
+      the <command>fdisk</command> command. Technical note here: when
+      we <quote>resize</quote> the partiton with
+      <command>fdisk</command> what we're
+      <emphasis>actually</emphasis> doing is deleting the partition
+      and then re-creating it starting at the same position.
+    </para>
 
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image04">
+      <title>
+	Resize <filename class="devicefile">/dev/vda</filename> with
+	<command>parted</command>
+      </title>
 
+      <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image04" parse="text"/></screen>
+    </example>
+
+    <note>
+      <para>
+	In the above example we use the defaults for some of the new
+	partition creation prompts. The defaults work out to selecting
+	the first and last available cylnders, respectively.
+      </para>
+    </note>
+
+    <para>
+      Restart the virtual machine again. Now we can see the partition
+      size has increased from 7.6G to 13.6GB:
+    </para>
+
+    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image05">
+      <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image05" parse="text"/></screen>
+    </informalexample>
+
+    <para>
+      Just like when we resized the filesystem on the RAW disk image
+      we'll use the <command>resize2fs</command> command inside the
+      QCOW2 image. The root partition, <filename
+      class="partition">/dev/vda3</filename>, is the last partition on the
+      disk and is followed by free space which we'll grow it into:
+    </para>
+
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image06">
+      <title>
+	Grow the filesystem on <filename class="partition">/dev/vda3</filename>
+      </title>
+
+      <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image06" parse="text"/></screen>
+    </example>
   </section>
-
 </section>

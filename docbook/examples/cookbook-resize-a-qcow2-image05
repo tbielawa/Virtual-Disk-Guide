@@ -1,0 +1,11 @@
+[root@f18 ~]# parted /dev/vda print
+Model: Virtio Block Device (virtblk)
+Disk /dev/vda: 18.3GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system     Flags
+ 1      1049kB  525MB   524MB   primary  ext4            boot
+ 2      525MB   4686MB  4161MB  primary  linux-swap(v1)
+ 3      4686MB  18.3GB  13.6GB  primary  ext4

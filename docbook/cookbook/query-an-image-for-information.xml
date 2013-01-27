@@ -71,8 +71,9 @@
   <note>
     <para>
       Its worth mentioning that RAW image types will be reported by
-      <command>file</command> as "x86 boot sector, code offset 0xb8"
-      once given a filesystem label and a partition table.
+      <command>file</command> as <literal>x86 boot sector, code offset
+      0xb8</literal> once given a filesystem label and a partition
+      table.
     </para>
   </note>
 
@@ -85,9 +86,10 @@
   <para>
     With <command>qemu-img</command> it's clear that
     <filename>image-qcow.qcow2</filename> is a QCOW2 type image and is
-    only 136K on disk and internally (the 'virtual size' field) is a
-    10G disk image. If the QCOW had a backing image the path to that
-    file would be shown here as an additional field.
+    only 136K on disk and internally (the <firstterm>virtual
+    size</firstterm> field) is a 10G disk image. If the QCOW had a
+    backing image the path to that file would be shown here as an
+    additional field.
   </para>
 
   <para>

@@ -1,0 +1,9 @@
+[root@f18 ~]# resize2fs /dev/vda3
+resize2fs 1.42.5 (29-Jul-2012)
+Filesystem at /dev/vda3 is mounted on /; on-line resizing required
+old_desc_blocks = 1, new_desc_blocks = 1
+The filesystem on /dev/vda3 is now 3312304 blocks long.
+
+[root@f18 ~]# df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda3        13G  3.6G  8.3G  31% /
