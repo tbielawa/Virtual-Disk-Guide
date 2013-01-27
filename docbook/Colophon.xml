@@ -58,7 +58,6 @@
     Linux</systemitem> releases.
   </para>
 
-  <!-- Rendering tech: dblatex, xetex, xsltproc -->
   <para>
     This book was produced using an
     <application>xsltproc</application> →

@@ -7,6 +7,8 @@
   <xsl:param name="make.year.ranges" select="1" />
   <xsl:param name="term.breakline">1</xsl:param>
   <xsl:param name="doc.lot.show"></xsl:param>
+  <xsl:param name="latex.hyperparam">colorlinks,linkcolor=blue,anchorcolor=blue,urlcolor=blue</xsl:param>
+
   <xsl:param name="xetex.font">
     <xsl:text>\setmainfont{Source Sans Pro}
     </xsl:text>

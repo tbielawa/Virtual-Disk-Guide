@@ -87,7 +87,7 @@
 
     , saying:
 
-    <blockquote>
+    <blockquote xml:id="VDG-Appendix-Disk-Drive-History-Master-Boot-Record-jdbp-alignment-quote">
       <para>
 	It is often believed that disc partitions have to be aligned
 	to cylinder or track boundaries. This is not in fact true and
