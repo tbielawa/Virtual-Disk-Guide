@@ -38,10 +38,12 @@
         the core concepts of virtual disk management. This document
         will concern itself primarily with the
         <command>qemu-img</command> tool and common GNU/Linux disk
-        utility tools like <command>fdisk</command>. Most importantly
-        to me, in the case of non-trivial examples, I hope to identify
-        what the relevant technical concepts are how they work up to
-        the final result of each example.
+        utility tools like <command>fdisk</command>,
+        <command>parted</command>, and
+        <command>resize2fs</command>. Most importantly to me, in the
+        case of non-trivial examples, I hope to identify what the
+        relevant technical concepts are how they work up to the final
+        result of each example.
       </para>
 
       <para>
