@@ -153,7 +153,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize01.png">
       <title>Welcome to <application>GParted</application></title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata fileref="./images/resize/resize01.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize01.png" />
         </imageobject>
       </mediaobject>
@@ -170,7 +173,10 @@
         Resize/Move <filename class="partition">loop0p2</filename>
       </title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="435pt" fileref="./images/resize/resize02.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize02.png" />
         </imageobject>
       </mediaobject>
@@ -198,7 +204,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize03">
       <title>Moving <filename class="partition">loop0p2</filename></title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="435pt" fileref="./images/resize/resize03.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize03.png" />
         </imageobject>
       </mediaobject>
@@ -212,7 +221,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize04">
       <title>Pending move operation</title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="435pt" fileref="./images/resize/resize04.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize04.png" />
         </imageobject>
       </mediaobject>
@@ -231,7 +243,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize05">
       <title>Resize <filename class="partition">loop0p1</filename></title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="435pt" fileref="./images/resize/resize05.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize05.png" />
         </imageobject>
       </mediaobject>
@@ -245,7 +260,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize06">
       <title>Apply the changes</title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="435pt" fileref="./images/resize/resize06.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize06.png" />
         </imageobject>
       </mediaobject>
@@ -258,7 +276,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize07">
       <title>Scary warning!</title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="435pt" fileref="./images/resize/resize07.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize07.png" />
         </imageobject>
       </mediaobject>
@@ -271,7 +292,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize08">
       <title>Progress happening</title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="435pt" fileref="./images/resize/resize08.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize08.png" />
         </imageobject>
       </mediaobject>
@@ -284,7 +308,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize09">
       <title>No errors!</title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="315pt" fileref="./images/resize/resize09.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="315pt" fileref="../../images/resize/resize09.png" />
         </imageobject>
       </mediaobject>
@@ -298,7 +325,10 @@
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize10">
       <title><application>GParted</application> has resized our partitions</title>
       <mediaobject>
-        <imageobject>
+        <imageobject condition="web">
+          <imagedata contentwidth="435pt" fileref="./images/resize/resize10.png" />
+        </imageobject>
+        <imageobject condition="print">
           <imagedata contentwidth="435pt" fileref="../../images/resize/resize10.png" />
         </imageobject>
       </mediaobject>
