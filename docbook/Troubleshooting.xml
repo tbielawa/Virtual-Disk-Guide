@@ -12,7 +12,16 @@
   <itemizedlist>
     <listitem>
       <para>
-	Why are cloned disks so big, I thought qcows were supposed to be small!
+	Why are cloned disks so big, I thought QCOWs were supposed to
+	be small&#8253;
+	<footnote>
+	  <para>
+	    This character <quote>&#8253;</quote> is called the
+	    <firstterm>interrobang</firstterm>. I just blew your mind.
+	  </para>
+	</footnote>
+
+
       </para>
     </listitem>
   </itemizedlist>
