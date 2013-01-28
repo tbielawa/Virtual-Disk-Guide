@@ -1,7 +1,7 @@
 <chapter xmlns="http://docbook.org/ns/docbook"
-	 xmlns:xl="http://www.w3.org/1999/xlink"
-	 xmlns:xi="http://www.w3.org/2001/XInclude"
-	 xml:id="VDG-Troubleshooting" version="5.0">
+         xmlns:xl="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xml:id="VDG-Troubleshooting" version="5.0">
 
   <title>Troubleshooting/FAQs</title>
 
@@ -9,21 +9,27 @@
     This is where the FAQs will be.
   </para>
 
-  <itemizedlist>
-    <listitem>
-      <para>
-	Why are cloned disks so big, I thought QCOWs were supposed to
-	be small&#8253;
-	<footnote>
-	  <para>
-	    This character <quote>&#8253;</quote> is called the
-	    <firstterm>interrobang</firstterm>. I just blew your mind.
-	  </para>
-	</footnote>
-
-
-      </para>
-    </listitem>
-  </itemizedlist>
-
+  <qandaset defaultlabel="qanda">
+    <!-- Don't generate a table of contents for QandASets -->
+    <?dbhtml toc="0" ?>
+    <qandaentry>
+      <question>
+        <para>
+          Why are cloned disks so big, I thought QCOWs were supposed to
+          be small&#8253;
+          <footnote>
+            <para>
+              This character <quote>&#8253;</quote> is called the
+              <firstterm>interrobang</firstterm>. I just blew your mind.
+            </para>
+          </footnote>
+        </para>
+      </question>
+      <answer>
+        <para>
+          foo
+        </para>
+      </answer>
+    </qandaentry>
+  </qandaset>
 </chapter>
