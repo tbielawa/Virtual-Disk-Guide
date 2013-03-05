@@ -24,9 +24,9 @@
     concept until I tried (<emphasis>expecting</emphasis> to fail) to
     use the <command>qemu-img</command> <command>convert</command>
     sub-command to create a virtual disk image of an actual hard
-    drive. This is possible in part due to the original philosophy
-    laid down by Dennis Ritchie and Ken Thompson when they first
-    created Unix: everything's treated as a file. The synopsis of the
+    drive. This is possible in part due to the philosophy laid down by
+    Dennis Ritchie and Ken Thompson when they first created UNIX:
+    everything's treated as a file. The synopsis of the
     <command>convert</command> sub-command is below.
   </para>
 
@@ -57,14 +57,21 @@
     <screen><xi:include href="../examples/advanced-clone-thumb_drive_properties" parse="text"/></screen>
   </example>
 
-  <remark>TODO: Make xref to the relevant troubleshooting section</remark>
 
   <para>
+    To convert the thumb drive we'll first going to unmount the drive,
+    then use the <command>qemu-img</command> command to perform the
+    actual conversion. While unmounting the drive I use the
+    <option>-l</option> option which means to unmount
+    <firstterm>lazily</firstterm>, i.e., to wait until there is no
+    activity going on before attempting to unmount.
 
+    <footnote><para>See also: <xref
+    linkend="VDG-Troubleshooting"/></para></footnote>
   </para>
 
   <example xml:id="VDG-Advanced-Cloning-A-Physical-Disk-unmount-and-convert-to-image01">
-    <title></title>
+    <title>Conversion Steps</title>
 
     <screen><xi:include href="../examples/advanced-clone-unmount-and-convert-to-image01" parse="text"/></screen>
   </example>

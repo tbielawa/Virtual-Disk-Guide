@@ -37,8 +37,8 @@
     </listitem>
     <listitem>
       <para>
-        <command>stat</command> still thinks it's a regular file (as
-        opposed to a block special device, or a socket, etc...).
+        <command>stat</command> still thinks it's a regular file, as
+        opposed to a block special device, or a socket, etc&#x2026;
       </para>
     </listitem>
     <listitem>

@@ -57,9 +57,9 @@
       </question>
       <answer>
         <para>
-          It's complicated, but worth learning about. See the appendix
-          <link linkend="VDG-Appendix-Disk-Drive-History">on disk
-          drive history</link> for a complete explanation.
+          It's complicated, but worth learning about. See <xref
+          linkend="VDG-Appendix-Disk-Drive-History"/> for a complete
+          explanation.
         </para>
 
         <para>
@@ -81,12 +81,13 @@
 	  etc) use this space to store <emphasis>additional</emphasis>
 	  code and data necessary to boot the system
 
-	  <footnote><para>
-	    <link xl:href="http://www.gnu.org/software/grub/manual/grub.html#BIOS-installation">GRUB: BIOS Installation</link>
+	  <footnote><para> GRUB: BIOS Installation: <link
+	  xl:href="http://www.gnu.org/software/grub/manual/grub.html#BIOS-installation">http://www.gnu.org/software/grub/manual/grub.html#BIOS-installation</link>
 	  </para></footnote>
 
-	  <footnote><para>
-	    <link xl:href="http://moi.vonos.net/linux/Booting_Linux_on_x86_with_Grub2/#installing-grub">Simon Kitching: Booting Linux on x86 using Grub2</link>
+	  <footnote><para> Simon Kitching: Booting Linux on x86 using
+	  Grub2: <link
+	  xl:href="http://moi.vonos.net/linux/Booting_Linux_on_x86_with_Grub2/#installing-grub">http://moi.vonos.net/linux/Booting_Linux_on_x86_with_Grub2/#installing-grub</link>
 	  </para></footnote>
 
 	  .

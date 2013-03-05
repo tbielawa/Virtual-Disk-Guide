@@ -6,7 +6,14 @@
   <title>Colophon</title>
 
   <para>
-    The standard typeface used in this book is Source Sans Pro
+    This book was created using free/open source software. All media
+    within was created and saved in formats unencumbered by patents.
+  </para>
+
+
+  <para>
+    The standard typeface used in this book is <emphasis>Source Sans
+    Pro</emphasis>
 
     <footnote>
       <para>
@@ -16,7 +23,7 @@
     </footnote>
 
 
-    , the monospaced sequences use Source Code Pro
+    , the monospaced sequences use <emphasis>Source Code Pro</emphasis>.
 
     <footnote>
       <para>
@@ -25,10 +32,16 @@
       </para>
     </footnote>
 
-    . Both of these beautiful fonts families were designed by Paul
-    D. Hunt at <orgname>Adobe Systems
-    Incorporated</orgname>. Moreover, both of these families are
-    available for use under the Open Font License version 1.1
+    Both of these beautiful fonts families were designed by Paul
+    D. Hunt
+
+    <footnote><para>Paul D. Hunt on Adobe.com: <link
+    xl:href="http://store1.adobe.com/cfusion/store/html/index.cfm?store=OLS-US&amp;event=displayDesignerInfo&amp;code=HUNT"
+    /></para></footnote>
+
+    at <orgname>Adobe Systems Incorporated</orgname>. Moreover, both
+    of these families are available for use under the Open Font
+    License version 1.1
 
     <footnote>
       <para>
@@ -40,7 +53,8 @@
   </para>
 
   <para>
-    This book was written in DocBook 5 XML (unmodified)
+    This book was written in 100% <emphasis>lint-free</emphasis>
+    DocBook 5 XML
 
     <footnote>
       <para>
@@ -58,8 +72,12 @@
     Linux</systemitem> releases.
   </para>
 
+  <!-- TODO: add attribution for GIMP and Inkscape -->
+
   <para>
-    This book was produced using an
+    This book was produced using a
+
+    <application>GNU Make</application> →
     <application>xsltproc</application> →
     <application>dblatex</application> →
     <application>xetex</application> →

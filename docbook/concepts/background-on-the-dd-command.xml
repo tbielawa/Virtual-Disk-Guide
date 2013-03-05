@@ -55,14 +55,12 @@
   <note>
     <para>
       <systemitem class="resource">/dev/zero</systemitem> doesn't
-      provide endless "0"s. It actually provides endless
-      <keycode>NUL</keycode> control characters(<keycap>^@</keycap> in
-      Caret Notation <footnote><para><link
-      xl:href="http://en.wikipedia.org/wiki/Caret_notation">Caret
-      Notation</link> on Wikipedia</para></footnote>). The
-      <keycode>NUL</keycode> control character has the octal value
-      <keycode>000</keycode>. The actual ASCII zero character
-      <keycap>0</keycap> has the octal value <keycode>060</keycode>.
+      provide endless <quote>0</quote>s. It actually provides endless
+      <keycode>NUL</keycode> control characters(<keycode>^@</keycode>
+      in Caret Notation). The <keycode>NUL</keycode> control character
+      has the octal value <literal>000</literal>. The actual ASCII
+      <quote>zero</quote> character (<keycap>0</keycap>) has the octal
+      value <literal>060</literal>.
     </para>
   </note>
 
@@ -74,7 +72,13 @@
     non-printing character (it doesn't represent a written symbol), so
     if you want to identify it you can use <command>cat</command> like
     this to print 5 <keycode>NUL</keycode> characters in Caret
-    Notation:
+    Notation
+
+    <footnote><para><link
+    xl:href="http://en.wikipedia.org/wiki/Caret_notation">Caret
+    Notation</link> on Wikipedia</para></footnote>
+
+    :
   </para>
 
   <screen><xi:include href="../examples/concepts-background-on-dd01" parse="text"/></screen>

@@ -16,12 +16,10 @@
 
   <para>
     To calculate how many cylinders to specify you could work
-    backwards from <xref
-    linkend="VDG-Concepts-Capacity-Equation"/><footnote><para><link
-    xl:href="http://www.rwc.uc.edu/koehler/comath/42.html">Disk
-    Geometry</link></para></footnote> but the number of unknowns at
-    this time make it prohibitively difficult for us to work out. It's
-    provided in this documentation as a general informative reference.
+    backwards from <xref linkend="VDG-Concepts-Capacity-Equation"/>
+    but the number of unknowns at this time make it prohibitively
+    difficult for us to work out. It's provided in this documentation
+    as a general informative reference.
   </para>
 
   <equation xml:id="VDG-Concepts-Capacity-Equation">

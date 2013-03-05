@@ -8,19 +8,22 @@
     <para>
       Since we'll be working with the kernel to create a device
       you'll need to have super user permissions to
-      continue<footnote><para><package>FUSE</package>
-      (Filesystem in Userspace) has a module called <systemitem
-      class="filesystem">Mountlo</systemitem> that allows
-      non-root users to make make loop
-      devices.</para></footnote>.
+      continue.
     </para>
   </note>
 
   <para>
-    To create a loop device. Run the <command>losetup</command>
-    command with the <option>-f</option> option and an available loop
+    To create a loop device run the <command>losetup</command> command
+    with the <option>-f</option> option, the first available loop
     device will be selected automatically and associated with
-    <filename>disk1.raw</filename>.
+    <filename>disk1.raw</filename>
+
+    <footnote><para><package>FUSE</package> (Filesystem in Userspace)
+    has a module called <systemitem
+    class="filesystem">Mountlo</systemitem> that allows non-root users
+    to make make loop devices.</para></footnote>
+
+    .
   </para>
 
   <example xml:id="VDG-Concepts-Example-Run-losetup">

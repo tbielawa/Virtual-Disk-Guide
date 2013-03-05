@@ -5,31 +5,108 @@
 
   <title>Troubleshooting/FAQs</title>
 
-  <para>
-    This is where the FAQs will be.
-  </para>
-
   <qandaset defaultlabel="qanda">
     <!-- Don't generate a table of contents for QandASets -->
     <?dbhtml toc="0" ?>
     <qandaentry>
       <question>
         <para>
-          Why are cloned disks so big, I thought QCOWs were supposed to
-          be small&#8253;
-          <footnote>
-            <para>
-              This character <quote>&#8253;</quote> is called the
-              <firstterm>interrobang</firstterm>. I just blew your mind.
-            </para>
-          </footnote>
+          Why are my cloned disks so big, I thought QCOWs would be
+          smaller if my disk was mostly empty <emphasis>&#8253;</emphasis>
+
+          <footnote><para>This character <quote>&#8253;</quote> is
+          called the <firstterm>interrobang</firstterm>. I just blew
+          your mind.</para></footnote>
         </para>
       </question>
       <answer>
         <para>
-          foo
+          Creating a disk image from a device copies
+          <emphasis>all</emphasis> blocks from the source device. This
+          includes data which has been deleted on the filesystem.
+        </para>
+
+        <para>
+          When you delete a file from the filesystem the operating
+          system will not signal to the disk that it should mark the
+          formerly occupied blocks as free
+          <footnote>
+            <para>This is what allows data recovery software to work</para>
+          </footnote>
+          . The additional overhead associated with the operation
+          would hurt disk performance.
+        </para>
+
+        <para>
+          So what option do you have available if you want to minimize
+          the size of the created disk image? The only solution I've
+          found thus far is a utility called
+          <application>zerofree</application>
+
+          <footnote>
+            <para>
+              <application>zerofree</application> homepage: <link
+              xl:href="http://intgat.tigress.co.uk/rmy/uml/sparsify.html"/>
+            </para>
+          </footnote>
         </para>
       </answer>
     </qandaentry>
+
+    <qandaentry>
+      <question>
+        <para>
+	  Why do I get a <computeroutput>device busy</computeroutput>
+	  error message when unmounting
+	  <replaceable>$THING</replaceable>?
+        </para>
+      </question>
+      <answer>
+        <para>
+	  A process is accessing files on the mounted volume. Possible fixes:
+        </para>
+
+	<itemizedlist>
+	  <listitem>
+	    <para>
+	      Sometimes the solution is a simple as
+	      <firstterm>lazily</firstterm> unmounting the device. Do
+	      this by giving the <option>-l</option> option to
+	      <command>umount</command>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      Make sure you don't have any open shells whose present
+	      working directory is in the path you're trying to
+	      unmount.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      If that doesn't work you can try using the
+	      <command>fuser</command> command to find what processes
+	      are accessing the device. For example:
+	      <computeroutput>fuser
+	      /mnt/thumbdrive</computeroutput>. This command also
+	      accepts an optional <option>-k</option> option, which
+	      will try to kill all processes accessing the busy path.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      If none of that works you can try the
+	      <command>lsof</command> command (superuser permissions
+	      required to see <emphasis>everything</emphasis> being
+	      accessed). For example: <computeroutput>lsof | grep
+	      /mnt/path</computeroutput>.
+	    </para>
+	  </listitem>
+
+	</itemizedlist>
+      </answer>
+    </qandaentry>
+
+
   </qandaset>
 </chapter>

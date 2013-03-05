@@ -24,17 +24,18 @@
 
   <para>
     So I went with backing images, they worked great for what I needed
-    to them do. I could work incrementally and "commit" changes in the
-    COW image (copy-on-write) back to the master. I also could use the
-    same base-image for multiple COWs at once which meant other people
-    on my team could all be using the same base-image if we were
-    working on the same thing.
+    to them do. I could work incrementally and
+    <firstterm>commit</firstterm> changes in the COW image
+    (copy-on-write) back to the master. I also could use the same
+    base-image for multiple COWs at once which meant other people on
+    my team could all be using the same base-image if we were working
+    on the same thing.
   </para>
 
   <note>
     <para>
-      The terms <literal>base-image</literal> and
-      <literal>backing-image</literal> are used interchangeably to
+      The terms <firstterm>base-image</firstterm> and
+      <firstterm>backing-image</firstterm> are used interchangeably to
       refer to the read-only image that is used to back a read-write
       disk.
     </para>
@@ -42,9 +43,9 @@
 
   <note>
     <para>
-      In this section when we refer to a <literal>COW</literal> image
-      it has no connotation to the <literal>COW</literal>
-      ("copy-on-write") disk format. Saying <literal>COW</literal>
+      In this section when we refer to a <firstterm>COW</firstterm>
+      image it is not apropos the COW
+      (<firstterm>copy-on-write</firstterm>) disk format. Saying COW
       only serves to help make a distinction between the read-only
       base-image and the image that changes are copied to on writing.
     </para>
@@ -88,8 +89,9 @@
 
     <step>
       <para>
-	Once the machine was what we wanted in a "Golden Master" it
-	was shutdown and the backing image would be made read-only.
+	Once the machine was what we wanted in a <quote>Golden
+	Master</quote> it was shutdown and the backing image would be
+	made read-only.
       </para>
     </step>
 
@@ -124,8 +126,8 @@
   <important>
     <para>
       It's not crucial, but highly recommend that the virtual machine
-      is turned off when running the <command>commit</command>
-      command.
+      is turned off or suspended when running the
+      <command>commit</command> command.
     </para>
   </important>
 

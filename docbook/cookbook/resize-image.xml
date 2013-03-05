@@ -561,7 +561,7 @@
       <para>
 	In the above example we use the defaults for some of the new
 	partition creation prompts. The defaults work out to selecting
-	the first and last available cylnders, respectively.
+	the first and last available cylinders, respectively.
       </para>
     </note>
 
