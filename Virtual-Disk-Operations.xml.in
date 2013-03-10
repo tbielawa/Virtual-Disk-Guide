@@ -42,8 +42,8 @@
         <command>parted</command>, and
         <command>resize2fs</command>. Most importantly to me, in the
         case of non-trivial examples, I hope to identify what the
-        relevant technical concepts are how they work up to the final
-        result of each example.
+        relevant technical concepts are and how they work up to the
+        final result of each example.
       </para>
 
       <para>
