@@ -9,6 +9,7 @@
   <xsl:param name="doc.lot.show"></xsl:param>
   <xsl:param name="latex.hyperparam">colorlinks,linkcolor=blue,anchorcolor=blue,urlcolor=blue</xsl:param>
   <xsl:param name="xref.with.number.and.title" select="1"/>
+  <xsl:param name="insert.xref.page.number">yes</xsl:param>
 
   <xsl:param name="xetex.font">
     <xsl:text>\setmainfont{Source Sans Pro}
