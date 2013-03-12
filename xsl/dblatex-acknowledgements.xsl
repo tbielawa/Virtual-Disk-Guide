@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version='1.0'>
   <xsl:param name="acknowledgements.tocdepth">0</xsl:param>
 
+
 <xsl:template match="acknowledgements">
   <xsl:call-template name="section.unnumbered">
     <xsl:with-param name="tocdepth" select="number($acknowledgements.tocdepth)"/>
@@ -12,4 +13,5 @@
     </xsl:with-param>
   </xsl:call-template>
 </xsl:template>
+<xsl:template match="acknowledgements/title"></xsl:template>
 </xsl:stylesheet>
