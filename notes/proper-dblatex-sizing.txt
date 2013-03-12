@@ -1,0 +1,15 @@
+My heart goes out to the person at Janix Software who wrote this blog
+post:
+
+http://janixsoft.wordpress.com/2013/02/15/dblatex/
+
+That blog post is the only piece of information on the Internet I was
+able to apply to successfully resize the dimensions of this book for
+print output.
+
+Also, reference credit to whomever wrote the page on Wikibooks.org
+about LaTeX page sizing:
+
+http://en.wikibooks.org/wiki/LaTeX/Page_Layout#Page_size
+
+It was the first result when I searched for "latex geometry package"
