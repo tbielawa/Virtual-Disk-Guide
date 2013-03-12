@@ -157,7 +157,7 @@
           <imagedata fileref="./images/resize/resize01.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize01.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize01.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -177,7 +177,7 @@
           <imagedata contentwidth="435pt" fileref="./images/resize/resize02.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize02.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize02.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -208,7 +208,7 @@
           <imagedata contentwidth="435pt" fileref="./images/resize/resize03.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize03.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize03.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -225,7 +225,7 @@
           <imagedata contentwidth="435pt" fileref="./images/resize/resize04.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize04.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize04.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -247,7 +247,7 @@
           <imagedata contentwidth="435pt" fileref="./images/resize/resize05.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize05.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize05.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -264,7 +264,7 @@
           <imagedata contentwidth="435pt" fileref="./images/resize/resize06.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize06.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize06.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -280,7 +280,7 @@
           <imagedata contentwidth="435pt" fileref="./images/resize/resize07.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize07.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize07.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -296,7 +296,7 @@
           <imagedata contentwidth="435pt" fileref="./images/resize/resize08.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize08.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize08.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -312,7 +312,7 @@
           <imagedata contentwidth="315pt" fileref="./images/resize/resize09.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="315pt" fileref="../../images/resize/resize09.png" />
+          <imagedata contentwidth="260.69pt" fileref="../../images/resize/resize09.png" />
         </imageobject>
       </mediaobject>
     </figure>
@@ -329,7 +329,7 @@
           <imagedata contentwidth="435pt" fileref="./images/resize/resize10.png" />
         </imageobject>
         <imageobject audience="pdf">
-          <imagedata contentwidth="435pt" fileref="../../images/resize/resize10.png" />
+          <imagedata contentwidth="360pt" fileref="../../images/resize/resize10.png" />
         </imageobject>
       </mediaobject>
     </figure>
