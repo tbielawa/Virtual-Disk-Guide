@@ -59,7 +59,9 @@ XSLTPARAMS = --xinclude
 XSLT_CHUNKED_PARAMS = --stringparam base.dir $(CHUNKDIR)/
 
 # -o $(OUTFILE).pdf
-DBLATEX_PARAMS = -p xsl/dblatex-pdf.xsl -b xetex
+DBLATEX_PARAMS = -p xsl/dblatex-pdf.xsl \
+	-p xsl/dblatex-acknowledgements.xsl \
+	 -b xetex
 DBLATEX_XSLTPROC_PARAMS = --xinclude \
 	--param profile.attribute "'audience'" \
 	--param profile.value "'pdf'" \
@@ -149,9 +151,19 @@ html: timestamp docdir $(OUTPUT).html
 	@echo "       BUILDING PDF OUTPUT NOW"
 	@echo "#############################################"
 	xsltproc $(DBLATEX_XSLTPROC_PARAMS) Virtual-Disk-Operations.xml | \
-	dblatex $(DBLATEX_PARAMS) -o $(DEST)/$@ -
+	dblatex -s ./latex/vdg.sty $(DBLATEX_PARAMS) -o $(DEST)/$@ -
+
+%.tex: %.xml
+	@echo "#############################################"
+	@echo "       BUILDING TEX OUTPUT NOW"
+	@echo "#############################################"
+	xsltproc $(DBLATEX_XSLTPROC_PARAMS) Virtual-Disk-Operations.xml | \
+	dblatex -d $(DBLATEX_PARAMS) -t tex -o $(DEST)/$@ -
+
 
 pdf: timestamp docdir $(OUTPUT).pdf
+
+tex: timestamp docdir $(OUTPUT).tex
 
 docs: docdir $(OUTPUT).html $(OUTPUT).pdf chunked
 

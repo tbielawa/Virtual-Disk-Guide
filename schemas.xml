@@ -8,5 +8,6 @@
   <documentElement localName="section" typeId="DocBook"/>
   <documentElement localName="set" typeId="DocBook"/>
   <documentElement localName="colophon" typeId="DocBook"/>
+  <documentElement localName="acknowledgements" typeId="DocBook"/>
   <typeId id="DocBook" uri="/usr/share/xml/docbook5/schema/rng/5.0/docbookxi.rnc"/>
 </locatingRules>

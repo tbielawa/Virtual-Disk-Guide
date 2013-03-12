@@ -1,0 +1,11 @@
+Notes on installing the necessary items for building this document:
+
+- Unfortunately the upstream dblatex header/footer LaTeX style file
+  must be modified.
+
+  - cp latex/dbk_headfoot.sty /usr/share/texmf/tex/latex/dblatex/dbk_headfoot.sty
+
+
+- Install the Adobe Source Code Pro/Source Sans Pro fonts *.ttf files in ~/.fonts/
+
+

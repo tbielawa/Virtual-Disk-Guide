@@ -1,8 +1,22 @@
 <acknowledgements xmlns="http://docbook.org/ns/docbook"
-	 xml:id="VDG-ACKS" version="5.0">
+                  xmlns:xl="http://www.w3.org/1999/xlink"
+                  xmlns:xi="http://www.w3.org/2001/XInclude"
+                  xml:id="VDG-ACKS" version="5.0">
 
   <title>Acknowledgments</title>
 
+  <para>
+    This is where all the acknowledgments will go.
+  </para>
+  <para>
+    This is where all the acknowledgments will go.
+  </para>
+  <para>
+    This is where all the acknowledgments will go.
+  </para>
+  <para>
+    This is where all the acknowledgments will go.
+  </para>
   <para>
     This is where all the acknowledgments will go.
   </para>
