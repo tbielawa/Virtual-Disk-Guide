@@ -6,6 +6,7 @@
   <xsl:param name="doc.collab.show">0</xsl:param>
   <xsl:param name="doc.lot.show"></xsl:param>
   <xsl:param name="draft.mode">yes</xsl:param>
+  <xsl:param name="filename.as.url">1</xsl:param>
   <xsl:param name="insert.xref.page.number">yes</xsl:param>
   <xsl:param name="latex.hyperparam">colorlinks,linkcolor=blue,anchorcolor=blue,urlcolor=blue</xsl:param>
   <xsl:param name="latex.output.revhistory">0</xsl:param>
