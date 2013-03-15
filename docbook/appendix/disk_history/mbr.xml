@@ -13,8 +13,10 @@
     Signature</firstterm> you have 512B, which up until recently
     happened to be the typical size of one sector
 
-    <footnote><para> Seagate.com - Transition to Advanced Format 4K
-    Sector Hard Drives: <link
+    <footnote
+    xml:id="VDG-Appendix-Disk-Drive-History-Master-Boot-Record-seagate-4k-drives"><para>
+    Seagate.com - Transition to Advanced Format 4K Sector Hard Drives:
+    <link
     xl:href="http://www.seagate.com/tech-insights/advanced-format-4k-sector-hard-drives-master-ti/"/>
     </para></footnote>
 
@@ -76,10 +78,10 @@
     In the old days a disk cylinder (or track) was typically 63
     sectors. This would represent one concentric ring of storage on a
     physical disk. Some people believe that early operating systems
-    (notably MS-DOS) enforced requirements which dictated that
-    partitions begin on cylinder boundaries, or that the OS needed to
-    begin and end on a cylinder boundary. Jonathan de Boyne Pollard
-    (JDBP) disputes that claim
+    (notably <systemitem class="osname">MS-DOS</systemitem>) enforced
+    requirements which dictated that partitions begin on cylinder
+    boundaries, or that the OS needed to begin and end on a cylinder
+    boundary. Jonathan de Boyne Pollard (JDBP) disputes that claim
 
     <footnote><para>The gen on disc partition alignment: <link
     xl:href="http://homepage.ntlworld.com/jonathan.deboynepollard/FGA/disc-partition-alignment.html"/>
@@ -88,6 +90,8 @@
     , saying:
 
     <blockquote xml:id="VDG-Appendix-Disk-Drive-History-Master-Boot-Record-jdbp-alignment-quote">
+      <attribution>Jonathan de Boyne Pollard</attribution>
+
       <para>
 	It is often believed that disc partitions have to be aligned
 	to cylinder or track boundaries. This is not in fact true and
@@ -129,8 +133,85 @@
   </para>
 
   <para>
-    What we can take away from JDBP here is this:
+    What we can take away from JDBP here is this: Operating systems,
+    not even <systemitem class="osname">MS-DOS</systemitem>, require
+    partitons to begin (or end) on cylinder or track boundaries.
+  </para>
+
+  <para>
+    The very idea that partitions have such restrictions is a complete
+    falsehood. A story passed down from hacker generation to
+    generation, accepted as canon and never questioned.
+  </para>
+
+  <para>
+    JDBP goes on to also discuss the 4KiB alignment rule:
   </para>
 
 
+  <blockquote xml:id="VDG-Appendix-Disk-Drive-History-Master-Boot-Record-jdbp-alignment-quote2">
+    <para>
+      There is a disc partition alignment rule that
+      <emphasis>does</emphasis> reflect the actual hardware. It is the
+      rule that partitions be aligned to 4KiB boundaries. This rule
+      only makes sense for <emphasis>some</emphasis> hard disc models,
+      however.
+    </para>
+
+    <para>
+      In some hard disc models, the internal sector size has been
+      increased from 0.5KiB to 4KiB. At the I/O command level, as
+      system softwares access the disc, the sector size is still
+      0.5KiB, however. Such discs are known as <quote>512 byte
+      emulation</quote> discs [&#x2026;]
+    </para>
+
+    <para>
+      What happens on such <quote>512e</quote> discs is that whenever
+      the operating system or the firmware reads a 0.5KiB sector, the
+      disc unit itself is actually reading a whole 4KiB and handing
+      the firmware/operating system the appropriate one-eighth; and
+      whenever the firmware/operating system writes a 0.5KiB sector,
+      the disc unit is actually reading a whole 4KiB sector, modifying
+      one eighth, and writing the whole 4KiB back again.
+    </para>
+
+    <para>
+      [&#x2026;]
+    </para>
+
+    <para>
+      So it's simply necessary to ensure that those eight 0.5KiB
+      sectors are contiguous and aligned to an actual 4KiB sector on
+      the disc. The <quote>natural</quote> I/O boundaries used by the
+      operating system must align with the internal, hidden, 4KiB
+      boundaries of the physical disc. The eight 0.5KiB sectors in the
+      I/O command must not span two or more 4KiB physical sectors; but
+      must be exactly one 4KiB sector, and in the right order within
+      that sector.
+    </para>
+  </blockquote>
+
+  <para>
+    What we should first observe from this second quote is that there
+    <emphasis>is</emphasis> a rule regarding sector alignment. But
+    that rule has nothing to do with operating system
+    requirements. Furthermore, this is only a rule and we are not
+    obligated to follow it. Failure to follow the rule simply results
+    in decreased I/O performance.
+  </para>
+
+  <para>
+    I recommend reading the entire page for a complete overview of
+    these topics. JDBP does an excellent job separating the fact from
+    fiction and explains how you can achieve correct 4KiB alignment,
+    or realignment if you need to fix an existing system.
+  </para>
+
+  <note>
+    <para>For more information on the <quote>native</quote> 4KiB disk
+    drive topic I recommend reviewing footnote <footnoteref
+    linkend="VDG-Appendix-Disk-Drive-History-Master-Boot-Record-seagate-4k-drives"
+    />.</para>
+  </note>
 </section>
