@@ -10,6 +10,7 @@
   <xsl:param name="make.year.ranges">1</xsl:param>
   <xsl:param name="section.autolabel">1</xsl:param>
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
+  <xsl:param name="navig.graphics.extension">.png</xsl:param>
 
   <!-- Make admonitions not be so far indented -->
   <xsl:param name="admon.style">
