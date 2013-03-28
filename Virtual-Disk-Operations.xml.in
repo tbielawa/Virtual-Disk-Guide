@@ -19,6 +19,8 @@
     </authorgroup>
 
     <abstract>
+      <?dbhtml-include href="docbook/analytics.html"?>
+
       <title>Introduction</title>
 
       <para>
