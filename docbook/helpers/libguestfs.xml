@@ -6,14 +6,29 @@
   <title>libguestfs</title>
 
   <para>
-    Up until now most of the commands we've been using have been very
-    low-level. Just the section on resizing images
-
-    <footnote><para><xref linkend="VDG-Cookbook-Resize-Image" /></para></footnote>
-
-    is about 8 pages of this book (depending on what format you're
-    reading it in). Lets get real here: it's not pragmatic to run ten
-    commands when one or two will suffice. Luckily for us some very
-    helpful utilities exist.
+    <systemitem class="library">libguestfs</systemitem> make managing
+    virtual disks (and machines) a lot simpler. Included is a C
+    library (with bindings available for Perl, Python, Ruby, Java,
+    OCaml, PHP, Haskell, Erlang, Lua and C#), as well as a collection
+    of 34 utilities (at the time of writing).
   </para>
+
+  <para>
+    I won't even attempt to cover all of it's features in this
+    book. Instead, I'll go over some of the most useful utilities. For
+    more information on <systemitem
+    class="library">libguestfs</systemitem> you should go to the
+    project website
+
+    <footnote><para><systemitem
+    class="library">libguestfs</systemitem> homepage: <link
+    xl:href="http://libguestfs.org/"/></para></footnote>
+
+    where they have a complete 250 page manual fully describing all
+    aspects of <systemitem class="library">libguestfs</systemitem>.
+  </para>
+
+  <xi:include href="libguestfs/guestmount.xml"/>
+  <xi:include href="libguestfs/virt-rescue.xml"/>
+  <xi:include href="libguestfs/virt-sparsify.xml"/>
 </section>
