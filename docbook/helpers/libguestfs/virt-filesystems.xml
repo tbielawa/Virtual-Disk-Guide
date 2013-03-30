@@ -1,0 +1,36 @@
+<section xml:id="VDG-Helpers-libguestfs-virt-filesystems"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <title>virt-filesystems</title>
+
+  <blockquote>
+    <attribution>man 1 virt-filesystems</attribution>
+
+    <para>
+      This tool allows you to discover filesystems, partitions,
+      logical volumes, and their sizes in a disk image or virtual
+      machine.
+    </para>
+  </blockquote>
+
+  <para>
+    <command>virt-filesystems</command> is the <command>df</command>
+    of virtual disk management. Minus the part that tells you how much
+    of a disk is actually used. What delights me most about
+    <command>virt-filesystems</command> is how well it integrates with
+    <acronym>LVM</acronym> (Logical Volume Manager) to show you LVM
+    device paths. This tool is most useful in combination with other
+    tools, such as virt-resize, virt-sparsify, or guestmount.
+  </para>
+
+  <remark>TODO: link to related sections</remark>
+
+  <para>
+    
+  </para>
+
+
+
+</section>

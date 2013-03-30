@@ -39,9 +39,8 @@
 
         <para>
           So what option do you have available if you want to minimize
-          the size of the created disk image? The only solution I've
-          found thus far is a utility called
-          <application>zerofree</application>
+          the size of the created disk image? You have two options, a
+          free utility called <application>zerofree</application>
 
           <footnote>
             <para>
@@ -49,6 +48,11 @@
               xl:href="http://intgat.tigress.co.uk/rmy/uml/sparsify.html"/>
             </para>
           </footnote>
+
+	  <remark>TODO: Link to libguestfs section</remark>
+
+	  , and <command>virt-sparsify</command>. I refer you to the
+	  section on libguestfs for more information on virt-sparsify.
         </para>
       </answer>
     </qandaentry>
