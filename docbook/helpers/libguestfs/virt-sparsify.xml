@@ -1,11 +1,159 @@
-<section xml:id="VDG-Helpers-libguestfs-guestmount-virt-sparsify"
+<section xml:id="VDG-Helpers-libguestfs-virt-sparsify"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:xl="http://www.w3.org/1999/xlink">
 
   <title>virt-sparsify</title>
 
-  <para>
+  <blockquote>
+    <attribution>man 1 virt-sparsify</attribution>
+    <para>
+      <command>virt-sparsify</command> is a tool which can make a
+      virtual machine disk (or any disk image) sparse
+      a.k.a. thin-provisioned. This means that free space within the
+      disk image can be converted back to free space on the host.
+    </para>
+  </blockquote>
 
+  <para>
+    Depending on your deployment strategy the
+    <command>virt-sparsify</command> command could potentially save
+    you a lot of disk space. This is especially the case in
+    <quote>cloud</quote>-type setups where new machines are commonly
+    created from a single <quote>golden-master</quote> image. If
+    you're making copies of <emphasis>any</emphasis> disk image then
+    you need to make sure that you aren't unnecessarily wasting space
+    on your disk.
   </para>
+
+  <para>
+    That's where <command>virt-sparsify</command> comes in. When you
+    <firstterm>sparsify</firstterm> a disk image (or any other file
+    for that matter) you're potentially reducing the number of blocks
+    on the backing storage volume
+
+    <footnote><para>The phrase <quote>backing storage volume</quote>
+    refers to the actual storage device which the disk image is saved
+    on.</para></footnote>
+
+    which are allocated to the disk image. This frees up room on the
+    backing volume for storing other files. Sparsifying a disk image
+    is only effective as there is space that can be freed. More on
+    that next.
+  </para>
+
+  <important>
+    <para>
+      Sparsifying files doesn't divorce you from the inherent size
+      limitations of your backing storage volume. I.e., you can not
+      expect to fill two 100GiB sparse disk images with data if the
+      volume they're stored on is only 50GiB.
+    </para>
+  </important>
+
+  <para>
+    In this example I'll sparsify the disk image we cloned from a
+    thumbdrive earlier in the book
+
+    <footnote><para><xref linkend="VDG-Advanced-Cloning-A-Physical-Disk-unmount-and-convert-to-image01"/></para></footnote>
+
+    . Lets start by using the <command>qemu-img info</command>
+    subcommand
+
+    <footnote><para>We could also use the <command>ls -lsh</command>
+    command. The <option>-s</option> option prints the
+    <firstterm>allocated size</firstterm> (actually used space), and
+    the <option>-h</option> options prints sizes in <quote>human
+    readable</quote> formats, e.g., 915M or 4.0K</para></footnote>
+
+    to see how much total space the disk image has allocated to it
+    presently:
+  </para>
+
+  <informalexample>
+    <screen><xi:include href="../../examples/helpers-libguestfs-virt-sparsify-examine01" parse="text"/></screen>
+  </informalexample>
+
+  <para>
+    The output you want to take note of here is on the <literal>disk
+    size</literal> line: 914M. For a thumb drive that only had two
+    small text files on it, we sure are wasting a lot of space. Lets
+    attempt to reclaim that space with
+    <command>virt-sparsify</command>. We'll call
+    <command>virt-sparsify</command> with two parameters, the first is
+    the source disk name, <filename>thumb_drive.raw</filename>, and
+    the second is the name of the sparsified disk image we're going to
+    create, <filename>thumb_drive_sparse.raw</filename>:
+  </para>
+
+  <example xml:id="VDG-Helpers-libguestfs-virt-sparsify-example01">
+    <title>
+      Sparsify a disk image
+    </title>
+
+    <screen><xi:include href="../../examples/helpers-libguestfs-virt-sparsify-example01" parse="text"/></screen>
+  </example>
+
+  <para>
+    As you can see, the output from <command>virt-sparsify</command>
+    is straightforward and easy to grok
+
+    <footnote><para><firstterm>grok</firstterm> - verb - "To
+    understand. Connotes intimate and exhaustive knowledge". Source:
+    <link
+    xl:href="http://www.catb.org/jargon/html/G/grok.html"/></para></footnote>
+
+    . Right away we can tell that <command>virt-sparsify</command> is
+    protecting our source file from undesired modifications by
+    creating an <quote>overlay file</quote>. Next it examines the
+    disk, identifying entities such as partition tables, LVM volumes,
+    and space to be freed. Then the freeable space is zero'd out.
+  </para>
+
+  <para>
+    Remember that we haven't modified the source image yet! All of the
+    potential changes were made to an overlay file. The final step to
+    sparsify the file is combining the delta present in the overlay
+    file with the source file and writing the result out to
+    disk. Observe the following important note from the
+    <command>virt-sparsify</command> man page:
+  </para>
+
+  <important>
+    <para>
+      <command>virt-sparsify</command> may require up to 2x the
+      virtual size of the source disk image (1 temporary copy + 1
+      destination image). This is in the worst case and usually much
+      less space is required.
+    </para>
+  </important>
+
+  <para>
+    Lets use <command>qemu-img info</command> again and examine the
+    sparsified disk image
+    (<filename>thumb_drive_sparse.raw</filename>). Recall that we're
+    primarily concerned with the <literal>disk size</literal> field
+    and that the starting size was 914M:
+  </para>
+
+  <informalexample>
+    <screen><xi:include href="../../examples/helpers-libguestfs-virt-sparsify-examine02" parse="text"/></screen>
+  </informalexample>
+
+  <para>
+    From this we can see that after the image was sparsified the
+    allocated space is only 6.2M. That's a net savings of 907.8M!
+    Don't let this result give you unreasonable expectations
+    though. This example demonstrated an ideal case, where the source
+    disk was virtually 100% empty to begin with.
+  </para>
+
+  <para>
+    <command>virt-sparsify</command> has other options available as
+    well. For example, it can convert between formats (e.g., vdmk to
+    qcow2), ignore specific filesystems on the source disk, or enable
+    compression in qcow2 images. Read the man page for a complete
+    description of all the available options.
+  </para>
+
 </section>

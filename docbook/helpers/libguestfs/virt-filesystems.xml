@@ -16,19 +16,25 @@
   </blockquote>
 
   <para>
-    <command>virt-filesystems</command> is the <command>df</command>
-    of virtual disk management. Minus the part that tells you how much
-    of a disk is actually used. What delights me most about
+    <command>virt-filesystems</command> is the Sherlock Holmes
+
+    <footnote><para>Sherlock Holmes is a fictional detective. Read
+    some of the books online for free on Project Gutenberg: <link
+    xl:href="http://www.gutenberg.org/ebooks/1661"/></para></footnote>
+
+    of virtual disk management. What delights me most about
     <command>virt-filesystems</command> is how well it integrates with
     <acronym>LVM</acronym> (Logical Volume Manager) to show you LVM
     device paths. This tool is most useful in combination with other
-    tools, such as virt-resize, virt-sparsify, or guestmount.
+    tools, such as <command>virt-resize</command>,
+    <command>virt-sparsify</command>, or
+    <command>guestmount</command>.
   </para>
 
   <remark>TODO: link to related sections</remark>
 
   <para>
-    
+
   </para>
 
 

@@ -59,7 +59,7 @@
 
 
   <para>
-    To convert the thumb drive we'll first going to unmount the drive,
+    To convert the thumb drive we're first going to unmount the drive,
     then use the <command>qemu-img</command> command to perform the
     actual conversion. While unmounting the drive I use the
     <option>-l</option> option which means to unmount

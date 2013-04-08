@@ -49,10 +49,9 @@
             </para>
           </footnote>
 
-	  <remark>TODO: Link to libguestfs section</remark>
-
-	  , and <command>virt-sparsify</command>. I refer you to the
-	  section on libguestfs for more information on virt-sparsify.
+	  , and <command>virt-sparsify</command>. I refer you to <xref
+	  linkend="VDG-Helpers-libguestfs-virt-sparsify" />
+	  for more information on virt-sparsify.
         </para>
       </answer>
     </qandaentry>

@@ -1,0 +1,5 @@
+[root@deepfryer mnt]# qemu-img info ./thumb_drive.raw
+image: ./thumb_drive.raw
+file format: raw
+virtual size: 966M (1012924416 bytes)
+disk size: 914M
