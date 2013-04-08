@@ -50,8 +50,8 @@
           </footnote>
 
 	  , and <command>virt-sparsify</command>. I refer you to <xref
-	  linkend="VDG-Helpers-libguestfs-virt-sparsify" />
-	  for more information on virt-sparsify.
+	  linkend="VDG-Helpers-libguestfs-virt-sparsify" /> for more
+	  information on <command>virt-sparsify</command>.
         </para>
       </answer>
     </qandaentry>
