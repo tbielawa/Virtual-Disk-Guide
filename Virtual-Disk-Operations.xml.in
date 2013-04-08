@@ -113,8 +113,8 @@
   <xi:include href="docbook/Advanced.xml"/>
   <xi:include href="docbook/Concepts.xml"/>
   <xi:include href="docbook/Helpers.xml"/>
+  <xi:include href="docbook/Performance.xml"/>
   <!-- <xi:include href="docbook/Other-Formats.xml"/> -->
-  <!-- <xi:include href="docbook/Additional-Resources.xml"/> -->
   <xi:include href="docbook/Troubleshooting.xml"/>
   <xi:include href="docbook/appendix/units7.xml"/>
   <xi:include href="docbook/appendix/disk_history.xml"/>
