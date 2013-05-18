@@ -1,4 +1,4 @@
-<tbielawa>@(fridge)[~/images]
+
 $ sudo mkfs -t ext3 /dev/loop1
 mke2fs 1.41.9 (22-Aug-2009)
 Filesystem label=
@@ -21,18 +21,18 @@ Writing superblocks and filesystem accounting information: done
 
 This filesystem will be automatically checked every 25 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
-<tbielawa>@(fridge)[~/images]
+
 $ sudo losetup -d /dev/loop1
-<tbielawa>@(fridge)[~/images]
+
 $ sudo losetup -d /dev/loop0
-<tbielawa>@(fridge)[~/images]
+
 $ mkdir partition1
-<tbielawa>@(fridge)[~/images]
+
 $ sudo mount -t ext3 -o loop,offset=32256 disk1.raw partition1/
-<tbielawa>@(fridge)[~/images]
+
 $ mount | grep partition1
-/dev/loop0 on /home/tbielawa/images/partition1 type ext3 (rw,offset=32256)
-<tbielawa>@(fridge)[~/images]
+/dev/loop0 on /home/tim/images/partition1 type ext3 (rw,offset=32256)
+
 $ df -h partition1/
 Filesystem            Size  Used Avail Use% Mounted on
-/dev/loop0           1008M   18M  940M   2% /home/tbielawa/images/partition1
+/dev/loop0           1008M   18M  940M   2% /home/tim/images/partition1

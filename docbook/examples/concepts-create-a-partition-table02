@@ -1,18 +1,18 @@
-<tbielawa>@(fridge)[~/images]
+
 $ file disk1.raw
 disk1.raw: x86 boot sector, code offset 0xb8
 
-<tbielawa>@(fridge)[~/images]
+
 $ stat disk1.raw
   File: `disk1.raw'
   Size: 1073741824      Blocks: 2097160    IO Block: 4096   regular file
 Device: 805h/2053d      Inode: 151552      Links: 1
-Access: (0644/-rw-r--r--)  Uid: (  500/tbielawa)   Gid: (  500/tbielawa)
+Access: (0644/-rw-r--r--)  Uid: (  500/tim)   Gid: (  500/tim)
 Access: 2010-09-15 19:38:30.516826093 -0400
 Modify: 2010-09-15 19:38:25.934611550 -0400
 Change: 2010-09-15 19:38:25.934611550 -0400
 
-<tbielawa>@(fridge)[~/images]
+
 $ fdisk -l disk1.raw
 You must set cylinders.
 You can do this from the extra functions menu.

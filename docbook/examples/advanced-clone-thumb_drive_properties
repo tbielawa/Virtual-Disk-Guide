@@ -1,4 +1,4 @@
-[root@deepfryer ~]# parted /dev/sdb print
+# parted /dev/sdb print
 Model: Generic Flash Disk (scsi)
 Disk /dev/sdb: 1013MB
 Sector size (logical/physical): 512B/512B

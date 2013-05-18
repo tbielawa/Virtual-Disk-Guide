@@ -1,4 +1,4 @@
-[root@f18 ~]# parted /dev/vda print
+# parted /dev/vda print
 Model: Virtio Block Device (virtblk)
 Disk /dev/vda: 18.3GB
 Sector size (logical/physical): 512B/512B

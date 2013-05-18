@@ -1,4 +1,4 @@
-<tbielawa>@(fridge)[~/images]
+
 $ sudo fdisk /dev/loop0
 
 Command (m for help): n
@@ -25,7 +25,7 @@ WARNING: Re-reading the partition table failed with error 22: Invalid argument.
 The kernel still uses the old table. The new table will be used at
 the next reboot or after you run partprobe(8) or kpartx(8)
 Syncing disks.
-<tbielawa>@(fridge)[~/images]
+
 $ sudo fdisk -l /dev/loop0
 
 Disk /dev/loop0: 1073 MB, 1073741824 bytes

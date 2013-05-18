@@ -1,4 +1,4 @@
-[root@f18 ~]# fdisk /dev/vda
+# fdisk /dev/vda
 Command (m for help): p
 
 Disk /dev/vda: 18.3 GB, 18253611008 bytes, 35651584 sectors

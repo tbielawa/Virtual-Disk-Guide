@@ -1,24 +1,24 @@
-<tbielawa>@(fridge)[~/images]
+
 $ dd if=/dev/zero of=disk1.raw bs=512 count=2097152
 2097152+0 records in
 2097152+0 records out
 1073741824 bytes (1.1 GB) copied, 10.8062 s, 99.4 MB/s
 
-<tbielawa>@(fridge)[~/images]
+
 $ file disk1.raw
 disk1.raw: data
 
-<tbielawa>@(fridge)[~/images]
+
 $ stat disk1.raw
   File: `disk1.raw'
   Size: 1073741824	Blocks: 2097152    IO Block: 4096   regular file
 Device: 805h/2053d	Inode: 151552      Links: 1
-Access: (0644/-rw-r--r--)  Uid: (  500/tbielawa)   Gid: (  500/tbielawa)
+Access: (0644/-rw-r--r--)  Uid: (  500/tim)   Gid: (  500/tim)
 Access: 2010-09-15 02:51:36.147724384 -0400
 Modify: 2010-09-15 02:51:25.729720057 -0400
 Change: 2010-09-15 02:51:25.729720057 -0400
 
-<tbielawa>@(fridge)[~/images]
+
 $ fdisk -l disk1.raw
 
 Disk disk1.raw: 0 MB, 0 bytes

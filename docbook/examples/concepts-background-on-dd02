@@ -1,2 +1,2 @@
-tbielawa@deepfryer:~$ if=/dev/zero bs=1 count=5 2>/dev/null | tr "\0" "\60"
+$ if=/dev/zero bs=1 count=5 2>/dev/null | tr "\0" "\60"
 00000

@@ -1,7 +1,7 @@
-[root@deepfryer ~]# kpartx -av ./thumb_drive_resize.raw 
+# kpartx -av ./thumb_drive_resize.raw
 add map loop0p1 (253:8): 0 3082432 linear /dev/loop0 2048
 add map loop0p2 (253:9): 0 996030 linear /dev/loop0 3084480
 
-[root@deepfryer dev]# dmsetup ls | grep loop
+# dmsetup ls | grep loop
 loop0p2 (253:9)
 loop0p1 (253:8)

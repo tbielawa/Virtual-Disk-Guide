@@ -1,2 +1,2 @@
-tbielawa@deepfryer:~$ dd if=/dev/zero bs=1 count=5 2>/dev/null | cat -v
+$ dd if=/dev/zero bs=1 count=5 2>/dev/null | cat -v
 ^@^@^@^@^@

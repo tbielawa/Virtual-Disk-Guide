@@ -1,2 +1,2 @@
-tbielawa@deepfryer:/srv/images/$ qemu-img create webserver.raw 10G
+$ qemu-img create webserver.raw 10G
 Formatting 'webserver.raw', fmt=raw, size=10485760 kB

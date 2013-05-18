@@ -1,7 +1,7 @@
-<tbielawa>@(fridge)[~/images]
+
 $ file /dev/sda
 /dev/sda: block special
-<tbielawa>@(fridge)[~/images]
+
 $ stat /dev/sda
 File: `/dev/sda'
 Size: 0             Blocks: 0          IO Block: 4096   block special file
@@ -10,7 +10,7 @@ Access: (0660/brw-rw----)  Uid: (    0/    root)   Gid: (    6/    disk)
 Access: 2010-09-15 01:09:02.060722589 -0400
 Modify: 2010-09-12 11:03:20.831372852 -0400
 Change: 2010-09-12 11:03:26.226369247 -0400
-<tbielawa>@(fridge)[~/images]
+
 $ sudo fdisk -l /dev/sda
 
 Disk /dev/sda: 320.1 GB, 320071851520 bytes

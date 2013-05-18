@@ -1,3 +1,3 @@
-[root@deepfryer ~]# kpartx -uv /dev/loop0
+# kpartx -uv /dev/loop0
 add map loop0p1 (253:8): 0 3082432 linear /dev/loop0 2048
 add map loop0p2 (253:9): 0 996030 linear /dev/loop0 3084480

@@ -1,4 +1,4 @@
-[root@deepfryer ~]# gparted /dev/loop0
+# gparted /dev/loop0
 ======================
 libparted : 3.0
 ======================

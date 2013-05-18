@@ -1,8 +1,8 @@
-<tbielawa>@(fridge)[~/images]
+
 $ file /dev/loop0
 /dev/loop0: block special
 
-<tbielawa>@(fridge)[~/images]
+
 $ stat /dev/loop0
   File: `/dev/loop0'
   Size: 0               Blocks: 0          IO Block: 4096   block special file
@@ -12,7 +12,7 @@ Access: 2010-09-15 01:22:09.909721760 -0400
 Modify: 2010-09-12 11:03:19.351004598 -0400
 Change: 2010-09-12 11:03:24.694640781 -0400
 
-<tbielawa>@(fridge)[~/images]
+
 $ sudo fdisk -l /dev/loop0
  Disk /dev/loop0: 1073 MB, 1073741824 bytes
 255 heads, 63 sectors/track, 130 cylinders

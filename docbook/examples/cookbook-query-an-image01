@@ -1,20 +1,20 @@
-tbielawa@deepfryer:/srv/images$ ls -lhs
+$ ls -lhs
 total 136K
-136K -rw-r-----. 1 tbielawa tbielawa 256K May  8 18:00 image-qcow.qcow2
-   0 -rw-r-----. 1 tbielawa tbielawa  10G May  8 18:00 image-raw.raw
+136K -rw-r-----. 1 tim tim 256K May  8 18:00 image-qcow.qcow2
+   0 -rw-r-----. 1 tim tim  10G May  8 18:00 image-raw.raw
 
-tbielawa@deepfryer:/srv/images$ file image-qcow.qcow2 image-raw.raw
+$ file image-qcow.qcow2 image-raw.raw
 image-qcow.qcow2: Qemu Image, Format: Qcow , Version: 2
 image-raw.raw:    data
 
-tbielawa@deepfryer:/srv/images$ qemu-img info image-qcow.qcow2
+$ qemu-img info image-qcow.qcow2
 image: image-qcow.qcow2
 file format: qcow2
 virtual size: 10G (10737418240 bytes)
 disk size: 136K
 cluster_size: 65536
 
-tbielawa@deepfryer:/srv/images$ qemu-img info image-raw.raw
+$ qemu-img info image-raw.raw
 image: image-raw.raw
 file format: raw
 virtual size: 10G (10737418240 bytes)

@@ -1,1 +1,1 @@
-<tbielawa>@(fridge)~$ dd if=/dev/zero of=disk1.raw bs=512 count=2097152
+$ dd if=/dev/zero of=disk1.raw bs=512 count=2097152

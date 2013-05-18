@@ -1,4 +1,4 @@
-<tbielawa>@(fridge)[~/images]
+
 $ sudo fdisk -u -l /dev/loop0
 
 Disk /dev/loop0: 1073 MB, 1073741824 bytes

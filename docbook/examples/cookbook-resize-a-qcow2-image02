@@ -1,7 +1,7 @@
-[root@spatula images]# qemu-img resize f18.qcow2 +5G
+# qemu-img resize f18.qcow2 +5G
 Image resized.
 
-[root@spatula images]# qemu-img info f18.qcow2
+# qemu-img info f18.qcow2
 image: f18.qcow2
 file format: qcow2
 virtual size: 17G (18253611008 bytes)

@@ -1,4 +1,4 @@
-[root@f18 ~]# parted /dev/vda print
+# parted /dev/vda print
 Model: Virtio Block Device (virtblk)
 Disk /dev/vda: 12.9GB
 Sector size (logical/physical): 512B/512B
@@ -10,6 +10,6 @@ Number  Start   End     Size    Type     File system     Flags
  2      525MB   4686MB  4161MB  primary  linux-swap(v1)
  3      4686MB  12.9GB  8199MB  primary  ext4
 
-[root@f18 ~]# df -h /
+# df -h /
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/vda3       7.6G  3.8G  3.4G  53% /
