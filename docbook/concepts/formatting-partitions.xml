@@ -50,6 +50,25 @@
     <qandaentry>
       <question>
         <para>
+          How do we calculate the offset to specify?
+        </para>
+      </question>
+      <answer>
+        <para>
+          To calculate the offset we need to know what sector the
+          partition (<systemitem
+          class="resource">loop0p1</systemitem>) starts
+          on. <command>fdisk</command> can give us this
+          information. (Spoiler: 9 times out of 10 the offset for the
+          first partition will be <literal>512 * 63 =
+          32256</literal>).
+        </para>
+      </answer>
+    </qandaentry>
+
+    <qandaentry>
+      <question>
+        <para>
           Why doesn't the first partition begin after the MBR?
           Specifically, why is there empty space between the first
           sector (where the MBR is stored) and the first partition?
@@ -57,14 +76,14 @@
       </question>
       <answer>
         <para>
-          It's complicated, but worth learning about. See <xref
+          It's complicated but worth learning about. See <xref
           linkend="VDG-Appendix-Disk-Drive-History"/> for a complete
           explanation.
         </para>
 
         <para>
 	  Here's the short answer: In current PC MBRs there may be up
-	  to 446B of executable code, and a partition table containing
+	  to 446B of executable code and a partition table containing
 	  up to 64B of data. When you add in another 2B to record a
 	  <firstterm>Boot Signature</firstterm> you have 512B, which
 	  up until recently happened to be the typical size of one
@@ -108,25 +127,6 @@
         </para>
       </answer>
     </qandaentry>
-
-    <qandaentry>
-      <question>
-        <para>
-          How do we calculate the offset to specify?
-        </para>
-      </question>
-      <answer>
-        <para>
-          To calculate the offset we need to know what sector the
-          partition (<systemitem
-          class="resource">loop0p1</systemitem>) starts
-          on. <command>fdisk</command> can give us this
-          information. (Spoiler: 9 times out of 10 the offset for the
-          first partition will be <literal>512 * 63 =
-          32256</literal>).
-        </para>
-      </answer>
-    </qandaentry>
   </qandaset>
 
   <para>
@@ -155,7 +155,7 @@
   </para>
 
   <example xml:id="VDG-Concepts-Example-Partition-Formating">
-    <title>Formatting the partition</title>
+    <title>Formatting and mounting the partition</title>
 
     <screen><xi:include href="../examples/concepts-formatting-partitions03" parse="text"/></screen>
   </example>

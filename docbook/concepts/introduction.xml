@@ -7,9 +7,15 @@
 
   <para>
     The best way to learn is by doing, so to learn the concepts of
-    virtual disks we're going to create a 1GiB virtual disk from
-    scratch. This information is applicable to the topic of disks in
-    general, it's value is not limited to virtual disks.
+    virtual disks we're going to create a 1GiB
+
+    <footnote><para>Check out <xref linkend="VDG-Appendix-Units"/> for
+    a review of binary/decimal prefixes if <quote>GiB</quote> is
+    foreign to you.</para></footnote>
+
+    virtual disk from scratch. This information is applicable to the
+    topic of disks in general, it's value is not limited to virtual
+    disks.
   </para>
 
   <para>
@@ -30,8 +36,13 @@
   <para>
     Lets start out by looking at what a regular drive looks like to
     our operating system. Throughout this document the regular drive
-    we'll be comparing our findings against will be a 320G SATA hard
-    drive drive that Linux references as <systemitem
+    we'll be comparing our findings against will be a 320G
+
+    <footnote><para>If you're wondering why I didn't say 320GiB here,
+    it's because <quote>320GB</quote> is the capacity as defined by
+    the manufacturer.</para></footnote>
+
+    SATA hard drive drive that Linux references as <systemitem
     class="resource">/dev/sda</systemitem>. The following example
     shows some basic information about the device.
   </para>

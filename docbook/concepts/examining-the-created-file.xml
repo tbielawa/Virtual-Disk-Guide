@@ -6,9 +6,9 @@
 
 
   <para>
-    Like in <xref linkend="VDG-Concepts-Regular-Drive"/> lets
-    take a look at the file we created from the operating
-    systems point of view.
+    Like in <xref linkend="VDG-Concepts-Regular-Drive"/> let's take a
+    look at the file we created from the operating system's point of
+    view.
   </para>
 
   <example xml:id="VDG-Concepts-Example-Examining-the-Created-File">
@@ -18,9 +18,11 @@
   </example>
 
   <para>
-    From this it's quite clear that there isn't much
-    <filename>disk1.raw</filename> has in common with the actual
-    disk drive <systemitem class="resource">sda</systemitem>.
+    From this it's quite clear that there isn't much that
+    <filename>disk1.raw</filename> has in common with the actual disk
+    drive <systemitem class="resource">sda</systemitem>. Using this
+    information, let's put the physical disk and the virtual disk
+    size-by-size and make some observations about their properties.
   </para>
 
   <itemizedlist mark='opencircle'>
@@ -78,7 +80,8 @@
   </table>
 
   <para>
-    These results make perfect sense. <filename>disk1.raw</filename>
-    is just 2<superscript>30</superscript> 0's in a row
+    These results make perfect sense, as
+    <filename>disk1.raw</filename> is just
+    2<superscript>30</superscript> <literal>0</literal>'s in a row.
   </para>
 </section>

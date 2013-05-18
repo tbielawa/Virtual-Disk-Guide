@@ -81,13 +81,13 @@
   </table>
 
   <para>
-    Our virtual disk is starting to look like a real hard drive
-    now!
-  </para>
+    Our virtual disk is starting to look like a real hard drive now!
+    To conclude this section we'll:
 
-  <para>
-    To bring this section to a conclusion we'll create a
-    partition, format it with ext3, and then mount it for reading
-    and writing.
+    <itemizedlist>
+      <listitem><para>create a partition</para></listitem>
+      <listitem><para>format it with an ext3 filesystem</para></listitem>
+      <listitem><para>mount it for reading and writing</para></listitem>
+    </itemizedlist>
   </para>
 </section>

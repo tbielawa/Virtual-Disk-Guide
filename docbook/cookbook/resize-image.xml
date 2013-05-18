@@ -74,12 +74,31 @@
     </example>
 
     <para>
-      Use <command>kpartx</command> to automatically create a loop
-      device for the resized image and device maps to the
+      Use the <command>kpartx</command> command
+
+      <footnote><para>For more information on the
+      <command>kpartx</command> command, see <xref
+      linkend="VDG-Helpers" /></para></footnote>
+
+      to automatically create a loop device
+
+      <footnote><para>Don't confuse the often misused term
+      <firstterm>loopback device</firstterm> with a <firstterm>loop
+      device.</firstterm> In networking a loopback device refers to a
+      virtual interface used for routing within a host. <systemitem
+      class="domainname">localhost</systemitem> is the standard
+      hostname given to the loopback address <systemitem
+      class="ipaddress">127.0.0.1</systemitem>. See <link
+      xl:href="http://tools.ietf.org/html/rfc1700">rfc1700</link> for
+      additional information.</para></footnote><footnote><para>We'll
+      revisit loop devices in <xref linkend="VDG-Concepts"
+      /></para></footnote>
+
+      for the resized image, as well as device maps to the
       partitions. The <option>-a</option> option means we're adding
-      partition mappings and the <option>-v</option> option means to do
-      it with increased verbosity so we know the names of the created
-      devices.
+      partition mappings and the <option>-v</option> option means to
+      do it with increased verbosity so we know the names of the
+      created devices.
     </para>
 
     <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image02">
@@ -93,8 +112,8 @@
 
     <para>
       I'm going to use <command>gparted</command> to resize the
-      partitions in the disk image. There's two important things to keep
-      in mind:
+      partitions in the disk image. There are two important things to
+      keep in mind:
     </para>
 
 
@@ -143,9 +162,9 @@
     </informalexample>
 
     <para>
-      <application>GParted</application> should open now and show the
-      two existing partitions, as well as the 2GiB of unallocated space
-      we just added to the image:
+      Now <command>gparted</command> should open and show the two
+      existing partitions, as well as the 2GiB of unallocated space we
+      just added to the image:
     </para>
 
     <!-- #################### BEGIN GPARTED SCREENSHOTS #################### -->
@@ -305,6 +324,8 @@
       You should see this screen if there were no errors:
     </para>
 
+    <remark>TODO: What if there ARE errors?</remark>
+
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize09">
       <title>No errors!</title>
       <mediaobject>
@@ -358,11 +379,11 @@
     </para>
 
     <para>
-      After the partitions were resized the partition table was updated
-      with the new information but we never updated the device maps in
-      the kernel. The <command>kpartx</command> command also accepts a
-      <option>-u</option> option to update partitions mappings, lets try
-      that and see if it fixes our problem:
+      After the partitions were resized the partition table was
+      updated with the new information but we never updated the device
+      maps in the kernel. The <command>kpartx</command> command also
+      accepts a <option>-u</option> option to update partitions
+      mappings. Let's try that and see if it fixes our problem:
     </para>
 
 
@@ -377,6 +398,7 @@
     </example>
 
 
+    <remark>TODO: Need a table here for comparison? (commented example in source)</remark>
 
     <!-- # 3082432 = sectors, 2048 = offset -->
 
@@ -538,11 +560,11 @@
 
       <footnote>
 	<para>
-	  On the Internet I've seen an example where the
-	  <command>parted</command> <command>resize</command>
-	  sub-command was used to resize a partition. That was not a
-	  valid sub-command in the version I used:
-	  parted-3.1-9.fc18.x86_64.
+	  While performing research for this section, I found some
+	  examples where the <command>parted</command>
+	  <command>resize</command> sub-command was used. As of
+	  <command>parted</command> version 2.4 the
+	  <command>resize</command> subcommand no longer exists.
 	</para>
       </footnote>
       .

@@ -11,6 +11,11 @@
     disk usage, <command>file</command> for a quick check of the
     types, and <command>qemu-img</command> for more in-depth
     information.
+
+    <footnote><para>The <command>qemu-img</command> command
+    manipulates virtual machine disks and is part of the QEMU
+    suite. <quote>QEMU</quote> is a <quote>Quick EMUlator</quote>. It
+    emulates hardware for virtual machines.</para></footnote>
   </para>
 
   <example xml:id="VDG-Cookbook-Example-Query-an-Image">
@@ -54,10 +59,11 @@
 
   <para>
     The <command>file</command> command tells us immediately what it
-    thinks each file is. This is another simple to perform query that
-    you can run from any system without special tools. Here we see it
-    correctly reports <filename>image-qcow.qcow2</filename>'s
-    type. Unfortunately, without any content, all it can tell us about
+    thinks each file is. This is another query which is simple to
+    perform and we can run on any system without special tools. In the
+    last example we see it correctly reports
+    <filename>image-qcow.qcow2</filename>'s type. Unfortunately,
+    without any content, all it can tell us about
     <filename>image-raw.raw</filename> is that it's
     <firstterm>data</firstterm>.
   </para>

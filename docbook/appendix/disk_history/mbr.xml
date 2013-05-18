@@ -198,7 +198,7 @@
     that rule has nothing to do with operating system
     requirements. Furthermore, this is only a rule and we are not
     obligated to follow it. Failure to follow the rule simply results
-    in decreased I/O performance.
+    in degraded I/O performance.
   </para>
 
   <para>

@@ -44,10 +44,10 @@
   </equation>
 
   <para>
-    We need something to fill the file with that has a negligible
+    We need to fill the file with something that has a negligable
     value. On Unix systems the best thing to use is the output from
     <systemitem class="resource">/dev/zero</systemitem> (a special
-    character device like a keyboard). We specify <systemitem
+    character device, like a keyboard). We specify <systemitem
     class="resource">/dev/zero</systemitem> as our input file to
     <command>dd</command> by using the <option>if</option> option.
   </para>
@@ -55,12 +55,12 @@
   <note>
     <para>
       <systemitem class="resource">/dev/zero</systemitem> doesn't
-      provide endless <quote>0</quote>s. It actually provides endless
+      provide endless zero characters. It actually provides endless
       <keycode>NUL</keycode> control characters(<keycode>^@</keycode>
       in Caret Notation). The <keycode>NUL</keycode> control character
       has the octal value <literal>000</literal>. The actual ASCII
-      <quote>zero</quote> character (<keycap>0</keycap>) has the octal
-      value <literal>060</literal>.
+      <quote>zero</quote> character has the octal value
+      <literal>060</literal>.
     </para>
   </note>
 

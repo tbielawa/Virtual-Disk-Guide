@@ -97,7 +97,7 @@
       only the disk drive knows it's actual physical
       (<acronym>CHS</acronym>) geometry. Access requests from the BIOS
       are <firstterm>translated</firstterm> internally on the hard
-      disk controller into actual physical disk geometry. A disks
+      disk controller into actual physical disk geometry. A disk's
       logical geometry will have a number of sectors approximately
       equal to, but never more than, the physical number of sectors on
       the disk. The reported logical geometry fits within the limits

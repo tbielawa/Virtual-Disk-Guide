@@ -14,7 +14,7 @@
 
   <para>
     To create a loop device run the <command>losetup</command> command
-    with the <option>-f</option> option, the first available loop
+    with the <option>-f</option> option. The first available loop
     device will be selected automatically and associated with
     <filename>disk1.raw</filename>
 

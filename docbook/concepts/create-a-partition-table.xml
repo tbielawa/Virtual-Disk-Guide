@@ -29,10 +29,10 @@
   <itemizedlist>
     <listitem>
       <para>
-	Now when we run <command>file</command> instead of
-	<quote>data</quote> <command>file</command> thinks it is an
-	x86 boot sector. That sounds pretty accurate since we just put
-	a partition table on it.
+	Now, instead of <quote>data</quote>, the
+	<command>file</command> command thinks it is an <quote>x86
+	boot sector</quote>. That sounds pretty accurate as we just
+	put a partition table on it.
       </para>
     </listitem>
     <listitem>
@@ -44,7 +44,7 @@
     <listitem>
       <para>
         <command>fdisk</command> was able to find a partition table in
-        that boot sector that <command>file</command> found.
+        the boot sector which <command>file</command> found.
       </para>
     </listitem>
   </itemizedlist>

@@ -5,51 +5,45 @@
   <title>Creating Disks with Backing Images</title>
 
   <para>
-    Using backing images for work I was doing is a trick I figured out
-    a few years ago. Back then I was doing lots of development on a
-    host provisioning tools and needed to be able to quickly revert
-    machines I was working on to a perfect clean state. Backing images
-    were especially handy when working on features that frequently
-    hosed the machine if it didn't work right.
-  </para>
-
-  <para>
-    Snapshots were an option, but how they worked wasn't documented
-    very well at the time (Snapshots will be covered in another
-    section). The technical concepts and practical skills describe in
-    this section mostly applies to Snapshots too.
+    A few years ago I found out about <firstterm>backing
+    images</firstterm> (or <quote>base-images</quote>). Back then I
+    was doing lots of development on host provisioning tools and
+    needed to be able to quickly revert machines I was working on to a
+    desired initial state. In this use-case backing images were
+    especially handy when working on features that frequently
+    destroyed the machine if it didn't work right.
   </para>
 
   <remark>TODO: Link to snapshot section</remark>
 
   <para>
-    So I went with backing images, they worked great for what I needed
-    to them do. I could work incrementally and
-    <firstterm>commit</firstterm> changes in the COW image
-    (copy-on-write) back to the master. I also could use the same
-    base-image for multiple COWs at once which meant other people on
-    my team could all be using the same base-image if we were working
-    on the same thing.
+    Snapshots were an option, but how they worked wasn't documented
+    very well at the time. So I went with backing images instead, as
+    they worked perfectly for what I needed to them do. I could work
+    iteratively and <firstterm>commit</firstterm> changes in the COW
+    image
+
+    <footnote><para> In this section when we refer to a
+    <firstterm>COW</firstterm> image it is not apropos the COW
+    (<firstterm>copy-on-write</firstterm>) disk format. Saying COW
+    only serves to help make a distinction between the read-only
+    base-image and the image that changes are copied to on
+    writing.</para></footnote>
+
+    (copy-on-write) back to the base-image
+
+    <footnote><para>The terms <quote>base-image</quote> and
+    <quote>backing image</quote> are used
+    interchangeably</para></footnote>
+
+    when I was satisfied. I also could use the same base-image for
+    multiple COWs at once. This meant that other people on my team
+    working on the same project could all use the same base-image.
   </para>
 
-  <note>
-    <para>
-      The terms <firstterm>base-image</firstterm> and
-      <firstterm>backing-image</firstterm> are used interchangeably to
-      refer to the read-only image that is used to back a read-write
-      disk.
-    </para>
-  </note>
+  <remark>TODO: Maybe create an analogy relating base image workflow
+  with version control</remark>
 
-  <note>
-    <para>
-      In this section when we refer to a <firstterm>COW</firstterm>
-      image it is not apropos the COW
-      (<firstterm>copy-on-write</firstterm>) disk format. Saying COW
-      only serves to help make a distinction between the read-only
-      base-image and the image that changes are copied to on writing.
-    </para>
-  </note>
 
   <example xml:id="VDG-Cookbook-Example-Create-Disk-with-a-Backing-Image">
     <title>Creating a Disk with a Backing Image</title>
@@ -125,9 +119,9 @@
 
   <important>
     <para>
-      It's not crucial, but highly recommend that the virtual machine
-      is turned off or suspended when running the
-      <command>commit</command> command.
+      You should turn off or suspended the virtual machine when
+      running the <command>commit</command> command. Failure to do so
+      could result in data corruption.
     </para>
   </important>
 
