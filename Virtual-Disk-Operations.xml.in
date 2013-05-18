@@ -89,12 +89,10 @@
 
     <legalnotice>
       <para>
-        This work is licensed under the Creative Commons Attribution
-        3.0 United States License. To view a copy of this license,
-        visit <link
-        xl:href="http://creativecommons.org/licenses/by/3.0/us/"/> or
-        send a letter to Creative Commons, 171 Second Street, Suite
-        300, San Francisco, California, 94105, USA.
+	The Linux Sysadmins Guide to Virtual Disks by Tim Bielawa is
+	licensed under the Creative Commons Attribution-ShareAlike 3.0
+	Unported License. To view a copy of this license, visit <link
+	xl:href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"/>.
       </para>
     </legalnotice>
 
