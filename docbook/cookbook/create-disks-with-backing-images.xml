@@ -119,9 +119,9 @@
 
   <important>
     <para>
-      You should turn off or suspended the virtual machine when
-      running the <command>commit</command> command. Failure to do so
-      could result in data corruption.
+      You should turn off or suspend the virtual machine when running
+      the <command>commit</command> command. Failure to do so could
+      result in data corruption.
     </para>
   </important>
 

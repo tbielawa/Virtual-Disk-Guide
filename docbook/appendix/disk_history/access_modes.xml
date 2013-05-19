@@ -38,7 +38,7 @@
       (<firstterm>sector</firstterm>), and the read-write head which
       accesses its side of the platter. This addressing system is
       called <firstterm>Cylinder-Head-Sector</firstterm>
-      (<acronym>CHS</acronym>).
+      (<acronym>CHS</acronym>)
 
       <footnote><para>
         PC Guide - Cylinder-Head-Sector: <link xl:href="http://www.pcguide.com/ref/hdd/geom/geom.htm"/>

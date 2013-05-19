@@ -146,25 +146,6 @@
           <entry align='left'>= 1MiB * 2<superscript>10</superscript></entry>
           <entry align='left'>The gibibyte</entry>
         </row>
-        <row>
-          <entry align='left'></entry>
-          <entry align='left'>
-            = 1B * 2<superscript>10</superscript> *
-            2<superscript>10</superscript> *
-            2<superscript>10</superscript>
-          </entry>
-          <entry align='left'></entry>
-        </row>
-        <row>
-          <entry align='left'></entry>
-          <entry align='left'>= 1B * 2<superscript>30</superscript></entry>
-          <entry align='left'></entry>
-        </row>
-        <row>
-          <entry align='left'></entry>
-          <entry align='left'>= 1B * 1073741824 (1,073,741,824)</entry>
-          <entry align='left'></entry>
-        </row>
       </tbody>
     </tgroup>
   </informaltable>

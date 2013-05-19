@@ -16,27 +16,6 @@
     you'll see the results are quite similar.
   </para>
 
-  <itemizedlist>
-    <listitem>
-      <para>
-        <command>file</command> detects <systemitem
-        class="resource">loop0</systemitem> as a block special
-        device.
-      </para>
-    </listitem>
-    <listitem>
-      <para>
-        <command>stat</command> does too.
-      </para>
-    </listitem>
-    <listitem>
-      <para>
-        <command>fdisk</command> no longer says we need to set
-        the cylinders.
-      </para>
-    </listitem>
-  </itemizedlist>
-
   <table pgwide='0' frame='none' xml:id="VDG-Concepts-Example-Examine-the-Loop-Device" role='vdg-table'>
     <title>Examining the Loop Device</title>
     <tgroup cols='5' align='center'>
@@ -79,6 +58,27 @@
       </tbody>
     </tgroup>
   </table>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        <command>file</command> detects <systemitem
+        class="resource">loop0</systemitem> as a block special
+        device.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>stat</command> does too.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <command>fdisk</command> no longer says we need to set
+        the cylinders.
+      </para>
+    </listitem>
+  </itemizedlist>
 
   <para>
     Our virtual disk is starting to look like a real hard drive now!
