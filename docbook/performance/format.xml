@@ -6,6 +6,19 @@
   <title>Disk Format</title>
 
   <para>
-    RAW, QCOW2, so many options. So little time.
+    In this section we'll review some of the formats available for
+    virtual disks. Along the way we'll discuss features of each
+    format, performance options (tunables), and use-case
+    considerations.
   </para>
+
+  <!-- <para> -->
+  <!--   http://qemu.weilnetz.de/qemu-doc.html#disk_005fimages_005fformats -->
+  <!--   RAW, QCOW2, so many options. So little time. -->
+  <!-- </para> -->
+
+  <xi:include href="format/raw.xml" />
+  <xi:include href="format/qcow.xml" />
+  <xi:include href="format/qcow2.xml" />
+  <xi:include href="format/other.xml" />
 </section>

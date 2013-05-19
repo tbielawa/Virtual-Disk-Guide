@@ -1,0 +1,35 @@
+<section xml:id="VDG-Performance-format-other"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <title>Other Formats</title>
+
+  <para>
+    Words to introduce the feature set.
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        Simple
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Exportable
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Supports sparse files
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <para>
+    Words about performance and use-cases.
+  </para>
+</section>

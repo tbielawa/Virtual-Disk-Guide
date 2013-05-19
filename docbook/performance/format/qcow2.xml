@@ -1,0 +1,52 @@
+<section xml:id="VDG-Performance-format-qcow2"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <title>QCOW2</title>
+
+  <para>
+    Words to introduce the feature set. http://people.gnome.org/~markmc/qcow-image-format.html
+  </para>
+  <para>
+    Words about performance and use-cases.
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        Smaller file size, even on filesystems which don't support holes (i.e. sparse files)
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Copy-on-write support, where the image only represents changes made to an underlying disk image
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Snapshot support, where the image can contain multiple snapshots of the images history
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Optional zlib based compression
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Optional AES encryption
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Options for performance/data integrity tuning
+      </para>
+    </listitem>
+  </itemizedlist>
+</section>

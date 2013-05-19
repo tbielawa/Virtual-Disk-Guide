@@ -1,0 +1,48 @@
+<section xml:id="VDG-Performance-format-qcow"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <title>QCOW</title>
+
+
+  <para>
+    Words to introduce the feature set.
+    http://people.gnome.org/~markmc/qcow-image-format-version-1.html
+  </para>
+  <para>
+    Words about performance and use-cases.
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        Smaller file size, even on filesystems which don't support holes (i.e. sparse files)
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Snapshot support, where the image only represents changes made to an underlying disk image
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Optional zlib based compression
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Optional AES encryption
+      </para>
+    </listitem>
+
+    <listitem>
+      <para>
+        Superseded by QCOW2
+      </para>
+    </listitem>
+  </itemizedlist>
+</section>

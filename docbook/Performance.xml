@@ -5,7 +5,49 @@
 
   <title>Performance Considerations</title>
 
-  <xi:include href="performance/introduction.xml"/>
+  <para>
+    Managing disk images doesn't stop at file maniplation and storage
+    pool monitoring. After you create a disk image something else is
+    going to use it. That's where performance tuning considerations
+    come into play. This section straddles the line between system
+    administrator and application developer roles. What I mean to say
+    is that application of some techniques in this section may require
+    knowledge which is outside of your domain as a system
+    administrator. To help bridge the knowledge gap I'll include notes
+    on how to identify what you're looking for when tuning the system.
+  </para>
+
+  <para>
+    In this section we'll cover the following topics:
+  </para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        Selecting the right disk format
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        Selecting the right disk caching mode
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        Selecting the right virtual device
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        Selecting the right I/O scheduler
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+	Balancing resources with cgroups
+      </para>
+    </listitem>
+  </itemizedlist>
 
   <xi:include href="performance/format.xml"/>
   <xi:include href="performance/caching.xml"/>

@@ -5,7 +5,150 @@
 
   <title>Disk Concepts</title>
 
-  <xi:include href="concepts/introduction.xml"/>
+  <para>
+    The best way to learn is by doing, so to learn the concepts of
+    virtual disks we're going to create a 1GiB
+
+    <footnote><para>Check out <xref linkend="VDG-Appendix-Units"/> for
+    a review of binary/decimal prefixes if <quote>GiB</quote> is
+    foreign to you.</para></footnote>
+
+    virtual disk from scratch. This information is applicable to the
+    topic of disks in general, it's value is not limited to virtual
+    disks.
+  </para>
+
+  <para>
+    What makes virtual disks any different from actual hard drives?
+    We'll examine this question by creating a virtual disk from
+    scratch.
+  </para>
+
+  <para>
+    What does your operating system think a disk drive is? I have a
+    320 GB SATA drive in my computer which is represented in Linux
+    as the file <systemitem class="resource">/dev/sda</systemitem>.
+    Using <command>file</command>, <command>stat</command> and
+    <command>fdisk</command> we'll see what Linux thinks the
+    <systemitem class="resource">/dev/sda</systemitem> file is.
+  </para>
+
+  <para>
+    Lets start out by looking at what a regular drive looks like to
+    our operating system. Throughout this document the regular drive
+    we'll be comparing our findings against will be a 320G
+
+    <footnote><para>If you're wondering why I didn't say 320GiB here,
+    it's because <quote>320GB</quote> is the capacity as defined by
+    the manufacturer.</para></footnote>
+
+    SATA hard drive drive that Linux references as <systemitem
+    class="resource">/dev/sda</systemitem>. The following example
+    shows some basic information about the device.
+  </para>
+
+  <example xml:id="VDG-Concepts-Regular-Drive">
+    <title>Regular Disk Drive</title>
+
+    <screen><xi:include href="examples/concepts-regular-drive" parse="text"/></screen>
+  </example>
+
+  <remark>TODO: Make this into a screenco with callouts on what to look for</remark>
+
+  <para>
+    The term <firstterm>block</firstterm> is generally interchangeable
+    with the term <firstterm>sector</firstterm>. The only difference
+    in their meaning is contextual. It's common usage to say block
+    when referring to the data being referenced and to use sector when
+    speaking about disk geometry. Officially the term <firstterm>data
+    block</firstterm> was defined by <orgname>ANSI ASC X3</orgname> in
+    <citetitle>ANSI X3.221-199x - AT Attachment Interface for Disk
+    Drives (ATA-1)</citetitle>
+
+    <footnote><para><citetitle>ANSI
+    X3.221-199x Working Draft</citetitle> - <link
+    xl:href="http://www.t10.org/t13/project/d0791r4c-ATA-1.pdf"/></para></footnote>
+
+    <footnote><para>Technical Committee (T13) Homepage: <link
+    xl:href="http://www.t10.org/t13/"/></para></footnote>
+
+    §3.1.3 as:
+
+  </para>
+
+  <variablelist>
+    <varlistentry>
+      <term>data block</term>
+      <listitem>
+        <para>
+          This term describes a data transfer, and is typically a
+          single sector [&#x2026;]
+        </para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+
+  <para>
+    Storage units need to be clearly defined. Luckily some very
+    smart people
+
+    <footnote><para><citetitle>IEC 60027-2, Second edition, 2000-11,
+    Letter symbols to be used in electrical technology</citetitle> -
+    Part 2: Telecommunications and electronics: <link
+    xl:href="http://webstore.iec.ch/webstore/webstore.nsf/artnum/034558"/>
+    </para></footnote>
+
+    already took care of that. The <orgname>International
+    Electrotechnical Commission</orgname>
+
+    <footnote><para>The <orgname>IEEE</orgname> also adopted this
+    method for unit prefixes. Within the IEEE it is known as
+    <citetitle>IEEE Std 1541-2002</citetitle>: <link
+    xl:href="http://ieeexplore.ieee.org/servlet/opac?punumber=5254929"/>
+    </para></footnote>
+
+    defined binary prefixes for use in the fields of data processing
+    and data transmission. Below are some prefixes as they apply to
+    bytes. See <xref linkend="VDG-Appendix-Units"/> for the full
+    prefix listing.
+  </para>
+
+  <informaltable pgwide='0' frame='none'>
+    <tgroup cols='3' align='center'>
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <thead>
+        <row>
+          <entry align='left'>Abbrev.</entry>
+          <entry align='left'>Measurement</entry>
+          <entry align='left'>Name</entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry align='left'>1B</entry>
+          <entry align='left'>= 8 bits</entry>
+          <entry align='left'>The byte</entry>
+        </row>
+        <row>
+          <entry align='left'>1KiB</entry>
+          <entry align='left'>= 1B * 2<superscript>10</superscript></entry>
+          <entry align='left'>The kibibyte</entry>
+        </row>
+        <row>
+          <entry align='left'>1MiB</entry>
+          <entry align='left'>= 1KiB * 2<superscript>10</superscript></entry>
+          <entry align='left'>The mebibyte</entry>
+        </row>
+        <row>
+          <entry align='left'>1GiB</entry>
+          <entry align='left'>= 1MiB * 2<superscript>10</superscript></entry>
+          <entry align='left'>The gibibyte</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
 
 
   <section xml:id="VDG-Concepts-Creation">
