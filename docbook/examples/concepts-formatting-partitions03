@@ -1,4 +1,3 @@
-
 $ sudo mkfs -t ext3 /dev/loop1
 mke2fs 1.41.9 (22-Aug-2009)
 Filesystem label=

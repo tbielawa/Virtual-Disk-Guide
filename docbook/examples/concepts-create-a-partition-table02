@@ -1,7 +1,5 @@
-
 $ file disk1.raw
 disk1.raw: x86 boot sector, code offset 0xb8
-
 
 $ stat disk1.raw
   File: `disk1.raw'
@@ -11,7 +9,6 @@ Access: (0644/-rw-r--r--)  Uid: (  500/tim)   Gid: (  500/tim)
 Access: 2010-09-15 19:38:30.516826093 -0400
 Modify: 2010-09-15 19:38:25.934611550 -0400
 Change: 2010-09-15 19:38:25.934611550 -0400
-
 
 $ fdisk -l disk1.raw
 You must set cylinders.

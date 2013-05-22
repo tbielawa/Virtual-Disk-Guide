@@ -1,7 +1,5 @@
-
 $ file /dev/loop0
 /dev/loop0: block special
-
 
 $ stat /dev/loop0
   File: `/dev/loop0'
@@ -11,7 +9,6 @@ Access: (0660/brw-rw----)  Uid: (    0/    root)   Gid: (    6/    disk)
 Access: 2010-09-15 01:22:09.909721760 -0400
 Modify: 2010-09-12 11:03:19.351004598 -0400
 Change: 2010-09-12 11:03:24.694640781 -0400
-
 
 $ sudo fdisk -l /dev/loop0
  Disk /dev/loop0: 1073 MB, 1073741824 bytes

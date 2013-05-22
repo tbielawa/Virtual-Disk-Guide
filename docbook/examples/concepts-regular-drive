@@ -1,4 +1,3 @@
-
 $ file /dev/sda
 /dev/sda: block special
 
@@ -12,7 +11,6 @@ Modify: 2010-09-12 11:03:20.831372852 -0400
 Change: 2010-09-12 11:03:26.226369247 -0400
 
 $ sudo fdisk -l /dev/sda
-
 Disk /dev/sda: 320.1 GB, 320071851520 bytes
 255 heads, 63 sectors/track, 38913 cylinders
 Units = cylinders of 16065 * 512 = 8225280 bytes

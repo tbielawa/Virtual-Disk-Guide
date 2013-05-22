@@ -1,6 +1,4 @@
-
 $ sudo fdisk -u -l /dev/loop0
-
 Disk /dev/loop0: 1073 MB, 1073741824 bytes
 255 heads, 63 sectors/track, 130 cylinders, total 2097152 sectors
 Units = sectors of 1 * 512 = 512 bytes

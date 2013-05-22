@@ -1,6 +1,4 @@
-
 $ sudo fdisk /dev/loop0
-
 Command (m for help): n
 Command action
    e   extended
@@ -27,7 +25,6 @@ the next reboot or after you run partprobe(8) or kpartx(8)
 Syncing disks.
 
 $ sudo fdisk -l /dev/loop0
-
 Disk /dev/loop0: 1073 MB, 1073741824 bytes
 255 heads, 63 sectors/track, 130 cylinders
 Units = cylinders of 16065 * 512 = 8225280 bytes

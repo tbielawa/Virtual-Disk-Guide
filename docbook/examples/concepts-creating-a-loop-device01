@@ -1,6 +1,4 @@
-
 $ sudo losetup -f disk1.raw
-
 
 $ sudo losetup -a
 /dev/loop1: [0805]:151552 (/home/tim/images/disk1.raw)

@@ -1,4 +1,3 @@
-
 $ fdisk disk1.raw
 You must set cylinders.
 You can do this from the extra functions menu.
