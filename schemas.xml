@@ -4,6 +4,8 @@
   <documentElement localName="article" typeId="DocBook"/>
   <documentElement localName="book" typeId="DocBook"/>
   <documentElement localName="chapter" typeId="DocBook"/>
+  <documentElement localName="glossary" typeId="DocBook"/>
+  <documentElement localName="index" typeId="DocBook"/>
   <documentElement localName="part" typeId="DocBook"/>
   <documentElement localName="section" typeId="DocBook"/>
   <documentElement localName="set" typeId="DocBook"/>
