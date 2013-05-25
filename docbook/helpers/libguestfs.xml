@@ -31,5 +31,6 @@
   <xi:include href="libguestfs/guestmount.xml"/>
   <xi:include href="libguestfs/virt-filesystems.xml"/>
   <xi:include href="libguestfs/virt-rescue.xml"/>
+  <xi:include href="libguestfs/virt-resize.xml"/>
   <xi:include href="libguestfs/virt-sparsify.xml"/>
 </section>

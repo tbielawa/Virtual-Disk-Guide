@@ -5,6 +5,19 @@
 
   <title>virt-rescue</title>
 
+  <blockquote>
+    <attribution>man 1 virt-rescue</attribution>
+
+    <para>
+      virt-rescue is like a Rescue CD, but for virtual machines, and
+      without the need for a CD.  virt-rescue gives you a rescue shell
+      and some simple recovery tools which you can use to examine or
+      rescue a virtual machine or disk image.
+    </para>
+  </blockquote>
+
+
+
   <para>
 
   </para>

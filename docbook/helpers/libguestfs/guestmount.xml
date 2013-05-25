@@ -5,7 +5,21 @@
 
   <title>guestmount</title>
 
-  <para>
+  <blockquote>
+    <attribution>man 1 guestmount</attribution>
 
+    <para>
+      The guestmount program can be used to mount virtual machine
+      filesystems and other disk images on the host.  It uses
+      libguestfs for access to the guest filesystem, and FUSE (the
+      "filesystem in userspace") to make it appear as a mountable
+      device.
+    </para>
+  </blockquote>
+
+  <remark>TODO: What about LVM bits spanning across multiple disks?</remark>
+
+  <para>
+    foo
   </para>
 </section>

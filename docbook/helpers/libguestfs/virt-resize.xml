@@ -1,0 +1,23 @@
+<section xml:id="VDG-Helpers-libguestfs-virt-resize"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <title>virt-resize</title>
+
+  <blockquote>
+    <attribution>man 1 virt-resize</attribution>
+
+    <para>
+      <command>virt-resize</command> is a tool which can resize a
+      virtual machine disk, making it larger or smaller overall, and
+      resizing or deleting any partitions contained within.
+    </para>
+  </blockquote>
+
+
+
+  <para>
+
+  </para>
+</section>
