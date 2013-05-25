@@ -52,6 +52,9 @@
 	  , and <command>virt-sparsify</command>. I refer you to <xref
 	  linkend="VDG-Helpers-libguestfs-virt-sparsify" /> for more
 	  information on <command>virt-sparsify</command>.
+
+	  <indexterm><primary>sparse</primary></indexterm>
+
         </para>
       </answer>
     </qandaentry>

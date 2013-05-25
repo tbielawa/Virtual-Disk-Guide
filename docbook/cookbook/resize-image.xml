@@ -205,7 +205,7 @@
       We're not going to resize the second partition. We just want to
       make room for the first partition to expand into. Enter
       <literal>1024</literal> into the <guilabel>Free space preceding
-      (MiB)</guilabel> box. That will move this partiton to the right
+      (MiB)</guilabel> box. That will move this partition to the right
       far enough to leave the first partition enough room to expand to
       1024 MiB. Also, in the <guilabel>Align to</guilabel> drop-down
       menu select <guimenuitem>Cylinder</guimenuitem>
@@ -273,7 +273,7 @@
 
     <para>
       There is a summary of the two pending actions below the partition
-      table. Click the Green Checkmark button to apply the changes:
+      table. Click the Green Check mark button to apply the changes:
     </para>
 
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize06">
@@ -553,7 +553,7 @@
     <para>
       Once the machine is back online we can resize the partition with
       the <command>fdisk</command> command. Technical note here: when
-      we <quote>resize</quote> the partiton with
+      we <quote>resize</quote> the partition with
       <command>fdisk</command> what we're
       <emphasis>actually</emphasis> doing is deleting the partition
       and then re-creating it starting at the same position

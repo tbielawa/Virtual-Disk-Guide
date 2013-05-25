@@ -135,7 +135,7 @@
   <para>
     What we can take away from JDBP here is this: Operating systems,
     not even <systemitem class="osname">MS-DOS</systemitem>, require
-    partitons to begin (or end) on cylinder or track boundaries.
+    partition's to begin (or end) on cylinder or track boundaries.
   </para>
 
   <para>

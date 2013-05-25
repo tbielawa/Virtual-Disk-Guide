@@ -107,7 +107,7 @@
     protecting our source file from undesired modifications by
     creating an <quote>overlay file</quote>. Next it examines the
     disk, identifying entities such as partition tables, LVM volumes,
-    and space to be freed. Then the freeable space is zero'd out.
+    and space to be freed. Then the freeable space is zeroed out.
   </para>
 
   <para>

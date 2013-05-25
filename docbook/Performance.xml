@@ -6,7 +6,7 @@
   <title>Performance Considerations</title>
 
   <para>
-    Managing disk images doesn't stop at file maniplation and storage
+    Managing disk images doesn't stop at file manipulation and storage
     pool monitoring. After you create a disk image something else is
     going to use it. That's where performance tuning considerations
     come into play. This section straddles the line between system

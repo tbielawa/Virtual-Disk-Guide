@@ -44,7 +44,7 @@
   </equation>
 
   <para>
-    We need to fill the file with something that has a negligable
+    We need to fill the file with something that has a negligible
     value. On Unix systems the best thing to use is the output from
     <systemitem class="resource">/dev/zero</systemitem> (a special
     character device, like a keyboard). We specify <systemitem
