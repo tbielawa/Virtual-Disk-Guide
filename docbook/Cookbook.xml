@@ -25,4 +25,5 @@
   <xi:include href="cookbook/converting-between-raw-and-qcow2.xml"/>
   <xi:include href="cookbook/create-disks-with-backing-images.xml"/>
   <xi:include href="cookbook/resize-image.xml"/>
+  <xi:include href="cookbook/cloning-a-physical-disk.xml"/>
 </chapter>

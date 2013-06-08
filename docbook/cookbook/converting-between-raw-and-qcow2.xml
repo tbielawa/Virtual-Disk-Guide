@@ -19,7 +19,7 @@
     </para>
 
     <example xml:id="VDG-Cookbook-Example-Convert-from-RAW-to-QCOW2">
-      <title>Converting from RAW to QCOW2</title>
+      <title>RAW to QCOW2</title>
 
       <screen><xi:include href="../examples/cookbook-convert-between-raw-and-qcow201" parse="text"/></screen>
     </example>
@@ -37,7 +37,7 @@
     </para>
 
     <example xml:id="VDG-Cookbook-Example-Convert-from-QCOW2-to-RAW">
-      <title>Converting from QCOW2 to RAW</title>
+      <title>QCOW2 to RAW</title>
 
       <screen><xi:include href="../examples/cookbook-convert-between-raw-and-qcow202" parse="text"/></screen>
     </example>

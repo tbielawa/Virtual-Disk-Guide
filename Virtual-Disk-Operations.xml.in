@@ -108,7 +108,7 @@
 
   <xi:include href="docbook/Acknowledgements.xml"/>
   <xi:include href="docbook/Cookbook.xml"/>
-  <xi:include href="docbook/Advanced.xml"/>
+  <!-- <xi:include href="docbook/Advanced.xml"/> -->
   <xi:include href="docbook/Concepts.xml"/>
   <xi:include href="docbook/Helpers.xml"/>
   <xi:include href="docbook/Performance.xml"/>

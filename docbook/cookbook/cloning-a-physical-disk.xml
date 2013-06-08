@@ -1,7 +1,7 @@
 <section xmlns="http://docbook.org/ns/docbook"
          xmlns:xl="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
-         xml:id="VDG-Advanced-Cloning-A-Physical-Disk"
+         xml:id="VDG-Cookbook-Cloning-A-Physical-Disk"
          version="5.0">
 
   <title>Cloning a Physical Disk</title>
@@ -51,7 +51,7 @@
     here's what that disk looks like to the host system:
   </para>
 
-  <example xml:id="VDG-Advanced-clone-thumb_drive_properties">
+  <example xml:id="VDG-Cookbook-clone-thumb_drive_properties">
     <title>Thumb Drive Properties</title>
 
     <screen><xi:include href="../examples/advanced-clone-thumb_drive_properties" parse="text"/></screen>
@@ -70,7 +70,7 @@
     linkend="VDG-Troubleshooting"/></para></footnote>
   </para>
 
-  <example xml:id="VDG-Advanced-Cloning-A-Physical-Disk-unmount-and-convert-to-image01">
+  <example xml:id="VDG-Cookbook-Cloning-A-Physical-Disk-unmount-and-convert-to-image01">
     <title>Conversion Steps</title>
 
     <screen><xi:include href="../examples/advanced-clone-unmount-and-convert-to-image01" parse="text"/></screen>

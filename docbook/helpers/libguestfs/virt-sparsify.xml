@@ -55,7 +55,7 @@
     In this example I'll sparsify the disk image we cloned from a
     thumbdrive earlier in the book
 
-    <footnote><para><xref linkend="VDG-Advanced-Cloning-A-Physical-Disk-unmount-and-convert-to-image01"/></para></footnote>
+    <footnote><para><xref linkend="VDG-Cookbook-Cloning-A-Physical-Disk-unmount-and-convert-to-image01"/></para></footnote>
 
     . Lets start by using the <command>qemu-img info</command>
     subcommand
