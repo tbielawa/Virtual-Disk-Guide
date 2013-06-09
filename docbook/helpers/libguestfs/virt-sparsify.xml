@@ -57,7 +57,7 @@
 
     <footnote><para><xref linkend="VDG-Cookbook-Cloning-A-Physical-Disk-unmount-and-convert-to-image01"/></para></footnote>
 
-    . Lets start by using the <command>qemu-img info</command>
+    . Let's start by using the <command>qemu-img info</command>
     subcommand
 
     <footnote><para>We could also use the <command>ls -lsh</command>
@@ -77,7 +77,7 @@
   <para>
     The output you want to take note of here is on the <literal>disk
     size</literal> line: 914M. For a thumb drive that only had two
-    small text files on it, we sure are wasting a lot of space. Lets
+    small text files on it, we sure are wasting a lot of space. Let's
     attempt to reclaim that space with
     <command>virt-sparsify</command>. We'll call
     <command>virt-sparsify</command> with two parameters, the first is
@@ -129,7 +129,7 @@
   </important>
 
   <para>
-    Lets use <command>qemu-img info</command> again and examine the
+    Let's use <command>qemu-img info</command> again and examine the
     sparsified disk image
     (<filename>thumb_drive_sparse.raw</filename>). Recall that we're
     primarily concerned with the <literal>disk size</literal> field

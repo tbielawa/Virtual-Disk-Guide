@@ -364,7 +364,7 @@
       1.47GiB. That can't be right. Before resizing the partition
       <command>gparted</command> said <filename
       class="partition">loop0p1</filename> was only using 25.54MiB out
-      of 482.56MiB. Lets take a look at it on the command line:
+      of 482.56MiB. Let's take a look at it on the command line:
     </para>
 
 
