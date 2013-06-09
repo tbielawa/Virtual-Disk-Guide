@@ -1,0 +1,11 @@
+<section xml:id="VDG-Performance-caching-writethrough"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <title>Write-through Caching</title>
+
+  <para>
+    words about write-through caching
+  </para>
+</section>

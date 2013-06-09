@@ -1,1 +1,7 @@
+Linking within the same document:
+
 <xref linkend="VDG-Troubleshooting"/>
+
+URL linking:
+
+<link xl:href="http://foo...."/>

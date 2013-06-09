@@ -1,0 +1,95 @@
+<section xml:id="VDG-Performance-caching-writeback"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <title>Write-back Caching</title>
+
+  <para>
+    Write-back caching means that as I/O from the virtual guest
+    happens it is reported as <firstterm>complete</firstterm> as soon
+    as the data is in the virtual hosts page cache<footnote
+    xml:id="QEMU-User-Docs-invocation"><para>QEMU User Docs:
+    <option>-drive</option> options - <link
+    xl:href="http://qemu.weilnetz.de/qemu-doc.html#sec_005finvocation"/></para></footnote>
+  </para>
+
+  <para>
+    I remember the phrase write-back by thinking of it like this:
+    <quote>As soon as a <firstterm>write</firstterm> happens on the
+    guest a response is sent <emphasis>back</emphasis> to indicate
+    that the operation has <quote>completeted</quote>.</quote>
+  </para>
+
+  <para>
+    Using write-back caching will have several side-affects:
+
+    <variablelist>
+      <varlistentry>
+	<term>PRO: Increased performance</term>
+	<listitem>
+	  <para>
+	    Both the guest and host will experience increased I/O
+	    performance due to the lazy nature of cache-writes.
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>CON: Increased risk of corruption</term>
+	<listitem>
+	  <para>
+	    Until the data is <function>flush</function>'d there is an
+	    increased risk of data corruption/loss due to the volatile
+	    properties of system cache.
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>CON: Doesn't support guest migrations</term>
+	<listitem>
+	  <para>
+	    You can not use the guest migration hypervisor feature if
+	    you are using write-back cache mode.
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>CON: Not supported by all Operating Systems</term>
+	<listitem>
+	  <para>
+	    Not all OSs may support write-back cache. For example,
+	    RHEL releases prior to 5.6<footnote><para><link
+	    xl:href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Virtualization_Tuning_and_Optimization_Guide/chap-Virtualization_Tuning_Optimization_Guide-BlockIO.html"/>.</para></footnote>
+	  </para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+
+  <note><para>Write-back is the default cache mode in QEMU.</para></note>
+
+  <para>
+    In reality, write-back is not as dangerous as it may appear to be,
+    though the CONs out-number the PROs. The QEMU User
+    Documentation<footnoteref linkend="QEMU-User-Docs-invocation"/>
+    says the following:
+  </para>
+
+  <blockquote>
+    <para>
+      By default, the <literal>cache=writeback</literal> mode is
+      used. It will report data writes as completed as soon as the
+      data is present in the host page cache. This is safe as long as
+      your guest OS makes sure to correctly flush disk caches where
+      needed. If your guest OS does not handle volatile disk write
+      caches correctly and your host crashes or loses power, then the
+      guest may experience data corruption.
+    </para>
+  </blockquote>
+
+  <para>
+    If your guest is ineligable for the <quote>none</quote> mode,
+    because it doesn't manage its disk write cache well, then
+    write-back mode is a great secondary option.
+  </para>
+</section>

@@ -6,30 +6,108 @@
   <title>Other Formats</title>
 
   <para>
-    Words to introduce the feature set.
+    In addition to the formats we've already reviewed, QEMU has
+    varrying levels of support for several other disk image
+    formats. See the documentation<footnote><para>QEMU User Docs: 3.6.6 Disk image
+    file formats - <link
+    xl:href="http://qemu.weilnetz.de/qemu-doc.html#disk_005fimages_005fformats"
+    /></para></footnote> for a complete description of their supported
+    options.
   </para>
-
-  <itemizedlist>
-    <listitem>
-      <para>
-        Simple
-      </para>
-    </listitem>
-
-    <listitem>
-      <para>
-        Exportable
-      </para>
-    </listitem>
-
-    <listitem>
-      <para>
-        Supports sparse files
-      </para>
-    </listitem>
-  </itemizedlist>
 
   <para>
-    Words about performance and use-cases.
+    The following formats are supported by QEMU in a
+    <emphasis>read-write</emphasis> mode:
   </para>
+
+  <variablelist>
+    <varlistentry>
+      <term>qed</term>
+      <listitem>
+	<para>
+	  Old QEMU image format with support for backing files and
+	  compact image files (when your filesystem or transport
+	  medium does not support holes).
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>cow</term>
+      <listitem>
+	<para>
+	  User Mode Linux Copy On Write image format. It is supported
+	  only for compatibility with previous versions.
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>vdi</term>
+      <listitem>
+	<para>
+	  VirtualBox 1.1 compatible image format.
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>vmdk</term>
+      <listitem>
+	<para>
+	  VMware 3 and 4 compatible image format.
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>vpc</term>
+      <listitem>
+	<para>
+	  VirtualPC compatible image format (VHD).
+	</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+
+  <para>
+    The following formats are also supported by QEMU in a
+    <emphasis>read-only</emphasis> mode:
+  </para>
+
+  <variablelist>
+    <varlistentry>
+      <term>bochs</term>
+      <listitem>
+	<para>
+	  Bochs images of <firstterm>growing</firstterm> type.
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>cloop</term>
+      <listitem>
+	<para>
+	  Linux Compressed Loop image, useful only to reuse directly
+	  compressed CD-ROM images present for example in the Knoppix
+	  CD-ROMs<footnote><para>KNOPPIX: bootable Live Linux system
+	  on CD/DVD - <link
+	  xl:href="http://www.knopper.net/knoppix/index-en.html"
+	  /></para></footnote>.
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>dmg</term>
+      <listitem>
+	<para>
+	  Apple disk image.
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>parallels</term>
+      <listitem>
+	<para>
+	  Parallels disk image format.
+	</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
 </section>

@@ -3,9 +3,93 @@
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:xl="http://www.w3.org/1999/xlink">
 
-  <title>Disk Caching</title>
+  <title>I/O Caching</title>
 
   <para>
-    Write-back, write-through, none?
+    I/O caching requirements differ from host to host. I/O caching
+    refers to the <firstterm>mode</firstterm> (or <firstterm>write
+    policy</firstterm>) by which the kernel writes modified data to
+    cache and the backing store. There are two general modes to
+    consider, <firstterm>write-back</firstterm> and
+    <firstterm>write-through</firstterm>. Let's review them now:
+
+    <variablelist>
+      <varlistentry>
+        <term>Write-back</term>
+        <listitem>
+          <para>
+            Writes are done <firstterm>lazily</firstterm>. That is,
+            writes initially happen in cache, and then are propagated
+            to the appropriate backing storage device. Also known as
+            <firstterm>write-behind</firstterm>.
+          </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Write-through</term>
+        <listitem>
+          <para>
+            Writes are done synchronously to cache and the backing
+            store (main system memory/disk drive).
+          </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
   </para>
+
+  <para>
+    Selecting the correct cache mode can increase or decrease your
+    overall system performance. Selecting the correct mode depends on
+    several factors, including:
+
+    <itemizedlist>
+      <listitem>
+        <para>Cost of data loss</para>
+      </listitem>
+      <listitem>
+        <para>System latency vs. throughput requirements</para>
+      </listitem>
+      <listitem>
+        <para>Operating System support</para>
+      </listitem>
+      <listitem>
+        <para>Hypervisor feature support</para>
+      </listitem>
+      <listitem>
+        <para>Virtualization deployment strategy</para>
+      </listitem>
+    </itemizedlist>
+  </para>
+
+  <para>
+    In addition to write-back and write-through modes there is a third
+    pseudo-mode called <firstterm>none</firstterm>. This mode is
+    considered a write-back mode. In this mode the onus is on the
+    guest operating system to handle the disk write cache correctly in
+    order to avoid data corruption on host crashes<footnoteref
+    linkend="QEMU-User-Docs-invocation"/>. In a supported system where
+    latency/throughput are valued over data integrity you should
+    consider choosing the <quote>none</quote>
+    mode<footnote><para><link
+    xl:href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Virtualization_Tuning_and_Optimization_Guide/chap-Virtualization_Tuning_Optimization_Guide-BlockIO.html"/></para></footnote>
+  </para>
+
+  <remark>TODO: It would be great to explain what systems handle disk
+  write cache better than others</remark>
+
+  <para>
+    Next we'll review the two cache mode options in greater detail. At
+    the end of the chapter we'll summarize the use cases for each
+    mode.
+  </para>
+
+  <xi:include href="caching/writeback.xml"/>
+  <xi:include href="caching/writethrough.xml"/>
+
+  <para>
+    Words about using "none" for your I/O cache
+  </para>
+
+  <xi:include href="caching/summary.xml"/>
 </section>

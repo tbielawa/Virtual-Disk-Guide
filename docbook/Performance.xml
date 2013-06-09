@@ -18,6 +18,15 @@
   </para>
 
   <para>
+    Many performance tuning decisions come down to one question:
+    <emphasis>In the event of catastrophic system failure, how
+    expensive is it to replace the data?</emphasis> If that value is
+    low you can reach higher levels of performance at the cost of
+    higher risk of data loss. If that value is high you can reach
+    greater levels of data integrity at the cost of performance.
+  </para>
+
+  <para>
     In this section we'll cover the following topics:
   </para>
 

@@ -8,7 +8,7 @@
   <para>
     In this section we'll review some of the formats available for
     virtual disks. Along the way we'll discuss features of each
-    format, performance options (tunables), and use-case
+    format, performance options (tunables), and use case
     considerations.
   </para>
 
