@@ -86,7 +86,7 @@
   </blockquote>
 
   <para>
-    If your guest is ineligable for the <quote>none</quote> mode,
+    If your guest is ineligible for the <quote>none</quote> mode,
     because it doesn't manage its disk write cache well, then
     write-back mode is a great secondary option.
   </para>
