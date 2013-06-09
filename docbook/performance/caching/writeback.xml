@@ -66,8 +66,6 @@
     </variablelist>
   </para>
 
-  <note><para>Write-back is the default cache mode in QEMU.</para></note>
-
   <para>
     In reality, write-back is not as dangerous as it may appear to be,
     though the CONs out-number the PROs. The QEMU User
