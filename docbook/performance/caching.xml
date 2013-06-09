@@ -9,8 +9,8 @@
     I/O caching requirements differ from host to host. I/O caching
     refers to the <firstterm>mode</firstterm> (or <firstterm>write
     policy</firstterm>) by which the kernel writes modified data to
-    cache and the backing store. There are two general modes to
-    consider, <firstterm>write-back</firstterm> and
+    both the cache and the caches backing store. There are two general
+    modes to consider, <firstterm>write-back</firstterm> and
     <firstterm>write-through</firstterm>. Let's review them now:
 
     <variablelist>
