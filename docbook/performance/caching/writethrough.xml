@@ -6,6 +6,8 @@
   <title>Write-through Caching</title>
 
   <para>
-    words about write-through caching
+    Write-through caching means that modified data is synchronously
+    written into both a backing store (RAM/disk drive) as well as the
+    system cache.
   </para>
 </section>

@@ -5,20 +5,28 @@
 
   <title>Write-back Caching</title>
 
+  <remark>TODO: This intro paragraph needs to be reworked</remark>
+
   <para>
     Write-back caching means that as I/O from the virtual guest
     happens it is reported as <firstterm>complete</firstterm> as soon
     as the data is in the virtual hosts page cache<footnote
     xml:id="QEMU-User-Docs-invocation"><para>QEMU User Docs:
     <option>-drive</option> options - <link
-    xl:href="http://qemu.weilnetz.de/qemu-doc.html#sec_005finvocation"/></para></footnote>
+    xl:href="http://qemu.weilnetz.de/qemu-doc.html#sec_005finvocation"/></para></footnote>.
+    This is a shortcut around the I/O process wherein the data is
+    written into the systems cache and then subsequently written into
+    the backing storage volume. Whether that volume be volatile system
+    memory (such as ram), or a non volatile source (such as a disk
+    drive). In write-back caching the new data is not written to the
+    backing store until a later time.
   </para>
 
   <para>
     I remember the phrase write-back by thinking of it like this:
     <quote>As soon as a <firstterm>write</firstterm> happens on the
     guest a response is sent <emphasis>back</emphasis> to indicate
-    that the operation has <quote>completeted</quote>.</quote>
+    that the operation has <quote>completed</quote>.</quote>
   </para>
 
   <para>
@@ -67,8 +75,8 @@
   </para>
 
   <para>
-    In reality, write-back is not as dangerous as it may appear to be,
-    though the CONs out-number the PROs. The QEMU User
+    Though the CONs out-number the PROs, In reality, write-back is not
+    as dangerous as it may appear to be. The QEMU User
     Documentation<footnoteref linkend="QEMU-User-Docs-invocation"/>
     says the following:
   </para>
