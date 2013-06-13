@@ -27,7 +27,7 @@ GENERATION_COMMIT_HASH = $(shell git reflog -1 | cut -d' ' -f1)
 # HTML_CHUNKED_xsl - Stylesheet for Chunked HTML transformations
 ##################################################################
 # Fedora - Package: docbook5-style-xsl
-STYLEDIR = /usr/share/sgml/docbook/xsl-ns-stylesheets/
+STYLEDIR = ~/opt/docbook/stylesheets/
 
 # Ubuntu - Package: docbook-xsl-ns
 # STYLEDIR = /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/
@@ -61,7 +61,7 @@ XSLT_CHUNKED_PARAMS = --stringparam base.dir $(CHUNKDIR)/
 # -o $(OUTFILE).pdf
 DBLATEX_PARAMS = -p xsl/dblatex-pdf.xsl \
 	-p xsl/dblatex-acknowledgements.xsl \
-	 -b xetex
+	-b xetex
 DBLATEX_XSLTPROC_PARAMS = --xinclude \
 	--param profile.attribute "'audience'" \
 	--param profile.value "'pdf'" \
@@ -89,7 +89,7 @@ endif
 # SCHEMADIR - Directory holding the DocBook5 RNC/RNG DTDs
 ##################################################################
 # Fedora - Package: docbook5-schemas
-SCHEMADIR = /usr/share/xml/docbook5/schema/rng/5.0
+SCHEMADIR = ~/opt/docbook/rng
 
 # OS X - Package (MacPorts): docbook-xml-5.0
 # SCHEMADIR = /opt/local/share/xml/docbook/5.0/rng
@@ -151,7 +151,8 @@ html: timestamp docdir $(OUTPUT).html
 	@echo "       BUILDING PDF OUTPUT NOW"
 	@echo "#############################################"
 	xsltproc $(DBLATEX_XSLTPROC_PARAMS) Virtual-Disk-Operations.xml | \
-	dblatex -s ./latex/vdg.sty $(DBLATEX_PARAMS) -o $(DEST)/$@ -
+	dblatex $(DBLATEX_PARAMS) -o $(DEST)/$@ -
+#	dblatex -s ./latex/vdg.sty $(DBLATEX_PARAMS) -o $(DEST)/$@ -
 
 %.tex: %.xml
 	@echo "#############################################"

@@ -11,5 +11,5 @@
   <documentElement localName="set" typeId="DocBook"/>
   <documentElement localName="colophon" typeId="DocBook"/>
   <documentElement localName="acknowledgements" typeId="DocBook"/>
-  <typeId id="DocBook" uri="/usr/share/xml/docbook5/schema/rng/5.0/docbookxi.rnc"/>
+  <typeId id="DocBook" uri="/home/tbielawa/opt/docbook/rng/docbookxi.rnc"/>
 </locatingRules>

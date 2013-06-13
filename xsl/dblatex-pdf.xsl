@@ -1,17 +1,19 @@
 <?xml version='1.0' encoding="iso-8859-1"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version='1.0'>
-  <!-- <xsl:param name="latex.class.options">11pt</xsl:param> -->
-  <!-- <xsl:param name="latex.class.options">a4paper,10pt,twoside,openright</xsl:param> -->
+  <xsl:param name="geometry.options">scale=0.9,twoside</xsl:param>
+  <!-- <xsl:param name="latex.class.options">openright</xsl:param> -->
+  <xsl:param name="paper.type">a5paper</xsl:param>
   <xsl:param name="colophon.tocdepth">1</xsl:param>
   <xsl:param name="doc.collab.show">0</xsl:param>
   <xsl:param name="doc.lot.show"></xsl:param>
-  <xsl:param name="draft.mode">yes</xsl:param>
   <xsl:param name="filename.as.url">1</xsl:param>
   <xsl:param name="insert.xref.page.number">yes</xsl:param>
   <xsl:param name="latex.hyperparam">colorlinks,linkcolor=blue,anchorcolor=blue,urlcolor=blue</xsl:param>
   <xsl:param name="latex.output.revhistory">0</xsl:param>
   <xsl:param name="make.year.ranges" select="1" />
   <xsl:param name="term.breakline">1</xsl:param>
+  <!-- Experimenting with different class styles. I like the way the headers are done in the book class -->
+  <!-- <xsl:param name="latex.class.book">book</xsl:param> -->
   <xsl:param name="xref.with.number.and.title" select="1"/>
 
   <xsl:param name="xetex.font">
