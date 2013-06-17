@@ -120,8 +120,8 @@
       <listitem>
         <para>
           <command>gparted</command> expects to find the <filename
-          class="partition">loop0p[12]</filename> devices in <filename
-          class="directory">/dev/</filename>, not <filename
+          class="partition">loop0p*</filename> devices in <filename
+          class="directory">/dev/</filename>, not in <filename
           class="directory">/dev/mapper/</filename>
         </para>
       </listitem>
@@ -141,7 +141,7 @@
       class="devicefile">/dev/loop0</filename>. We can use this
       information to create the symlinks necessary for
       <command>gparted</command> to locate <filename
-      class="partition">loop0p[12]</filename>.
+      class="partition">loop0p*</filename>.
     </para>
 
     <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image03">
