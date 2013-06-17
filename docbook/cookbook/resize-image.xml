@@ -7,12 +7,12 @@
   <title>Resizing Disk Images</title>
 
   <para>
-    In this section we'll resize two different disk images. One is a
-    RAW image, the other is a QCOW2 image. The RAW section is more
-    involved in that we'll do all of the resizing operations
-    <emphasis>outside</emphasis> of a virtual machine. In the QCOW2
-    section I'll show the (simpler) steps which take place both
-    outside and inside of a virtual machine.
+    In this section we'll resize two different virtual disk
+    images. The first will be a RAW image, the other will be a QCOW2
+    image. The RAW section is more involved in that we'll do all of
+    the resizing operations <emphasis>outside</emphasis> of a virtual
+    machine. In the QCOW2 section I'll show the (simpler) steps which
+    take place both outside and inside of a virtual machine.
   </para>
 
   <section xml:id="VDG-Cookbook-Resize-Image-RAW">
@@ -74,13 +74,15 @@
     </example>
 
     <para>
-      Use the <command>kpartx</command> command
+      Next we need to create device maps and devices linking to the
+      enlarged disk image so we may interact with it. We will use the
+      <command>kpartx</command> command
 
       <footnote><para>For more information on the
       <command>kpartx</command> command, see <xref
       linkend="VDG-Helpers" /></para></footnote>
 
-      to automatically create a loop device
+      to automatically create a loop devices
 
       <footnote><para>Don't confuse the often misused term
       <firstterm>loopback device</firstterm> with a <firstterm>loop
@@ -90,15 +92,14 @@
       hostname given to the loopback address <systemitem
       class="ipaddress">127.0.0.1</systemitem>. See <link
       xl:href="http://tools.ietf.org/html/rfc1700">rfc1700</link> for
-      additional information.</para></footnote><footnote><para>We'll
+      additional information.</para></footnote> <footnote><para> We'll
       revisit loop devices in <xref linkend="VDG-Concepts"
       /></para></footnote>
 
-      for the resized image, as well as device maps to the
-      partitions. The <option>-a</option> option means we're adding
-      partition mappings and the <option>-v</option> option means to
-      do it with increased verbosity so we know the names of the
-      created devices.
+      and device maps to the partitions. The <option>-a</option>
+      option means we're adding partition mappings and the
+      <option>-v</option> option means to do it with increased
+      verbosity so we know the names of the created devices.
     </para>
 
     <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image02">
@@ -109,13 +110,11 @@
       <screen><xi:include href="../examples/cookbook-resize-a-disk-image02" parse="text"/></screen>
     </example>
 
-
     <para>
-      I'm going to use <command>gparted</command> to resize the
+      Now we're going to use <command>gparted</command> to resize the
       partitions in the disk image. There are two important things to
       keep in mind:
     </para>
-
 
     <orderedlist>
       <listitem>
@@ -145,11 +144,9 @@
       class="partition">loop0p[12]</filename>.
     </para>
 
-
     <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image03">
       <screen><xi:include href="../examples/cookbook-resize-a-disk-image03" parse="text"/></screen>
     </informalexample>
-
 
     <para>
       Once the symlinks are created we can run
