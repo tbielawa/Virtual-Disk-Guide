@@ -53,7 +53,7 @@
 	  linkend="VDG-Helpers-libguestfs-virt-sparsify" /> for more
 	  information on <command>virt-sparsify</command>.
 
-	  <indexterm><primary>sparse</primary></indexterm>
+	  <!-- <indexterm><primary>sparse</primary></indexterm> -->
 
         </para>
       </answer>
