@@ -82,7 +82,7 @@
       <command>kpartx</command> command, see <xref
       linkend="VDG-Helpers" /></para></footnote>
 
-      to automatically create a loop devices
+      to automatically create loop devices
 
       <footnote><para>Don't confuse the often misused term
       <firstterm>loopback device</firstterm> with a <firstterm>loop
