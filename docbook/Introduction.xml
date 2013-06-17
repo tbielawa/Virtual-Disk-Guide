@@ -1,0 +1,34 @@
+<chapter xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xml:id="VDG-Introduction"
+         version="5.0">
+
+  <title>Introduction</title>
+
+  <section xml:id="VDG-Introduction-Introduction">
+    <title>Introduction</title>
+
+    <para>
+      Foo
+    </para>
+  </section>
+
+  <section xml:id="VDG-Introduction-Conventions">
+    <title>Typographical Conventions</title>
+
+    <para>
+      Bar
+    </para>
+  </section>
+
+
+  <section xml:id="VDG-Introduction-Feedback">
+    <title>Feedback</title>
+
+    <para>
+      Ducks
+    </para>
+  </section>
+
+  <!-- <xi:include href=".xml"/> -->
+</chapter>

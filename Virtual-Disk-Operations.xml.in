@@ -24,24 +24,22 @@
       <title>Introduction</title>
 
       <para>
-        I was motivated to write this document because I felt the
-        quality of the information regarding commonly used
-        functionality in virtual disk operation was lacking certain
-        specific clear examples. The information that is available is
-        not contained in a central location. Some concepts of the qemu
-        system aren't covered at all. FAQs lead on to having an answer
-        to a particular query, but many lead you to off site
-        resources, some of which are no longer available on the
-        Internet.
+        I was motivated to write this book because I felt the quality
+        of the information regarding commonly used functionality in
+        virtual disk operation was lacking certain specific clear
+        examples. The information that is available is not contained
+        in a central location. Some concepts of the qemu system aren't
+        covered at all. FAQs lead on to having an answer to a
+        particular query, but many lead you to off site resources,
+        some of which are no longer available on the Internet.
       </para>
 
       <para>
-        What I hope to do is provide a document which will demonstrate
-        the core concepts of virtual disk management. This document
-        will concern itself primarily with the
-        <command>qemu-img</command> tool and common GNU/Linux disk
-        utility tools like <command>fdisk</command>,
-        <command>parted</command>, and
+        What I hope to provide is a book which will demonstrate the
+        core concepts of virtual disk management. This book will
+        concern itself primarily with the <command>qemu-img</command>
+        tool and common GNU/Linux disk utility tools like
+        <command>fdisk</command>, <command>parted</command>, and
         <command>resize2fs</command>. Most importantly to me, in the
         case of non-trivial examples, I hope to identify what the
         relevant technical concepts are and how they work up to the
@@ -49,170 +47,56 @@
       </para>
 
       <para>
-        You may also enjoy:
+	Other material related to this book:
 
-	<itemizedlist>
-	  <listitem>
-	    <para>
-	      <link
-	      xl:href="http://github.com/tbielawa/Virtual-Disk-Guide">GitHub:
-	      Virtual Disk Guide</link> - report issues with this
-	      guide, or view the latest DocBook 5 XML source under git
-	      version control
-	    </para>
-	  </listitem>
 
-	  <listitem audience="pdf">
-	    <para>
-	      <link
-	      xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html">Virtual-Disk-Guide.html</link>
-	      - the HTML compiled version of this guide
-	    </para>
-	  </listitem>
+        <itemizedlist>
+          <listitem>
+            <para>
+              <link
+              xl:href="http://github.com/tbielawa/Virtual-Disk-Guide">GitHub:
+              Virtual Disk Guide</link><footnote><para><link
+              xl:href="http://github.com/tbielawa/Virtual-Disk-Guide"/></para></footnote>
+              - report issues with this book, or view the latest
+              DocBook 5 XML source under git version control
+            </para>
+          </listitem>
 
-	  <listitem audience="html">
-	    <para>
-	      <link
-	      xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf">Virtual-Disk-Guide.pdf</link>
-	      - the PDF compiled version of this guide
-	    </para>
-	  </listitem>
-	</itemizedlist>
+          <listitem audience="pdf">
+            <para>
+              <link
+                  xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html">Virtual-Disk-Book.html</link><footnote><para><link
+                  xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html"/></para></footnote>
+              - the HTML compiled version of this book
+            </para>
+          </listitem>
+
+          <listitem audience="html">
+            <para>
+              <link
+                  xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf">Virtual-Disk-Book.pdf</link><footnote><para><link
+                  xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf"/></para></footnote>
+              - the PDF compiled version of this book
+            </para>
+          </listitem>
+        </itemizedlist>
       </para>
 
       <para>
-	This document was generated from commit <link
-	xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/GENERATION_COMMIT_HASH"><literal>GENERATION_COMMIT_HASH</literal></link>
-	on GENERATION_TIMESTAMP.
+        This document was generated from commit <link
+        xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/GENERATION_COMMIT_HASH"><literal>GENERATION_COMMIT_HASH</literal></link>
+        on GENERATION_TIMESTAMP.
       </para>
     </abstract>
 
     <legalnotice>
       <para>
-	The Linux Sysadmins Guide to Virtual Disks by Tim Bielawa is
-	licensed under the Creative Commons Attribution-ShareAlike 3.0
-	Unported License. To view a copy of this license, visit <link
-	xl:href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"/>.
+        The Linux Sysadmins Guide to Virtual Disks by Tim Bielawa is
+        licensed under the Creative Commons Attribution-ShareAlike 3.0
+        Unported License. To view a copy of this license, visit <link
+        xl:href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"/>.
       </para>
 
-      <!-- <para> -->
-      <!-- 	This is a human-readable summary of the Legal Code (the full -->
-      <!-- 	license): -->
-      <!-- </para> -->
-
-      <!-- <para> -->
-      <!-- 	You are free: -->
-
-      <!-- 	<variablelist> -->
-      <!-- 	  <varlistentry> -->
-      <!-- 	    <term>to Share</term> -->
-      <!-- 	    <listitem> -->
-      <!--         <para> -->
-      <!-- 		to copy, distribute and transmit the work -->
-      <!--         </para> -->
-      <!-- 	    </listitem> -->
-      <!-- 	  </varlistentry> -->
-      <!-- 	  <varlistentry> -->
-      <!-- 	    <term>to Remix</term> -->
-      <!-- 	    <listitem> -->
-      <!-- 	      <para> -->
-      <!-- 		to adapt the work -->
-      <!-- 	      </para> -->
-      <!-- 	    </listitem> -->
-      <!-- 	  </varlistentry> -->
-      <!-- 	</variablelist> -->
-
-      <!-- 	to make commercial use of the work -->
-      <!-- </para> -->
-
-      <!-- <para> -->
-      <!-- 	Under the following conditions: -->
-
-      <!-- 	<variablelist> -->
-      <!-- 	  <varlistentry> -->
-      <!-- 	    <term>Attribution</term> -->
-      <!-- 	    <listitem> -->
-      <!--         <para> -->
-      <!-- 		You must attribute the work in the manner specified by -->
-      <!-- 		the author or licensor (but not in any way that -->
-      <!-- 		suggests that they endorse you or your use of the -->
-      <!-- 		work). -->
-      <!--         </para> -->
-      <!-- 	    </listitem> -->
-      <!-- 	  </varlistentry> -->
-      <!-- 	  <varlistentry> -->
-      <!-- 	    <term>Share Alike</term> -->
-      <!-- 	    <listitem> -->
-      <!-- 	      <para> -->
-      <!-- 		If you alter, transform, or build upon this work, you -->
-      <!-- 		may distribute the resulting work only under the same -->
-      <!-- 		or similar license to this one. -->
-      <!-- 	      </para> -->
-      <!-- 	    </listitem> -->
-      <!-- 	  </varlistentry> -->
-      <!-- 	</variablelist> -->
-
-      <!-- 	With the understanding that: -->
-
-      <!-- 	<variablelist> -->
-      <!-- 	  <varlistentry> -->
-      <!-- 	    <term>Waiver</term> -->
-      <!-- 	    <listitem> -->
-      <!-- 	      <para> -->
-      <!-- 		Any of the above conditions can be -->
-      <!-- 		<emphasis>waived</emphasis> if you get permission from -->
-      <!-- 		the copyright holder. -->
-      <!-- 	      </para> -->
-      <!-- 	    </listitem> -->
-      <!-- 	  </varlistentry> -->
-      <!-- 	  <varlistentry> -->
-      <!-- 	    <term>Public Domain</term> -->
-      <!-- 	    <listitem> -->
-      <!-- 	      <para> -->
-      <!-- 		Where the work or any of its elements is in the -->
-      <!-- 		<emphasis>public domain</emphasis> under applicable -->
-      <!-- 		law, that status is in no way affected by the license. -->
-      <!-- 	      </para> -->
-      <!-- 	    </listitem> -->
-      <!-- 	  </varlistentry> -->
-      <!-- 	</variablelist> -->
-
-      <!-- 	<emphasis>Other Rights</emphasis> - In no way are any of the -->
-      <!-- 	following rights affected by the license: -->
-
-      <!-- 	<itemizedlist> -->
-      <!-- 	  <listitem> -->
-      <!-- 	    <para> -->
-      <!-- 	      Your fair dealing or <emphasis>fair use</emphasis> -->
-      <!-- 	      rights, or other applicable copyright exceptions and -->
-      <!-- 	      limitations; -->
-      <!-- 	    </para> -->
-      <!-- 	  </listitem> -->
-      <!-- 	  <listitem> -->
-      <!-- 	    <para> -->
-      <!-- 	      Apart from the remix rights granted under this license, -->
-      <!-- 	      the author's <emphasis>moral</emphasis> rights; -->
-      <!-- 	    </para> -->
-      <!-- 	  </listitem> -->
-      <!-- 	  <listitem> -->
-      <!-- 	    <para> -->
-      <!-- 	      Rights other persons may have either in the work itself -->
-      <!-- 	      or in how the work is used, such as -->
-      <!-- 	      <emphasis>publicity</emphasis> or privacy rights. -->
-      <!-- 	    </para> -->
-      <!-- 	  </listitem> -->
-      <!-- 	  <listitem> -->
-      <!-- 	    <para> -->
-      <!-- 	      Notice — For any reuse or distribution, you must make -->
-      <!-- 	      clear to others the license terms of this work. The best -->
-      <!-- 	      way to do this is with a link to this web -->
-      <!-- 	      page<footnote><para><link -->
-      <!-- 	      xl:href="http://creativecommons.org/licenses/by-sa/3.0/us/" -->
-      <!-- 	      /></para></footnote>. -->
-      <!-- 	    </para> -->
-      <!-- 	  </listitem> -->
-      <!-- 	</itemizedlist> -->
-      <!-- </para> -->
     </legalnotice>
 
     <copyright>
@@ -225,13 +109,12 @@
     </copyright>
   </info>
 
+  <xi:include href="docbook/Introduction.xml"/>
   <xi:include href="docbook/Acknowledgements.xml"/>
   <xi:include href="docbook/Cookbook.xml"/>
-  <!-- <xi:include href="docbook/Advanced.xml"/> -->
   <xi:include href="docbook/Concepts.xml"/>
   <xi:include href="docbook/Helpers.xml"/>
   <xi:include href="docbook/Performance.xml"/>
-  <!-- <xi:include href="docbook/Other-Formats.xml"/> -->
   <xi:include href="docbook/Troubleshooting.xml"/>
   <xi:include href="docbook/appendix/units7.xml"/>
   <xi:include href="docbook/appendix/disk_history.xml"/>

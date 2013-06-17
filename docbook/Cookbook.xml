@@ -1,11 +1,11 @@
 <chapter xmlns="http://docbook.org/ns/docbook"
 	 xmlns:xi="http://www.w3.org/2001/XInclude"
-	 xml:id="VDI-Cookbook"
+	 xml:id="VDG-Cookbook"
 	 version="5.0">
 
   <title>The Virtual Disk Cookbook</title>
 
-  <section xml:id="VDI-Cookbook-Introduction">
+  <section xml:id="VDG-Cookbook-Introduction">
     <title>Introduction</title>
 
     <para>
