@@ -6,10 +6,11 @@
 
   <para>
     A few years ago I found out about <firstterm>backing
-    images</firstterm> (or <quote>base-images</quote>). Back then I
-    was doing lots of development on host provisioning tools and
-    needed to be able to quickly revert machines I was working on to a
-    desired initial state. In this use case backing images were
+    images</firstterm> (or <quote>base-images</quote>)<footnoteref
+    linkend="VDG-Cookbook-create-disks-with-backing-images-foornote01"/>. Back
+    then I was doing lots of development on host provisioning tools
+    and needed to be able to quickly revert machines I was working on
+    to a desired initial state. In this use case backing images were
     especially handy when working on features that frequently
     destroyed the machine if it didn't work right.
   </para>
@@ -32,9 +33,10 @@
 
     (copy-on-write) back to the base-image
 
-    <footnote><para>The terms <quote>base-image</quote> and
-    <quote>backing image</quote> are used
-    interchangeably</para></footnote>
+    <footnote
+    xml:id="VDG-Cookbook-create-disks-with-backing-images-foornote01"><para>The
+    terms <quote>base-image</quote> and <quote>backing image</quote>
+    are used interchangeably</para></footnote>
 
     when I was satisfied. I also could use the same base-image for
     multiple COWs at once. This meant that other people on my team
@@ -56,8 +58,8 @@
 
     <step>
       <para>
-	It's bad practice to just have a bunch of disk images in a
-	directory so we made two here. <filename
+	I consider it bad practice to a bunch of bunch of disk images
+	in a directory so we made two directories here. <filename
 	class="directory">/srv/images/base-images/</filename> to hold
 	all the base-images on this system and <filename
 	class="directory">/srv/images/webserver01</filename> to later
@@ -93,9 +95,12 @@
       <para>
 	The next step was creating the copy-on-write (COW) image. See
 	how in the example we give the <option>-b</option> option with
-	the <emphasis>full path</emphasis> to the base-image? Also
+	the <emphasis>full path</emphasis> to the
+	base-image<footnote><para>Some versions of
+	<command>qemu-img</command> can not handle
+	<firstterm>relative</firstterm> paths)</para></footnote>? Also
 	note that no size is given after the file name. Size is
-	constrained to the size of a disks base-image.
+	implicitly the size of the disks backing image.
       </para>
     </step>
 
@@ -107,22 +112,4 @@
       </para>
     </step>
   </procedure>
-
-  <para>
-    Sometimes we would want to update a base-image to resemble the
-    contents of an attached COW image. Maybe we wanted to make the
-    latest system updates a part of the base image, or a configuration
-    setting needed to be updated. This was as simple as making the
-    base-image read-write, and running <command>qemu-img
-    commit</command> on the created file.
-  </para>
-
-  <important>
-    <para>
-      You should turn off or suspend the virtual machine when running
-      the <command>commit</command> command. Failure to do so could
-      result in data corruption.
-    </para>
-  </important>
-
 </section>

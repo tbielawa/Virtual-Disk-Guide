@@ -5,25 +5,21 @@
 
   <title>The Virtual Disk Cookbook</title>
 
-  <section xml:id="VDG-Cookbook-Introduction">
-    <title>Introduction</title>
+  <para>
+    In this section we're just going to cover things you'll find
+    yourself needing to do from time to time. Theory and concepts will
+    be covered later on. It's assumed that you're comfortable with the
+    concepts already and don't need everything explained.
+  </para>
 
-    <para>
-      In this section we're just going to cover things you'll find
-      yourself needing to do from time to time. Theory and concepts
-      will be covered later on. It's assumed that you're comfortable
-      with the concepts already and don't need everything explained.
-    </para>
-
-    <remark>TODO: Make a link to theory/concepts</remark>
-
-  </section>
+  <remark>TODO: Make a link to theory/concepts</remark>
 
   <!-- Links to each recipe follow -->
   <xi:include href="cookbook/create-virtual-disks.xml"/>
   <xi:include href="cookbook/query-an-image-for-information.xml"/>
   <xi:include href="cookbook/converting-between-raw-and-qcow2.xml"/>
   <xi:include href="cookbook/create-disks-with-backing-images.xml"/>
+  <xi:include href="cookbook/commit-changes-to-backing-image.xml"/>
   <xi:include href="cookbook/resize-image.xml"/>
   <xi:include href="cookbook/cloning-a-physical-disk.xml"/>
 </chapter>

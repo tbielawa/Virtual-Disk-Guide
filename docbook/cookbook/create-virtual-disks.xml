@@ -45,8 +45,8 @@
 
   <para>
     In this example we will start simple and only show how to create
-    basic images in different formats. Each will appear to a virtual
-    machine as being 10G in capacity.
+    basic images in different formats. Each image we create will
+    appear to a virtual machine as a drive with 10GB of capacity.
   </para>
 
   <example xml:id="VDG-Cookbook-Example-Creating-Simple-Images">
@@ -62,9 +62,12 @@
   </remark>
 
   <para>
-    From the <literal>fmt</literal> attribute above you can see that
-    the type of virtual disk crated was RAW, this is the default when
-    using <command>qemu-img</command>. You can also see that the disk
-    will appear as a 10G drive when used in a virtual machine.
+    From the <literal>fmt</literal> attribute in the output above we
+    can see that the format of the virtual disk we created is of type
+    <firstterm>RAW</firstterm><footnote><para><xref
+    linkend="VDG-Performance-format-raw"/></para></footnote>, this is
+    the default when using <command>qemu-img</command>. Where it says
+    <literal>size=...</literal> we see that the disk was created with
+    a capacity of 10485760 kB, or 10gB.
   </para>
 </section>

@@ -1,4 +1,5 @@
 <section xml:id="VDG-Cookbook-Convert-Between-RAW-and-QCOW2"
+         xmlns:xl="http://www.w3.org/1999/xlink"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude">
 
@@ -10,8 +11,18 @@
     <para>
       RAW images, though simple to work with, carry the disadvantage
       of increased disk usage on the host OS. One option we have is to
-      convert the image into the QCOW2 format which uses zlib
-      compression and optionally allows for 128 bit AES encryption.
+      convert the image into the QCOW2 format which uses
+      zlib<footnote><para>From the zlib homepage (<link
+      xl:href="http://zlib.net/"/>): zlib is designed to be a free,
+      general-purpose, legally unencumbered -- that is, not covered by
+      any patents -- lossless data-compression library for use on
+      virtually any computer hardware and operating
+      system.</para></footnote> compression and optionally allows your
+      disks to be secured with 128 bit AES
+      encryption<footnote><para>For more information on AES
+      encryption, see FIPS PUB 197: Advanced Encryption Standard -
+      <link
+      xl:href="http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf"></link></para></footnote>.
 
       <remark>TODO: Explain how QCOW2 only uses as much space as there
       is data in the image. Also talk about sparse file
@@ -23,10 +34,6 @@
 
       <screen><xi:include href="../examples/cookbook-convert-between-raw-and-qcow201" parse="text"/></screen>
     </example>
-
-    <para>
-      It's that simple.
-    </para>
   </section>
 
   <section xml:id="VDG-Cookbook-Converting-from-QCOW2-to-RAW">
@@ -42,14 +49,13 @@
       <screen><xi:include href="../examples/cookbook-convert-between-raw-and-qcow202" parse="text"/></screen>
     </example>
 
-    <para>
-      It's that simple.
-    </para>
-
     <note>
       <para>
 	When converted to the RAW format the image has the potential
-	to take up much more disk space than before.
+	to take up much more disk space than before. RAW images may
+	use up up their allocated space immediately, whereas QCOW
+	images will grow to their pre-determined maximum size over
+	time.
       </para>
     </note>
   </section>

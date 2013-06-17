@@ -1,0 +1,8 @@
+# qemu-img create -f qcow2 /srv/base-images/base-image01.qcow2 10G
+Formatting '/srv/base-images/base-image01.qcow2', fmt=qcow2 size=10737418240 encryption=off cluster_size=65536
+
+# qemu-img create -b /srv/base-images/base-image01.qcow2 -f qcow2 /srv/images/with-backing-image.qcow2
+Formatting '/srv/images/with-backing-image.qcow2', fmt=qcow2 size=10737418240 backing_file='/srv/base-images/base-image01.qcow2' encryption=off cluster_size=65536
+
+# qemu-img commit /srv/images/with-backing-image.qcow2
+Image committed.

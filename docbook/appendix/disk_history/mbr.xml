@@ -24,7 +24,6 @@
       <link xl:href="http://www.pixelbeat.org/docs/disk/"/>
     </para></footnote>
 
-
     . This first sector is referred to by a special name, the
     <systemitem>boot sector</systemitem>.
   </para>

@@ -1,0 +1,29 @@
+<section xml:id="VDG-Cookbook-commit-changes-to-backing-image"
+	 xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Comitting changes to a backing image</title>
+
+  <para>
+    Sometimes we would want to update a base-image to resemble the
+    contents of an attached COW image. Maybe we wanted to make the
+    latest system updates a part of the base image, or a configuration
+    setting needed to be updated. This was as simple as making the
+    base-image read-write, and running <command>qemu-img
+    commit</command> on the created file.
+  </para>
+
+  <important>
+    <para>
+      You should turn off or suspend the virtual machine when running
+      the <command>commit</command> command. Failure to do so could
+      result in data corruption.
+    </para>
+  </important>
+
+  <example xml:id="VDG-Cookbook-Example-commit-changes-to-backing-image01">
+    <title>Commiting changes</title>
+
+    <screen><xi:include href="../examples/cookbook-commit-changes-to-backing-image01" parse="text"/></screen>
+  </example>
+</section>

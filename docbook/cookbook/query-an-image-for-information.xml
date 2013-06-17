@@ -6,11 +6,11 @@
   <title>Query an Image for Information</title>
 
   <para>
-    How to query some basic information about virtual disks. The tools
-    of the trade here are going to be <command>ls</command> to check
-    disk usage, <command>file</command> for a quick check of the
-    types, and <command>qemu-img</command> for more in-depth
-    information.
+    This section is going to show how to query some basic information
+    from a virtual disk. The tools of the trade here are going to be
+    <command>ls</command> to check disk usage, <command>file</command>
+    for a quick check of the types, and <command>qemu-img</command>
+    for more in-depth information.
 
     <footnote><para>The <command>qemu-img</command> command
     manipulates virtual machine disks and is part of the QEMU
@@ -33,12 +33,12 @@
 
   <para>
     The interesting information we can get from using <command>ls
-    -lhs</command> is how the files are actually
-    sized. <filename>image-raw.raw</filename> appears to be 10G but
-    doesn't have any actual blocks allocated to it yet. It is
-    literally an empty file. What's good about these RAW disks is that
-    you don't need any special kind of tools to know how large the
-    disk is internally. The RAW image should always match it's
+    -lhs</command> is how the files are actually sized. What's good
+    about these RAW disks is that you don't need any special kind of
+    tools to know how large the disk is
+    internally. <filename>image-raw.raw</filename> appears to be 10G
+    but doesn't have any actual blocks allocated to it yet. It is
+    literally an empty file.  The RAW image should always match it's
     reported file size on the host OS.
   </para>
 
@@ -100,6 +100,6 @@
 
   <para>
     For the RAW image there is no new information here that we didn't
-    already get from the <command>ls</command>.
+    already get from the <command>ls</command> command.
   </para>
 </section>

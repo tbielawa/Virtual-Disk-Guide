@@ -1,4 +1,5 @@
 <chapter xmlns="http://docbook.org/ns/docbook"
+         xmlns:xl="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xml:id="VDG-Introduction"
          version="5.0">
@@ -21,14 +22,70 @@
     </para>
   </section>
 
-
-  <section xml:id="VDG-Introduction-Feedback">
-    <title>Feedback</title>
+  <section xml:id="VDG-Introduction-Units">
+    <title>Units and Prefixes</title>
 
     <para>
-      Ducks
+      Throughout this book you will see file sizes specified with an
+      assortment of units. For example: 42 kB, 42 Mb, 42 GiB, 42 G, 42 GiB.
+    </para>
+
+    <para>
+      Without an explanation this may seem confusing, random, and
+      inconsistent. However, there is a method to this madness:
+
+      <orderedlist>
+	<listitem>
+	  <para>
+	    The unit used in discussion preceding/following an example
+	    is consistent with the convention used in the example
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Without any scope or context, binary prefixes are used
+	    (e.g., 1024 KiB, 35565 MiB)
+	  </para>
+	</listitem>
+      </orderedlist>
+    </para>
+
+    <para>
+      For additional literature on why this necessary, I refer you to
+      <xref linkend="VDG-Appendix-Units"/>
     </para>
   </section>
 
+
+  <section xml:id="VDG-Introduction-Feedback">
+    <title>Getting Help/Feedback</title>
+
+    <para>
+      If you find a typographical or any other error in this book, or
+      if you have thought of a way to make this book better, I would
+      love to hear from you! Please submit a report in GitHub:
+      <link
+      xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/issues"/>
+    </para>
+
+    <para>
+      If you have a suggestion for improving the book, try to be as
+      specific as possible when describing it. If you have found an
+      error, please include the section number and some of the
+      surrounding text so I can find it easily. I also recommend you
+      review the suggestions in <xref linkend="VDG-Troubleshooting"/>.
+    </para>
+
+    <para>
+      If you're submitting an error with an example, please try and
+      include as much relevant information about your setup as
+      possible. This includes (but is not limited to): your operating
+      system and version, the version of the software the example
+      happens with, if you are running the command as the root user or
+      not, and the exact commands to run to reproduce the error.
+    </para>
+
+    <remark>TODO: Add example bug report?</remark>
+  </section>
   <!-- <xi:include href=".xml"/> -->
 </chapter>
