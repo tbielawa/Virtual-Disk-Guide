@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Virtual-Disk-Operations"
+      xmlns:xl="http://www.w3.org/1999/xlink" version="5.0">
+
+  <info>
+    <title>The Linux Sysadmins Guide to Virtual Disks</title>
+
+    <subtitle>From the basics to the advanced</subtitle>
+
+    <authorgroup>
+      <author>
+        <personname>
+          <firstname>Tim</firstname>
+          <surname>Bielawa</surname>
+        </personname>
+        <email>tbielawa@redhat.com</email>
+      </author>
+    </authorgroup>
+
+    <legalnotice>
+      <para>
+        The Linux Sysadmins Guide to Virtual Disks by Tim Bielawa is
+        licensed under the Creative Commons Attribution-ShareAlike 3.0
+        Unported License. To view a copy of this license, visit <link
+        xl:href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"/>.
+      </para>
+
+    </legalnotice>
+
+    <copyright>
+      <year>2009</year>
+      <year>2010</year>
+      <year>2011</year>
+      <year>2012</year>
+      <year>2013</year>
+      <holder>Tim Bielawa</holder>
+    </copyright>
+  </info>
+
+  <xi:include href="docbook/Introduction.xml"/>
+  <xi:include href="docbook/Acknowledgements.xml"/>
+  <xi:include href="docbook/Cookbook.xml"/>
+  <xi:include href="docbook/Concepts.xml"/>
+  <xi:include href="docbook/Helpers.xml"/>
+  <xi:include href="docbook/Performance.xml"/>
+  <xi:include href="docbook/Troubleshooting.xml"/>
+  <xi:include href="docbook/appendix/units7.xml"/>
+  <xi:include href="docbook/appendix/disk_history.xml"/>
+  <!-- <xi:include href="docbook/Glossary.xml"/> -->
+  <!-- <xi:include href="docbook/Index.xml"/> -->
+  <xi:include href="docbook/Colophon.xml"/>
+</book>

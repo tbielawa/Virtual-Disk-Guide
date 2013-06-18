@@ -136,11 +136,11 @@ chunked:
 # The called target should be the last transformation. I.E.,
 # somefile.pdf, or somefile.html.  The depend target (%.xml below) are
 # recursively evaluated until all required targets have been met.
-%.html: %.xml
+%.html: docbook/Introduction.xml
 	@echo "#############################################"
 	@echo "       BUILDING HTML OUTPUT NOW"
 	@echo "#############################################"
-	xsltproc $(HTML_XSLTPROC_PARAMS) $< | \
+	xsltproc $(HTML_XSLTPROC_PARAMS) Virtual-Disk-Operations.xml | \
 	xsltproc $(XSLTPARAMS) $(XSLT_HTML_PARAMS) -o $(DEST)/$@ $(HTML_CUSTOM_XSL) -
 
 html: timestamp docdir $(OUTPUT).html
@@ -151,7 +151,6 @@ html: timestamp docdir $(OUTPUT).html
 	@echo "#############################################"
 	xsltproc $(DBLATEX_XSLTPROC_PARAMS) Virtual-Disk-Operations.xml | \
 	dblatex $(DBLATEX_PARAMS) -o $(DEST)/$@ -
-#	dblatex -s ./latex/vdg.sty $(DBLATEX_PARAMS) -o $(DEST)/$@ -
 
 %.tex: %.xml
 	@echo "#############################################"
@@ -172,7 +171,7 @@ locator:
 
 clean:
 	$(FIND)  \( -regex "^[.]?(.+)\~$$" -o -regex "./[.]?#.*#" \) -delete
-	rm -fR output html Virtual-Disk-Operations.xml
+	rm -fR output html docbook/Introduction.xml
 
 spell:
 	for i in `find . -name "*.xml"`; do aspell -H -c $$i; done
