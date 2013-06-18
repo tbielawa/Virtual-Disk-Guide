@@ -61,7 +61,7 @@ XSLT_CHUNKED_PARAMS = --stringparam base.dir $(CHUNKDIR)/
 # -o $(OUTFILE).pdf
 DBLATEX_PARAMS = -p xsl/dblatex-pdf.xsl \
 	-p xsl/dblatex-acknowledgements.xsl \
-	-b xetex
+	-b xetex -T vdg
 DBLATEX_XSLTPROC_PARAMS = --xinclude \
 	--param profile.attribute "'audience'" \
 	--param profile.value "'pdf'" \
@@ -100,16 +100,15 @@ SCHEMADIR = ~/opt/docbook/rng
 ##################################################################
 # Build targets
 ##################################################################
-all: clean Virtual-Disk-Operations.xml docs
+all: clean docbook/Introduction.xml docs
 
 # Support a rendered-on timestamp in HTML *and* PDF output. Removes
 # the reliance on the <?dbtimestamp> element
-Virtual-Disk-Operations.xml: Virtual-Disk-Operations.xml.in
+docbook/Introduction.xml: docbook/Introduction.xml.in
 	sed -e "s/GENERATION_TIMESTAMP/$(GENERATION_TIMESTAMP)/" \
 	-e "s/GENERATION_COMMIT_HASH/$(GENERATION_COMMIT_HASH)/g" $< > $@
 
-timestamp: Virtual-Disk-Operations.xml
-
+timestamp: docbook/Introduction.xml
 
 docdir:
 	mkdir -p $(DEST)

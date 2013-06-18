@@ -72,8 +72,8 @@
 
     <para>
       This document was generated from commit <link
-      xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/2b3d997"><literal>2b3d997</literal></link>
-      on Tue 18 Jun 2013 06:42:57 PM EDT.
+      xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/GENERATION_COMMIT_HASH"><literal>GENERATION_COMMIT_HASH</literal></link>
+      on GENERATION_TIMESTAMP.
     </para>
   </section>
 
