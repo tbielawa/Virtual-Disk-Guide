@@ -144,9 +144,10 @@
       class="partition">loop0p*</filename>.
     </para>
 
-    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image03">
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image03">
+      <title>Create the symbolic links</title>
       <screen><xi:include href="../examples/cookbook-resize-a-disk-image03" parse="text"/></screen>
-    </informalexample>
+    </example>
 
     <para>
       Once the symlinks are created we can run
@@ -154,9 +155,10 @@
       class="devicefile">/dev/loop0</filename> as the device argument.
     </para>
 
-    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image04">
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image04">
+      <title>Run <command>gparted</command></title>
       <screen><xi:include href="../examples/cookbook-resize-a-disk-image04" parse="text"/></screen>
-    </informalexample>
+    </example>
 
     <para>
       Now <command>gparted</command> should open and show the two
@@ -365,9 +367,10 @@
     </para>
 
 
-    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image05">
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image05">
+      <title>Compare <command>gparted</command> and <command>df</command> output</title>
       <screen><xi:include href="../examples/cookbook-resize-a-disk-image05" parse="text"/></screen>
-    </informalexample>
+    </example>
 
 
     <para>
@@ -379,8 +382,9 @@
       After the partitions were resized the partition table was
       updated with the new information but we never updated the device
       maps in the kernel. The <command>kpartx</command> command also
-      accepts a <option>-u</option> option to update partitions
-      mappings. Let's try that and see if it fixes our problem:
+      accepts a <option>-u</option> option to
+      <emphasis>update</emphasis> partitions mappings. Let's try that
+      and see if it fixes our problem:
     </para>
 
 
@@ -422,10 +426,10 @@
       capacity:
     </para>
 
-    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image07">
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image07">
+      <title>Still missing added capacity</title>
       <screen><xi:include href="../examples/cookbook-resize-a-disk-image07" parse="text"/></screen>
-    </informalexample>
-
+    </example>
 
     <para>
       We've already resized the partition, but we haven't resized the
@@ -445,16 +449,14 @@
       <screen><xi:include href="../examples/cookbook-resize-a-disk-image08" parse="text"/></screen>
     </example>
 
-
-
     <para>
       Don't forget to clean up those lingering symlinks we made earlier:
     </para>
 
-    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image09">
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-a-disk-image09">
+      <title>Cleanup lingering symlinks</title>
       <screen><xi:include href="../examples/cookbook-resize-a-disk-image09" parse="text"/></screen>
-    </informalexample>
-
+    </example>
 
     <note>
       <para>
@@ -465,7 +467,6 @@
       </para>
     </note>
   </section>
-
 
   <section xml:id="VDG-Cookbook-Resize-Image-QCOW2">
     <title>Resizing QCOW2 Images</title>
@@ -494,18 +495,20 @@
       Outside of the virtual machine the disk looks like this:
     </para>
 
-    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image01">
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image01">
+      <title>Examine <filename class="devicefile">f18.qcow2</filename> on the host</title>
       <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image01" parse="text"/></screen>
-    </informalexample>
+    </example>
 
     <para>
       Inside of the virtual machine the disk and root partition look
       like this:
     </para>
 
-    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image03">
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image03">
+      <title>Examine <filename class="devicefile">vda</filename> in the guest</title>
       <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image03" parse="text"/></screen>
-    </informalexample>
+    </example>
 
     <warning>
       <para>
@@ -589,9 +592,10 @@
       size has increased from 7.6G to 13.6GB:
     </para>
 
-    <informalexample xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image05">
+    <example xml:id="VDG-Cookbook-Example-Resize-Image-cookbook-resize-qcow2-image05">
+      <title>New capacity now detected</title>
       <screen><xi:include href="../examples/cookbook-resize-a-qcow2-image05" parse="text"/></screen>
-    </informalexample>
+    </example>
 
     <para>
       Just like when we resized the filesystem on the RAW disk image

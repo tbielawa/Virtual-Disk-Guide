@@ -17,9 +17,73 @@
   <section xml:id="VDG-Introduction-Conventions">
     <title>Typographical Conventions</title>
 
-    <para>
-      Bar
-    </para>
+    <variablelist>
+      <varlistentry>
+	<term>References</term>
+	<listitem>
+	  <para>
+	    References to other sections will look like this: <xref
+	    linkend="VDG-Troubleshooting"/>. The format is:
+	    <emphasis>Chapter/section title</emphasis> followed by the
+	    page number in [brackets].
+	    </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>Commands &amp; options</term>
+	<listitem>
+	  <para>
+	    The name of commands are formatted in bold, an option you
+	    would give to a command is formatted in a monospaced
+	    sequence, for example: give the <option>-d</option> option
+	    to <command>losetup</command> command.
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>Filesystem paths</term>
+	<listitem>
+	  <para>
+	    Names or paths to files, directories, and devices on the
+	    filesystem are formatted in a monospaced sequence:
+	    <filename class="directory">/dev/loop0p1</filename>
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>Examples</term>
+	<listitem>
+	  <para>
+	    Examples are formatted in a gray box with a title bar
+	    which gives the example number and title.
+	  </para>
+	  <example>
+	    <title>An example of examples</title>
+	    <screen>[dblatex:~/v] 18:16:50  (master)
+$ du -sh
+7.0M    .</screen>
+	  </example>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>Notes, warnings, and other important information</term>
+	<listitem>
+	  <note>
+	    <para>
+	      A note will provide additional information relevant to
+	      the current discussion.
+	    </para>
+	  </note>
+	  <important>
+	    <para>
+	      Warnings and other important information which you
+	      should know before executing any commands will appear in
+	      an admonition such as this.
+	    </para>
+	  </important>
+	</listitem>
+      </varlistentry>
+    </variablelist>
   </section>
 
   <section xml:id="VDG-Introduction-Units">
