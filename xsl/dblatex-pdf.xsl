@@ -25,6 +25,8 @@
 
   <!-- Blue - EVERYWHERE! This needs to change for the actual print version -->
   <xsl:param name="latex.hyperparam">colorlinks,linkcolor=blue,anchorcolor=blue,urlcolor=blue</xsl:param>
+  <!-- Black - Test print version -->
+  <!-- <xsl:param name="latex.hyperparam">colorlinks,linkcolor=black,anchorcolor=black,urlcolor=black</xsl:param> -->
 
   <!-- Don't include the revision history block -->
   <xsl:param name="latex.output.revhistory">0</xsl:param>
