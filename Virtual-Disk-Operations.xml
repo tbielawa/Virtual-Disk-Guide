@@ -16,6 +16,20 @@
         </personname>
         <email>tbielawa@redhat.com</email>
       </author>
+      <editor>
+	<personname>
+	  <firstname>Jon</firstname>
+	  <surname>Connell</surname>
+	</personname>
+	<email>foo@bar.com?</email>
+      </editor>
+      <editor>
+	<personname>
+	  <firstname>Henry</firstname>
+	  <surname>Graham</surname>
+	</personname>
+	<email>hgraham@redhat.com</email>
+      </editor>
     </authorgroup>
 
     <legalnotice>

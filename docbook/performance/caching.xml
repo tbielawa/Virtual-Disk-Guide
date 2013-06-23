@@ -75,8 +75,9 @@
     xl:href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Virtualization_Tuning_and_Optimization_Guide/chap-Virtualization_Tuning_Optimization_Guide-BlockIO.html"/></para></footnote>
   </para>
 
-  <remark>TODO: It would be great to explain what systems handle disk
-  write cache better than others</remark>
+  <remark>TODO: Words about using "none" for your I/O cache?</remark>
+
+  <remark>TODO: It would be great to explain what systems handle disk write cache better than others</remark>
 
   <para>
     Next we'll review the two cache mode options in greater detail. At
@@ -86,10 +87,5 @@
 
   <xi:include href="caching/writeback.xml"/>
   <xi:include href="caching/writethrough.xml"/>
-
-  <para>
-    Words about using "none" for your I/O cache
-  </para>
-
   <xi:include href="caching/summary.xml"/>
 </section>

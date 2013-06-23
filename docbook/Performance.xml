@@ -53,6 +53,11 @@
     </listitem>
   </itemizedlist>
 
+  <para>
+    You may also be interested in reading over <xref
+    linkend="VDG-Formats" />.
+  </para>
+
   <xi:include href="performance/caching.xml"/>
   <xi:include href="performance/device.xml"/>
   <xi:include href="performance/scheduler.xml"/>

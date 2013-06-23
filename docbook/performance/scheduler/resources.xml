@@ -1,0 +1,53 @@
+<section xml:id="VDG-Performance-scheduler-resources"
+         xmlns="http://docbook.org/ns/docbook"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xl="http://www.w3.org/1999/xlink">
+
+  <title>Additional Resources</title>
+
+  <para>
+    White papers:
+
+    <itemizedlist>
+      <listitem>
+        <para><citetitle pubwork="article">Does Virtualization Make
+        Disk Scheduling Passé?</citetitle> - <link
+        xl:href="http://www-users.cs.umn.edu/~chandra/papers/hotstorage09/paper.pdf"/></para>
+      </listitem>
+      <listitem>
+        <para><citetitle pubwork="article">On Disk I/O Scheduling in
+        Virtual Machines</citetitle> - <link
+        xl:href="http://sysrun.haifa.il.ibm.com/hrl/wiov2010/papers/kesavan.pdf"/></para>
+      </listitem>
+      <listitem>
+        <para><citetitle pubwork="article">Understanding the Effects
+        of Hypervisor I/O Scheduling for Virtual Machine Performance
+        Interference</citetitle> - <link
+        xl:href="http://www.seas.gwu.edu/~howie/publications/CloudCom12.pdf"/></para>
+      </listitem>
+      <listitem>
+        <para><citetitle pubwork="webpage">I/O Scheduling for SAN and
+        Virtualization</citetitle> - <link
+        xl:href="http://www.monperrus.net/martin/IO+scheduling+for+san+and+virtualization"/></para>
+      </listitem>
+    </itemizedlist>
+  </para>
+
+  <para>
+    Performance tests:
+
+    <itemizedlist>
+      <listitem>
+        <para><citetitle pubwork="webpage">Ceph Bobtail Performance –
+        IO Scheduler Comparison</citetitle> - <link
+        xl:href="http://ceph.com/community/ceph-bobtail-performance-io-scheduler-comparison/"/></para>
+      </listitem>
+
+      <listitem>
+        <para><citetitle pubwork="webpage">I/O Scheduler Comparison On
+        The Linux 3.4 Desktop</citetitle> - <link
+        xl:href="http://www.phoronix.com/scan.php?page=article&amp;item=linux_iosched_2012&amp;num=1"/></para>
+      </listitem>
+    </itemizedlist>
+  </para>
+</section>

@@ -6,6 +6,42 @@
   <title>I/O Schedulers</title>
 
   <para>
-    Deadline? CFQ? NOOP?
+    Scheduling algorithms, sometimes referred to as
+    <firstterm>elevators</firstterm><footnote><para>TODO: Explain
+    why</para></footnote>, are methods used by the operating system to
+    decide the order in which block I/O operations (read/write) take
+    place. Different algorithms exist because no single one is best
+    suited for all workloads.
   </para>
+
+  <para>
+    A database server would want to prioritize latency over
+    throughput, thus making the deadline scheduler an ideal choice,
+    whereas in an interactive desktop you would favor the CFQ
+    (<quote>completely fair queueing</quote>) scheduler. Workload
+    isn't the only parameter to consider when selecting a
+    scheduler. The properties of the backing storage device also play
+    an important role (SSD or spinning disk?). In a virtualized
+    environment the choice of scheduler becomes even more involved
+    because you may wish to consider the scheduler used by the
+    hypervisor as well.
+  </para>
+
+  <para>
+    As you can see, the topic of selecting the proper I/O scheduler is
+    neither short, nor is it simple. That being said, in this chapter
+    I'll attempt to provide you with sufficient information to make an
+    informed decision as well as several resources which discuss I/O
+    schedulers in greater detail. Together we'll review the scheduler
+    options available, the procedure for setting one permanently, and
+    typical use cases.
+  </para>
+
+  <xi:include href="scheduler/options.xml"/>
+  <xi:include href="scheduler/cfq.xml"/>
+  <xi:include href="scheduler/deadline.xml"/>
+  <xi:include href="scheduler/noop.xml"/>
+  <xi:include href="scheduler/backing_storage.xml"/>
+  <xi:include href="scheduler/resources.xml"/>
+
 </section>

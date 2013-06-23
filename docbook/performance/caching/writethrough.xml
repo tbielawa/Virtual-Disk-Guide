@@ -6,8 +6,18 @@
   <title>Write-through Caching</title>
 
   <para>
-    Write-through caching means that modified data is synchronously
-    written into both a backing store (RAM/disk drive) as well as the
-    system cache.
+    Write-through caching means that modified data is written
+    synchronously into both system cache, as well as a backing store
+    (RAM/disk drive). Because the writing happens in the backing store
+    as well, write-through cache introduces a performance hit.
+  </para>
+
+  <para>
+    Because write-through caching puts a larger load on the host it is
+    best used in moderation. You should avoid enabling write-through
+    caching on a host with many guests, as this configuration is prone
+    to scaling issues. You should only consider enabling write-through
+    caching in situations where data integrity is paramount above all
+    else or where write-back caching is not available on the guest.
   </para>
 </section>
