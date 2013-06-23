@@ -58,18 +58,18 @@
       </listitem>
     </varlistentry>
 
-    <varlistentry>
-      <term>virt tools</term>
-      <listitem>
-        <para>
-          Virt Tools are open source virtualization management tools
-          for Linux system administrators.
-        </para>
-      </listitem>
-    </varlistentry>
+  <!--   <varlistentry> -->
+  <!--     <term>virt tools</term> -->
+  <!--     <listitem> -->
+  <!--       <para> -->
+  <!--         Virt Tools are open source virtualization management tools -->
+  <!--         for Linux system administrators. -->
+  <!--       </para> -->
+  <!--     </listitem> -->
+  <!--   </varlistentry> -->
   </variablelist>
 
   <xi:include href="helpers/libguestfs.xml"/>
   <xi:include href="helpers/virtmanager.xml"/>
-  <xi:include href="helpers/virttools.xml"/>
+  <!-- <xi:include href="helpers/virttools.xml"/> -->
 </chapter>

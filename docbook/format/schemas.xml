@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <documentElement localName="appendix" typeId="DocBook"/>
+  <documentElement localName="article" typeId="DocBook"/>
+  <documentElement localName="book" typeId="DocBook"/>
+  <documentElement localName="chapter" typeId="DocBook"/>
+  <documentElement localName="glossary" typeId="DocBook"/>
+  <documentElement localName="index" typeId="DocBook"/>
+  <documentElement localName="part" typeId="DocBook"/>
+  <documentElement localName="section" typeId="DocBook"/>
+  <documentElement localName="set" typeId="DocBook"/>
+  <documentElement localName="colophon" typeId="DocBook"/>
+  <documentElement localName="acknowledgements" typeId="DocBook"/>
+  <typeId id="DocBook" uri="/home/tbielawa/opt/docbook/rng/docbookxi.rnc"/>
+</locatingRules>

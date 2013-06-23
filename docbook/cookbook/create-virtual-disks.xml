@@ -65,7 +65,7 @@
     From the <literal>fmt</literal> attribute in the output above we
     can see that the format of the virtual disk we created is of type
     <firstterm>RAW</firstterm><footnote><para><xref
-    linkend="VDG-Performance-format-raw"/></para></footnote>, this is
+    linkend="VDG-Formats-raw"/></para></footnote>, this is
     the default when using <command>qemu-img</command>. Where it says
     <literal>size=...</literal> we see that the disk was created with
     a capacity of 10485760 kB, or 10gB.

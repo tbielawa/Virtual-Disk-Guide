@@ -33,11 +33,6 @@
   <itemizedlist>
     <listitem>
       <para>
-        Selecting the right disk format
-      </para>
-    </listitem>
-    <listitem>
-      <para>
         Selecting the right disk caching mode
       </para>
     </listitem>
@@ -58,7 +53,6 @@
     </listitem>
   </itemizedlist>
 
-  <xi:include href="performance/format.xml"/>
   <xi:include href="performance/caching.xml"/>
   <xi:include href="performance/device.xml"/>
   <xi:include href="performance/scheduler.xml"/>

@@ -1,12 +1,12 @@
-<section xml:id="VDG-Performance-format"
+<chapter xml:id="VDG-Formats"
          xmlns="http://docbook.org/ns/docbook"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          xmlns:xl="http://www.w3.org/1999/xlink">
 
-  <title>Disk Format</title>
+  <title>Disk Formats</title>
 
   <para>
-    In this section we'll review some of the formats available for
+    In this chapter we'll review some of the formats available for
     virtual disks. Along the way we'll discuss features of each
     format, performance options (tunables), and use case
     considerations.
@@ -21,4 +21,4 @@
   <xi:include href="format/qcow.xml" />
   <xi:include href="format/qcow2.xml" />
   <xi:include href="format/other.xml" />
-</section>
+</chapter>
