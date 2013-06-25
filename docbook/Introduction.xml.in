@@ -156,8 +156,8 @@
         <example>
           <title>An example of examples</title>
           <screen>[~/vdg] 18:38:17  (master)
-          $ cat /etc/redhat-release
-          Fedora release 19 (Schrödinger’s Cat)</screen>
+$ cat /etc/redhat-release
+Fedora release 19 (Schrödinger’s Cat)</screen>
         </example>
       </listitem>
     </varlistentry>
