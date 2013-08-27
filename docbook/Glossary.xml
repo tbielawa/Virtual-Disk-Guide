@@ -8,7 +8,7 @@
   <glossentry xml:id="gloss-AES-encryption">
     <glossterm>AES encryption</glossterm>
     <glossdef>
-      <para><firstterm>Advanced Encryption Standard</firstterm> - very fast and secure; the de facto standard for symmetric encryption.</para>
+      <para><firstterm>Advanced Encryption Standard</firstterm> - very fast and secure; the de-facto standard for symmetric encryption.</para>
       <glossseealso otherterm="gloss-zlib-compression" />
     </glossdef>
   </glossentry>
@@ -75,7 +75,7 @@
   <glossentry xml:id="gloss-Image">
     <glossterm>Image</glossterm>
     <glossdef>
-      <para>(1) A file which virtualization software can use as a hard disk, similar to a snapshot.</para>
+      <para>A file which virtualization software can use as a hard disk, similar to a snapshot.</para>
     </glossdef>
   </glossentry>
 
@@ -94,6 +94,7 @@
       <glossseealso otherterm="gloss-kpartx" />
       <glossseealso otherterm="gloss-GParted" />
       <glossseealso otherterm="gloss-Partition" />
+      <glossseealso otherterm="gloss-meta-data" />
     </glossdef>
   </glossentry>
 
@@ -124,6 +125,7 @@
       <para>The simplest type of virtual disk format, as the file contains no extra meta-data about itself, often usable without requiring special software.</para>
       <glossseealso otherterm="gloss-QCOW" />
       <glossseealso otherterm="gloss-QCOW2" />
+      <glossseealso otherterm="gloss-meta-data" />
     </glossdef>
   </glossentry>
 
