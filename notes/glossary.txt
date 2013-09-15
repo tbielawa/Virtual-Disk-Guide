@@ -1,19 +1,19 @@
 AES encryption|<firstterm>Advanced Encryption Standard</firstterm> - very fast and secure; the de facto standard for symmetric encryption.|zlib compression
-ASCII||
+ASCII|American Standard Code for Information Interchange. It is a 7-bit code. ASCII encodes characters as you would enter them into a computer (like this book).|
 Backing image|A (typically) read-only disk image which can be used as a starting point for new read-write images.|Snapshot
 Base-image|Placeholder.|Backing image,Snapshot
 block||
 block special||
 Caret notation||
-cat||
+cat|A utility program which concatenates files and print them the standard output.|
 Control character||
 cylinder||
-dd||
+dd|A utility program which can copy files, converting and formatting them according to the options given by the user.|
 Device map|Software which creates devices from partition tables which you can interact with.|Partition table,kpartx,GParted,Partition
 dev null||
 dev zero||
-fdisk||
-file||
+fdisk|A utility program which manipulates disk partition tables.|Partition,Partition table
+file|A utility program which is used to determine file types|
 Filesystem||
 fuse||
 GParted|A graphical application used for manipulating (creating, resizing, moving, copying) the filesystems of partitions.|
@@ -24,34 +24,34 @@ Hypervisor|Software blabla.|
 IDE||
 Image|A file which virtualization software can use as a hard disk, similar to a snapshot.|Snapshot
 kpartx|Reads partition tables on a specified device and create device maps over partition segments detected.|Partition
-lookback device||
-loop device||
-losetup||
+Lookback device||
+Loop device||
+losetup|A utility program which sets up and controls loop devices.|Loop device,Loopback device
 ls|A command which lists directory contents and file attributes.|
 LVM||
-MBR||
+MBR|The <firstterm>Master Boot Record</firstterm> holds the information on how the logical partitions, containing file systems, are organized on a storage device.|Partition,Partition table
 meta-data|Data which describes other data; e.g., virtual disk configuration parameters.|
-mount||unmount
+mount|A utility program which attaches a filesystem to a directory tree.|umount,Filesystem
 NUL||
 offset||
 OS|Short for <firstterm>Operating System</firstterm>.|
-parted||
+parted|Utility program which manipulates storage partitions|fdisk
 Partition|In storage devices, the definition of storage allocation on a device; the capacity of that region is less than or equal to that of the backing storage device; multiple partitions may exist.|
 Partition table|Meta-data stored on a storage volume which describes the partition layout, i.e., begin/end locations, types, and other properties.|Device map,kpartx,GParted,Partition,meta-data
 QCOW2|<firstterm>QEMY Copy On Write</firstterm> image format (version 2); improves v1 with few features: snapshots, performance tuning options.|
 QCOW|<firstterm>QEMU Copy On Write</firstterm> image format (version 1); supports sparse files, backing files, and encryption.|
 qemu-img|Virtual disk manipulation tool bundled with the QEMU (Quick Emulator) software collection.|
 RAW|The simplest type of virtual disk format, as the file contains no extra meta-data about itself, often usable without requiring special software.|QCOW,QCOW2,meta-data
-resize2fs||
+resize2fs|Utility program which can resize ext2, ext3, or ext4 file systems.|
 SATA||
 sector||
 Snapshot|An virtual disk feature representing a moment in time, not represented as a disk image.|Backing image,Base-image
 socket||
-stat||
+stat||Utility program which displays file or file system status.|file
 superuser||
 symlink||
 UNIX||
-unmount||mount
+umount|Utility program which detaches the file system(s) mentioned from the file hierarchy.|mount
 virsh||
 x86 boot sector||
 zlib compression|general-purpose, patent-free, lossless data compression library.|AES encryption

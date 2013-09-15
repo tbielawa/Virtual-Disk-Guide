@@ -16,7 +16,7 @@
   <glossentry xml:id="gloss-ASCII">
     <glossterm>ASCII</glossterm>
     <glossdef>
-      <para></para>
+      <para>American Standard Code for Information Interchange. It is a 7-bit code. ASCII encodes characters as you would enter them into a computer (like this book)</para>
     </glossdef>
   </glossentry>
 
@@ -61,7 +61,7 @@
   <glossentry xml:id="gloss-cat">
     <glossterm>cat</glossterm>
     <glossdef>
-      <para></para>
+      <para>A utility program which concatenates files and print them the standard output.</para>
     </glossdef>
   </glossentry>
 
@@ -82,7 +82,7 @@
   <glossentry xml:id="gloss-dd">
     <glossterm>dd</glossterm>
     <glossdef>
-      <para></para>
+      <para>A utility program which can copy files, converting and formatting them according to the options given by the user.</para>
     </glossdef>
   </glossentry>
 
@@ -114,14 +114,16 @@
   <glossentry xml:id="gloss-fdisk">
     <glossterm>fdisk</glossterm>
     <glossdef>
-      <para></para>
+      <para>A utility program which manipulates disk partition tables.</para>
+      <glossseealso otherterm="gloss-Partition" />
+      <glossseealso otherterm="gloss-Partition-table" />
     </glossdef>
   </glossentry>
 
   <glossentry xml:id="gloss-file">
     <glossterm>file</glossterm>
     <glossdef>
-      <para></para>
+      <para>A utility program which is used to determine file types</para>
     </glossdef>
   </glossentry>
 
@@ -188,6 +190,7 @@
     <glossterm>Image</glossterm>
     <glossdef>
       <para>A file which virtualization software can use as a hard disk, similar to a snapshot.</para>
+      <glossseealso otherterm="gloss-Snapshot" />
     </glossdef>
   </glossentry>
 
@@ -199,15 +202,15 @@
     </glossdef>
   </glossentry>
 
-  <glossentry xml:id="gloss-lookback-device">
-    <glossterm>lookback device</glossterm>
+  <glossentry xml:id="gloss-Lookback-device">
+    <glossterm>Lookback device</glossterm>
     <glossdef>
       <para></para>
     </glossdef>
   </glossentry>
 
-  <glossentry xml:id="gloss-loop-device">
-    <glossterm>loop device</glossterm>
+  <glossentry xml:id="gloss-Loop-device">
+    <glossterm>Loop device</glossterm>
     <glossdef>
       <para></para>
     </glossdef>
@@ -216,7 +219,9 @@
   <glossentry xml:id="gloss-losetup">
     <glossterm>losetup</glossterm>
     <glossdef>
-      <para></para>
+      <para>A utility program which sets up and controls loop devices.</para>
+      <glossseealso otherterm="gloss-Loop-device" />
+      <glossseealso otherterm="gloss-Loopback-device" />
     </glossdef>
   </glossentry>
 
@@ -237,7 +242,9 @@
   <glossentry xml:id="gloss-MBR">
     <glossterm>MBR</glossterm>
     <glossdef>
-      <para></para>
+      <para>The <firstterm>Master Boot Record</firstterm> holds the information on how the logical partitions, containing file systems, are organized on a storage device.</para>
+      <glossseealso otherterm="gloss-Partition" />
+      <glossseealso otherterm="gloss-Partition-table" />
     </glossdef>
   </glossentry>
 
@@ -251,8 +258,9 @@
   <glossentry xml:id="gloss-mount">
     <glossterm>mount</glossterm>
     <glossdef>
-      <para></para>
-      <glossseealso otherterm="gloss-unmount" />
+      <para>A utility program which attaches a filesystem to a directory tree.</para>
+      <glossseealso otherterm="gloss-umount" />
+      <glossseealso otherterm="gloss-Filesystem" />
     </glossdef>
   </glossentry>
 
@@ -280,7 +288,8 @@
   <glossentry xml:id="gloss-parted">
     <glossterm>parted</glossterm>
     <glossdef>
-      <para></para>
+      <para>Utility program which manipulates storage partitions</para>
+      <glossseealso otherterm="gloss-fdisk" />
     </glossdef>
   </glossentry>
 
@@ -337,7 +346,7 @@
   <glossentry xml:id="gloss-resize2fs">
     <glossterm>resize2fs</glossterm>
     <glossdef>
-      <para></para>
+      <para>Utility program which can resize ext2, ext3, or ext4 file systems.</para>
     </glossdef>
   </glossentry>
 
@@ -375,6 +384,7 @@
     <glossterm>stat</glossterm>
     <glossdef>
       <para></para>
+      <glossseealso otherterm="gloss-Utility-program-which-displays-file-or-file-system-status." />
     </glossdef>
   </glossentry>
 
@@ -399,10 +409,10 @@
     </glossdef>
   </glossentry>
 
-  <glossentry xml:id="gloss-unmount">
-    <glossterm>unmount</glossterm>
+  <glossentry xml:id="gloss-umount">
+    <glossterm>umount</glossterm>
     <glossdef>
-      <para></para>
+      <para>Utility program which detaches the file system(s) mentioned from the file hierarchy.</para>
       <glossseealso otherterm="gloss-mount" />
     </glossdef>
   </glossentry>
@@ -428,8 +438,5 @@
       <glossseealso otherterm="gloss-AES-encryption" />
     </glossdef>
   </glossentry>
-
-
-
 
 </glossary>
