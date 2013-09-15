@@ -1,57 +1,57 @@
 AES encryption|<firstterm>Advanced Encryption Standard</firstterm> - very fast and secure; the de facto standard for symmetric encryption.|zlib compression
+ASCII||
 Backing image|A (typically) read-only disk image which can be used as a starting point for new read-write images.|Snapshot
 Base-image|Placeholder.|Backing image,Snapshot
-Device map|Software which creates devices from partition tables which you can interact with|Partition table,kpartx,GParted,Partition
-GParted|A graphical application used for manipulating (creating, resizing, moving, copying) the filesystems of partitions.|
-Guest OS|An operating system which is installed and ran on emulatd, virtual, or paravirtual hardware which is managed by hypervisor software on the Host OS.|Hypervisor,Host OS
-Host OS|The running system (server, OS) which provides resources and facilities for running several virtual Guest Operating Systems.|Guest OS
-Hypervisor|Software blabla.|
-Image|A file which virtualization software can use as a hard disk, similar to a snapshot.|
-OS|Short for <firstterm>Operating System</firstterm>.|
-Partition table|Meta-data stored on a storage volume which describes the partition layout, i.e., begin/end locations, types, and other properties.|Device map,kpartx,GParted,Partition,meta-data
-Partition|In storage devices, the definition of storage allocation on a device; the capacity of that region is less than or equal to that of the backing storage device; multiple partitions may exist.|
-QCOW2|<firstterm>QEMY Copy On Write</firstterm> image format (version 2); improves v1 with few features: snapshots, performance tuning options.|
-QCOW|<firstterm>QEMU Copy On Write</firstterm> image format (version 1); supports sparse files, backing files, and encryption.|
-RAW|The simplest type of virtual disk format, as the file contains no extra meta-data about itself, often usable without requiring special software.|QCOW,QCOW2,meta-data
-Snapshot|An virtual disk feature representing a moment in time, not represented as a disk image.|Backing image,Base-image
-kpartx|Reads partition tables on a specified device and create device maps over partition segments detected|Partition
-ls|A command which lists directory contents and file attributes.|
-meta-data|Data which describes other data; e.g., virtual disk configuration parameters.|
-qemu-img|Virtual disk manipulation tool bundled with the QEMU (Quick Emulator) software collection.|
-zlib compression|general-purpose, patent-free, lossless data compression library.|AES encryption
-virsh||
-fdisk||
-symlink||
-resize2fs||
-LVM||
-Filesystem
-UNIX||
-mount||unmount
-unmount||mount
-MBR||
-parted||
-SATA||
-IDE
-stat||
-file||
-dd||
 block||
 block special||
-/dev/zero||
-NUL||
-ASCII||
-Control character||
-cat||
 Caret notation||
-/dev/null||
-superuser||
-fuse||
-socket||
-x86 boot sector||
+cat||
+Control character||
 cylinder||
+dd||
+Device map|Software which creates devices from partition tables which you can interact with.|Partition table,kpartx,GParted,Partition
+/dev/null||
+/dev/zero||
+fdisk||
+file||
+Filesystem
+fuse||
+GParted|A graphical application used for manipulating (creating, resizing, moving, copying) the filesystems of partitions.|
+Guest OS|An operating system which is installed and ran on emulatd, virtual, or paravirtual hardware which is managed by hypervisor software on the Host OS.|Hypervisor,Host OS
 head||
-sector||
-loop device||
+Host OS|The running system (server, OS) which provides resources and facilities for running several virtual Guest Operating Systems.|Guest OS
+Hypervisor|Software blabla.|
+IDE
+Image|A file which virtualization software can use as a hard disk, similar to a snapshot.|
+kpartx|Reads partition tables on a specified device and create device maps over partition segments detected.|Partition
 lookback device||
+loop device||
 losetup||
+ls|A command which lists directory contents and file attributes.|
+LVM||
+MBR||
+meta-data|Data which describes other data; e.g., virtual disk configuration parameters.|
+mount||unmount
+NUL||
 offset||
+OS|Short for <firstterm>Operating System</firstterm>.|
+parted||
+Partition|In storage devices, the definition of storage allocation on a device; the capacity of that region is less than or equal to that of the backing storage device; multiple partitions may exist.|
+Partition table|Meta-data stored on a storage volume which describes the partition layout, i.e., begin/end locations, types, and other properties.|Device map,kpartx,GParted,Partition,meta-data
+QCOW2|<firstterm>QEMY Copy On Write</firstterm> image format (version 2); improves v1 with few features: snapshots, performance tuning options.|
+QCOW|<firstterm>QEMU Copy On Write</firstterm> image format (version 1); supports sparse files, backing files, and encryption.|
+qemu-img|Virtual disk manipulation tool bundled with the QEMU (Quick Emulator) software collection.|
+RAW|The simplest type of virtual disk format, as the file contains no extra meta-data about itself, often usable without requiring special software.|QCOW,QCOW2,meta-data
+resize2fs||
+SATA||
+sector||
+Snapshot|An virtual disk feature representing a moment in time, not represented as a disk image.|Backing image,Base-image
+socket||
+stat||
+superuser||
+symlink||
+UNIX||
+unmount||mount
+virsh||
+x86 boot sector||
+zlib compression|general-purpose, patent-free, lossless data compression library.|AES encryption
