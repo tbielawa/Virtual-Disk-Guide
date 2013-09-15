@@ -1,12 +1,179 @@
 <glossary xmlns="http://docbook.org/ns/docbook"
-         xmlns:xl="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xml:id="VDG-Glossary" version="5.0">
+          xmlns:xl="http://www.w3.org/1999/xlink"
+          xmlns:xi="http://www.w3.org/2001/XInclude"
+          xml:id="VDG-Glossary" version="5.0">
 
   <title>Glossary</title>
 
-  <para>
-    Glossary!
-  </para>
+  <glossentry xml:id="gloss-AES-encryption">
+    <glossterm>AES encryption</glossterm>
+    <glossdef>
+      <para><firstterm>Advanced Encryption Standard</firstterm> - very fast and secure; the de-facto standard for symmetric encryption.</para>
+      <glossseealso otherterm="gloss-zlib-compression" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Backing-image">
+    <glossterm>Backing image</glossterm>
+    <glossdef>
+      <para>A (typically) read-only disk image which can be used as a starting point for new read-write images.</para>
+      <glossseealso otherterm="gloss-Snapshot" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Base-image">
+    <glossterm>Base-image</glossterm>
+    <glossdef>
+      <para>Placeholder.</para>
+      <glossseealso otherterm="gloss-Backing-image" />
+      <glossseealso otherterm="gloss-Snapshot" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Device-map">
+    <glossterm>Device map</glossterm>
+    <glossdef>
+      <para>Software which creates devices from partition tables which you can interact with</para>
+      <glossseealso otherterm="gloss-Partition-table" />
+      <glossseealso otherterm="gloss-kpartx" />
+      <glossseealso otherterm="gloss-GParted" />
+      <glossseealso otherterm="gloss-Partition" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-GParted">
+    <glossterm>GParted</glossterm>
+    <glossdef>
+      <para>A graphical application used for manipulating (creating, resizing, moving, copying) the filesystems of partitions.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Guest-OS">
+    <glossterm>Guest OS</glossterm>
+    <glossdef>
+      <para>An operating system which is installed and ran on emulatd, virtual, or paravirtual hardware which is managed by hypervisor software on the Host OS.</para>
+      <glossseealso otherterm="gloss-Hypervisor" />
+      <glossseealso otherterm="gloss-Host-OS" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Host-OS">
+    <glossterm>Host OS</glossterm>
+    <glossdef>
+      <para>The running system (server, OS) which provides resources and facilities for running several virtual Guest Operating Systems.</para>
+      <glossseealso otherterm="gloss-Guest-OS" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Hypervisor">
+    <glossterm>Hypervisor</glossterm>
+    <glossdef>
+      <para>Software blabla.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Image">
+    <glossterm>Image</glossterm>
+    <glossdef>
+      <para>A file which virtualization software can use as a hard disk, similar to a snapshot.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-OS">
+    <glossterm>OS</glossterm>
+    <glossdef>
+      <para>Short for <firstterm>Operating System</firstterm>.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Partition-table">
+    <glossterm>Partition table</glossterm>
+    <glossdef>
+      <para>Meta-data stored on a storage volume which describes the partition layout, i.e., begin/end locations, types, and other properties.</para>
+      <glossseealso otherterm="gloss-Device-map" />
+      <glossseealso otherterm="gloss-kpartx" />
+      <glossseealso otherterm="gloss-GParted" />
+      <glossseealso otherterm="gloss-Partition" />
+      <glossseealso otherterm="gloss-meta-data" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Partition">
+    <glossterm>Partition</glossterm>
+    <glossdef>
+      <para>In storage devices, the definition of storage allocation on a device; the capacity of that region is less than or equal to that of the backing storage device; multiple partitions may exist.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-QCOW2">
+    <glossterm>QCOW2</glossterm>
+    <glossdef>
+      <para><firstterm>QEMY Copy On Write</firstterm> image format (version 2); improves v1 with few features: snapshots, performance tuning options.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-QCOW">
+    <glossterm>QCOW</glossterm>
+    <glossdef>
+      <para><firstterm>QEMU Copy On Write</firstterm> image format (version 1); supports sparse files, backing files, and encryption.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-RAW">
+    <glossterm>RAW</glossterm>
+    <glossdef>
+      <para>The simplest type of virtual disk format, as the file contains no extra meta-data about itself, often usable without requiring special software.</para>
+      <glossseealso otherterm="gloss-QCOW" />
+      <glossseealso otherterm="gloss-QCOW2" />
+      <glossseealso otherterm="gloss-meta-data" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Snapshot">
+    <glossterm>Snapshot</glossterm>
+    <glossdef>
+      <para>An virtual disk feature representing a moment in time, not represented as a disk image.</para>
+      <glossseealso otherterm="gloss-Backing-image" />
+      <glossseealso otherterm="gloss-Base-image" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-kpartx">
+    <glossterm>kpartx</glossterm>
+    <glossdef>
+      <para>Reads partition tables on a specified device and create device maps over partition segments detected</para>
+      <glossseealso otherterm="gloss-Partition" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-ls">
+    <glossterm>ls</glossterm>
+    <glossdef>
+      <para>A command which lists directory contents and file attributes.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-meta-data">
+    <glossterm>meta-data</glossterm>
+    <glossdef>
+      <para>Data which describes other data; e.g., virtual disk configuration parameters.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-qemu-img">
+    <glossterm>qemu-img</glossterm>
+    <glossdef>
+      <para>Virtual disk manipulation tool bundled with the QEMU (Quick Emulator) software collection.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-zlib-compression">
+    <glossterm>zlib compression</glossterm>
+    <glossdef>
+      <para>general-purpose, patent-free, lossless data compression library.</para>
+      <glossseealso otherterm="gloss-AES-encryption" />
+    </glossdef>
+  </glossentry>
+
 
 </glossary>
