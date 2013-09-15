@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 def see_alsos(alsos):
     ''' Expects a list of terms to create <glossseealso/> elements for '''
     result = '\n'

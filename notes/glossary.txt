@@ -10,19 +10,19 @@ Control character||
 cylinder||
 dd||
 Device map|Software which creates devices from partition tables which you can interact with.|Partition table,kpartx,GParted,Partition
-/dev/null||
-/dev/zero||
+dev null||
+dev zero||
 fdisk||
 file||
-Filesystem
+Filesystem||
 fuse||
 GParted|A graphical application used for manipulating (creating, resizing, moving, copying) the filesystems of partitions.|
-Guest OS|An operating system which is installed and ran on emulatd, virtual, or paravirtual hardware which is managed by hypervisor software on the Host OS.|Hypervisor,Host OS
+Guest OS|An operating system which is installed and ran on emulatd, virtual, or paravirtual hardware which is managed by hypervisor software on the Host OS.|Hypervisor,Host OS|
 head||
 Host OS|The running system (server, OS) which provides resources and facilities for running several virtual Guest Operating Systems.|Guest OS
 Hypervisor|Software blabla.|
-IDE
-Image|A file which virtualization software can use as a hard disk, similar to a snapshot.|
+IDE||
+Image|A file which virtualization software can use as a hard disk, similar to a snapshot.|Snapshot
 kpartx|Reads partition tables on a specified device and create device maps over partition segments detected.|Partition
 lookback device||
 loop device||

@@ -8,8 +8,15 @@
   <glossentry xml:id="gloss-AES-encryption">
     <glossterm>AES encryption</glossterm>
     <glossdef>
-      <para><firstterm>Advanced Encryption Standard</firstterm> - very fast and secure; the de-facto standard for symmetric encryption.</para>
+      <para><firstterm>Advanced Encryption Standard</firstterm> - very fast and secure; the de facto standard for symmetric encryption.</para>
       <glossseealso otherterm="gloss-zlib-compression" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-ASCII">
+    <glossterm>ASCII</glossterm>
+    <glossdef>
+      <para></para>
     </glossdef>
   </glossentry>
 
@@ -30,14 +37,105 @@
     </glossdef>
   </glossentry>
 
+  <glossentry xml:id="gloss-block">
+    <glossterm>block</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-block-special">
+    <glossterm>block special</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Caret-notation">
+    <glossterm>Caret notation</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-cat">
+    <glossterm>cat</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Control-character">
+    <glossterm>Control character</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-cylinder">
+    <glossterm>cylinder</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-dd">
+    <glossterm>dd</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
   <glossentry xml:id="gloss-Device-map">
     <glossterm>Device map</glossterm>
     <glossdef>
-      <para>Software which creates devices from partition tables which you can interact with</para>
+      <para>Software which creates devices from partition tables which you can interact with.</para>
       <glossseealso otherterm="gloss-Partition-table" />
       <glossseealso otherterm="gloss-kpartx" />
       <glossseealso otherterm="gloss-GParted" />
       <glossseealso otherterm="gloss-Partition" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-dev-null">
+    <glossterm>dev null</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-dev-zero">
+    <glossterm>dev zero</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-fdisk">
+    <glossterm>fdisk</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-file">
+    <glossterm>file</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Filesystem">
+    <glossterm>Filesystem</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-fuse">
+    <glossterm>fuse</glossterm>
+    <glossdef>
+      <para></para>
     </glossdef>
   </glossentry>
 
@@ -57,6 +155,13 @@
     </glossdef>
   </glossentry>
 
+  <glossentry xml:id="gloss-head">
+    <glossterm>head</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
   <glossentry xml:id="gloss-Host-OS">
     <glossterm>Host OS</glossterm>
     <glossdef>
@@ -72,6 +177,13 @@
     </glossdef>
   </glossentry>
 
+  <glossentry xml:id="gloss-IDE">
+    <glossterm>IDE</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
   <glossentry xml:id="gloss-Image">
     <glossterm>Image</glossterm>
     <glossdef>
@@ -79,10 +191,103 @@
     </glossdef>
   </glossentry>
 
+  <glossentry xml:id="gloss-kpartx">
+    <glossterm>kpartx</glossterm>
+    <glossdef>
+      <para>Reads partition tables on a specified device and create device maps over partition segments detected.</para>
+      <glossseealso otherterm="gloss-Partition" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-lookback-device">
+    <glossterm>lookback device</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-loop-device">
+    <glossterm>loop device</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-losetup">
+    <glossterm>losetup</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-ls">
+    <glossterm>ls</glossterm>
+    <glossdef>
+      <para>A command which lists directory contents and file attributes.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-LVM">
+    <glossterm>LVM</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-MBR">
+    <glossterm>MBR</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-meta-data">
+    <glossterm>meta-data</glossterm>
+    <glossdef>
+      <para>Data which describes other data; e.g., virtual disk configuration parameters.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-mount">
+    <glossterm>mount</glossterm>
+    <glossdef>
+      <para></para>
+      <glossseealso otherterm="gloss-unmount" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-NUL">
+    <glossterm>NUL</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-offset">
+    <glossterm>offset</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
   <glossentry xml:id="gloss-OS">
     <glossterm>OS</glossterm>
     <glossdef>
       <para>Short for <firstterm>Operating System</firstterm>.</para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-parted">
+    <glossterm>parted</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-Partition">
+    <glossterm>Partition</glossterm>
+    <glossdef>
+      <para>In storage devices, the definition of storage allocation on a device; the capacity of that region is less than or equal to that of the backing storage device; multiple partitions may exist.</para>
     </glossdef>
   </glossentry>
 
@@ -95,13 +300,6 @@
       <glossseealso otherterm="gloss-GParted" />
       <glossseealso otherterm="gloss-Partition" />
       <glossseealso otherterm="gloss-meta-data" />
-    </glossdef>
-  </glossentry>
-
-  <glossentry xml:id="gloss-Partition">
-    <glossterm>Partition</glossterm>
-    <glossdef>
-      <para>In storage devices, the definition of storage allocation on a device; the capacity of that region is less than or equal to that of the backing storage device; multiple partitions may exist.</para>
     </glossdef>
   </glossentry>
 
@@ -119,6 +317,13 @@
     </glossdef>
   </glossentry>
 
+  <glossentry xml:id="gloss-qemu-img">
+    <glossterm>qemu-img</glossterm>
+    <glossdef>
+      <para>Virtual disk manipulation tool bundled with the QEMU (Quick Emulator) software collection.</para>
+    </glossdef>
+  </glossentry>
+
   <glossentry xml:id="gloss-RAW">
     <glossterm>RAW</glossterm>
     <glossdef>
@@ -126,6 +331,27 @@
       <glossseealso otherterm="gloss-QCOW" />
       <glossseealso otherterm="gloss-QCOW2" />
       <glossseealso otherterm="gloss-meta-data" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-resize2fs">
+    <glossterm>resize2fs</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-SATA">
+    <glossterm>SATA</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-sector">
+    <glossterm>sector</glossterm>
+    <glossdef>
+      <para></para>
     </glossdef>
   </glossentry>
 
@@ -138,32 +364,60 @@
     </glossdef>
   </glossentry>
 
-  <glossentry xml:id="gloss-kpartx">
-    <glossterm>kpartx</glossterm>
+  <glossentry xml:id="gloss-socket">
+    <glossterm>socket</glossterm>
     <glossdef>
-      <para>Reads partition tables on a specified device and create device maps over partition segments detected</para>
-      <glossseealso otherterm="gloss-Partition" />
+      <para></para>
     </glossdef>
   </glossentry>
 
-  <glossentry xml:id="gloss-ls">
-    <glossterm>ls</glossterm>
+  <glossentry xml:id="gloss-stat">
+    <glossterm>stat</glossterm>
     <glossdef>
-      <para>A command which lists directory contents and file attributes.</para>
+      <para></para>
     </glossdef>
   </glossentry>
 
-  <glossentry xml:id="gloss-meta-data">
-    <glossterm>meta-data</glossterm>
+  <glossentry xml:id="gloss-superuser">
+    <glossterm>superuser</glossterm>
     <glossdef>
-      <para>Data which describes other data; e.g., virtual disk configuration parameters.</para>
+      <para></para>
     </glossdef>
   </glossentry>
 
-  <glossentry xml:id="gloss-qemu-img">
-    <glossterm>qemu-img</glossterm>
+  <glossentry xml:id="gloss-symlink">
+    <glossterm>symlink</glossterm>
     <glossdef>
-      <para>Virtual disk manipulation tool bundled with the QEMU (Quick Emulator) software collection.</para>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-UNIX">
+    <glossterm>UNIX</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-unmount">
+    <glossterm>unmount</glossterm>
+    <glossdef>
+      <para></para>
+      <glossseealso otherterm="gloss-mount" />
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-virsh">
+    <glossterm>virsh</glossterm>
+    <glossdef>
+      <para></para>
+    </glossdef>
+  </glossentry>
+
+  <glossentry xml:id="gloss-x86-boot-sector">
+    <glossterm>x86 boot sector</glossterm>
+    <glossdef>
+      <para></para>
     </glossdef>
   </glossentry>
 
@@ -174,6 +428,8 @@
       <glossseealso otherterm="gloss-AES-encryption" />
     </glossdef>
   </glossentry>
+
+
 
 
 </glossary>
