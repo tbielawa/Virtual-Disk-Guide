@@ -20,17 +20,11 @@
 
     <para>
       In this part we'll add 2GiB to a disk image I created of a 1GiB
-      USB thumb drive
-
-      <footnote>
-        <para>
-          See <xref linkend="VDG-Cookbook-Cloning-A-Physical-Disk"/> for
-          instructions on how to do this yourself.
-        </para>
-      </footnote>
-
-      . The thumb drive has two roughly equal sized partitions, both
-      are <systemitem class="filesystem">EXT4</systemitem>.
+      USB thumb drive <footnote><para>See <xref
+      linkend="VDG-Cookbook-Cloning-A-Physical-Disk"/> for
+      instructions on how to do this yourself.</para></footnote> The
+      thumb drive has two roughly equal sized partitions, both are
+      <systemitem class="filesystem">EXT4</systemitem>.
     </para>
 
     <para>
@@ -90,11 +84,13 @@
       virtual interface used for routing within a host. <systemitem
       class="domainname">localhost</systemitem> is the standard
       hostname given to the loopback address <systemitem
-      class="ipaddress">127.0.0.1</systemitem>. See <link
-      xl:href="http://tools.ietf.org/html/rfc1700">rfc1700</link> for
-      additional information.</para></footnote> <footnote><para> We'll
-      revisit loop devices in <xref linkend="VDG-Concepts"
-      /></para></footnote>
+      class="ipaddress">127.0.0.1</systemitem>. See rfc1700
+      <citetitle>Assigned Numbers</citetitle> for additional
+      information (<link
+      xl:href="http://tools.ietf.org/html/rfc1700"/>).</para></footnote>
+
+      <footnote><para>We'll revisit loop devices in <xref
+      linkend="VDG-Concepts" /></para></footnote>
 
       and device maps to the partitions. The <option>-a</option>
       option means we're adding partition mappings and the

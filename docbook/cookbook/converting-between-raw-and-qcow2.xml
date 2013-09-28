@@ -22,7 +22,7 @@
       encryption<footnote><para>For more information on AES
       encryption, see FIPS PUB 197: Advanced Encryption Standard -
       <link
-      xl:href="http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf"></link></para></footnote>.
+      xl:href="http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf"/></para></footnote>.
 
       <remark>TODO: Explain how QCOW2 only uses as much space as there
       is data in the image. Also talk about sparse file

@@ -45,9 +45,12 @@
         <row>
           <entry align='left'>440B</entry>
           <entry align='left'>86%</entry>
-          <entry align='left'>Bootable Code (such as <link
-          xl:href="http://www.gnu.org/software/grub/">GRUB</link>/<link
-          xl:href="http://lilo.alioth.debian.org/">LILO</link>)</entry>
+          <entry align='left'>Bootable Code (such as GRUB
+
+	  <footnote><para>The Grand Unified Boot Loader (GRUB): <link
+	  xl:href="http://www.gnu.org/software/grub/"/></para></footnote>/LILO
+	  <footnote><para>Linux Loader (LILO): <link
+	  xl:href="http://lilo.alioth.debian.org/"/></para></footnote>)</entry>
         </row>
         <row>
           <entry align='left'>004B</entry>
