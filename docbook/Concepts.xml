@@ -66,7 +66,7 @@
     Drives (ATA-1)</citetitle>
 
     <footnote><para><citetitle>ANSI
-    X3.221-199x Working Draft</citetitle> - <link
+    X3.221-199x Working Draft</citetitle>: <link
     xl:href="http://www.t10.org/t13/project/d0791r4c-ATA-1.pdf"/></para></footnote>
 
     <footnote><para>Technical Committee (T13) Homepage: <link
@@ -89,12 +89,11 @@
   </variablelist>
 
   <para>
-    Storage units need to be clearly defined. Luckily some very
-    smart people
-
-    <footnote><para><citetitle>IEC 60027-2, Second edition, 2000-11,
-    Letter symbols to be used in electrical technology</citetitle> -
-    Part 2: Telecommunications and electronics: <link
+    Storage units need to be clearly defined. Luckily some very smart
+    people<footnote><para><citetitle>IEC 60027-2, Second edition,
+    2000-11, Letter symbols to be used in electrical
+    technology</citetitle> - Part 2: Telecommunications and
+    electronics: <link
     xl:href="http://webstore.iec.ch/webstore/webstore.nsf/artnum/034558"/>
     </para></footnote>
 

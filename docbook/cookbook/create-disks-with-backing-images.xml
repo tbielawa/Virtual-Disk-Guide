@@ -20,7 +20,7 @@
   <para>
     Snapshots were an option, but how they worked wasn't documented
     very well at the time. I went with backing images instead, as they
-    worked perfectly for what I needed to them do. I could work
+    worked perfectly for what I needed them to do. I could work
     iteratively and <firstterm>commit</firstterm> changes in the COW
     image
 

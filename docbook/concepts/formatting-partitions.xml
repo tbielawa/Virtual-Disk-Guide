@@ -93,9 +93,9 @@
 	<para>
 	  Partitioning tools historically left the space between the
 	  MBR and the second cylinder empty. Modern boot loaders
-	  (NTLDR<footnote><para><link
+	  (NTLDR<footnote><para>NT Loader (NTLDR): <link
 	  xl:href="http://en.wikipedia.org/wiki/NTLDR"/></para></footnote>,
-	  GRUB<footnote><para><link
+	  GRUB<footnote><para>The Grand Unified Bootloader (GRUB): <link
 	  xl:href="http://www.gnu.org/software/grub/"/></para></footnote>,
 	  etc) use this space to store <emphasis>additional</emphasis>
 	  code and data necessary to boot the system

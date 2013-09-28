@@ -14,14 +14,14 @@
       convert the image into the QCOW2 format which uses
       zlib<footnote><para>From the zlib homepage (<link
       xl:href="http://zlib.net/"/>): zlib is designed to be a free,
-      general-purpose, legally unencumbered -- that is, not covered by
-      any patents -- lossless data-compression library for use on
-      virtually any computer hardware and operating
+      general-purpose, legally unencumbered &#x2014; that is, not
+      covered by any patents &#x2014; lossless data-compression
+      library for use on virtually any computer hardware and operating
       system.</para></footnote> compression and optionally allows your
       disks to be secured with 128 bit AES
       encryption<footnote><para>For more information on AES
-      encryption, see FIPS PUB 197: Advanced Encryption Standard -
-      <link
+      encryption, see <citetitle>FIPS PUB 197: Advanced Encryption
+      Standard</citetitle> - <link
       xl:href="http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf"/></para></footnote>.
 
       <remark>TODO: Explain how QCOW2 only uses as much space as there
