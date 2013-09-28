@@ -38,7 +38,7 @@ install_stylesheets() {
 }
 
 install_dblatex_hack() {
-
+    :
 }
 
 

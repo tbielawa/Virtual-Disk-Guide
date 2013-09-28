@@ -151,7 +151,7 @@
 
 
   <section xml:id="VDG-Concepts-Creation">
-    <title>Learning by doing (Creating a 1GiB virtual disk from scratch)</title>
+    <title>Creating a 1GiB virtual disk from scratch</title>
 
     <xi:include href="concepts/background-on-the-dd-command.xml"/>
     <xi:include href="concepts/running-dd.xml"/>
