@@ -183,7 +183,7 @@
     <para>
       Right click the second partition, <filename
       class="partition">loop0p2</filename>, and select the
-      <guimenuitem>Resize/Move</guimenuitem> option:
+      <emphasis>Resize/Move</emphasis> option:
     </para>
 
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize02">
@@ -203,11 +203,11 @@
     <para>
       We're not going to resize the second partition. We just want to
       make room for the first partition to expand into. Enter
-      <literal>1024</literal> into the <guilabel>Free space preceding
-      (MiB)</guilabel> box. That will move this partition to the right
+      <literal>1024</literal> into the <emphasis>Free space preceding
+      (MiB)</emphasis> box. That will move this partition to the right
       far enough to leave the first partition enough room to expand to
-      1024 MiB. Also, in the <guilabel>Align to</guilabel> drop-down
-      menu select <guimenuitem>Cylinder</guimenuitem>
+      1024 MiB. Also, in the <emphasis>Align to</emphasis> drop-down
+      menu select <emphasis>Cylinder</emphasis>
 
       <footnote>
         <para>
@@ -250,12 +250,12 @@
 
     <para>
       Now right click the first partition and select
-      <guimenuitem>Resize/Move</guimenuitem> like we did with the second
+      <emphasis>Resize/Move</emphasis> like we did with the second
       partition. We'll make the first partition use the free space
-      preceding the second partition by setting the <guilabel>Free space
-      following (MiB)</guilabel> input box to
-      <literal>0</literal>. Again, in the <guilabel>Align to</guilabel>
-      drop-down menu select <guimenuitem>Cylinder</guimenuitem>:
+      preceding the second partition by setting the <emphasis>Free space
+      following (MiB)</emphasis> input box to
+      <literal>0</literal>. Again, in the <emphasis>Align to</emphasis>
+      drop-down menu select <emphasis>Cylinder</emphasis>:
     </para>
 
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize05">
@@ -272,7 +272,7 @@
 
     <para>
       There is a summary of the two pending actions below the partition
-      table. Click the Green Check mark button to apply the changes:
+      table. Click the green check mark button to apply the changes:
     </para>
 
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize06">
@@ -338,7 +338,7 @@
     </figure>
 
     <para>
-      All done! Click Close to return to the main
+      All done! Click <emphasis>Close</emphasis> to return to the main
       <application>GParted</application> screen:
     </para>
 
