@@ -21,7 +21,7 @@
 
     <listitem>
       <para>
-        Copy-on-write support, where the image only represents changes made to an underlying disk image
+        Copy-on-write support via <firstterm>backing images</firstterm>, where the image only represents changes made to an original separate disk image
       </para>
     </listitem>
 

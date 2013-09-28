@@ -7,7 +7,7 @@
 
   <para>
     In addition to the formats we've already reviewed, QEMU has
-    varrying levels of support for several other disk image
+    varying levels of support for several other disk image
     formats. See the documentation<footnote><para>QEMU User Docs: 3.6.6 Disk image
     file formats - <link
     xl:href="http://qemu.weilnetz.de/qemu-doc.html#disk_005fimages_005fformats"
