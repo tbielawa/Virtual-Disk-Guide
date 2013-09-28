@@ -47,13 +47,13 @@
       <listitem>
         <para>
           Shifted the the second partition 1024MiB right into the new
-          space with <application>GParted</application>
+          space with <command>gparted</command>
         </para>
       </listitem>
 
       <listitem>
         <para>
-          Enlarged the first partition by about 1GiB with <application>GParted</application>
+          Enlarged the first partition by about 1GiB with <command>gparted</command>
         </para>
       </listitem>
 
@@ -169,7 +169,7 @@
     <!-- #################### BEGIN GPARTED SCREENSHOTS #################### -->
 
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize01.png">
-      <title>Welcome to <application>GParted</application></title>
+      <title>Welcome to <command>gparted</command></title>
       <mediaobject>
         <imageobject audience="html">
           <imagedata fileref="./images/resize/resize01.png" />
@@ -232,7 +232,7 @@
     </figure>
 
     <para>
-      <application>GParted</application> will now show 1 operation
+      <command>gparted</command> will now show 1 operation
       pending:
     </para>
 
@@ -339,11 +339,11 @@
 
     <para>
       All done! Click <emphasis>Close</emphasis> to return to the main
-      <application>GParted</application> screen:
+      <command>gparted</command> screen:
     </para>
 
     <figure xml:id="VDG-Cookbook-Resize-Image-figure-resize10">
-      <title><application>GParted</application> has resized our partitions</title>
+      <title><command>gparted</command> has resized our partitions</title>
       <mediaobject>
         <imageobject audience="html">
           <imagedata contentwidth="435pt" fileref="./images/resize/resize10.png" />
