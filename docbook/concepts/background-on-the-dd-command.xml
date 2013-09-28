@@ -66,19 +66,15 @@
 
   <para>
     <keycode>NUL</keycode> being a control character
-    <footnote><para><link
-    xl:href="http://en.wikipedia.org/wiki/Control_code">Control
-    Characters</link> on Wikipedia</para></footnote> means it's a
-    non-printing character (it doesn't represent a written symbol), so
-    if you want to identify it you can use <command>cat</command> like
-    this to print 5 <keycode>NUL</keycode> characters in Caret
-    Notation
+    <footnote><para>Wikipedia.org - Control Characters: <link
+    xl:href="http://en.wikipedia.org/wiki/Control_code"/></para></footnote>
+    means it's a non-printing character (it doesn't represent a
+    written symbol), so if you want to identify it you can use
+    <command>cat</command> like this to print 5 <keycode>NUL</keycode>
+    characters in Caret Notation
 
-    <footnote><para><link
-    xl:href="http://en.wikipedia.org/wiki/Caret_notation">Caret
-    Notation</link> on Wikipedia</para></footnote>
-
-    :
+    <footnote><para>Wikipedia.org - Caret Notation: <link
+    xl:href="http://en.wikipedia.org/wiki/Caret_notation"/></para></footnote>:
   </para>
 
   <screen><xi:include href="../examples/concepts-background-on-dd01" parse="text"/></screen>

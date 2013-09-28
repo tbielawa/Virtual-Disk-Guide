@@ -11,12 +11,9 @@
     (geometry). The second system for addressing blocks (LBA) has been
     an option in almost every disk drive since 1996
 
-    <footnote><para>
-      <link
-          xl:href="http://en.wikipedia.org/wiki/Logical_block_addressing">Wikipedia:
-      Logical Block Addressing</link>
-    </para></footnote>
-    .
+    <footnote><para>Wikipedia.org - Logical Block Addressing: <link
+    xl:href="http://en.wikipedia.org/wiki/Logical_block_addressing#Enhanced_BIOS"/>
+    </para></footnote>.
   </para>
 
   <note>

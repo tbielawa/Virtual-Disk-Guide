@@ -93,23 +93,21 @@
 	<para>
 	  Partitioning tools historically left the space between the
 	  MBR and the second cylinder empty. Modern boot loaders
-	  (<link
-	  xl:href="http://en.wikipedia.org/wiki/NTLDR">NTLDR</link>,
-	  <link
-	  xl:href="http://www.gnu.org/software/grub/">GRUB</link>,
+	  (NTLDR<footnote><para><link
+	  xl:href="http://en.wikipedia.org/wiki/NTLDR"/></para></footnote>,
+	  GRUB<footnote><para><link
+	  xl:href="http://www.gnu.org/software/grub/"/></para></footnote>,
 	  etc) use this space to store <emphasis>additional</emphasis>
 	  code and data necessary to boot the system
 
 	  <footnote><para> GRUB: BIOS Installation: <link
-	  xl:href="http://www.gnu.org/software/grub/manual/grub.html#BIOS-installation">http://www.gnu.org/software/grub/manual/grub.html#BIOS-installation</link>
+	  xl:href="http://www.gnu.org/software/grub/manual/grub.html#BIOS-installation"/>
 	  </para></footnote>
 
-	  <footnote><para> Simon Kitching: Booting Linux on x86 using
+	  <footnote><para>Simon Kitching: Booting Linux on x86 using
 	  Grub2: <link
-	  xl:href="http://moi.vonos.net/linux/Booting_Linux_on_x86_with_Grub2/#installing-grub">http://moi.vonos.net/linux/Booting_Linux_on_x86_with_Grub2/#installing-grub</link>
-	  </para></footnote>
-
-	  .
+	  xl:href="http://moi.vonos.net/linux/Booting_Linux_on_x86_with_Grub2/#installing-grub"/>
+	  </para></footnote>.
 	</para>
 
 	<para>
