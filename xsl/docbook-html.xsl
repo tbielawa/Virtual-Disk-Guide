@@ -2,10 +2,17 @@
 <xsl:stylesheet  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  version="1.0">
   <xsl:import href="/home/tbielawa/opt/docbook/stylesheets/html/docbook.xsl"/>
+
+  <!-- output styling/format -->
+  <xsl:param name="html.stylesheet">./lnx-docbook-stylesheet.css</xsl:param>
+  <xsl:template name="user.head.content">
+    <xsl:variable name="codefile" select="document('js/vdg.js',/)"/>
+    <xsl:copy-of select="$codefile/html/node()"/>
+  </xsl:template>
+
   <xsl:output method="html" indent="yes"/>
   <xsl:param name="admon.graphics">1</xsl:param>
   <xsl:param name="draft.mode">yes</xsl:param>
-  <xsl:param name="html.stylesheet">./lnx-docbook-stylesheet.css</xsl:param>
   <xsl:param name="make.year.ranges">1</xsl:param>
   <xsl:param name="section.autolabel">1</xsl:param>
   <xsl:param name="section.label.includes.component.label">1</xsl:param>

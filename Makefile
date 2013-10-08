@@ -113,9 +113,11 @@ timestamp: docbook/Introduction.xml
 docdir:
 	mkdir -p $(DEST)
 	@ln -s ../css/lnx-docbook-stylesheet.css $(DEST)/lnx-docbook-stylesheet.css || true
+	@ln -s ../js/vdg.js $(DEST)/vdg.js || true
 	@ln -s ../images $(DEST)/images || true
 	mkdir -p $(CHUNKDIR)
 	@ln -s ../css/lnx-docbook-stylesheet.css $(CHUNKDIR)/lnx-docbook-stylesheet.css || true
+	@ln -s ../js/vdg.js $(CHUNKDIR)/vdg.js || true
 	@ln -s ../images $(CHUNKDIR)/images || true
 
 chunked:
