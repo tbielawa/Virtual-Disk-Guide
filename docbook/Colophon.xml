@@ -72,6 +72,16 @@
     Linux</systemitem> releases.
   </para>
 
+  <para>
+    The single-page HTML version of this
+    book<footnote><para>Single-page HTML version of the Virtual Disk
+    Guide: <link
+    xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html"/></para></footnote>
+    uses the Twitter Bootstrap <footnote><para>Twitter Bootstrap:
+    <link xl:href="http://getbootstrap.com/"/></para></footnote>
+    stylesheet.
+  </para>
+
   <!-- TODO: add attribution for GIMP and Inkscape -->
 
   <para>
