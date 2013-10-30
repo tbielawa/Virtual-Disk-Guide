@@ -223,6 +223,7 @@ textarea {
 
 body {
   margin: 0;
+  margin-top: 40px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -6164,4 +6165,12 @@ a.badge:focus {
 
 .affix {
   position: fixed;
+}
+
+.remark {
+  opacity: 0.5;
+}
+
+.remark:hover {
+  opacity: 1;
 }
