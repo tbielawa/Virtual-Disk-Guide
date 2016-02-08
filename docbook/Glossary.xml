@@ -380,13 +380,13 @@
     </glossdef>
   </glossentry>
 
-  <glossentry xml:id="gloss-stat">
-    <glossterm>stat</glossterm>
-    <glossdef>
-      <para></para>
-      <glossseealso otherterm="gloss-Utility-program-which-displays-file-or-file-system-status." />
-    </glossdef>
-  </glossentry>
+  <!-- <glossentry xml:id="gloss-stat"> -->
+  <!--   <glossterm>stat</glossterm> -->
+  <!--   <glossdef> -->
+  <!--     <para></para> -->
+  <!--     <glossseealso otherterm="gloss-Utility-program-which-displays-file-or-file-system-status." /> -->
+  <!--   </glossdef> -->
+  <!-- </glossentry> -->
 
   <glossentry xml:id="gloss-superuser">
     <glossterm>superuser</glossterm>

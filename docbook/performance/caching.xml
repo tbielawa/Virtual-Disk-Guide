@@ -87,5 +87,5 @@
 
   <xi:include href="caching/writeback.xml"/>
   <xi:include href="caching/writethrough.xml"/>
-  <xi:include href="caching/summary.xml"/>
+  <!-- <xi:include href="caching/summary.xml"/> -->
 </section>

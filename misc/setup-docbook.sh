@@ -1,11 +1,11 @@
 #!/bin/bash
 set -xe
-
-DBXSL=http://iweb.dl.sourceforge.net/project/docbook/docbook-xsl-ns/1.78.1/docbook-xsl-ns-1.78.1.tar.bz2
+DBXSL=http://netcologne.dl.sourceforge.net/project/docbook/docbook-xsl-ns/1.79.1/docbook-xsl-ns-1.79.1.tar.bz2
+#DBXSL=http://iweb.dl.sourceforge.net/project/docbook/docbook-xsl-ns/1.78.1/docbook-xsl-ns-1.78.1.tar.bz2
 DBRNG=http://www.docbook.org/xml/5.1b8/rng/docbookxi.rng
 DBRNC=http://www.docbook.org/xml/5.1b8/rng/docbookxi.rnc
-SOURCESANS=http://iweb.dl.sourceforge.net/project/sourcesans.adobe/SourceSansPro_FontsOnly-1.050.zip
-SOURCECODE=http://iweb.dl.sourceforge.net/project/sourcecodepro.adobe/SourceCodePro_FontsOnly-1.017.zip
+SOURCESANS=https://github.com/adobe-fonts/source-sans-pro/archive/2.020R-ro/1.075R-it.zip
+SOURCECODE=https://github.com/adobe-fonts/source-code-pro/archive/2.010R-ro/1.030R-it.zip
 DLDEST=`mktemp -d`
 DEST=~/opt/docbook
 RNGDEST=$DEST/rng

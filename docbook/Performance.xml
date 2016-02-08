@@ -59,7 +59,7 @@
   </para>
 
   <xi:include href="performance/caching.xml"/>
-  <xi:include href="performance/device.xml"/>
+  <!-- <xi:include href="performance/device.xml"/> -->
   <xi:include href="performance/scheduler.xml"/>
-  <xi:include href="performance/cgroups.xml"/>
+  <!-- <xi:include href="performance/cgroups.xml"/> -->
 </chapter>
