@@ -10,7 +10,7 @@
   <section xml:id="VDG-Introduction-Introduction">
     <title>Introduction</title>
 
-    <?dbhtml-include href="docbook/analytics.html"?>
+    <?dbhtml-include href="analytics.html"?>
 
     <para>
       I was motivated to write this book because I felt the quality
