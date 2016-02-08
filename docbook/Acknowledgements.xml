@@ -6,23 +6,61 @@
   <title>Acknowledgments</title>
 
   <para>
-    How do you write a proper acknowledgements section? I've never had
-    to do one of these before.
-  </para>
-
-  <para>
     This book wouldn't have been possible without the gracious advice,
     support, and patience of several individuals.
   </para>
 
   <para>
-    Finally, my biggest "thanks" goes to David Krovich. A mentor,
-    friend, and button-pusher for many years now. You always
+    Andrew <quote>Hoss</quote> Butcher. You're a badass friend. A+
+    roomate as well, would live with again.
+  </para>
+
+  <para>
+    Thanks to John Eckersberg and Chris Venghaus for copious amounts
+    of feedback early on. It really helped to stoke my fire and get
+    things moving. And a special thanks to Chris for being my biggest
+    word-of-mouth referral. I have no idea how you meet all these
+    people with burning needs to have their virtual disk questions
+    answered, but I'm glad you refer them to me when you do.
+  </para>
+
+  <para>
+    Jorge Fábregas, you were a fabulous unexpected resource when most
+    of the major writing was happening for this book. Thanks for
+    repeatedly reaching out to me with your feedback and suggestions
+    and pointing out errors. This book is better because of your
+    unique contributions.
+  </para>
+
+  <para>
+    Thank you Jon Connell and Henry Graham for editing! Jason Hibbets
+    and Christopher Negus, thanks for the reviews, and general
+    authoring and publishing advice.
+  </para>
+
+  <para>
+    To my wife, Alicia, thanks for making me so hapy and keeping me
+    sane. Thank you for encouraging me to work on this book when I
+    didn't want to. And, thank you for <firstterm>everything
+    else</firstterm>.
+  </para>
+  
+  <para>
+    Finally, my biggest <quote>thanks</quote> goes to David Krovich. A
+    mentor, friend, and button-pusher for many years now. You always
     encouraged me to be better than I was. Without the opportunities
     you offered me, and the radical influence you had on my life, this
-    book would never have even reached conception. It was while
-    working under your instruction that I discovered my passion for
-    documenting everything I learned.
+    book would never have even reached conception. Truth be told,
+    <xref linkend="VDG-Cookbook"/> section is mostly a merge and
+    refresh of a lot of the notes I took, and staff documentation I
+    wrote, working on one of our provisioning projects.
   </para>
+
+  <para>
+    It was while working under your instruction that I discovered my
+    passion for documenting everything I learned. This book is a
+    testament to that passion. Thanks, Kro.
+  </para>
+
 
 </acknowledgements>

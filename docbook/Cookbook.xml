@@ -7,12 +7,11 @@
 
   <para>
     In this section we're just going to cover things you'll find
-    yourself needing to do from time to time. Theory and concepts will
-    be covered later on. It's assumed that you're comfortable with the
-    concepts already and don't need everything explained.
+    yourself needing to do from time to time. It's assumed that you're
+    comfortable with the concepts already and don't need everything
+    explained. Theory and concepts will be covered later on in <xref
+    linkend="VDG-Concepts"/>.
   </para>
-
-  <remark>TODO: Make a link to theory/concepts</remark>
 
   <!-- Links to each recipe follow -->
   <xi:include href="cookbook/create-virtual-disks.xml"/>
