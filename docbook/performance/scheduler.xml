@@ -37,11 +37,15 @@
     typical use cases.
   </para>
 
-  <xi:include href="scheduler/options.xml"/>
-  <xi:include href="scheduler/cfq.xml"/>
-  <xi:include href="scheduler/deadline.xml"/>
-  <xi:include href="scheduler/noop.xml"/>
-  <xi:include href="scheduler/backing_storage.xml"/>
+  <para>
+    This chapter is incomplete. Please come back for updates.
+  </para>
+
+  <!-- <xi:include href="scheduler/options.xml"/> -->
+  <!-- <xi:include href="scheduler/cfq.xml"/> -->
+  <!-- <xi:include href="scheduler/deadline.xml"/> -->
+  <!-- <xi:include href="scheduler/noop.xml"/> -->
+  <!-- <xi:include href="scheduler/backing_storage.xml"/> -->
   <xi:include href="scheduler/resources.xml"/>
 
 </section>
