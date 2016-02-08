@@ -39,6 +39,24 @@
   </para>
 
   <para>
+    Obligatory shout-outs to Norman Walsh, the man I consider the
+    living personification of DocBook XML
+
+    <footnote>
+      <para>DocBook Homepage: <link xl:href="http://www.docbook.org/"/></para>
+    </footnote>
+
+    , and Bob Stayton, author of DocBook XSL: The Complete Guide
+
+    <footnote>
+      <para>Read DocBook XSL: The Complete Guide online at <link
+      xl:href="http://www.sagehill.net/docbookxsl/index.html"/></para>
+    </footnote>
+
+    .
+  </para>
+
+  <para>
     To my wife, Alicia, thanks for making me so hapy and keeping me
     sane. Thank you for encouraging me to work on this book when I
     didn't want to. And, thank you for <firstterm>everything
