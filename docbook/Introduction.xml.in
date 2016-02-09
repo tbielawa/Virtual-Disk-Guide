@@ -292,8 +292,10 @@ Fedora release 19 (Schrödinger’s Cat)</screen>
     <para>
       <package>bitmath</package> is a Python library Tim wrote which
       simplifies a lot of work required to manipulate (add, subtract,
-      convert) prefix units (MiB, kB, TB,
-      etc). <package>bitmath</package> is loaded with features:
+      convert) prefix units (MiB, kB, TB, etc). Much of the
+      inspiration for writing the <package>bitmath</package> library
+      came directly from working on this
+      book. <package>bitmath</package> is loaded with features:
       converting between units, arithmetic, best human-readable
       representation, rich comparison, sorting, the list of features
       goes on. Check out the bitmath docs
@@ -314,9 +316,7 @@ Fedora release 19 (Schrödinger’s Cat)</screen>
 	</para>
       </footnote>
 
-      for more information on getting started. Much of the inspiration
-      for writing the <package>bitmath</package> library came directly
-      from working on this book.
+      for more information on getting started.
     </para>
 
   </section>
