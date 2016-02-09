@@ -296,7 +296,7 @@ Fedora release 19 (Schrödinger’s Cat)</screen>
       etc). <package>bitmath</package> is loaded with features:
       converting between units, arithmetic, best human-readable
       representation, rich comparison, sorting, the list of features
-      goes on. Check out bitmath the bitmath docs
+      goes on. Check out the bitmath docs
 
       <footnote>
 	<para>
