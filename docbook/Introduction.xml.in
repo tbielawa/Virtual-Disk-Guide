@@ -136,7 +136,7 @@
           </para>
         </listitem>
       </varlistentry>
-      p      <varlistentry>
+      <varlistentry>
       <term>Filesystem Paths</term>
       <listitem>
         <para>
@@ -244,8 +244,81 @@ Fedora release 19 (Schrödinger’s Cat)</screen>
       happens with, if you are running the command as the root user or
       not, and the exact commands to run to reproduce the error.
     </para>
-
-    <remark>TODO: Add example bug report?</remark>
   </section>
-  <!-- <xi:include href=".xml"/> -->
+
+
+  <section xml:id="VDG-Introduction-About-The-Author">
+    <title>About The Author</title>
+
+    <para>
+      Tim Bielawa (or <firstterm>Shaggy</firstterm> if you knew him in
+      college) has been a system administrator since his humble
+      beginnings in 2007. Back then he was working in the Systems
+      Staff Group in the West Virginia University Computer Science
+      Department.
+    </para>
+
+    <para>
+      Now-a-days Tim works at Red Hat, Inc., makers of Red Hat
+      Enterprise Linux, and sponsors of the Fedora Project. Tim has
+      been involved in Open Source communities for around a decade,
+      and a contributor/maintainer for about half that time. In his
+      spare time he enjoys writing documentation
+
+      <footnote>
+	<para>
+	  Docs on lnx.cx: <link xl:href="http://lnx.cx/docs/"/>
+	</para>
+      </footnote>
+
+      , solving interesting problems (and blogging
+
+      <footnote>
+	<para>My blog, Technitribe: <link
+	xl:href="https://blog.lnx.cx"/>
+	</para>
+      </footnote>
+
+      about them), and building things
+
+      <footnote>
+	<para>
+	  GitHub: tbielawa <link xl:href="https://github.com/tbielawa/"/>
+	</para>
+      </footnote>
+      .
+    </para>
+
+    <para>
+      <package>bitmath</package> is a Python library Tim wrote which
+      simplifies a lot of work required to manipulate (add, subtract,
+      convert) prefix units (MiB, kB, TB,
+      etc). <package>bitmath</package> is loaded with features:
+      converting between units, arithmetic, best human-readable
+      representation, rich comparison, sorting, the list of features
+      goes on. Check out bitmath the bitmath docs
+
+      <footnote>
+	<para>
+	  Read the bitmath docs online: <link
+	  xl:href="https://bitmath.readthedocs.org/en/latest/"/>
+	</para>
+      </footnote>
+
+      or GitHub project
+
+      <footnote>
+	<para>
+	  bitmath on GitHub.com: <link
+	  xl:href="https://github.com/tbielawa/bitmath"/>
+	</para>
+      </footnote>
+
+      for more information on getting started. Much of the inspiration
+      for writing the <package>bitmath</package> library came directly
+      from working on this book.
+    </para>
+
+  </section>
+
 </chapter>

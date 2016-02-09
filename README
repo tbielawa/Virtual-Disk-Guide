@@ -1,3 +1,74 @@
+# See it online
+
+HTML: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html
+PDF: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf
+
+
+# Table of Contents
+
+1. Introduction
+1.1. Introduction
+1.2. Typographical Conventions
+1.3. Units & Prefixes
+1.4. Getting Help/Feedback
+2. The Virtual Disk Cookbook
+2.1. Creating Simple Images
+2.2. Resizing Disk Images
+2.2.1. Resizing RAW Images
+2.2.2. Resizing QCOW2 Images
+2.3. Query an Image for Information
+2.4. Converting Between RAW and QCOW2
+2.4.1. Convert an Image from RAW to QCOW2
+2.4.2. Convert an Image from QCOW2 to RAW
+2.5. Creating Disks with Backing Images
+2.6. Comitting changes to a backing image
+2.7. Cloning a Physical Disk
+3. Disk Concepts
+3.1. Creating a 1GiB virtual disk from scratch
+3.1.1. Background on the dd command
+3.1.2. Running dd
+3.1.3. Examining the Created File
+3.1.4. Create a Partition Table
+3.2. Devices and Partitions
+3.2.1. Introduction
+3.2.2. Creating a Loop Device
+3.2.3. Examine the loop device
+3.2.4. Creating partitions
+3.2.5. Formatting Partitions
+3.2.6. Cleaning Up
+4. Helper Utilities
+4.1. libguestfs
+4.1.1. guestmount
+4.1.2. virt-filesystems
+4.1.3. virt-rescue
+4.1.4. virt-resize
+4.1.5. virt-sparsify
+4.2. virt manager
+5. Disk Formats
+5.1. RAW
+5.2. QCOW
+5.3. QCOW2
+5.4. Other Formats
+6. Performance Considerations
+6.1. I/O Caching
+6.1.1. Write-back Caching
+6.1.2. Write-through Caching
+6.2. I/O Schedulers
+6.2.1. Additional Resources
+7. Troubleshooting/FAQs
+A. Appendix: Man Pages
+UNITS — decimal and binary prefixes
+B. Appendix: Disk Drive History
+B.1. Disk Drive Components
+B.2. Access Modes
+B.2.1. CHS Addressing
+B.2.2. LBA Addressing
+B.3. The Master Boot Record
+Glossary
+
+
+# Building
+
 Compiling this documentation requires:
     xsltproc
     dblatex
@@ -10,8 +81,4 @@ Fedora Packages with some of these dependencies:
     dblatex available in dblatex
 
 
-
-See it online:
-
-HTML: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html
-PDF: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf
+There is a basic setup script in ``misc/setup-docbook.sh``.
