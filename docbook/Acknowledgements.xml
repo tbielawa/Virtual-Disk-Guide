@@ -29,10 +29,28 @@
   </para>
 
   <para>
-    And a special thanks to Chris for being my biggest
-    word-of-mouth referral. I have no idea how you meet all these
-    people with burning needs to have their virtual disk questions
-    answered, but I'm glad you refer them to me when you do.
+    And a special thanks to Chris for being my biggest word-of-mouth
+    referral. I have no idea how you meet all these people with
+    burning needs to have their virtual disk questions answered, but
+    I'm glad you refer them to me when you do.
+  </para>
+
+  <para>
+    Alex Wood, your eclectic interests never fail to serve my personal
+    interests in some way. Thanks for the assist with that XSLT a
+    while back. Coincidentally, that XSLT
+
+    <footnote>
+      <para>
+	See my blog post about dblatex+docbook+acknowledgements
+	sections for the interesting details: <link
+	xl:href="https://blog.lnx.cx/2013/03/27/dblatex-docbook-acknowledgements-and-pdf-output/"/>
+      </para>
+    </footnote>
+
+    pertained to rendering the very
+    <firstterm>Acknowledgements</firstterm> section you're reading
+    right now. So I guess we all owe you debt of gratitude for that!
   </para>
 
   <para>
