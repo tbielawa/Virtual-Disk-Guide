@@ -6,8 +6,20 @@
   <xsl:param name="geometry.options">scale=0.9,twoside</xsl:param>
   <xsl:param name="paper.type">a5paper</xsl:param>
 
-  <!-- Include the colophon in the Table of Contents -->
+  <!-- Include the colophon and acknowledgements in the Table of Contents -->
   <xsl:param name="colophon.tocdepth">1</xsl:param>
+  <!-- The following param is supposed to do something, but the
+       present 'acknowledgements' integration is just a a hack and as
+       a result, this parameter does nothing. -->
+  <!-- Leaving it here commented outx until there's an opportunity to
+       see if anything happens as a result of this recent
+       dblatex-users mailing list post. They appear to be considering
+       my 'acknowledgements' hack for integration into dblatex. If
+       they do, maybe they'll know how to do it right so the gentext
+       (localization) and the tocdepth stuff works. -->
+  <!-- Subject: [Dblatex-users] template for <acknowledgements> -->
+  <!-- http://sourceforge.net/p/dblatex/mailman/message/34642434/ -->
+  <!-- <xsl:param name="acknowledgements.tocdepth">1</xsl:param> -->
 
   <!-- Don't show the 'collaborators' section -->
   <xsl:param name="doc.collab.show">0</xsl:param>

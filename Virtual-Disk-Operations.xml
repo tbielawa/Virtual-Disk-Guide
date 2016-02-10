@@ -62,8 +62,8 @@
     </copyright>
   </info>
 
-  <xi:include href="docbook/Introduction.xml"/>
   <xi:include href="docbook/Acknowledgements.xml"/>
+  <xi:include href="docbook/Introduction.xml"/>
   <xi:include href="docbook/Cookbook.xml"/>
   <xi:include href="docbook/Concepts.xml"/>
   <xi:include href="docbook/Helpers.xml"/>
