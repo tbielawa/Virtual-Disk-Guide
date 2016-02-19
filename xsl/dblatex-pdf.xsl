@@ -52,6 +52,12 @@
   <!-- Experimenting with different class styles. I like the way the headers are done in the book class -->
   <!-- <xsl:param name="latex.class.book">book</xsl:param> -->
 
+  <!-- Adjust the page margins -->
+  <xsl:param name="page.margin.inner">10.50mm</xsl:param>
+  <xsl:param name="page.margin.outer">8.00mm</xsl:param>
+  <xsl:param name="page.margin.top">8.50mm</xsl:param>
+  <xsl:param name="page.margin.bottom">8.50mm</xsl:param>
+
   <!-- Font's available at: -->
   <!-- http://iweb.dl.sourceforge.net/project/sourcesans.adobe/SourceSansPro_FontsOnly-1.050.zip -->
   <!-- http://iweb.dl.sourceforge.net/project/sourcecodepro.adobe/SourceCodePro_FontsOnly-1.017.zip -->
