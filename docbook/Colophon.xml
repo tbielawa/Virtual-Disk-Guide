@@ -85,9 +85,8 @@
   <!-- TODO: add attribution for GIMP and Inkscape -->
 
   <para>
-    This book was produced using a
+    This book was produced using an
 
-    <application>GNU Make</application> →
     <application>xsltproc</application> →
     <application>dblatex</application> →
     <application>xetex</application> →
