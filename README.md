@@ -1,3 +1,6 @@
+![VDG Cover](/images/github-cover-preview.png)
+Format: ![See full size cover](https://raw.githubusercontent.com/tbielawa/Virtual-Disk-Guide/master/images/github-cover.png)
+
 # The Linux Sysadmin's Guide to Virtual Disks
 
 The Linux Sysadmin's Guide to Virtual Disks demonstrates the core
