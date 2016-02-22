@@ -54,21 +54,6 @@
       </para>
     </legalnotice>
 
-    <cover>
-      <para role="tagline">The Virtual Disk Guide </para>
-      <mediaobject>
-	<imageobject>
-	  <imagedata fileref="cover-material/exported/front-cover-transparent.png">
-            <info>
-	      <othercredit>
-		<orgname>Scribe's Guides</orgname>
-	      </othercredit>
-	    </info>
-	  </imagedata>
-	</imageobject>
-      </mediaobject>
-    </cover>
-
     <revhistory>
       <revision>
 	<revnumber>1</revnumber>

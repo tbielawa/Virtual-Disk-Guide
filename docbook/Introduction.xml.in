@@ -36,34 +36,24 @@
     </para>
 
     <para>
-      Other material related to this book:
+      This book is available for free in the following digital
+      formats:
 
       <itemizedlist>
         <listitem>
           <para>
             <link
-                xl:href="http://github.com/tbielawa/Virtual-Disk-Guide">GitHub:
-            Virtual Disk Guide</link><footnote><para><link
-            xl:href="http://github.com/tbielawa/Virtual-Disk-Guide"/></para></footnote>
-            - report issues with this book, or view the latest
-            DocBook 5 XML source under git version control
-          </para>
-        </listitem>
-
-        <listitem audience="pdf">
-          <para>
-            <link
-                xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html">Virtual-Disk-Book.html</link><footnote><para><link
-                xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html"/></para></footnote>
+            xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html">Virtual-Disk-Book.html</link><footnote><para><link
+            xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html"/></para></footnote>
             - the HTML compiled version of this book
           </para>
         </listitem>
 
-        <listitem audience="html">
+        <listitem>
           <para>
             <link
-                xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf">Virtual-Disk-Book.pdf</link><footnote><para><link
-                xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf"/></para></footnote>
+            xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf">Virtual-Disk-Book.pdf</link><footnote><para><link
+            xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf"/></para></footnote>
             - the PDF compiled version of this book
           </para>
         </listitem>
@@ -223,9 +213,17 @@ Fedora release 19 (Schrödinger’s Cat)</screen>
     <para>
       If you find a typographical or any other error in this book, or
       if you have thought of a way to make this book better, I would
-      love to hear from you! Please submit a report in GitHub:
-      <link
-          xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/issues"/>
+      love to hear from you! Please submit a report in GitHub
+
+      <footnote>
+	<para>
+	  <link
+              xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/issues"/>
+	</para>
+	</footnote>
+
+	. You can also read or clone the entire book's DocBook XML
+	source from GitHub.
     </para>
 
     <para>
