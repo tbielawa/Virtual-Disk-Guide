@@ -100,15 +100,15 @@ copy to show your support. Or not, no pressure.
 # Building the Document
 
 Compiling this documentation requires:
-    xsltproc
-    dblatex
-    docboook5 stylesheets (http://sourceforge.net/projects/docbook/files/docbook-xsl-ns/)
-    make
-    Adobe Source Code Pro/Source Sans Pro fonts (store *.ttf files in ~/.fonts/)
+* xsltproc
+* dblatex
+* docboook5 stylesheets (http://sourceforge.net/projects/docbook/files/docbook-xsl-ns/)
+* make
+* Adobe Source Code Pro/Source Sans Pro fonts (store *.ttf files in ~/.fonts/)
 
 Fedora Packages with some of these dependencies:
-    xsltprox available in libxslt
-    dblatex available in dblatex
+* xsltprox available in libxslt
+* dblatex available in dblatex
 
 
 There is a basic setup script in ``misc/setup-docbook.sh``.
