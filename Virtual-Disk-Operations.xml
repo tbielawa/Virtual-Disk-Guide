@@ -39,16 +39,43 @@
       </editor>
     </authorgroup>
 
+    <publisher>
+      <publishername>Scribe's Guides</publishername>
+      <address><city>New York</city></address>
+    </publisher>
+
     <legalnotice>
       <para>
-        The Linux Sysadmins Guide to Virtual Disks by Tim Bielawa is
+        The Linux Sysadmin's Guide to Virtual Disks by Tim Bielawa is
         licensed under the Creative Commons Attribution-ShareAlike 4.0
         International (CC BY-SA 4.0) License. To view a copy of this
         license, visit <link
         xl:href="https://creativecommons.org/licenses/by-sa/4.0/"/>.
       </para>
-
     </legalnotice>
+
+    <cover>
+      <para role="tagline">The Virtual Disk Guide </para>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="cover-material/exported/front-cover-transparent.png">
+            <info>
+	      <othercredit>
+		<orgname>Scribe's Guides</orgname>
+	      </othercredit>
+	    </info>
+	  </imagedata>
+	</imageobject>
+      </mediaobject>
+    </cover>
+
+    <revhistory>
+      <revision>
+	<revnumber>1</revnumber>
+	<date>2016-02-19</date>
+	<revremark>First Edition</revremark>
+      </revision>
+    </revhistory>
 
     <copyright>
       <year>2009</year>
