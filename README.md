@@ -1,4 +1,4 @@
-![VDG Cover](/images/github-cover-preview.png)
+![VDG Cover](/images/github-cover.png)
 
 # The Linux Sysadmin's Guide to Virtual Disks
 
