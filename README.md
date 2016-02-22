@@ -1,16 +1,43 @@
-# See it online
+# The Linux Sysadmin's Guide to Virtual Disks
 
-HTML: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html
-PDF: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf
+The Linux Sysadmin's Guide to Virtual Disks demonstrates the core
+concepts of virtual disk management. Real-world problems are covered
+in this book's "Cookbook" section. Included are examples across the
+difficulty spectrum, from the basic printing of a disk's meta-data, to
+cloning physical disks into virtual disks. Disk format conversion and
+disk resizing are both covered in-depth.
+
+Topics include, the Virtual disk cookbook, helper utilities, disk
+formats, troubleshooting, and performance considerations.
+
+The Linux Sysadmin's Guide to Virtual Disks is written in a tone that
+is approachable to both newcomers, and experienced veterans.  No
+matter what your experience level, you're guaranteed to learn
+something new.
+
+
+## Read the book online for free:
+
+* HTML: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html
+* PDF: http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf
+
+## Buy a physical copy to support the author:
+
+If you have enjoyed the Virtual Disk Guide, consider buying a physical
+copy to show your support. Or not, no pressure.
+
+* [Lulu.com: Virtual Disk Guide](http://www.lulu.com/shop/tim-bielawa/the-linux-sysadmins-guide-to-virtual-disks/paperback/product-22572755.html)
 
 
 # Table of Contents
 
+0. Acknowledgements
 1. Introduction
 1.1. Introduction
 1.2. Typographical Conventions
 1.3. Units & Prefixes
 1.4. Getting Help/Feedback
+1.5. About The Author
 2. The Virtual Disk Cookbook
 2.1. Creating Simple Images
 2.2. Resizing Disk Images
