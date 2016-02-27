@@ -5,7 +5,6 @@
 
   <info>
     <title>The Linux Sysadmins Guide to Virtual Disks</title>
-
     <subtitle>From the Basics to the Advanced</subtitle>
 
     <authorgroup>
@@ -39,20 +38,87 @@
       </editor>
     </authorgroup>
 
+    <legalnotice>
+      <para>
+        <productname>The Linux Sysadmin's Guide to Virtual
+        Disks</productname> by Tim Bielawa is licensed under the
+        <firstterm>Creative Commons Attribution-ShareAlike 4.0
+        International License</firstterm> (CC BY-SA 4.0). To view a
+        copy of the CC BY-SA 4.0 License, please visit:
+
+	<blockquote>
+	  <para>https://creativecommons.org/licenses/by-sa/4.0/</para>
+	</blockquote>
+      </para>
+
+      <para>First Edition - First Printing - 2016</para>
+      <para>Printed in The United States</para>
+
+      <para>
+	Published by Scribe's Guides
+
+	<blockquote>
+	  <para>New York, NY, USA</para>
+	  <para>Web Site: https://scribesguides.com/</para>
+	</blockquote>
+      </para>
+
+      <para>
+	<emphasis role="bold">Editors:</emphasis>
+
+	<blockquote>
+	  <para>Henry Graham</para>
+	  <para>Jonathan Connell</para>
+	  <para>Jyoti Sabharwal</para>
+	</blockquote>
+
+      </para>
+      <para>
+	<emphasis role="bold">Cover Designer</emphasis>: Tim Bielawa
+      </para>
+
+      <para>
+	The Disk Components Image (<xref
+	linkend="VDG-Appendix-Disk-Drive-History-Illustration-Figure"/>)
+	which appears on both covers and in the Disk Drive History
+	appendix of this book is remixed from the Wikipedia image
+	<filename>Disk-structure2.svg</filename>. The original image
+
+	<footnote>
+	  <para>https://commons.wikimedia.org/wiki/File:Disk-structure2.svg</para>
+	</footnote>
+
+	is licensed as a work in the worldwide public domain. Original
+	image created by Wikipedia users MistWiz
+
+	<footnote>
+	  <para>https://en.wikipedia.org/wiki/User:MistWiz</para>
+	</footnote>
+
+	and Heron2
+
+	<footnote>
+	  <para>https://en.wikipedia.org/wiki/User:Heron2</para>
+	</footnote>
+
+	. The image was last updated by Tim Bielawa as displayed in
+	this book.
+      </para>
+
+      <para>
+	<emphasis role="bold">Library of Congress Control Number</emphasis>: 2016903293
+      </para>
+
+      <para>
+	<emphasis role="bold">Soft Cover ISBN-13</emphasis>: 978-0-692-64121-7
+      </para>
+
+    </legalnotice>
+
     <publisher>
       <publishername>Scribe's Guides</publishername>
       <address><city>New York</city></address>
     </publisher>
-
-    <legalnotice>
-      <para>
-        The Linux Sysadmin's Guide to Virtual Disks by Tim Bielawa is
-        licensed under the Creative Commons Attribution-ShareAlike 4.0
-        International (CC BY-SA 4.0) License. To view a copy of this
-        license, visit <link
-        xl:href="https://creativecommons.org/licenses/by-sa/4.0/"/>.
-      </para>
-    </legalnotice>
 
     <revhistory>
       <revision>
