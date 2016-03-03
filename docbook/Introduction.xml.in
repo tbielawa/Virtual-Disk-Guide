@@ -34,37 +34,6 @@
       relevant technical concepts are and how they work up to the
       final result of each example.
     </para>
-
-    <para>
-      This book is available for free in the following digital
-      formats:
-
-      <itemizedlist>
-        <listitem>
-          <para>
-            <link
-            xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html">Virtual-Disk-Book.html</link><footnote><para><link
-            xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html"/></para></footnote>
-            - the HTML compiled version of this book
-          </para>
-        </listitem>
-
-        <listitem>
-          <para>
-            <link
-            xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf">Virtual-Disk-Book.pdf</link><footnote><para><link
-            xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.pdf"/></para></footnote>
-            - the PDF compiled version of this book
-          </para>
-        </listitem>
-      </itemizedlist>
-    </para>
-
-    <para>
-      This document was generated from commit <link
-      xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/GENERATION_COMMIT_HASH"><literal>GENERATION_COMMIT_HASH</literal></link>
-      on GENERATION_TIMESTAMP.
-    </para>
   </section>
 
   <section xml:id="VDG-Introduction-Conventions">
@@ -244,6 +213,46 @@ Fedora release 19 (Schrödinger’s Cat)</screen>
     </para>
   </section>
 
+  <section xml:id="VDG-Introduction-More-Versions">
+    <title>Updates and Alternative Formats</title>
+
+    <para>
+      The latest version of this book is always available online for
+      <emphasis role="bold">free</emphasis> in the following digital
+      formats:
+
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    PDF
+	  </para>
+	</listitem>
+        <listitem>
+          <para>
+	    HTML Single Page
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    HTML Chunked
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+
+    <para>
+      If you find this book useful, please consider supporting the
+      author by purchasing a hard-copy. Visit the publisher's website
+      at <link xl:href="http://scribesguides.com/"/> for purchasing
+      options and links to alternative formats.
+    </para>
+
+    <para>
+      This document was generated from commit <link
+      xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/GENERATION_COMMIT_HASH"><literal>GENERATION_COMMIT_HASH</literal></link>
+      on GENERATION_TIMESTAMP.
+    </para>
+  </section>
 
   <section xml:id="VDG-Introduction-About-The-Author">
     <title>About The Author</title>
@@ -316,7 +325,5 @@ Fedora release 19 (Schrödinger’s Cat)</screen>
 
       for more information on getting started.
     </para>
-
   </section>
-
 </chapter>
