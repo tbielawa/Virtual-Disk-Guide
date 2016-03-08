@@ -51,7 +51,7 @@
 	</blockquote>
       </para>
 
-      <para>First Edition - First Printing - 2016</para>
+      <para>Second Edition DRAFT - In Progress - 20XX</para>
       <para>Printed in The United States</para>
 
       <para>
@@ -125,6 +125,11 @@
 	<revnumber>1</revnumber>
 	<date>2016-02-19</date>
 	<revremark>First Edition</revremark>
+      </revision>
+      <revision>
+	<revnumber>2</revnumber>
+	<date>2016-03-08</date>
+	<revremark>Second Edition DRAFT - In Progress</revremark>
       </revision>
     </revhistory>
 

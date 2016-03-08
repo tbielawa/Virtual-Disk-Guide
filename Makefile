@@ -120,11 +120,11 @@ docdir:
 	@ln -s ../js/vdg.js $(CHUNKDIR)/vdg.js || true
 	@ln -s ../images $(CHUNKDIR)/images || true
 
-chunked:
-	@echo "#############################################"
-	@echo "     BUILDING HTML (CHUNKED) OUTPUT NOW"
-	@echo "#############################################"
-	xsltproc $(XSLTPARAMS) $(XSLT_CHUNKED_PARAMS) $(HTML_CHUNKED_xsl) $(INPUT).xml
+# chunked:
+# 	@echo "#############################################"
+# 	@echo "     BUILDING HTML (CHUNKED) OUTPUT NOW"
+# 	@echo "#############################################"
+# 	xsltproc $(XSLTPARAMS) $(XSLT_CHUNKED_PARAMS) $(HTML_CHUNKED_xsl) $(INPUT).xml
 
 # %.html: %.xml
 # This is a target for <somedocument>.html. %.xml is a target for
@@ -166,7 +166,7 @@ pdf: timestamp docdir $(OUTPUT).pdf
 
 tex: timestamp docdir $(OUTPUT).tex
 
-docs: docdir $(OUTPUT).html $(OUTPUT).pdf chunked
+docs: docdir $(OUTPUT).html $(OUTPUT).pdf
 
 locator:
 	sed "s'%SCHEMADIR%'$(SCHEMADIR)'" .schemas.xml > schemas.xml
