@@ -11,8 +11,8 @@
   </xsl:template>
   <xsl:output method="html" encoding="utf-8" indent="yes"/>
 
-  <xsl:param name="use.extensions" select="1"></xsl:param>
-  <xsl:param name="linenumbering.extension" select="1"></xsl:param>
+  <!-- <xsl:param name="use.extensions" select="1"></xsl:param> -->
+  <!-- <xsl:param name="linenumbering.extension" select="1"></xsl:param> -->
 
   <xsl:param name="generate.id.attributes" select="1"/>
   <xsl:param name="admon.graphics">1</xsl:param>
@@ -41,7 +41,6 @@
     section   toc
     set       toc,title
   </xsl:param>
-
 
   <!-- Make admonitions not be so far indented -->
   <xsl:param name="admon.style">
