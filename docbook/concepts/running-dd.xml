@@ -1,7 +1,7 @@
 <section xml:id="VDG-Concepts-Running-dd"
 	 xmlns="http://docbook.org/ns/docbook"
 	 xmlns:xi="http://www.w3.org/2001/XInclude"
-	 version="5.0">
+	 version="5.1">
 
   <title>
     Running <command>dd</command>
