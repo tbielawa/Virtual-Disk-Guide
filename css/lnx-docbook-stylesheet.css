@@ -223,6 +223,8 @@ textarea {
 
 body {
   margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 40px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -920,7 +922,7 @@ blockquote {
 
 blockquote p {
   margin-bottom: 0;
-  font-size: 17.5px;
+  /* font-size: 17.5px; */
   font-weight: 300;
   line-height: 1.25;
 }
@@ -6173,4 +6175,12 @@ a.badge:focus {
 
 .remark:hover {
   opacity: 1;
+}
+
+#VDG-TOC {
+    padding-top: 60px;
+}
+
+#VDG-TOC > p {
+    font-size: 30px;
 }
