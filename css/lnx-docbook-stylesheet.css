@@ -227,7 +227,7 @@ body {
   margin-right: 20px;
   margin-top: 40px;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
@@ -6199,6 +6199,15 @@ div .footnote p {
 
 div > .footnote {
     padding-left: 10px;
+}
+
+div > .chapter {
+    padding-top: 100px;
+}
+
+div > .section,
+div > .figure {
+    padding-top: 15px;
 }
 
 /* Ensure our fonts appear */

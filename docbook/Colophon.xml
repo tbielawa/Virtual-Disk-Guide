@@ -22,7 +22,6 @@
       </para>
     </footnote>
 
-
     , the monospaced sequences use <emphasis>Source Code Pro</emphasis>.
 
     <footnote>
@@ -81,12 +80,20 @@
   </para>
 
   <para>
-    The single-page HTML version of this
-    book<footnote><para>Single-page HTML: <link
-    xl:href="http://scribesguides.com/books/vdg/latest/Virtual-Disk-Operations.html"/></para></footnote>
-    is based off of Twitter Bootstrap <footnote><para>Twitter
-    Bootstrap: <link
-    xl:href="http://getbootstrap.com/"/></para></footnote> stylesheet.
+    The single-page HTML version of this book
+
+    <footnote>
+      <para>Single-page HTML: <link
+      xl:href="http://scribesguides.com/books/vdg/latest/Virtual-Disk-Operations.html"/>
+      </para>
+    </footnote>
+
+    uses Twitter Bootstrap
+
+    <footnote><para>Twitter Bootstrap: <link
+    xl:href="http://getbootstrap.com/"/></para></footnote>
+
+    for styling.
   </para>
 
   <!-- TODO: add attribution for GIMP and Inkscape -->
