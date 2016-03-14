@@ -226,7 +226,7 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 40px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
@@ -975,7 +975,7 @@ address {
 code,
 pre {
   padding: 0 3px 2px;
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 12px;
   color: #333333;
   -webkit-border-radius: 3px;
@@ -6184,3 +6184,22 @@ a.badge:focus {
 #VDG-TOC > p {
     font-size: 30px;
 }
+
+p .remark {
+    display: none;
+}
+
+.mediaobject {
+    text-align: center;
+}
+
+div .footnote p {
+    font-size: small;
+}
+
+div > .footnote {
+    padding-left: 10px;
+}
+
+/* Ensure our fonts appear */
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Sans+Pro:400,700);

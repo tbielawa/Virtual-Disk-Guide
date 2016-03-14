@@ -68,24 +68,31 @@
   <para>
     Composition of this book took place entirely in
     <application>Emacs</application> (nXML/RNG mode if you're
-    curious), on an assortment of <systemitem class="osname">Fedora
-    Linux</systemitem> releases.
+    curious), on an assortment of Fedora Linux
+
+    <footnote>
+      <para>
+	Visit the Fedora Project Homepage: <link xl:href="https://getfedora.org/"/>
+      </para>
+    </footnote>
+
+    releases ranging from Fedora 11, <firstterm>Leonidas</firstterm>,
+    to Fedora 23 (first edition published).
   </para>
 
   <para>
     The single-page HTML version of this
-    book<footnote><para>Single-page HTML version of the Virtual Disk
-    Guide: <link
-    xl:href="http://lnx.cx/docs/vdg/output/Virtual-Disk-Operations.html"/></para></footnote>
-    uses the Twitter Bootstrap <footnote><para>Twitter Bootstrap:
-    <link xl:href="http://getbootstrap.com/"/></para></footnote>
-    stylesheet.
+    book<footnote><para>Single-page HTML: <link
+    xl:href="http://scribesguides.com/books/vdg/latest/Virtual-Disk-Operations.html"/></para></footnote>
+    is based off of Twitter Bootstrap <footnote><para>Twitter
+    Bootstrap: <link
+    xl:href="http://getbootstrap.com/"/></para></footnote> stylesheet.
   </para>
 
   <!-- TODO: add attribution for GIMP and Inkscape -->
 
   <para>
-    This book was produced using an
+    The print and PDF versions of this book were produced using an
 
     <application>xsltproc</application> →
     <application>dblatex</application> →

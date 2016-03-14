@@ -131,9 +131,9 @@
 
     <para>
       When we ran <command>kpartx</command> it created symbolic links
-      <filename class="directory"></filename> to the new devices
-      (<filename class="devicefile">/dev/dm-*</filename>) which map to
-      the partitions on <filename
+      to the new devices (<filename
+      class="devicefile">/dev/dm-*</filename>) which map to the
+      partitions on <filename
       class="devicefile">/dev/loop0</filename>. We can use this
       information to create the symlinks necessary for
       <command>gparted</command> to locate <filename
