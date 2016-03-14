@@ -53,12 +53,12 @@
 
   <para>
     This book was written in 100% <emphasis>lint-free</emphasis>
-    DocBook 5 XML
+    DocBook 5.1 XML
 
     <footnote>
       <para>
 	DocBook 5: The Definitive Guide: <link
-	xl:href="http://www.docbook.org/tdg5/en/html/docbook.html"/>
+	xl:href="http://docbook.org/tdg51/en/html/"/>
       </para>
     </footnote>
     .
