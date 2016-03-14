@@ -243,8 +243,15 @@ Fedora release 19 (Schrödinger’s Cat)</screen>
     </para>
 
     <para>
-      This document was generated from commit <link
+      This book was generated from commit <link
       xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/GENERATION_COMMIT_HASH"><literal>GENERATION_COMMIT_HASH</literal></link>
+
+      <footnote>
+	<para>
+	  <link xl:href="https://github.com/tbielawa/Virtual-Disk-Guide/commit/GENERATION_COMMIT_HASH"/>
+	</para>
+      </footnote>
+
       on GENERATION_TIMESTAMP.
     </para>
   </section>
