@@ -40,7 +40,7 @@
     </listitem>
     <listitem>
       <para>
-        <command>fdisk</command> doesn't knows how big it is, nor
+        <command>fdisk</command> doesn't know how big it is, nor
         can it find any partition information on it.
       </para>
     </listitem>
